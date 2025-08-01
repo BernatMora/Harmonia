@@ -42,71 +42,226 @@ export default function SpeedGame() {
 
   const generateQuestions = () => {
     const questionTypes = [
+      // Harmonia negativa
       {
-        type: 'interval_semitones',
+        type: 'negative_harmony',
         generate: () => {
-          const interval = intervals[Math.floor(Math.random() * intervals.length)];
-          const wrongAnswers = intervals.filter(int => int.name !== interval.name)
-            .sort(() => 0.5 - Math.random())
-            .slice(0, 3);
+          const pairs = [
+            { original: 'Cmaj7', negative: 'Fm(maj7)' },
+            { original: 'G7', negative: 'Fm7' },
+            { original: 'Am7', negative: 'Bbmaj7' },
+            { original: 'F', negative: 'Gm' },
+            { original: 'Dm7', negative: 'Cmaj7' }
+          ];
+          const pair = pairs[Math.floor(Math.random() * pairs.length)];
+          const wrong = pairs.filter(p => p.negative !== pair.negative).slice(0, 3);
           return {
-            question: `Quants semitons té una ${interval.name}?`,
-            hint: `Exemple: ${interval.example}`,
-            correct: interval.semitones.toString(),
-            options: [interval.semitones, ...wrongAnswers.map(w => w.semitones)]
-              .sort(() => 0.5 - Math.random())
-              .map(n => n.toString())
+            question: `En harmonia negativa, ${pair.original} es converteix en:`,
+            hint: `Reflexió sobre l'eix C`,
+            correct: pair.negative,
+            options: [pair.negative, ...wrong.map(w => w.negative)].sort(() => 0.5 - Math.random())
           };
         }
       },
+
+      // Upper structures
       {
-        type: 'interval_name',
-        generate: () => {
-          const interval = intervals[Math.floor(Math.random() * intervals.length)];
-          const wrongAnswers = intervals.filter(int => int.name !== interval.name)
-            .sort(() => 0.5 - Math.random())
-            .slice(0, 3);
-          return {
-            question: `Quin interval té ${interval.semitones} semitons?`,
-            hint: `Pensa en la distància des de C`,
-            correct: interval.name,
-            options: [interval.name, ...wrongAnswers.map(w => w.name)]
-              .sort(() => 0.5 - Math.random())
-          };
-        }
-      },
-      {
-        type: 'chord_notes',
+        type: 'upper_structures',
         generate: () => {
           const chords = [
-            { name: 'C major', notes: ['C', 'E', 'G'], hint: 'Acord de Do major' },
-            { name: 'G major', notes: ['G', 'B', 'D'], hint: 'Acord de Sol major' },
-            { name: 'F major', notes: ['F', 'A', 'C'], hint: 'Acord de Fa major' },
-            { name: 'Am', notes: ['A', 'C', 'E'], hint: 'Acord de La menor' }
+            { name: 'G13', upper: 'D major', fundamental: 'G7' },
+            { name: 'C13#11', upper: 'A major', fundamental: 'C7' },
+            { name: 'F13', upper: 'C major', fundamental: 'F7' },
+            { name: 'D13#11', upper: 'B major', fundamental: 'D7' }
           ];
           const chord = chords[Math.floor(Math.random() * chords.length)];
-          const allNotes = ['C', 'D', 'E', 'F', 'G', 'A', 'B'];
-          const wrongAnswers = allNotes.filter(note => !chord.notes.includes(note))
-            .sort(() => 0.5 - Math.random())
-            .slice(0, 3);
-          const correctNote = chord.notes[Math.floor(Math.random() * chord.notes.length)];
+          const wrong = chords.filter(c => c.upper !== chord.upper).slice(0, 3);
           return {
-            question: `Quina nota forma part de l'acord ${chord.name}?`,
-            hint: chord.hint,
-            correct: correctNote,
-            options: [correctNote, ...wrongAnswers]
-              .sort(() => 0.5 - Math.random())
+            question: `L'upper structure triad de ${chord.name} és:`,
+            hint: `Tètrada major sobre la 5a del dominant`,
+            correct: chord.upper,
+            options: [chord.upper, ...wrong.map(w => w.upper)].sort(() => 0.5 - Math.random())
+          };
+        }
+      },
+
+      // Substitucions tritonals
+      {
+        type: 'tritone_substitution',
+        generate: () => {
+          const subs = [
+            { original: 'G7', tritone: 'Db7' },
+            { original: 'D7', tritone: 'Ab7' },
+            { original: 'A7', tritone: 'Eb7' },
+            { original: 'E7', tritone: 'Bb7' },
+            { original: 'B7', tritone: 'F7' }
+          ];
+          const sub = subs[Math.floor(Math.random() * subs.length)];
+          const wrong = subs.filter(s => s.tritone !== sub.tritone).slice(0, 3);
+          return {
+            question: `La substitució tritonal de ${sub.original} és:`,
+            hint: `b5 del dominant original`,
+            correct: sub.tritone,
+            options: [sub.tritone, ...wrong.map(w => w.tritone)].sort(() => 0.5 - Math.random())
+          };
+        }
+      },
+
+      // Modes avançats
+      {
+        type: 'advanced_modes',
+        generate: () => {
+          const modes = [
+            { chord: 'Cm(maj7)', mode: 'Menor melòdica' },
+            { chord: 'C7#11', mode: 'Lidi dominant' },
+            { chord: 'Cm7b5', mode: 'Locri' },
+            { chord: 'Cmaj7#5', mode: 'Lidi augmentat' }
+          ];
+          const mode = modes[Math.floor(Math.random() * modes.length)];
+          const wrong = modes.filter(m => m.mode !== mode.mode).slice(0, 3);
+          return {
+            question: `Sobre ${mode.chord} s'utilitza:`,
+            hint: `Mode específic per aquesta sonoritat`,
+            correct: mode.mode,
+            options: [mode.mode, ...wrong.map(w => w.mode)].sort(() => 0.5 - Math.random())
+          };
+        }
+      },
+
+      // Voice leading cromàtic
+      {
+        type: 'voice_leading',
+        generate: () => {
+          const progressions = [
+            { progression: 'Cmaj7-C#dim7-Dm7', movement: 'Cromàtic ascendent al baix' },
+            { progression: 'Am7-Ab7-Gmaj7', movement: 'Substitució tritonal' },
+            { progression: 'Cmaj7-E7/B-Am7', movement: 'Línia cromàtica descendent' },
+            { progression: 'Fmaj7-B7-Em7', movement: 'Modulació per terceres' }
+          ];
+          const prog = progressions[Math.floor(Math.random() * progressions.length)];
+          const wrong = progressions.filter(p => p.movement !== prog.movement).slice(0, 3);
+          return {
+            question: `En ${prog.progression}, el voice leading és:`,
+            hint: `Analitza el moviment melòdic`,
+            correct: prog.movement,
+            options: [prog.movement, ...wrong.map(w => w.movement)].sort(() => 0.5 - Math.random())
+          };
+        }
+      },
+
+      // Tensions disponibles
+      {
+        type: 'available_tensions',
+        generate: () => {
+          const chords = [
+            { name: 'Cmaj7', tensions: '9, #11, 13' },
+            { name: 'Dm7', tensions: '9, 11, 13' },
+            { name: 'G7alt', tensions: 'b9, #9, #11, b13' },
+            { name: 'Am7b5', tensions: 'b9, 11, b13' }
+          ];
+          const chord = chords[Math.floor(Math.random() * chords.length)];
+          const wrong = chords.filter(c => c.tensions !== chord.tensions).slice(0, 3);
+          return {
+            question: `Tensions disponibles sobre ${chord.name}:`,
+            hint: `Evita avoid notes`,
+            correct: chord.tensions,
+            options: [chord.tensions, ...wrong.map(w => w.tensions)].sort(() => 0.5 - Math.random())
+          };
+        }
+      },
+
+      // Giant Steps analysis
+      {
+        type: 'giant_steps',
+        generate: () => {
+          const segments = [
+            { start: 'B', next: 'D7', analysis: 'Tercera major descendent' },
+            { start: 'G', next: 'Bb7', analysis: 'Tercera major descendent' },
+            { start: 'Eb', next: 'F#7', analysis: 'Tercera major descendent' },
+            { start: 'B7', next: 'E', analysis: 'Resolució dominant-tònica' }
+          ];
+          const segment = segments[Math.floor(Math.random() * segments.length)];
+          const wrong = segments.filter(s => s.analysis !== segment.analysis).slice(0, 3);
+          return {
+            question: `En Giant Steps, ${segment.start} a ${segment.next} és:`,
+            hint: `Patró de Coltrane Changes`,
+            correct: segment.analysis,
+            options: [segment.analysis, ...wrong.map(w => w.analysis)].sort(() => 0.5 - Math.random())
+          };
+        }
+      },
+
+      // Intercanvi modal
+      {
+        type: 'modal_interchange',
+        generate: () => {
+          const borrowed = [
+            { key: 'C major', chord: 'Ab', from: 'C menor natural' },
+            { key: 'F major', chord: 'Db', from: 'F menor natural' },
+            { key: 'G major', chord: 'Bb7', from: 'G menor natural' },
+            { key: 'D major', chord: 'F', from: 'D menor natural' }
+          ];
+          const borrow = borrowed[Math.floor(Math.random() * borrowed.length)];
+          const wrong = borrowed.filter(b => b.from !== borrow.from).slice(0, 3);
+          return {
+            question: `${borrow.chord} en ${borrow.key} ve de:`,
+            hint: `Intercanvi modal`,
+            correct: borrow.from,
+            options: [borrow.from, ...wrong.map(w => w.from)].sort(() => 0.5 - Math.random())
+          };
+        }
+      },
+
+      // Reharmonització
+      {
+        type: 'reharmonization',
+        generate: () => {
+          const reharms = [
+            { original: 'C-Am-F-G', new: 'C-A7-Dm-G7alt' },
+            { original: 'Dm-G7-C', new: 'Dm-Db7-C' },
+            { original: 'F-C', new: 'F-E7-Am-C' },
+            { original: 'Am-F', new: 'Am-Ab7-Gmaj7' }
+          ];
+          const reharm = reharms[Math.floor(Math.random() * reharms.length)];
+          const wrong = reharms.filter(r => r.new !== reharm.new).slice(0, 3);
+          return {
+            question: `Reharmonització de ${reharm.original}:`,
+            hint: `Substitucions cromàtiques`,
+            correct: reharm.new,
+            options: [reharm.new, ...wrong.map(w => w.new)].sort(() => 0.5 - Math.random())
+          };
+        }
+      },
+
+      // Acords quartals
+      {
+        type: 'quartal_harmony',
+        generate: () => {
+          const quartals = [
+            { root: 'C', quartal: 'C-F-Bb' },
+            { root: 'D', quartal: 'D-G-C' },
+            { root: 'E', quartal: 'E-A-D' },
+            { root: 'F', quartal: 'F-Bb-Eb' }
+          ];
+          const quartal = quartals[Math.floor(Math.random() * quartals.length)];
+          const wrong = quartals.filter(q => q.quartal !== quartal.quartal).slice(0, 3);
+          return {
+            question: `Acord quartal sobre ${quartal.root}:`,
+            hint: `Intervals de 4a pura`,
+            correct: quartal.quartal,
+            options: [quartal.quartal, ...wrong.map(w => w.quartal)].sort(() => 0.5 - Math.random())
           };
         }
       }
     ];
 
-    const newQuestions = [];
-    for (let i = 0; i < 50; i++) {
-      const questionType = questionTypes[Math.floor(Math.random() * questionTypes.length)];
-      newQuestions.push(questionType.generate());
-    }
-    setQuestions(newQuestions);
+    // Seleccionar 10 tipus de pregunta aleatòris i generar una pregunta de cada tipus
+    const selectedTypes = [...questionTypes].sort(() => 0.5 - Math.random()).slice(0, 10);
+    const newQuestions = selectedTypes.map(type => type.generate());
+    
+    // Barrejar l'ordre de les preguntes generades
+    const shuffledQuestions = newQuestions.sort(() => 0.5 - Math.random());
+    setQuestions(shuffledQuestions);
   };
 
   const startGame = () => {

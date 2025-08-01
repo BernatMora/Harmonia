@@ -4,14 +4,27 @@ import { useGame } from '@/contexts/GameContext';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 
-const chords = [
-  { name: 'C', color: 'bg-red-500', description: 'Do major' },
-  { name: 'Dm', color: 'bg-orange-500', description: 'Re menor' },
-  { name: 'Em', color: 'bg-yellow-500', description: 'Mi menor' },
-  { name: 'F', color: 'bg-green-500', description: 'Fa major' },
-  { name: 'G', color: 'bg-blue-500', description: 'Sol major' },
-  { name: 'Am', color: 'bg-purple-500', description: 'La menor' },
-  { name: 'Bdim', color: 'bg-pink-500', description: 'Si disminuït' }
+const allChords = [
+  // Acords complexos d'harmonia avançada
+  { name: 'Cmaj7#11', color: 'bg-red-500', description: 'Do major 7 amb 11 augmentada' },
+  { name: 'Dm7b5', color: 'bg-orange-500', description: 'Re menor 7 bemoll 5' },
+  { name: 'G7alt', color: 'bg-yellow-500', description: 'Sol 7 alterat' },
+  { name: 'Am(maj7)', color: 'bg-green-500', description: 'La menor major 7' },
+  { name: 'F13#11', color: 'bg-blue-500', description: 'Fa 13 amb 11 augmentada' },
+  { name: 'Bb7#5', color: 'bg-purple-500', description: 'Sib 7 amb 5 augmentada' },
+  { name: 'Edim7', color: 'bg-pink-500', description: 'Mi disminuït 7' },
+  { name: 'Ab7sus4', color: 'bg-indigo-500', description: 'Lab 7 suspès 4' },
+  { name: 'C#m7b5', color: 'bg-teal-500', description: 'Do# menor 7 bemoll 5' },
+  { name: 'Fmaj7#5', color: 'bg-cyan-500', description: 'Fa major 7 amb 5 augmentada' },
+  { name: 'Bm(maj7)', color: 'bg-lime-500', description: 'Si menor major 7' },
+  { name: 'Eb13', color: 'bg-emerald-500', description: 'Mib 13' },
+  { name: 'A7b9', color: 'bg-amber-500', description: 'La 7 amb 9 bemoll' },
+  { name: 'Dm6/9', color: 'bg-rose-500', description: 'Re menor 6 afegit 9' },
+  { name: 'G7#9', color: 'bg-violet-500', description: 'Sol 7 amb 9 augmentada' },
+  { name: 'Cmaj9#11', color: 'bg-sky-500', description: 'Do major 9 amb 11 augmentada' },
+  { name: 'F7sus4', color: 'bg-stone-500', description: 'Fa 7 suspès 4' },
+  { name: 'Bbadd9', color: 'bg-neutral-500', description: 'Sib amb 9 afegida' },
+  { name: 'Em7add11', color: 'bg-slate-500', description: 'Mi menor 7 amb 11 afegida' }
 ];
 
 export default function MemoryGame() {
@@ -24,6 +37,7 @@ export default function MemoryGame() {
   const [gameOver, setGameOver] = useState(false);
   const [showingSequence, setShowingSequence] = useState(false);
   const [startTime, setStartTime] = useState<number>(0);
+  const [availableChords, setAvailableChords] = useState(allChords.slice(0, 8));
 
   const startGame = () => {
     setSequence([]);
@@ -32,11 +46,16 @@ export default function MemoryGame() {
     setGameOver(false);
     setIsPlaying(true);
     setStartTime(Date.now());
+    
+    // Seleccionar 8 acords aleatoris del pool total per aquesta partida
+    const selectedChords = [...allChords].sort(() => 0.5 - Math.random()).slice(0, 8);
+    setAvailableChords(selectedChords);
+    
     addToSequence();
   };
 
   const addToSequence = () => {
-    const newChord = chords[Math.floor(Math.random() * chords.length)].name;
+    const newChord = availableChords[Math.floor(Math.random() * availableChords.length)].name;
     const newSequence = [...sequence, newChord];
     setSequence(newSequence);
     setPlayerSequence([]);
@@ -170,7 +189,7 @@ export default function MemoryGame() {
 
         {/* Chord Buttons */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-          {chords.map((chord) => (
+          {availableChords.map((chord) => (
             <Button
               key={chord.name}
               onClick={() => handleChordClick(chord.name)}
