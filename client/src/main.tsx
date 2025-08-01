@@ -1,6 +1,6 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import App from './AppClean.tsx';
+import App from './AppFixed.tsx';
 import './index.css';
 
 // Service Worker registration for offline functionality (optional)
