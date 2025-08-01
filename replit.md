@@ -101,5 +101,7 @@ shared/
   - **Composition Laboratory**: Create progressions with complex harmonic restrictions (chromatic motion, modal constraints, negative harmony challenges)
   - **Analysis Master**: Decode real transcriptions from Bill Evans, Herbie Hancock with function analysis, voicing identification, and scale selection
   - **Musical Theory Easter Egg Hunt**: Progressive treasure hunt through hidden harmonic secrets with unlockable knowledge rewards
-  - **Interactive Challenges**: 11 total game modes now available, each requiring deep musical analysis and creative problem-solving
+  - **Chord Builder Extreme**: Construct ultra-complex chords note by note with real-time harmonic analysis and interval identification
+  - **Progression Laboratory**: Advanced harmonic analysis tools for jazz standards with voice leading visualization and substitution suggestions
+  - **Interactive Challenges**: 13 total game modes now available, each requiring deep musical analysis and creative problem-solving
   - **Personal Learning Focus**: Designed for single advanced user with personalized difficulty that scales infinitely

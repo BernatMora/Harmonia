@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Music, Trophy, BookOpen, Volume2, Target, Puzzle, ArrowLeft, Play, Clock, CheckCircle, XCircle } from "lucide-react";
 import { getRandomProgression, getProgressionsByMode, getChordTypes } from "./data/progressions";
 
-type GameMode = 'home' | 'theory' | 'speed' | 'memory' | 'target' | 'puzzle' | 'arcade' | 'harmonia' | 'advanced-theory' | 'composition-lab' | 'analysis-master' | 'easter-hunt';
+type GameMode = 'home' | 'theory' | 'speed' | 'memory' | 'target' | 'puzzle' | 'arcade' | 'harmonia' | 'advanced-theory' | 'composition-lab' | 'analysis-master' | 'easter-hunt' | 'chord-builder' | 'progression-lab';
 
 // Contingut educatiu ultra-avançat per cada joc
 const gameContent = {
@@ -487,6 +487,20 @@ const gameTypes = [
     description: 'Descobreix secrets harmònics amagats',
     icon: Target,
     color: 'from-purple-500 to-pink-600'
+  },
+  {
+    id: 'chord-builder',
+    title: 'Constructor d\'Acords Extrems',
+    description: 'Construeix acords ultra-complexos nota per nota',
+    icon: Puzzle,
+    color: 'from-red-500 to-rose-600'
+  },
+  {
+    id: 'progression-lab',
+    title: 'Laboratori de Progressions',
+    description: 'Analitza i crea cadenes harmòniques avançades',
+    icon: Music,
+    color: 'from-cyan-500 to-blue-600'
   }
 ];
 
@@ -1783,7 +1797,7 @@ function App() {
         {/* Estadístiques */}
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
           <div className="bg-gradient-to-br from-blue-500/10 to-blue-600/10 p-6 rounded-2xl border border-blue-500/20 text-center">
-            <div className="text-3xl font-bold text-blue-400 mb-2">11</div>
+            <div className="text-3xl font-bold text-blue-400 mb-2">13</div>
             <div className="text-gray-300">Modes de Joc</div>
           </div>
           <div className="bg-gradient-to-br from-purple-500/10 to-purple-600/10 p-6 rounded-2xl border border-purple-500/20 text-center">
@@ -1798,6 +1812,369 @@ function App() {
       </div>
     </div>
   );
+
+  // Component Constructor d'Acords Extrems
+  const ChordBuilderComponent = () => {
+    const [selectedNotes, setSelectedNotes] = useState<string[]>([]);
+    const [targetChord, setTargetChord] = useState('');
+    const [difficulty, setDifficulty] = useState('extreme');
+    const [showAnalysis, setShowAnalysis] = useState(false);
+    const [score, setScore] = useState(0);
+
+    const chromaticNotes = ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B'];
+    
+    const extremeChords = [
+      'C13#11', 'Gm(maj9)#11', 'F#7alt', 'Bbmaj7#5', 'Am11b5',
+      'D7sus4b9', 'Emaj9#11', 'Abm(maj13)', 'B7#9#11', 'F13sus4'
+    ];
+
+    const getRandomChord = () => {
+      return extremeChords[Math.floor(Math.random() * extremeChords.length)];
+    };
+
+    const analyzeChord = (notes: string[]) => {
+      if (notes.length < 3) return "Mínim 3 notes necessàries";
+      
+      const intervals = [];
+      const root = notes[0];
+      
+      // Calcula intervals des de la root
+      for (let i = 1; i < notes.length; i++) {
+        const rootIndex = chromaticNotes.indexOf(root);
+        const noteIndex = chromaticNotes.indexOf(notes[i]);
+        const interval = (noteIndex - rootIndex + 12) % 12;
+        intervals.push(interval);
+      }
+      
+      // Identifica el tipus d'acord basat en intervals
+      if (intervals.includes(4) && intervals.includes(7)) {
+        if (intervals.includes(10)) return `${root}7`;
+        return `${root}maj`;
+      }
+      if (intervals.includes(3) && intervals.includes(7)) {
+        return `${root}m`;
+      }
+      if (intervals.includes(4) && intervals.includes(8)) {
+        return `${root}aug`;
+      }
+      
+      return "Acord complex/polychord";
+    };
+
+    const toggleNote = (note: string) => {
+      if (selectedNotes.includes(note)) {
+        setSelectedNotes(selectedNotes.filter(n => n !== note));
+      } else {
+        setSelectedNotes([...selectedNotes, note]);
+      }
+    };
+
+    const checkChord = () => {
+      const analysis = analyzeChord(selectedNotes);
+      setShowAnalysis(true);
+      
+      if (analysis.includes(targetChord.split(/[0-9#b]+/)[0])) {
+        setScore(score + 20);
+      }
+    };
+
+    const newChallenge = () => {
+      setTargetChord(getRandomChord());
+      setSelectedNotes([]);
+      setShowAnalysis(false);
+    };
+
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900/30 to-rose-900/20 text-white p-6">
+        <div className="max-w-6xl mx-auto">
+          <div className="flex items-center mb-8">
+            <button onClick={() => handleNavigate('home')} className="mr-4 p-2 rounded-lg bg-white/10 hover:bg-white/20">
+              <ArrowLeft className="h-6 w-6" />
+            </button>
+            <div>
+              <h1 className="text-4xl font-bold mb-2">🎹 Constructor d'Acords Extrems</h1>
+              <p className="text-gray-300">Construeix acords ultra-complexos nota per nota</p>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* Piano Interface */}
+            <div className="bg-slate-800/50 rounded-lg p-6">
+              <h2 className="text-2xl font-bold text-red-400 mb-4">Piano Virtual</h2>
+              
+              <div className="mb-6">
+                <div className="text-center mb-4">
+                  <h3 className="text-xl font-semibold">Objectiu: {targetChord || 'Fes clic per començar'}</h3>
+                  <button 
+                    onClick={newChallenge}
+                    className="mt-2 bg-red-600 hover:bg-red-700 px-4 py-2 rounded"
+                  >
+                    Nou Acord
+                  </button>
+                </div>
+              </div>
+
+              {/* Virtual Piano */}
+              <div className="relative bg-gray-900 rounded-lg p-4">
+                <div className="flex justify-center space-x-1">
+                  {chromaticNotes.map((note, index) => {
+                    const isBlack = note.includes('#');
+                    const isSelected = selectedNotes.includes(note);
+                    
+                    return (
+                      <button
+                        key={note}
+                        onClick={() => toggleNote(note)}
+                        className={`
+                          ${isBlack 
+                            ? 'bg-gray-800 text-white w-8 h-20 -mx-2 z-10' 
+                            : 'bg-gray-100 text-black w-12 h-32'
+                          }
+                          ${isSelected ? (isBlack ? 'bg-red-600' : 'bg-red-400') : ''}
+                          border border-gray-400 rounded-b-lg font-semibold text-sm
+                          hover:opacity-80 transition-all relative
+                        `}
+                      >
+                        <span className={`absolute bottom-2 left-1/2 transform -translate-x-1/2 text-xs`}>
+                          {note}
+                        </span>
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+
+              <div className="mt-6">
+                <h3 className="font-semibold mb-2">Notes seleccionades:</h3>
+                <div className="bg-slate-700/50 p-3 rounded-lg min-h-12 flex items-center">
+                  {selectedNotes.length > 0 ? (
+                    <span className="text-red-300 font-mono text-lg">
+                      {selectedNotes.join(' - ')}
+                    </span>
+                  ) : (
+                    <span className="text-gray-500">Selecciona notes al piano...</span>
+                  )}
+                </div>
+              </div>
+
+              <button
+                onClick={checkChord}
+                disabled={selectedNotes.length < 3}
+                className="mt-4 w-full bg-red-600 hover:bg-red-700 disabled:bg-gray-600 px-6 py-3 rounded-lg font-semibold"
+              >
+                Analitzar Acord
+              </button>
+            </div>
+
+            {/* Analysis Panel */}
+            <div className="bg-slate-800/50 rounded-lg p-6">
+              <h2 className="text-2xl font-bold text-rose-400 mb-4">Anàlisi Harmònica</h2>
+              
+              {showAnalysis && selectedNotes.length >= 3 ? (
+                <div className="space-y-4">
+                  <div className="bg-slate-700/50 p-4 rounded-lg">
+                    <h3 className="font-semibold text-rose-300 mb-2">Identificació:</h3>
+                    <p className="text-white text-lg font-mono">{analyzeChord(selectedNotes)}</p>
+                  </div>
+
+                  <div className="bg-slate-700/50 p-4 rounded-lg">
+                    <h3 className="font-semibold text-rose-300 mb-2">Intervals (des de {selectedNotes[0]}):</h3>
+                    <div className="space-y-1">
+                      {selectedNotes.slice(1).map((note, index) => {
+                        const rootIndex = chromaticNotes.indexOf(selectedNotes[0]);
+                        const noteIndex = chromaticNotes.indexOf(note);
+                        const interval = (noteIndex - rootIndex + 12) % 12;
+                        const intervalNames = ['Unison', 'm2', 'M2', 'm3', 'M3', 'P4', 'Tritó', 'P5', 'm6', 'M6', 'm7', 'M7'];
+                        
+                        return (
+                          <div key={index} className="text-sm">
+                            {note}: {intervalNames[interval]} ({interval} semitons)
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+
+                  <div className="bg-slate-700/50 p-4 rounded-lg">
+                    <h3 className="font-semibold text-rose-300 mb-2">Funcions Possibles:</h3>
+                    <ul className="text-sm space-y-1">
+                      <li>• Tònica: {selectedNotes[0]}maj o {selectedNotes[0]}m</li>
+                      <li>• Dominant: V7 de {chromaticNotes[(chromaticNotes.indexOf(selectedNotes[0]) + 7) % 12]}</li>
+                      <li>• Subdominant: IV de {chromaticNotes[(chromaticNotes.indexOf(selectedNotes[0]) + 5) % 12]}</li>
+                    </ul>
+                  </div>
+
+                  <div className="bg-rose-600/20 border border-rose-500/30 p-4 rounded-lg">
+                    <h3 className="font-semibold text-rose-300 mb-2">Puntuació Actual:</h3>
+                    <div className="text-2xl font-bold text-white">{score} punts</div>
+                  </div>
+                </div>
+              ) : (
+                <div className="text-center text-gray-500 py-12">
+                  <Puzzle className="h-16 w-16 mx-auto mb-4 opacity-50" />
+                  <p>Selecciona almenys 3 notes per veure l'anàlisi harmònica...</p>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  };
+
+  // Component Laboratori de Progressions
+  const ProgressionLabComponent = () => {
+    const [currentProgression, setCurrentProgression] = useState<string[]>([]);
+    const [analysisMode, setAnalysisMode] = useState('functional');
+    const [selectedKey, setSelectedKey] = useState('C');
+    const [showVoiceLeading, setShowVoiceLeading] = useState(false);
+
+    const jazzStandards = [
+      { name: "All The Things You Are", progression: ["Fm7", "Bb7", "EbMaj7", "AbMaj7", "Dm7b5", "G7", "CMaj7"] },
+      { name: "Giant Steps", progression: ["BMaj7", "D7", "GMaj7", "Bb7", "EbMaj7"] },
+      { name: "Autumn Leaves", progression: ["Cm7", "F7", "BbMaj7", "EbMaj7", "Am7b5", "D7", "Gm7"] },
+      { name: "Cherokee", progression: ["BbMaj7", "G7", "Cm7", "F7", "Dm7", "G7", "Cm7", "F7"] }
+    ];
+
+    const analyzeProgression = (chords: string[], mode: string) => {
+      if (mode === 'functional') {
+        return chords.map((chord, i) => `${i + 1}. ${chord} → análisi funcional`);
+      }
+      if (mode === 'voice-leading') {
+        return chords.map((chord, i) => `${chord}: moviment de veus`);
+      }
+      return chords.map((chord, i) => `${chord}: substitucions possibles`);
+    };
+
+    const loadStandard = (standard: any) => {
+      setCurrentProgression(standard.progression);
+    };
+
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-cyan-900/30 to-blue-900/20 text-white p-6">
+        <div className="max-w-6xl mx-auto">
+          <div className="flex items-center mb-8">
+            <button onClick={() => handleNavigate('home')} className="mr-4 p-2 rounded-lg bg-white/10 hover:bg-white/20">
+              <ArrowLeft className="h-6 w-6" />
+            </button>
+            <div>
+              <h1 className="text-4xl font-bold mb-2">🔬 Laboratori de Progressions</h1>
+              <p className="text-gray-300">Analitza cadenes harmòniques complexes amb eines professionals</p>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {/* Standards Library */}
+            <div className="bg-slate-800/50 rounded-lg p-6">
+              <h2 className="text-xl font-bold text-cyan-400 mb-4">Biblioteca d'Standards</h2>
+              
+              <div className="space-y-3">
+                {jazzStandards.map((standard, index) => (
+                  <button
+                    key={index}
+                    onClick={() => loadStandard(standard)}
+                    className="w-full bg-slate-700/50 hover:bg-slate-600/50 p-3 rounded-lg text-left"
+                  >
+                    <div className="font-semibold text-cyan-300">{standard.name}</div>
+                    <div className="text-sm text-gray-400 mt-1">
+                      {standard.progression.slice(0, 3).join(' - ')}...
+                    </div>
+                  </button>
+                ))}
+              </div>
+
+              <div className="mt-6">
+                <h3 className="font-semibold mb-3">Controls d'Anàlisi:</h3>
+                <select 
+                  value={analysisMode}
+                  onChange={(e) => setAnalysisMode(e.target.value)}
+                  className="w-full bg-slate-700 rounded p-2 mb-3"
+                >
+                  <option value="functional">Anàlisi Funcional</option>
+                  <option value="voice-leading">Voice Leading</option>
+                  <option value="substitutions">Substitucions</option>
+                </select>
+
+                <select 
+                  value={selectedKey}
+                  onChange={(e) => setSelectedKey(e.target.value)}
+                  className="w-full bg-slate-700 rounded p-2 mb-3"
+                >
+                  {chromaticNotes.map(note => (
+                    <option key={note} value={note}>{note} Major</option>
+                  ))}
+                </select>
+
+                <button
+                  onClick={() => setShowVoiceLeading(!showVoiceLeading)}
+                  className="w-full bg-cyan-600 hover:bg-cyan-700 px-4 py-2 rounded"
+                >
+                  {showVoiceLeading ? 'Amagar' : 'Mostrar'} Voice Leading
+                </button>
+              </div>
+            </div>
+
+            {/* Progression Display */}
+            <div className="lg:col-span-2 bg-slate-800/50 rounded-lg p-6">
+              <h2 className="text-xl font-bold text-blue-400 mb-4">Progressió Actual</h2>
+              
+              {currentProgression.length > 0 ? (
+                <div className="space-y-6">
+                  <div className="grid grid-cols-4 gap-3">
+                    {currentProgression.map((chord, index) => (
+                      <div key={index} className="bg-slate-700/50 p-4 rounded-lg text-center">
+                        <div className="text-lg font-bold text-blue-300">{chord}</div>
+                        <div className="text-sm text-gray-400 mt-1">Comp {index + 1}</div>
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="bg-slate-700/30 rounded-lg p-6">
+                    <h3 className="font-semibold text-blue-300 mb-3">
+                      Anàlisi {analysisMode === 'functional' ? 'Funcional' : analysisMode === 'voice-leading' ? 'Voice Leading' : 'Substitucions'}:
+                    </h3>
+                    
+                    <div className="space-y-2">
+                      {analyzeProgression(currentProgression, analysisMode).map((analysis, index) => (
+                        <div key={index} className="text-sm bg-slate-800/50 p-2 rounded">
+                          {analysis}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  {showVoiceLeading && (
+                    <div className="bg-blue-600/20 border border-blue-500/30 rounded-lg p-6">
+                      <h3 className="font-semibold text-blue-300 mb-3">Moviment de Veus:</h3>
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                          <h4 className="font-semibold mb-2">Soprano:</h4>
+                          <div className="text-sm font-mono bg-slate-800/50 p-2 rounded">
+                            {currentProgression.map((_, i) => `${5 + i % 3}`).join(' → ')}
+                          </div>
+                        </div>
+                        <div>
+                          <h4 className="font-semibold mb-2">Bass:</h4>
+                          <div className="text-sm font-mono bg-slate-800/50 p-2 rounded">
+                            {currentProgression.map(chord => chord.charAt(0)).join(' → ')}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <div className="text-center text-gray-500 py-12">
+                  <Music className="h-16 w-16 mx-auto mb-4 opacity-50" />
+                  <p>Selecciona un standard per començar l'anàlisi harmònica...</p>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  };
 
   // Component de la Caça del Tresor Musical
   const EasterHuntComponent = () => {
@@ -2197,6 +2574,14 @@ function App() {
     
     if (mode === 'easter-hunt') {
       return <EasterHuntComponent />;
+    }
+    
+    if (mode === 'chord-builder') {
+      return <ChordBuilderComponent />;
+    }
+    
+    if (mode === 'progression-lab') {
+      return <ProgressionLabComponent />;
     }
 
     if (mode === 'analysis-master') {
