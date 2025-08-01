@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Gamepad2, Heart, Zap } from 'lucide-react';
+import { useGame } from '@/contexts/GameContext';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Progress } from '@/components/ui/progress';
 
 const questions = [
   { q: 'Quants semitons té una 5a perfecta?', a: '7', options: ['5', '6', '7', '8'] },
@@ -10,6 +14,7 @@ const questions = [
 ];
 
 export default function ArcadeGame() {
+  const { completeExercise, addAchievement } = useGame();
   const [lives, setLives] = useState(3);
   const [score, setScore] = useState(0);
   const [level, setLevel] = useState(1);
@@ -18,6 +23,7 @@ export default function ArcadeGame() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [gameOver, setGameOver] = useState(false);
   const [questionPool, setQuestionPool] = useState<any[]>([]);
+  const [startTime, setStartTime] = useState(0);
 
   useEffect(() => {
     if (isPlaying && timeLeft > 0) {
@@ -35,6 +41,7 @@ export default function ArcadeGame() {
     setScore(0);
     setLevel(1);
     setCurrentQuestion(0);
+    setStartTime(Date.now());
     generateQuestions();
     setTimeLeft(10);
   };

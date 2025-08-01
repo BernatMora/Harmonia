@@ -1,9 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { Target, Crosshair } from 'lucide-react';
+import { useGame } from '@/contexts/GameContext';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Progress } from '@/components/ui/progress';
 
 const notes = ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B'];
 
 export default function TargetGame() {
+  const { completeExercise, addAchievement } = useGame();
   const [targetNote, setTargetNote] = useState('');
   const [score, setScore] = useState(0);
   const [timeLeft, setTimeLeft] = useState(30);
@@ -11,6 +16,7 @@ export default function TargetGame() {
   const [gameOver, setGameOver] = useState(false);
   const [hits, setHits] = useState(0);
   const [misses, setMisses] = useState(0);
+  const [startTime, setStartTime] = useState(0);
 
   useEffect(() => {
     if (isPlaying && timeLeft > 0) {
@@ -29,6 +35,7 @@ export default function TargetGame() {
     setHits(0);
     setMisses(0);
     setTimeLeft(30);
+    setStartTime(Date.now());
     generateTarget();
   };
 
@@ -37,12 +44,31 @@ export default function TargetGame() {
     setTargetNote(randomNote);
   };
 
-  const handleNoteClick = (note: string) => {
+  const handleNoteClick = async (note: string) => {
     if (!isPlaying) return;
 
     if (note === targetNote) {
-      setScore(score + 10);
-      setHits(hits + 1);
+      const newScore = score + 10;
+      const newHits = hits + 1;
+      setScore(newScore);
+      setHits(newHits);
+      
+      // Save progress
+      try {
+        await completeExercise(10, (Date.now() - startTime) / 1000);
+      } catch (error) {
+        console.warn('Failed to save exercise progress:', error);
+      }
+      
+      // Check for achievements
+      if (newHits >= 20 && hits < 20) {
+        try {
+          await addAchievement('Tirador Expert - 20 notes encertades');
+        } catch (error) {
+          console.warn('Failed to save achievement:', error);
+        }
+      }
+      
       generateTarget();
     } else {
       setScore(Math.max(0, score - 5));

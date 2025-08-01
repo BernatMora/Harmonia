@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import { Puzzle, CheckCircle, RotateCcw } from 'lucide-react';
+import { useGame } from '@/contexts/GameContext';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
 
 const progressions = [
   {
@@ -28,10 +31,12 @@ const availableChords = {
 };
 
 export default function PuzzleGame() {
+  const { completeExercise, addAchievement } = useGame();
   const [currentPuzzle, setCurrentPuzzle] = useState(0);
   const [playerChords, setPlayerChords] = useState<string[]>([]);
   const [isComplete, setIsComplete] = useState(false);
   const [score, setScore] = useState(0);
+  const [startTime] = useState(Date.now());
 
   const puzzle = progressions[currentPuzzle];
   const chords = availableChords[puzzle.key as keyof typeof availableChords];
@@ -53,11 +58,28 @@ export default function PuzzleGame() {
     setIsComplete(false);
   };
 
-  const checkSolution = (chords: string[]) => {
+  const checkSolution = async (chords: string[]) => {
     const isCorrect = chords.every((chord, index) => chord === puzzle.correct[index]);
     if (isCorrect) {
       setIsComplete(true);
-      setScore(score + 100);
+      const newScore = score + 100;
+      setScore(newScore);
+      
+      // Save progress
+      try {
+        await completeExercise(100, (Date.now() - startTime) / 1000);
+      } catch (error) {
+        console.warn('Failed to save exercise progress:', error);
+      }
+      
+      // Check for achievements
+      if (currentPuzzle === progressions.length - 1 && newScore >= 300) {
+        try {
+          await addAchievement('Mestre dels Trencaclosques - Tots els reptes completats');
+        } catch (error) {
+          console.warn('Failed to save achievement:', error);
+        }
+      }
     }
   };
 

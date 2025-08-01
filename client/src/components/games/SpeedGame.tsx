@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Clock, Zap, Trophy } from 'lucide-react';
+import { useGame } from '@/contexts/GameContext';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Progress } from '@/components/ui/progress';
 
 const intervals = [
   { name: '2a major', semitones: 2, example: 'C-D' },
@@ -13,12 +17,14 @@ const intervals = [
 ];
 
 export default function SpeedGame() {
+  const { completeExercise, addAchievement } = useGame();
   const [timeLeft, setTimeLeft] = useState(60);
   const [score, setScore] = useState(0);
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const [gameOver, setGameOver] = useState(false);
   const [questions, setQuestions] = useState<any[]>([]);
+  const [startTime, setStartTime] = useState<number>(0);
 
   useEffect(() => {
     generateQuestions();
@@ -59,46 +65,72 @@ export default function SpeedGame() {
     setScore(0);
     setCurrentQuestion(0);
     setTimeLeft(60);
+    setStartTime(Date.now());
     generateQuestions();
   };
 
-  const handleAnswer = (answer: string) => {
-    if (answer === questions[currentQuestion]?.correct) {
-      setScore(score + 10);
+  const handleAnswer = async (answer: string) => {
+    const isCorrect = answer === questions[currentQuestion]?.correct;
+    const newScore = isCorrect ? score + 10 : score;
+    
+    if (isCorrect) {
+      setScore(newScore);
+      // Save each correct answer
+      try {
+        await completeExercise(10, (Date.now() - startTime) / 1000);
+      } catch (error) {
+        console.warn('Failed to save exercise progress:', error);
+      }
     }
+    
     setCurrentQuestion(currentQuestion + 1);
+    
+    // Check for achievements
+    if (newScore >= 100 && score < 100) {
+      try {
+        await addAchievement('Velocitat Centurió - 100 punts en velocitat');
+      } catch (error) {
+        console.warn('Failed to save achievement:', error);
+      }
+    }
   };
 
   if (gameOver) {
     return (
-      <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10 text-center">
-        <Trophy className="w-16 h-16 text-yellow-400 mx-auto mb-4" />
-        <h2 className="text-2xl font-bold text-white mb-4">Joc Acabat!</h2>
-        <p className="text-xl text-white mb-2">Puntuació Final: {score}</p>
-        <p className="text-white/60 mb-6">Preguntes correctes: {score / 10}</p>
-        <button
-          onClick={startGame}
-          className="px-6 py-3 bg-yellow-500 hover:bg-yellow-600 text-white font-bold rounded-lg transition-colors"
-        >
-          Jugar Altra Vegada
-        </button>
-      </div>
+      <Card className="bg-slate-800/50 border-slate-700">
+        <CardContent className="p-8 text-center">
+          <Trophy className="w-16 h-16 text-yellow-400 mx-auto mb-4" />
+          <CardTitle className="text-2xl text-white mb-4">Joc Acabat!</CardTitle>
+          <p className="text-xl text-white mb-2">Puntuació Final: {score}</p>
+          <p className="text-gray-400 mb-6">Preguntes correctes: {score / 10}</p>
+          <Button
+            onClick={startGame}
+            className="bg-yellow-500 hover:bg-yellow-600 text-white font-bold"
+            size="lg"
+          >
+            Jugar Altra Vegada
+          </Button>
+        </CardContent>
+      </Card>
     );
   }
 
   if (!isPlaying) {
     return (
-      <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10 text-center">
-        <Zap className="w-16 h-16 text-yellow-400 mx-auto mb-4" />
-        <h2 className="text-2xl font-bold text-white mb-4">Velocitat Musical</h2>
-        <p className="text-white/80 mb-6">Respon tantes preguntes com puguis en 60 segons!</p>
-        <button
-          onClick={startGame}
-          className="px-8 py-4 bg-yellow-500 hover:bg-yellow-600 text-white font-bold rounded-lg transition-colors text-lg"
-        >
-          Començar Joc
-        </button>
-      </div>
+      <Card className="bg-slate-800/50 border-slate-700">
+        <CardContent className="p-8 text-center">
+          <Zap className="w-16 h-16 text-yellow-400 mx-auto mb-4" />
+          <CardTitle className="text-2xl text-white mb-4">Velocitat Musical</CardTitle>
+          <p className="text-gray-300 mb-6">Respon tantes preguntes com puguis en 60 segons!</p>
+          <Button
+            onClick={startGame}
+            className="bg-yellow-500 hover:bg-yellow-600 text-white font-bold text-lg"
+            size="lg"
+          >
+            Començar Joc
+          </Button>
+        </CardContent>
+      </Card>
     );
   }
 
@@ -106,42 +138,36 @@ export default function SpeedGame() {
   if (!question) return null;
 
   return (
-    <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-      {/* Header */}
-      <div className="flex justify-between items-center mb-6">
-        <div className="flex items-center gap-2">
-          <Clock className="w-5 h-5 text-yellow-400" />
-          <span className="text-white font-bold">{timeLeft}s</span>
+    <Card className="bg-slate-800/50 border-slate-700">
+      <CardHeader>
+        <div className="flex justify-between items-center">
+          <div className="flex items-center gap-2">
+            <Clock className="w-5 h-5 text-yellow-400" />
+            <span className="text-white font-bold">{timeLeft}s</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <Trophy className="w-5 h-5 text-yellow-400" />
+            <span className="text-white font-bold">{score}</span>
+          </div>
         </div>
-        <div className="flex items-center gap-2">
-          <Trophy className="w-5 h-5 text-yellow-400" />
-          <span className="text-white font-bold">{score}</span>
-        </div>
-      </div>
-
-      {/* Progress */}
-      <div className="w-full bg-white/10 rounded-full h-2 mb-6">
-        <div 
-          className="bg-yellow-400 h-2 rounded-full transition-all duration-300"
-          style={{ width: `${(timeLeft / 60) * 100}%` }}
-        />
-      </div>
-
-      {/* Question */}
-      <div className="mb-6">
-        <h3 className="text-xl font-bold text-white mb-4">{question.question}</h3>
+        <Progress value={(timeLeft / 60) * 100} className="mt-4" />
+      </CardHeader>
+      
+      <CardContent>
+        <CardTitle className="text-xl text-white mb-4">{question.question}</CardTitle>
         <div className="grid grid-cols-2 gap-3">
           {question.options.map((option: string, index: number) => (
-            <button
+            <Button
               key={index}
               onClick={() => handleAnswer(option)}
-              className="p-4 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white font-semibold transition-colors"
+              variant="outline"
+              className="p-4 bg-slate-700/50 hover:bg-slate-600 border-slate-600 text-white font-semibold h-auto"
             >
               {option}
-            </button>
+            </Button>
           ))}
         </div>
-      </div>
-    </div>
+      </CardContent>
+    </Card>
   );
 }
