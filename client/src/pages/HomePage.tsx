@@ -76,25 +76,24 @@ export default function HomePage() {
           
           return (
             <Link key={game.id} href={game.path}>
-              <Card className="bg-slate-800/50 border-slate-700 hover:bg-slate-800/70 transition-all duration-200 cursor-pointer group">
-                <CardHeader className="pb-4">
-                  <div className={`w-12 h-12 rounded-lg ${game.color} flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-200`}>
-                    <IconComponent className="h-6 w-6" />
-                  </div>
-                  <CardTitle className="text-white text-xl">{game.title}</CardTitle>
-                  <CardDescription className="text-gray-400">
-                    {game.description}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <Button 
-                    className="w-full bg-white/10 hover:bg-white/20 text-white border-0"
-                    variant="outline"
-                  >
-                    Començar
-                  </Button>
-                </CardContent>
-              </Card>
+              <div className="block w-full h-full">
+                <Card className="bg-slate-800/50 border-slate-700 hover:bg-slate-800/70 transition-all duration-200 cursor-pointer group h-full">
+                  <CardHeader className="pb-4">
+                    <div className={`w-12 h-12 rounded-lg ${game.color} flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-200`}>
+                      <IconComponent className="h-6 w-6" />
+                    </div>
+                    <CardTitle className="text-white text-xl">{game.title}</CardTitle>
+                    <CardDescription className="text-gray-400">
+                      {game.description}
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="w-full bg-white/10 hover:bg-white/20 text-white border-0 rounded-md py-2 px-4 text-center transition-colors">
+                      Començar
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
             </Link>
           );
         })}

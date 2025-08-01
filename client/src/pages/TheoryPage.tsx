@@ -54,11 +54,11 @@ export default function TheoryPage() {
   };
 
   const isLevelCompleted = (levelId: number) => {
-    return stats?.completedLevels?.includes(levelId.toString()) || false;
+    return (stats as any)?.completedLevels?.includes(levelId.toString()) || false;
   };
 
   const getLevelProgress = (levelId: number) => {
-    const progress = userProgress?.find((p: any) => p.levelId === levelId);
+    const progress = (userProgress as any[])?.find((p: any) => p.levelId === levelId);
     return progress?.score || 0;
   };
 
@@ -81,7 +81,7 @@ export default function TheoryPage() {
         
         <div className="text-right">
           <div className="text-white font-semibold">Puntuació Total</div>
-          <div className="text-2xl font-bold text-blue-400">{stats?.totalScore || 0}</div>
+          <div className="text-2xl font-bold text-blue-400">{(stats as any)?.totalScore || 0}</div>
         </div>
       </div>
 
@@ -96,15 +96,15 @@ export default function TheoryPage() {
         <CardContent>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div className="text-center">
-              <div className="text-2xl font-bold text-white">{stats?.completedLevels?.length || 0}</div>
+              <div className="text-2xl font-bold text-white">{(stats as any)?.completedLevels?.length || 0}</div>
               <div className="text-gray-400">Nivells Completats</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-white">{stats?.streakCount || 0}</div>
+              <div className="text-2xl font-bold text-white">{(stats as any)?.streakCount || 0}</div>
               <div className="text-gray-400">Ratxa Actual</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-white">{stats?.achievements?.length || 0}</div>
+              <div className="text-2xl font-bold text-white">{(stats as any)?.achievements?.length || 0}</div>
               <div className="text-gray-400">Assoliments</div>
             </div>
           </div>
