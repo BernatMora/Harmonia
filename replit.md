@@ -109,3 +109,12 @@ shared/
   - **Interactive Challenges**: 15 total game modes now available, each requiring deep musical analysis and creative problem-solving
   - **Guitar-Specific Focus**: Specialized for jazz guitarist with authentic fingerings, positions, and guitar-centric harmonic concepts
   - **Personal Learning Focus**: Designed for single advanced user with personalized difficulty that scales infinitely
+- **2025-08-01**: Revolutionary AI-powered dynamic question generation system:
+  - **OpenAI Integration**: Complete GPT-4o integration for generating unique questions each session
+  - **Zero Repetition Guarantee**: Advanced caching system ensures no question repeats between sessions
+  - **Professional Jazz Focus**: AI generates ultra-advanced questions on negative harmony, voice leading, Giant Steps analysis
+  - **Intelligent Fallback**: System gracefully falls back to static questions if API unavailable
+  - **User Control**: Toggle option for dynamic vs static questions in Theory and Speed modes
+  - **Visual Indicators**: Clear UI feedback when using AI-generated content
+  - **Performance Optimized**: Questions generate in ~2 minutes, cached for immediate reuse within session
+  - **Cost Effective**: Approximately $0.01 per session for 10 unique professional-level questions
