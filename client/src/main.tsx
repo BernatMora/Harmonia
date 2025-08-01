@@ -3,12 +3,12 @@ import { createRoot } from 'react-dom/client';
 import App from './App.tsx';
 import './index.css';
 
-// Registrar Service Worker per funcionalitat offline
-if ('serviceWorker' in navigator) {
+// Service Worker registration for offline functionality (optional)
+if ('serviceWorker' in navigator && import.meta.env.PROD) {
   window.addEventListener('load', () => {
     navigator.serviceWorker.register('/sw.js')
       .then((registration) => {
-        console.log('SW registrat amb èxit: ', registration);
+        console.log('SW registered successfully: ', registration);
       })
       .catch((registrationError) => {
         console.log('SW registration failed: ', registrationError);
