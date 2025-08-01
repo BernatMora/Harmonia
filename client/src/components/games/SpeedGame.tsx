@@ -258,7 +258,7 @@ export default function SpeedGame() {
     // Seleccionar 10 tipus de pregunta aleatòris i generar una pregunta de cada tipus
     const selectedTypes = [...questionTypes].sort(() => 0.5 - Math.random()).slice(0, 10);
     const newQuestions = selectedTypes.map(type => type.generate());
-    
+
     // Barrejar l'ordre de les preguntes generades
     const shuffledQuestions = newQuestions.sort(() => 0.5 - Math.random());
     setQuestions(shuffledQuestions);
@@ -271,13 +271,14 @@ export default function SpeedGame() {
     setCurrentQuestion(0);
     setTimeLeft(60);
     setStartTime(Date.now());
+    // Sempre generar noves preguntes
     generateQuestions();
   };
 
   const handleAnswer = async (answer: string) => {
     const isCorrect = answer === questions[currentQuestion]?.correct;
     const newScore = isCorrect ? score + 10 : score;
-    
+
     if (isCorrect) {
       setScore(newScore);
       // Save each correct answer
@@ -287,9 +288,9 @@ export default function SpeedGame() {
         console.warn('Failed to save exercise progress:', error);
       }
     }
-    
+
     setCurrentQuestion(currentQuestion + 1);
-    
+
     // Check for achievements
     if (newScore >= 100 && score < 100) {
       try {
@@ -357,7 +358,7 @@ export default function SpeedGame() {
         </div>
         <Progress value={(timeLeft / 60) * 100} className="mt-4" />
       </CardHeader>
-      
+
       <CardContent>
         <CardTitle className="text-xl text-white mb-2">{question.question}</CardTitle>
         {question.hint && (

@@ -96,13 +96,21 @@ export default function ArcadeGame() {
     setLevel(1);
     setCurrentQuestion(0);
     setStartTime(Date.now());
+    // Sempre generar noves preguntes quan es comença
     generateQuestions();
     setTimeLeft(10);
   };
 
   const generateQuestions = () => {
-    // Seleccionar 10 preguntes aleatòries del pool total
-    const shuffled = [...allQuestions].sort(() => 0.5 - Math.random());
+    // Seleccionar 10 preguntes aleatòries del pool total amb millor barreja
+    const shuffled = [...allQuestions];
+    
+    // Algoritme Fisher-Yates per millor aleatorietat
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    
     const selectedQuestions = shuffled.slice(0, 10);
     setQuestionPool(selectedQuestions);
   };
@@ -140,6 +148,7 @@ export default function ArcadeGame() {
     if (currentQuestion < questionPool.length - 1) {
       setCurrentQuestion(currentQuestion + 1);
     } else {
+      // Regenerar noves preguntes quan s'acaben
       generateQuestions();
       setCurrentQuestion(0);
     }

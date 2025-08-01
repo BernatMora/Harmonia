@@ -38,20 +38,42 @@ export default function MemoryGame() {
   const [showingSequence, setShowingSequence] = useState(false);
   const [startTime, setStartTime] = useState<number>(0);
   const [availableChords, setAvailableChords] = useState(allChords.slice(0, 8));
+  const [level, setLevel] = useState(1);
+  const [pattern, setPattern] = useState<string[]>([]);
+  const [playerInput, setPlayerInput] = useState<string[]>([]);
+  const [currentStep, setCurrentStep] = useState(0);
+  const [showPattern, setShowPattern] = useState(false);
 
+  const generatePattern = () => {
+    const notes = ['C', 'D', 'E', 'F', 'G', 'A', 'B'];
+    const newPattern = [];
+    const patternLength = Math.min(level + 2, 8);
+
+    // Generar patró completament nou cada vegada
+    for (let i = 0; i < patternLength; i++) {
+      // Assegurar que no es repeteixi la mateixa nota consecutivament
+      let randomNote;
+      do {
+        randomNote = notes[Math.floor(Math.random() * notes.length)];
+      } while (i > 0 && randomNote === newPattern[i - 1]);
+
+      newPattern.push(randomNote);
+    }
+
+    setPattern(newPattern);
+    setPlayerInput([]);
+  };
+  
   const startGame = () => {
-    setSequence([]);
-    setPlayerSequence([]);
-    setScore(0);
-    setGameOver(false);
     setIsPlaying(true);
-    setStartTime(Date.now());
-    
-    // Seleccionar 8 acords aleatoris del pool total per aquesta partida
-    const selectedChords = [...allChords].sort(() => 0.5 - Math.random()).slice(0, 8);
-    setAvailableChords(selectedChords);
-    
-    addToSequence();
+    setGameOver(false);
+    setScore(0);
+    setLevel(1);
+    setShowPattern(true);
+    setPlayerInput([]);
+    setCurrentStep(0);
+    // Sempre generar nou patró
+    generatePattern();
   };
 
   const addToSequence = () => {
@@ -65,7 +87,7 @@ export default function MemoryGame() {
   const showSequence = (seq: string[]) => {
     setShowingSequence(true);
     setIsPlayerTurn(false);
-    
+
     seq.forEach((chord, index) => {
       setTimeout(() => {
         // Aquí es podria afegir so o animació
@@ -96,14 +118,14 @@ export default function MemoryGame() {
     if (newPlayerSequence.length === sequence.length) {
       const newScore = score + 1;
       setScore(newScore);
-      
+
       // Save progress
       try {
         await completeExercise(20, (Date.now() - startTime) / 1000);
       } catch (error) {
         console.warn('Failed to save exercise progress:', error);
       }
-      
+
       // Check for achievements
       if (newScore >= 10 && score < 10) {
         try {
@@ -112,7 +134,7 @@ export default function MemoryGame() {
           console.warn('Failed to save achievement:', error);
         }
       }
-      
+
       setTimeout(() => {
         addToSequence();
       }, 1000);
