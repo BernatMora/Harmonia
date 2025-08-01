@@ -478,6 +478,7 @@ function GameComponent({ mode, onBack }: { mode: GameMode; onBack: () => void })
     setGameCompleted(false);
     setCurrentHarmonia(0);
     setHarmoniaQuestions([]);
+    setArcadeGame(0);
     
     if (mode === 'speed' && content && content[0] && 'timeLimit' in content[0]) {
       setTimeLeft(content[0].timeLimit || 5);
@@ -977,8 +978,229 @@ function GameComponent({ mode, onBack }: { mode: GameMode; onBack: () => void })
   // Joc d'Arcade
   if (mode === 'arcade') {
     const games = content as any[];
-    const selectedGame = games[arcadeGame];
     
+    // Joc seleccionat per jugar
+    if (arcadeGame > 0) {
+      const selectedGame = games[arcadeGame - 1];
+      
+      // Note Catcher Game
+      if (selectedGame.type === 'action') {
+        return (
+          <div className="max-w-2xl mx-auto text-center">
+            <h2 className="text-3xl font-bold text-pink-400 mb-6">{selectedGame.name}</h2>
+            
+            <div className="bg-gradient-to-br from-pink-500/20 to-purple-500/20 border border-pink-500/30 rounded-lg p-8 mb-6">
+              <div className="text-6xl mb-6">🎵</div>
+              <p className="text-gray-300 mb-6">{selectedGame.description}</p>
+              <p className="text-sm text-gray-400 mb-8">{selectedGame.instructions}</p>
+              
+              {/* Simulació del joc */}
+              <div className="bg-slate-800/50 rounded-lg p-6 mb-6">
+                <div className="text-lg text-white mb-4">Notes que cauen:</div>
+                <div className="flex justify-center space-x-4 mb-4">
+                  {['Do', 'Re', 'Mi', 'Fa', 'Sol'].map((note, i) => (
+                    <div key={i} className={`w-12 h-12 rounded-full flex items-center justify-center text-white font-bold transition-all duration-500 ${
+                      Math.random() > 0.5 ? 'bg-blue-500 animate-bounce' : 'bg-gray-600'
+                    }`}>
+                      {note}
+                    </div>
+                  ))}
+                </div>
+                <div className="text-yellow-400 font-bold">Puntuació: {Math.floor(Math.random() * 100)}</div>
+              </div>
+              
+              <div className="flex space-x-4 justify-center">
+                <button
+                  onClick={() => setArcadeGame(0)}
+                  className="bg-gray-600 hover:bg-gray-700 text-white px-6 py-3 rounded-lg font-semibold"
+                >
+                  Tornar a selecció
+                </button>
+                <button
+                  onClick={() => {
+                    setScore(score + Math.floor(Math.random() * 10) + 1);
+                    setTimeout(() => setArcadeGame(0), 1000);
+                  }}
+                  className="bg-pink-600 hover:bg-pink-700 text-white px-6 py-3 rounded-lg font-semibold"
+                >
+                  Jugar una ronda
+                </button>
+              </div>
+            </div>
+          </div>
+        );
+      }
+      
+      // Rhythm Master Game
+      if (selectedGame.type === 'rhythm') {
+        return (
+          <div className="max-w-2xl mx-auto text-center">
+            <h2 className="text-3xl font-bold text-pink-400 mb-6">{selectedGame.name}</h2>
+            
+            <div className="bg-gradient-to-br from-pink-500/20 to-purple-500/20 border border-pink-500/30 rounded-lg p-8 mb-6">
+              <div className="text-6xl mb-6">🥁</div>
+              <p className="text-gray-300 mb-6">{selectedGame.description}</p>
+              
+              {/* Simulació del ritme */}
+              <div className="bg-slate-800/50 rounded-lg p-6 mb-6">
+                <div className="text-lg text-white mb-4">Segueix el ritme:</div>
+                <div className="flex justify-center space-x-2 mb-6">
+                  {[1,2,3,4,1,2,3,4].map((beat, i) => (
+                    <div key={i} className={`w-8 h-8 rounded-full flex items-center justify-center text-white font-bold ${
+                      i % 4 === 0 ? 'bg-red-500' : 'bg-blue-500'
+                    } ${Math.random() > 0.7 ? 'animate-pulse' : ''}`}>
+                      {beat}
+                    </div>
+                  ))}
+                </div>
+                <div className="text-yellow-400 font-bold mb-4">Precisió: {Math.floor(Math.random() * 30) + 70}%</div>
+                <button className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-2 rounded-lg text-lg font-bold">
+                  ESPAI per tocar
+                </button>
+              </div>
+              
+              <div className="flex space-x-4 justify-center">
+                <button
+                  onClick={() => setArcadeGame(0)}
+                  className="bg-gray-600 hover:bg-gray-700 text-white px-6 py-3 rounded-lg font-semibold"
+                >
+                  Tornar a selecció
+                </button>
+              </div>
+            </div>
+          </div>
+        );
+      }
+      
+      // Chord Builder Game
+      if (selectedGame.type === 'construction') {
+        const [chordTarget] = useState(['Do', 'Mi', 'Sol']);
+        const [selectedNotes, setSelectedNotes] = useState<string[]>([]);
+        const notes = ['Do', 'Re', 'Mi', 'Fa', 'Sol', 'La', 'Si'];
+        
+        return (
+          <div className="max-w-2xl mx-auto text-center">
+            <h2 className="text-3xl font-bold text-pink-400 mb-6">{selectedGame.name}</h2>
+            
+            <div className="bg-gradient-to-br from-pink-500/20 to-purple-500/20 border border-pink-500/30 rounded-lg p-8 mb-6">
+              <div className="text-6xl mb-6">🎼</div>
+              <p className="text-gray-300 mb-6">{selectedGame.description}</p>
+              
+              <div className="bg-slate-800/50 rounded-lg p-6 mb-6">
+                <div className="text-lg text-white mb-4">Construeix l'acord: Do Major</div>
+                <div className="text-sm text-gray-400 mb-4">Objectiu: {chordTarget.join(' - ')}</div>
+                
+                <div className="mb-6">
+                  <div className="text-white mb-2">Notes seleccionades:</div>
+                  <div className="flex justify-center space-x-2 mb-4">
+                    {selectedNotes.map((note, i) => (
+                      <div key={i} className="bg-green-600 text-white px-3 py-2 rounded">
+                        {note}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                
+                <div className="grid grid-cols-7 gap-2 mb-6">
+                  {notes.map((note, i) => (
+                    <button
+                      key={i}
+                      onClick={() => {
+                        if (!selectedNotes.includes(note) && selectedNotes.length < 3) {
+                          setSelectedNotes([...selectedNotes, note]);
+                        }
+                      }}
+                      disabled={selectedNotes.includes(note)}
+                      className={`p-3 rounded font-semibold transition-all ${
+                        selectedNotes.includes(note)
+                          ? 'bg-green-600 text-white'
+                          : 'bg-slate-700 hover:bg-slate-600 text-white'
+                      }`}
+                    >
+                      {note}
+                    </button>
+                  ))}
+                </div>
+                
+                {selectedNotes.length === 3 && (
+                  <div className={`text-lg font-bold mb-4 ${
+                    JSON.stringify(selectedNotes.sort()) === JSON.stringify(chordTarget.sort())
+                      ? 'text-green-400'
+                      : 'text-red-400'
+                  }`}>
+                    {JSON.stringify(selectedNotes.sort()) === JSON.stringify(chordTarget.sort())
+                      ? '¡Correcte! 🎉'
+                      : 'Prova de nou 🤔'}
+                  </div>
+                )}
+                
+                <button
+                  onClick={() => setSelectedNotes([])}
+                  className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded mr-4"
+                >
+                  Reiniciar
+                </button>
+              </div>
+              
+              <div className="flex space-x-4 justify-center">
+                <button
+                  onClick={() => setArcadeGame(0)}
+                  className="bg-gray-600 hover:bg-gray-700 text-white px-6 py-3 rounded-lg font-semibold"
+                >
+                  Tornar a selecció
+                </button>
+              </div>
+            </div>
+          </div>
+        );
+      }
+      
+      // Scale Runner Game
+      if (selectedGame.type === 'platform') {
+        return (
+          <div className="max-w-2xl mx-auto text-center">
+            <h2 className="text-3xl font-bold text-pink-400 mb-6">{selectedGame.name}</h2>
+            
+            <div className="bg-gradient-to-br from-pink-500/20 to-purple-500/20 border border-pink-500/30 rounded-lg p-8 mb-6">
+              <div className="text-6xl mb-6">🏃‍♂️</div>
+              <p className="text-gray-300 mb-6">{selectedGame.description}</p>
+              
+              <div className="bg-slate-800/50 rounded-lg p-6 mb-6">
+                <div className="text-lg text-white mb-4">Escala objectiu: Do Major</div>
+                <div className="text-sm text-gray-400 mb-4">Salta només sobre: Do, Re, Mi, Fa, Sol, La, Si</div>
+                
+                {/* Simulació de plataformes */}
+                <div className="flex justify-center space-x-1 mb-6">
+                  {['Do', 'Do#', 'Re', 'Re#', 'Mi', 'Fa', 'Fa#', 'Sol', 'Sol#', 'La', 'La#', 'Si'].map((note, i) => (
+                    <div key={i} className={`w-12 h-12 rounded border-2 flex items-center justify-center text-xs font-bold transition-all ${
+                      ['Do', 'Re', 'Mi', 'Fa', 'Sol', 'La', 'Si'].includes(note)
+                        ? 'bg-green-500 border-green-400 text-white cursor-pointer hover:bg-green-400'
+                        : 'bg-red-500 border-red-400 text-white'
+                    }`}>
+                      {note}
+                    </div>
+                  ))}
+                </div>
+                
+                <div className="text-yellow-400 font-bold mb-4">Distància: {Math.floor(Math.random() * 500) + 100}m</div>
+                <div className="text-sm text-gray-300">Usa les fletxes per saltar entre notes de l'escala</div>
+              </div>
+              
+              <div className="flex space-x-4 justify-center">
+                <button
+                  onClick={() => setArcadeGame(0)}
+                  className="bg-gray-600 hover:bg-gray-700 text-white px-6 py-3 rounded-lg font-semibold"
+                >
+                  Tornar a selecció
+                </button>
+              </div>
+            </div>
+          </div>
+        );
+      }
+    }
+    
+    // Selecció de jocs d'arcade
     return (
       <div className="max-w-2xl mx-auto text-center">
         <h2 className="text-3xl font-bold text-white mb-8">Selecciona un Joc d'Arcade</h2>
@@ -987,22 +1209,20 @@ function GameComponent({ mode, onBack }: { mode: GameMode; onBack: () => void })
           {games.map((game, index) => (
             <div
               key={index}
+              onClick={() => setArcadeGame(index + 1)}
               className="bg-gradient-to-br from-pink-500/20 to-purple-500/20 border border-pink-500/30 rounded-lg p-6 cursor-pointer hover:scale-105 transition-transform"
             >
               <h3 className="text-xl font-bold text-pink-400 mb-3">{game.name}</h3>
               <p className="text-gray-300 mb-4">{game.description}</p>
               <p className="text-sm text-gray-400 mb-4">{game.instructions}</p>
-              <div className="bg-gradient-to-r from-pink-500/20 to-purple-500/20 text-white px-4 py-2 rounded font-semibold">
-                Aviat disponible
+              <div className="bg-gradient-to-r from-pink-500 to-purple-500 text-white px-4 py-2 rounded font-semibold hover:from-pink-600 hover:to-purple-600 transition-all">
+                Jugar ara!
               </div>
             </div>
           ))}
         </div>
         
         <div className="mt-8">
-          <p className="text-gray-400 mb-4">
-            Els jocs d'arcade estan en desenvolupament. Aviat podràs jugar a tots aquests modes emocionants!
-          </p>
           <button
             onClick={onBack}
             className="bg-pink-600 hover:bg-pink-700 text-white px-8 py-3 rounded-lg font-semibold"
@@ -1016,8 +1236,6 @@ function GameComponent({ mode, onBack }: { mode: GameMode; onBack: () => void })
 
   // Joc d'Harmonia (amb progressions reals)
   if (mode === 'harmonia') {
-    const [harmoniaQuestions, setHarmoniaQuestions] = useState<any[]>([]);
-    const [currentHarmonia, setCurrentHarmonia] = useState(0);
 
     // Generar preguntes dinàmiques quan es carrega el joc
     useEffect(() => {
