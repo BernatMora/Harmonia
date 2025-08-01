@@ -1,31 +1,177 @@
-import { QueryClientProvider } from "@tanstack/react-query";
-import { queryClient } from "@/lib/queryClient";
+import { useState } from "react";
+import { Music, Trophy, BookOpen, Volume2, Target, Puzzle, ArrowLeft } from "lucide-react";
 
-function SimpleApp() {
-  return (
-    <QueryClientProvider client={queryClient}>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-4">Teoria Musical</h1>
-          <p className="text-xl text-gray-300">Aplicació carregada correctament!</p>
-          <div className="mt-8 grid grid-cols-2 gap-4 max-w-md">
-            <button 
-              className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded"
-              onClick={() => console.log('Button clicked!')}
+// Tipus de joc
+type GameMode = 'home' | 'theory' | 'speed' | 'memory' | 'target' | 'puzzle' | 'arcade';
+
+// Dades dels jocs
+const gameTypes = [
+  {
+    id: 'theory',
+    title: 'Teoria',
+    description: 'Aprèn els fonaments de la teoria musical',
+    icon: BookOpen,
+    color: 'from-blue-500 to-blue-600'
+  },
+  {
+    id: 'speed',
+    title: 'Velocitat',
+    description: 'Respon ràpidament a preguntes musicals',
+    icon: Volume2,
+    color: 'from-green-500 to-green-600'
+  },
+  {
+    id: 'memory',
+    title: 'Memòria',
+    description: 'Memoritza patrons i seqüències musicals',
+    icon: Trophy,
+    color: 'from-purple-500 to-purple-600'
+  },
+  {
+    id: 'target',
+    title: 'Objectiu',
+    description: 'Assoleix objectius musicals específics',
+    icon: Target,
+    color: 'from-orange-500 to-orange-600'
+  },
+  {
+    id: 'puzzle',
+    title: 'Trencaclosques',
+    description: 'Resol problemes musicals complexos',
+    icon: Puzzle,
+    color: 'from-red-500 to-red-600'
+  },
+  {
+    id: 'arcade',
+    title: 'Arcade',
+    description: 'Jocs musicals d\'entreteniment i diversió',
+    icon: Music,
+    color: 'from-pink-500 to-pink-600'
+  }
+];
+
+function App() {
+  const [currentMode, setCurrentMode] = useState<GameMode>('home');
+  
+  console.log('Current mode:', currentMode);
+
+  const handleNavigate = (mode: GameMode) => {
+    console.log('Navigating to:', mode);
+    setCurrentMode(mode);
+  };
+
+  const renderHome = () => (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900/20 to-purple-900/20 p-6">
+      <div className="max-w-6xl mx-auto">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <div className="flex items-center justify-center mb-6">
+            <Music className="h-16 w-16 text-blue-400 mr-4" />
+            <h1 className="text-6xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+              Teoria Musical
+            </h1>
+          </div>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Descobreix el món de la música amb els nostres jocs i exercicis interactius
+          </p>
+        </div>
+
+        {/* Game Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {gameTypes.map((game) => {
+            const IconComponent = game.icon;
+            return (
+              <div
+                key={game.id}
+                onClick={() => handleNavigate(game.id as GameMode)}
+                className="bg-gradient-to-br from-slate-800/80 to-slate-900/80 border border-slate-700/50 rounded-lg p-6 cursor-pointer transform hover:scale-105 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/20"
+              >
+                <div className={`w-16 h-16 bg-gradient-to-r ${game.color} rounded-lg flex items-center justify-center mb-4`}>
+                  <IconComponent className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2">{game.title}</h3>
+                <p className="text-gray-400 text-sm mb-4">{game.description}</p>
+                <div className="bg-gradient-to-r from-blue-500/20 to-purple-500/20 text-white px-4 py-2 rounded text-center font-semibold">
+                  Començar
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </div>
+  );
+
+  const renderGame = (mode: GameMode) => {
+    const game = gameTypes.find(g => g.id === mode);
+    
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 to-slate-800 p-6">
+        <div className="max-w-4xl mx-auto">
+          {/* Header amb botó de tornada */}
+          <div className="flex items-center mb-8">
+            <button
+              onClick={() => handleNavigate('home')}
+              className="flex items-center text-blue-400 hover:text-blue-300 transition-colors mr-4"
             >
-              Test Button 1
+              <ArrowLeft className="h-6 w-6 mr-2" />
+              Tornar
             </button>
-            <button 
-              className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded"
-              onClick={() => alert('Button works!')}
-            >
-              Test Button 2
-            </button>
+            <h1 className="text-4xl font-bold text-white">{game?.title}</h1>
+          </div>
+
+          {/* Contingut del joc */}
+          <div className="bg-slate-800/50 rounded-lg p-8 border border-slate-700">
+            <div className="text-center">
+              <div className={`w-24 h-24 bg-gradient-to-r ${game?.color} rounded-full flex items-center justify-center mx-auto mb-6`}>
+                {game?.icon && <game.icon className="h-12 w-12 text-white" />}
+              </div>
+              <h2 className="text-2xl font-bold text-white mb-4">
+                Mode: {game?.title}
+              </h2>
+              <p className="text-gray-300 mb-8">
+                {game?.description}
+              </p>
+              
+              {/* Exemple de contingut del joc */}
+              <div className="bg-slate-700/50 rounded-lg p-6 mb-6">
+                <h3 className="text-lg font-semibold text-white mb-4">
+                  Exercici d'exemple
+                </h3>
+                <p className="text-gray-300 mb-4">
+                  Això és un exemple de com funcionaria el joc {game?.title.toLowerCase()}.
+                </p>
+                <div className="flex justify-center space-x-4">
+                  <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded transition-colors">
+                    Opció A
+                  </button>
+                  <button className="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded transition-colors">
+                    Opció B
+                  </button>
+                  <button className="bg-orange-600 hover:bg-orange-700 text-white px-6 py-2 rounded transition-colors">
+                    Opció C
+                  </button>
+                </div>
+              </div>
+              
+              <button 
+                onClick={() => handleNavigate('home')}
+                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:shadow-lg transition-all"
+              >
+                Tornar al menú principal
+              </button>
+            </div>
           </div>
         </div>
       </div>
-    </QueryClientProvider>
+    );
+  };
+
+  return (
+    <div>
+      {currentMode === 'home' ? renderHome() : renderGame(currentMode)}
+    </div>
   );
 }
 
-export default SimpleApp;
+export default App;
