@@ -105,9 +105,8 @@ export default function HomePage() {
             const IconComponent = game.icon;
             
             return (
-              <Link href={game.path} className="block h-full">
+              <Link key={game.id} href={game.path} className="block h-full">
                 <Card 
-                  key={game.id} 
                   className="relative bg-gradient-to-br from-slate-800/80 to-slate-900/80 border-slate-700/50 hover:border-slate-600 hover:shadow-2xl hover:shadow-blue-500/10 active:scale-95 transition-all duration-300 cursor-pointer h-full backdrop-blur-sm overflow-hidden touch-manipulation group focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-slate-900"
                   style={{
                     animation: `fadeInUp 0.6s ease-out ${index * 0.1}s both`
