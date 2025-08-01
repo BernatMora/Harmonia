@@ -1,9 +1,9 @@
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Router, Route, Switch } from "wouter";
 import { queryClient } from "@/lib/queryClient";
-import HomePage from "./pages/HomePage.js";
-import TheoryPage from "./pages/TheoryPage.js";
-import GamePage from "./pages/GamePage.js";
+import HomePage from "./pages/HomePage";
+import TheoryPage from "./pages/TheoryPage";
+import GamePage from "./pages/GamePage";
 import { GameProvider } from "./contexts/GameContext";
 
 function App() {
