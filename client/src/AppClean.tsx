@@ -645,7 +645,7 @@ function GameComponent({ mode, onBack }: { mode: GameMode; onBack: () => void })
     setSelectedNotes([]);
     
     // Carrega preguntes dinàmiques si està activat
-    if (useDynamicQuestions && (mode === 'theory' || mode === 'speed')) {
+    if (useDynamicQuestions && (mode === 'theory' || mode === 'speed' || mode === 'target' || mode === 'puzzle')) {
       await loadDynamicQuestions();
     }
     
@@ -869,10 +869,48 @@ function GameComponent({ mode, onBack }: { mode: GameMode; onBack: () => void })
             </>
           )}
           {mode === 'target' && (
-            <p className="text-gray-300">Completa reptes específics per guanyar medalles i recompenses.</p>
+            <>
+              <p className="text-gray-300">Completa reptes específics per guanyar medalles i recompenses.</p>
+              <div className="mt-4 space-y-3">
+                <div className="flex items-center space-x-3">
+                  <input 
+                    type="checkbox" 
+                    id="dynamic-questions-target"
+                    checked={useDynamicQuestions}
+                    onChange={(e) => setUseDynamicQuestions(e.target.checked)}
+                    className="w-4 h-4 rounded"
+                  />
+                  <label htmlFor="dynamic-questions-target" className="text-sm text-gray-300">
+                    🧠 Reptes únics amb IA (recomanat)
+                  </label>
+                </div>
+                {questionError && (
+                  <p className="text-red-400 text-xs">{questionError}</p>
+                )}
+              </div>
+            </>
           )}
           {mode === 'puzzle' && (
-            <p className="text-gray-300">Resol trencaclosques musicals completant escales, acords i progressions.</p>
+            <>
+              <p className="text-gray-300">Resol trencaclosques musicals completant escales, acords i progressions.</p>
+              <div className="mt-4 space-y-3">
+                <div className="flex items-center space-x-3">
+                  <input 
+                    type="checkbox" 
+                    id="dynamic-questions-puzzle"
+                    checked={useDynamicQuestions}
+                    onChange={(e) => setUseDynamicQuestions(e.target.checked)}
+                    className="w-4 h-4 rounded"
+                  />
+                  <label htmlFor="dynamic-questions-puzzle" className="text-sm text-gray-300">
+                    🧠 Puzzles únics amb IA (recomanat)
+                  </label>
+                </div>
+                {questionError && (
+                  <p className="text-red-400 text-xs">{questionError}</p>
+                )}
+              </div>
+            </>
           )}
           {mode === 'arcade' && (
             <p className="text-gray-300">Jocs d'acció musicals divertits amb diferents mecàniques de joc.</p>
@@ -1056,7 +1094,27 @@ function GameComponent({ mode, onBack }: { mode: GameMode; onBack: () => void })
 
   // Joc de Target (Objectius)
   if (mode === 'target') {
-    const challenge = content[currentChallenge] as any;
+    // Usa preguntes dinàmiques si estan disponibles, sinó les estàtiques
+    const challenges = useDynamicQuestions && dynamicQuestions.length > 0 ? 
+      [{
+        challenge: "Reptes Avançats amb IA",
+        goal: dynamicQuestions.length,
+        reward: "🧠 Mestre de l'Harmonia IA",
+        questions: dynamicQuestions
+      }] : content as any[];
+    
+    const challenge = challenges[currentChallenge];
+    
+    // Mostra loading si s'estan carregant preguntes dinàmiques
+    if (loadingQuestions) {
+      return (
+        <div className="max-w-2xl mx-auto text-center">
+          <div className="animate-spin w-8 h-8 border-2 border-orange-500 border-t-transparent rounded-full mx-auto mb-4"></div>
+          <p className="text-white">🧠 Generant reptes únics amb IA...</p>
+          <p className="text-gray-400 text-sm mt-2">Això pot trigar uns segons</p>
+        </div>
+      );
+    }
     
     if (gameCompleted) {
       return (
@@ -1068,6 +1126,9 @@ function GameComponent({ mode, onBack }: { mode: GameMode; onBack: () => void })
             <p className="text-yellow-400 font-bold text-lg">{challenge.reward}</p>
           </div>
           <p className="text-gray-300 mb-6">Puntuació final: {targetProgress}/{challenge.goal}</p>
+          {useDynamicQuestions && (
+            <p className="text-green-400 text-sm mb-4">✨ Reptes generats amb IA completats!</p>
+          )}
           <div className="flex space-x-4 justify-center">
             <button
               onClick={startGame}
@@ -1086,10 +1147,31 @@ function GameComponent({ mode, onBack }: { mode: GameMode; onBack: () => void })
       );
     }
     
-    const question = challenge.questions[currentQuestion];
+    const question = challenge.questions?.[currentQuestion];
+    
+    if (!question) {
+      return (
+        <div className="text-center text-white">
+          <p>Error: No hi ha preguntes disponibles</p>
+          <button onClick={onBack} className="mt-4 bg-gray-600 hover:bg-gray-700 px-4 py-2 rounded">
+            Tornar al menú
+          </button>
+        </div>
+      );
+    }
     
     return (
       <div className="max-w-2xl mx-auto">
+        {/* Indicador IA */}
+        {useDynamicQuestions && (
+          <div className="bg-gradient-to-r from-purple-500/20 to-blue-500/20 rounded-lg p-3 mb-4 border border-purple-500/30">
+            <div className="flex items-center justify-center text-sm text-purple-300">
+              <span className="animate-pulse mr-2">🧠</span>
+              Repte generat amb Intel·ligència Artificial
+            </div>
+          </div>
+        )}
+        
         {/* Header del repte */}
         <div className="bg-gradient-to-r from-orange-500/20 to-red-500/20 rounded-lg p-4 mb-6 border border-orange-500/30">
           <h3 className="text-xl font-bold text-white mb-2">{challenge.challenge}</h3>
