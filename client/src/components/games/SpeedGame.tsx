@@ -41,20 +41,70 @@ export default function SpeedGame() {
   }, [isPlaying, timeLeft]);
 
   const generateQuestions = () => {
+    const questionTypes = [
+      {
+        type: 'interval_semitones',
+        generate: () => {
+          const interval = intervals[Math.floor(Math.random() * intervals.length)];
+          const wrongAnswers = intervals.filter(int => int.name !== interval.name)
+            .sort(() => 0.5 - Math.random())
+            .slice(0, 3);
+          return {
+            question: `Quants semitons té una ${interval.name}?`,
+            hint: `Exemple: ${interval.example}`,
+            correct: interval.semitones.toString(),
+            options: [interval.semitones, ...wrongAnswers.map(w => w.semitones)]
+              .sort(() => 0.5 - Math.random())
+              .map(n => n.toString())
+          };
+        }
+      },
+      {
+        type: 'interval_name',
+        generate: () => {
+          const interval = intervals[Math.floor(Math.random() * intervals.length)];
+          const wrongAnswers = intervals.filter(int => int.name !== interval.name)
+            .sort(() => 0.5 - Math.random())
+            .slice(0, 3);
+          return {
+            question: `Quin interval té ${interval.semitones} semitons?`,
+            hint: `Pensa en la distància des de C`,
+            correct: interval.name,
+            options: [interval.name, ...wrongAnswers.map(w => w.name)]
+              .sort(() => 0.5 - Math.random())
+          };
+        }
+      },
+      {
+        type: 'chord_notes',
+        generate: () => {
+          const chords = [
+            { name: 'C major', notes: ['C', 'E', 'G'], hint: 'Acord de Do major' },
+            { name: 'G major', notes: ['G', 'B', 'D'], hint: 'Acord de Sol major' },
+            { name: 'F major', notes: ['F', 'A', 'C'], hint: 'Acord de Fa major' },
+            { name: 'Am', notes: ['A', 'C', 'E'], hint: 'Acord de La menor' }
+          ];
+          const chord = chords[Math.floor(Math.random() * chords.length)];
+          const allNotes = ['C', 'D', 'E', 'F', 'G', 'A', 'B'];
+          const wrongAnswers = allNotes.filter(note => !chord.notes.includes(note))
+            .sort(() => 0.5 - Math.random())
+            .slice(0, 3);
+          const correctNote = chord.notes[Math.floor(Math.random() * chord.notes.length)];
+          return {
+            question: `Quina nota forma part de l'acord ${chord.name}?`,
+            hint: chord.hint,
+            correct: correctNote,
+            options: [correctNote, ...wrongAnswers]
+              .sort(() => 0.5 - Math.random())
+          };
+        }
+      }
+    ];
+
     const newQuestions = [];
     for (let i = 0; i < 50; i++) {
-      const interval = intervals[Math.floor(Math.random() * intervals.length)];
-      const wrongAnswers = intervals.filter(int => int.name !== interval.name)
-        .sort(() => 0.5 - Math.random())
-        .slice(0, 3);
-      
-      newQuestions.push({
-        question: `Quants semitons té una ${interval.name}?`,
-        correct: interval.semitones.toString(),
-        options: [interval.semitones, ...wrongAnswers.map(w => w.semitones)]
-          .sort(() => 0.5 - Math.random())
-          .map(n => n.toString())
-      });
+      const questionType = questionTypes[Math.floor(Math.random() * questionTypes.length)];
+      newQuestions.push(questionType.generate());
     }
     setQuestions(newQuestions);
   };
@@ -154,14 +204,17 @@ export default function SpeedGame() {
       </CardHeader>
       
       <CardContent>
-        <CardTitle className="text-xl text-white mb-4">{question.question}</CardTitle>
+        <CardTitle className="text-xl text-white mb-2">{question.question}</CardTitle>
+        {question.hint && (
+          <p className="text-sm text-gray-400 mb-4 italic">💡 {question.hint}</p>
+        )}
         <div className="grid grid-cols-2 gap-3">
           {question.options.map((option: string, index: number) => (
             <Button
               key={index}
               onClick={() => handleAnswer(option)}
               variant="outline"
-              className="p-4 bg-slate-700/50 hover:bg-slate-600 border-slate-600 text-white font-semibold h-auto"
+              className="p-4 bg-slate-700/50 hover:bg-slate-600 active:bg-slate-500 border-slate-600 text-white font-semibold h-auto transition-all duration-200 mobile-button"
             >
               {option}
             </Button>

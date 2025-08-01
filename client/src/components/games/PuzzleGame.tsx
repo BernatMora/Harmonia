@@ -103,8 +103,9 @@ export default function PuzzleGame() {
   };
 
   return (
-    <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-      {/* Header */}
+    <Card className="bg-slate-800/50 border-slate-700">
+      <CardContent className="p-6">
+        {/* Header */}
       <div className="flex justify-between items-center mb-6">
         <div className="flex items-center gap-2">
           <Puzzle className="w-6 h-6 text-indigo-400" />
@@ -192,6 +193,7 @@ export default function PuzzleGame() {
           Trencaclosques {currentPuzzle + 1} de {progressions.length}
         </p>
       </div>
-    </div>
+      </CardContent>
+    </Card>
   );
 }

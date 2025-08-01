@@ -80,107 +80,83 @@ export default function TargetGame() {
     const accuracy = hits + misses > 0 ? Math.round((hits / (hits + misses)) * 100) : 0;
     
     return (
-      <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10 text-center">
-        <Target className="w-16 h-16 text-green-400 mx-auto mb-4" />
-        <h2 className="text-2xl font-bold text-white mb-4">Diana Completada!</h2>
-        <div className="space-y-2 mb-6">
-          <p className="text-xl text-white">Puntuació: {score}</p>
-          <p className="text-green-400">Encerts: {hits}</p>
-          <p className="text-red-400">Errors: {misses}</p>
-          <p className="text-blue-400">Precisió: {accuracy}%</p>
-        </div>
-        <button
-          onClick={startGame}
-          className="px-6 py-3 bg-green-500 hover:bg-green-600 text-white font-bold rounded-lg transition-colors"
-        >
-          Jugar Altra Vegada
-        </button>
-      </div>
+      <Card className="bg-slate-800/50 border-slate-700">
+        <CardContent className="p-8 text-center">
+          <Target className="w-16 h-16 text-green-400 mx-auto mb-4" />
+          <CardTitle className="text-2xl text-white mb-4">Diana Completada!</CardTitle>
+          <div className="space-y-2 mb-6">
+            <p className="text-xl text-white">Puntuació Final: {score}</p>
+            <p className="text-green-400">✅ Encerts: {hits}</p>
+            <p className="text-red-400">❌ Errors: {misses}</p>
+            <p className="text-blue-400">📊 Precisió: {accuracy}%</p>
+          </div>
+          <Button
+            onClick={startGame}
+            className="bg-green-500 hover:bg-green-600 text-white font-bold"
+            size="lg"
+          >
+            Jugar Altra Vegada
+          </Button>
+        </CardContent>
+      </Card>
     );
   }
 
-  if (!isPlaying) {
-    return (
-      <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10 text-center">
-        <Target className="w-16 h-16 text-green-400 mx-auto mb-4" />
-        <h2 className="text-2xl font-bold text-white mb-4">Diana Musical</h2>
-        <p className="text-white/80 mb-6">Clica la nota correcta el més ràpid possible!</p>
-        <button
-          onClick={startGame}
-          className="px-8 py-4 bg-green-500 hover:bg-green-600 text-white font-bold rounded-lg transition-colors text-lg"
-        >
-          Començar Joc
-        </button>
-      </div>
-    );
-  }
+
 
   return (
-    <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-      {/* Header */}
-      <div className="flex justify-between items-center mb-6">
-        <div className="text-white">
-          <span className="font-bold">Temps: {timeLeft}s</span>
-        </div>
-        <div className="text-white">
-          <span className="font-bold">Punts: {score}</span>
-        </div>
-      </div>
-
-      {/* Target */}
-      <div className="text-center mb-8">
-        <div className="inline-flex items-center gap-3 bg-green-500/20 border-2 border-green-400 rounded-xl p-6">
-          <Crosshair className="w-8 h-8 text-green-400" />
-          <div>
-            <p className="text-white/80 text-sm">Objectiu:</p>
-            <p className="text-3xl font-bold text-white">{targetNote}</p>
+    <Card className="bg-slate-800/50 border-slate-700">
+      <CardHeader>
+        <div className="flex justify-between items-center">
+          <div className="text-white">
+            <span className="font-bold">⏱️ Temps: {timeLeft}s</span>
+          </div>
+          <div className="text-white">
+            <span className="font-bold">🎯 Punts: {score}</span>
           </div>
         </div>
-      </div>
+        <Progress value={(timeLeft / 30) * 100} className="mt-2" />
+      </CardHeader>
+      
+      <CardContent>
+        {/* Target Display */}
+        <div className="text-center mb-8">
+          <div className="inline-flex items-center gap-3 bg-green-500/20 border-2 border-green-400 rounded-xl p-6 animate-pulse">
+            <Crosshair className="w-8 h-8 text-green-400" />
+            <div>
+              <p className="text-gray-300 text-sm">Objectiu:</p>
+              <p className="text-3xl font-bold text-white">{targetNote}</p>
+            </div>
+          </div>
+        </div>
 
-      {/* Piano Keys */}
-      <div className="flex justify-center mb-6">
-        <div className="flex">
-          {/* White keys */}
-          {['C', 'D', 'E', 'F', 'G', 'A', 'B'].map((note) => (
-            <button
+        {/* Note Grid */}
+        <div className="grid grid-cols-3 sm:grid-cols-4 gap-3 mb-6">
+          {notes.map((note) => (
+            <Button
               key={note}
               onClick={() => handleNoteClick(note)}
-              className={`w-12 h-32 bg-white border border-gray-300 hover:bg-gray-100 transition-colors ${
-                targetNote === note ? 'ring-4 ring-green-400' : ''
+              disabled={!isPlaying}
+              className={`p-4 text-lg font-bold mobile-button transition-all duration-200 ${
+                note === targetNote
+                  ? 'bg-green-600 hover:bg-green-700 text-white ring-2 ring-green-400 animate-pulse'
+                  : isPlaying
+                  ? 'bg-slate-700 hover:bg-slate-600 active:bg-slate-500 text-white'
+                  : 'bg-slate-800 text-gray-400 cursor-not-allowed'
               }`}
             >
-              <span className="text-black font-bold text-sm">{note}</span>
-            </button>
+              {note}
+            </Button>
           ))}
         </div>
-        
-        {/* Black keys overlay */}
-        <div className="flex absolute ml-6">
-          {['C#', '', 'D#', '', '', 'F#', '', 'G#', '', 'A#'].map((note, index) => (
-            note ? (
-              <button
-                key={note}
-                onClick={() => handleNoteClick(note)}
-                className={`w-8 h-20 bg-black hover:bg-gray-800 text-white text-xs font-bold transition-colors ${
-                  targetNote === note ? 'ring-4 ring-green-400' : ''
-                }`}
-                style={{ marginLeft: index === 0 ? '0' : '1rem' }}
-              >
-                {note}
-              </button>
-            ) : (
-              <div key={index} className="w-8" style={{ marginLeft: '1rem' }} />
-            )
-          ))}
-        </div>
-      </div>
 
-      {/* Stats */}
-      <div className="flex justify-center gap-6 text-sm">
-        <span className="text-green-400">Encerts: {hits}</span>
-        <span className="text-red-400">Errors: {misses}</span>
-      </div>
-    </div>
+        {/* Stats */}
+        <div className="flex justify-center gap-6 text-sm">
+          <span className="text-green-400">✅ Encerts: {hits}</span>
+          <span className="text-red-400">❌ Errors: {misses}</span>
+          <span className="text-blue-400">📊 Precisió: {hits + misses > 0 ? Math.round((hits / (hits + misses)) * 100) : 0}%</span>
+        </div>
+      </CardContent>
+    </Card>
   );
 }

@@ -4,7 +4,15 @@ import { useGame } from '@/contexts/GameContext';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 
-const chords = ['C', 'Dm', 'Em', 'F', 'G', 'Am', 'Bdim'];
+const chords = [
+  { name: 'C', color: 'bg-red-500', description: 'Do major' },
+  { name: 'Dm', color: 'bg-orange-500', description: 'Re menor' },
+  { name: 'Em', color: 'bg-yellow-500', description: 'Mi menor' },
+  { name: 'F', color: 'bg-green-500', description: 'Fa major' },
+  { name: 'G', color: 'bg-blue-500', description: 'Sol major' },
+  { name: 'Am', color: 'bg-purple-500', description: 'La menor' },
+  { name: 'Bdim', color: 'bg-pink-500', description: 'Si disminuït' }
+];
 
 export default function MemoryGame() {
   const { completeExercise, addAchievement } = useGame();
@@ -28,7 +36,7 @@ export default function MemoryGame() {
   };
 
   const addToSequence = () => {
-    const newChord = chords[Math.floor(Math.random() * chords.length)];
+    const newChord = chords[Math.floor(Math.random() * chords.length)].name;
     const newSequence = [...sequence, newChord];
     setSequence(newSequence);
     setPlayerSequence([]);
@@ -161,20 +169,23 @@ export default function MemoryGame() {
         </div>
 
         {/* Chord Buttons */}
-        <div className="grid grid-cols-4 gap-3">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
           {chords.map((chord) => (
             <Button
-              key={chord}
-              onClick={() => handleChordClick(chord)}
+              key={chord.name}
+              onClick={() => handleChordClick(chord.name)}
               disabled={!isPlayerTurn}
               variant="outline"
-              className={`p-4 font-bold h-auto ${
-                isPlayerTurn 
-                  ? 'bg-slate-700/50 hover:bg-slate-600 border-slate-600 text-white' 
+              className={`p-4 font-bold h-auto mobile-button transition-all duration-200 ${
+                showingSequence && sequence[sequence.length - 1] === chord.name
+                  ? `${chord.color} text-white shadow-lg scale-105`
+                  : isPlayerTurn 
+                  ? 'bg-slate-700/50 hover:bg-slate-600 active:bg-slate-500 border-slate-600 text-white' 
                   : 'bg-slate-800/50 border-slate-700 text-gray-500 cursor-not-allowed'
               }`}
+              title={chord.description}
             >
-              {chord}
+              {chord.name}
             </Button>
           ))}
         </div>

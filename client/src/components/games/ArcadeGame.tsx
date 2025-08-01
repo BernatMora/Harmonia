@@ -94,41 +94,47 @@ export default function ArcadeGame() {
 
   if (gameOver) {
     return (
-      <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10 text-center">
-        <Gamepad2 className="w-16 h-16 text-red-400 mx-auto mb-4" />
-        <h2 className="text-2xl font-bold text-white mb-4">Game Over!</h2>
-        <div className="space-y-2 mb-6">
-          <p className="text-xl text-white">Puntuació Final: {score}</p>
-          <p className="text-yellow-400">Nivell Assolit: {level}</p>
-        </div>
-        <button
-          onClick={startGame}
-          className="px-6 py-3 bg-red-500 hover:bg-red-600 text-white font-bold rounded-lg transition-colors"
-        >
-          Jugar Altra Vegada
-        </button>
-      </div>
+      <Card className="bg-slate-800/50 border-slate-700">
+        <CardContent className="p-8 text-center">
+          <Gamepad2 className="w-16 h-16 text-red-400 mx-auto mb-4" />
+          <CardTitle className="text-2xl text-white mb-4">Game Over!</CardTitle>
+          <div className="space-y-2 mb-6">
+            <p className="text-xl text-white">Puntuació Final: {score}</p>
+            <p className="text-yellow-400">Nivell Assolit: {level}</p>
+          </div>
+          <Button
+            onClick={startGame}
+            className="bg-red-500 hover:bg-red-600 text-white font-bold"
+            size="lg"
+          >
+            Jugar Altra Vegada
+          </Button>
+        </CardContent>
+      </Card>
     );
   }
 
   if (!isPlaying) {
     return (
-      <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10 text-center">
-        <Gamepad2 className="w-16 h-16 text-red-400 mx-auto mb-4" />
-        <h2 className="text-2xl font-bold text-white mb-4">Mode Arcade</h2>
-        <p className="text-white/80 mb-6">Supervivència musical! Respon correctament o perd vides!</p>
-        <div className="text-white/60 text-sm mb-6">
-          <p>• 3 vides per començar</p>
-          <p>• El temps disminueix cada nivell</p>
-          <p>• Més punts per respostes ràpides</p>
-        </div>
-        <button
-          onClick={startGame}
-          className="px-8 py-4 bg-red-500 hover:bg-red-600 text-white font-bold rounded-lg transition-colors text-lg"
-        >
-          Començar Arcade
-        </button>
-      </div>
+      <Card className="bg-slate-800/50 border-slate-700">
+        <CardContent className="p-8 text-center">
+          <Gamepad2 className="w-16 h-16 text-red-400 mx-auto mb-4" />
+          <CardTitle className="text-2xl text-white mb-4">Mode Arcade</CardTitle>
+          <p className="text-gray-300 mb-6">Supervivència musical! Respon correctament o perd vides! 🎮</p>
+          <div className="text-gray-400 text-sm mb-6 space-y-1">
+            <p>• 3 vides per començar</p>
+            <p>• El temps disminueix cada nivell</p>
+            <p>• Més punts per respostes ràpides</p>
+          </div>
+          <Button
+            onClick={startGame}
+            className="bg-red-500 hover:bg-red-600 text-white font-bold text-lg"
+            size="lg"
+          >
+            Començar Arcade
+          </Button>
+        </CardContent>
+      </Card>
     );
   }
 
@@ -136,8 +142,9 @@ export default function ArcadeGame() {
   if (!question) return null;
 
   return (
-    <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-      {/* Header */}
+    <Card className="bg-slate-800/50 border-slate-700">
+      <CardContent className="p-6">
+        {/* Header */}
       <div className="flex justify-between items-center mb-6">
         <div className="flex items-center gap-4">
           <div className="flex items-center gap-1">
@@ -195,6 +202,7 @@ export default function ArcadeGame() {
           Punts per al següent nivell: {500 - (score % 500)}
         </p>
       </div>
-    </div>
+      </CardContent>
+    </Card>
   );
 }

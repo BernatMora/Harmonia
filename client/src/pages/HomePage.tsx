@@ -124,6 +124,10 @@ export default function HomePage() {
                   </CardHeader>
                   <CardContent className="pt-0 relative z-10">
                     <Button 
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        handleCardClick(game.path);
+                      }}
                       className="w-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 hover:from-blue-500/30 hover:to-purple-500/30 active:from-blue-500/40 active:to-purple-500/40 text-white border border-blue-500/30 hover:border-blue-400/50 mobile-button text-sm sm:text-base font-semibold shadow-lg hover:shadow-blue-500/20 transition-all duration-300"
                       variant="outline"
                     >
