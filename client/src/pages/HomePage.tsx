@@ -130,7 +130,15 @@ export default function HomePage() {
 
         {/* Advanced Features */}
         <div className="mt-16 sm:mt-20">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
+              🚀 Funcions Avançades
+            </h2>
+            <p className="text-gray-300 text-sm sm:text-base">
+              Descobreix les noves funcionalitats d'IA, recompenses i estudi personalitzat
+            </p>
+          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 max-w-7xl mx-auto">
             <ProgressTracker />
             <RewardsSystem />
             <StudyMode />

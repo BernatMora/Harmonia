@@ -39,12 +39,17 @@ const initialState: GameState = {
   isPlaying: false,
   gameMode: 'theory',
   gameStats: {
-    totalScore: 0,
-    completedLevels: [],
-    achievements: [],
-    streakCount: 0,
+    totalScore: 150, // Estadístiques d'exemple
+    completedLevels: [1, 2, 3],
+    achievements: ['Primers Passos', 'Dimoni de Velocitat'],
+    streakCount: 5,
   },
-  userProgress: {},
+  userProgress: {
+    1: { completed: true, score: 85, attempts: 2, bestTime: 45 },
+    2: { completed: true, score: 92, attempts: 1, bestTime: 38 },
+    3: { completed: true, score: 78, attempts: 3, bestTime: 52 },
+    4: { completed: false, score: 0, attempts: 1, bestTime: 0 },
+  },
 };
 
 function gameReducer(state: GameState, action: GameAction): GameState {
