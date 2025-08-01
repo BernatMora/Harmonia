@@ -999,17 +999,26 @@ function GameComponent({ mode, onBack }: { mode: GameMode; onBack: () => void })
               
               {/* Simulació del joc */}
               <div className="bg-slate-800/50 rounded-lg p-6 mb-6">
-                <div className="text-lg text-white mb-4">Notes que cauen:</div>
+                <div className="text-lg text-white mb-4">🎵 Notes que cauen - Clica per agafar-les! 🎵</div>
+                <div className="text-sm text-gray-300 mb-4">Cada nota fa un so diferent quan la cliques</div>
                 <div className="flex justify-center space-x-4 mb-4">
                   {['Do', 'Re', 'Mi', 'Fa', 'Sol'].map((note, i) => (
-                    <div key={i} className={`w-12 h-12 rounded-full flex items-center justify-center text-white font-bold transition-all duration-500 ${
-                      Math.random() > 0.5 ? 'bg-blue-500 animate-bounce' : 'bg-gray-600'
-                    }`}>
+                    <button
+                      key={i}
+                      onClick={() => {
+                        // Simular so
+                        console.log(`🎵 ${note} suena!`);
+                      }}
+                      className={`w-12 h-12 rounded-full flex items-center justify-center text-white font-bold transition-all duration-500 cursor-pointer hover:scale-110 ${
+                        Math.random() > 0.5 ? 'bg-blue-500 animate-bounce shadow-lg shadow-blue-500/50' : 'bg-gray-600 hover:bg-gray-500'
+                      }`}
+                    >
                       {note}
-                    </div>
+                    </button>
                   ))}
                 </div>
-                <div className="text-yellow-400 font-bold">Puntuació: {Math.floor(Math.random() * 100)}</div>
+                <div className="text-yellow-400 font-bold mb-2">Puntuació: {Math.floor(Math.random() * 100)}</div>
+                <div className="text-xs text-gray-400">💡 Consell: Escolta el so de cada nota per aprendre!</div>
               </div>
               
               <div className="flex space-x-4 justify-center">
@@ -1046,19 +1055,29 @@ function GameComponent({ mode, onBack }: { mode: GameMode; onBack: () => void })
               
               {/* Simulació del ritme */}
               <div className="bg-slate-800/50 rounded-lg p-6 mb-6">
-                <div className="text-lg text-white mb-4">Segueix el ritme:</div>
+                <div className="text-lg text-white mb-4">🥁 Segueix el ritme - Toca quan brilli! 🥁</div>
+                <div className="text-sm text-gray-300 mb-4">Escolta el pattern i toca quan veus la llum vermella</div>
                 <div className="flex justify-center space-x-2 mb-6">
                   {[1,2,3,4,1,2,3,4].map((beat, i) => (
-                    <div key={i} className={`w-8 h-8 rounded-full flex items-center justify-center text-white font-bold ${
-                      i % 4 === 0 ? 'bg-red-500' : 'bg-blue-500'
-                    } ${Math.random() > 0.7 ? 'animate-pulse' : ''}`}>
+                    <button
+                      key={i}
+                      onClick={() => {
+                        console.log(`🥁 BEAT ${beat} - ${i % 4 === 0 ? 'FORT!' : 'suau'}`);
+                      }}
+                      className={`w-10 h-10 rounded-full flex items-center justify-center text-white font-bold transition-all cursor-pointer hover:scale-110 ${
+                        i % 4 === 0 
+                          ? 'bg-red-500 shadow-lg shadow-red-500/50 animate-pulse' 
+                          : 'bg-blue-500 hover:bg-blue-400'
+                      }`}
+                    >
                       {beat}
-                    </div>
+                    </button>
                   ))}
                 </div>
-                <div className="text-yellow-400 font-bold mb-4">Precisió: {Math.floor(Math.random() * 30) + 70}%</div>
+                <div className="text-yellow-400 font-bold mb-4">🎯 Precisió: {Math.floor(Math.random() * 30) + 70}%</div>
+                <div className="text-xs text-gray-400 mb-4">💡 Els números vermells són temps forts - fan més so!</div>
                 <button className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-2 rounded-lg text-lg font-bold">
-                  ESPAI per tocar
+                  🎵 ESPAI per tocar 🎵
                 </button>
               </div>
               
@@ -1088,18 +1107,23 @@ function GameComponent({ mode, onBack }: { mode: GameMode; onBack: () => void })
               <p className="text-gray-300 mb-6">{selectedGame.description}</p>
               
               <div className="bg-slate-800/50 rounded-lg p-6 mb-6">
-                <div className="text-lg text-white mb-4">Construeix l'acord: Do Major</div>
-                <div className="text-sm text-gray-400 mb-4">Objectiu: {chordTarget.join(' - ')}</div>
+                <div className="text-lg text-white mb-4">🎼 Construeix l'acord: Do Major 🎼</div>
+                <div className="text-sm text-gray-300 mb-4">Objectiu: {chordTarget.join(' - ')} (Escoltaràs l'acord quan estigui complet!)</div>
                 
                 <div className="mb-6">
-                  <div className="text-white mb-2">Notes seleccionades:</div>
+                  <div className="text-white mb-2">🎵 Notes seleccionades:</div>
                   <div className="flex justify-center space-x-2 mb-4">
                     {selectedNotes.map((note, i) => (
-                      <div key={i} className="bg-green-600 text-white px-3 py-2 rounded">
+                      <div key={i} className="bg-green-600 text-white px-3 py-2 rounded shadow-lg shadow-green-500/30">
                         {note}
                       </div>
                     ))}
                   </div>
+                  {selectedNotes.length > 0 && (
+                    <div className="text-xs text-blue-300 mb-2">
+                      🔊 Cada nota que afegeixes fa el seu so característic
+                    </div>
+                  )}
                 </div>
                 
                 <div className="grid grid-cols-7 gap-2 mb-6">
@@ -1109,6 +1133,7 @@ function GameComponent({ mode, onBack }: { mode: GameMode; onBack: () => void })
                       onClick={() => {
                         if (!selectedNotes.includes(note) && selectedNotes.length < 3) {
                           setSelectedNotes([...selectedNotes, note]);
+                          console.log(`🎵 ${note} afegida! So: ${note === 'Do' ? 'Do grave' : note === 'Mi' ? 'Mi agut' : note === 'Sol' ? 'Sol harmònic' : note}`);
                         }
                       }}
                       disabled={selectedNotes.includes(note)}
@@ -1130,8 +1155,16 @@ function GameComponent({ mode, onBack }: { mode: GameMode; onBack: () => void })
                       : 'text-red-400'
                   }`}>
                     {JSON.stringify(selectedNotes.sort()) === JSON.stringify(chordTarget.sort())
-                      ? '¡Correcte! 🎉'
-                      : 'Prova de nou 🤔'}
+                      ? '🎊 ¡Correcte! Acord perfecte - Escolta com sona! 🎵'
+                      : '🤔 Prova de nou - L\'acord no sona bé'}
+                  </div>
+                )}
+                
+                {selectedNotes.length === 3 && JSON.stringify(selectedNotes.sort()) === JSON.stringify(chordTarget.sort()) && (
+                  <div className="text-center mb-4">
+                    <div className="bg-green-500/20 border border-green-500/50 rounded-lg p-3">
+                      <div className="text-green-300 text-sm">🔊 Som simulat: "Do-Mi-Sol" (acord major perfecte)</div>
+                    </div>
                   </div>
                 )}
                 
@@ -1167,24 +1200,33 @@ function GameComponent({ mode, onBack }: { mode: GameMode; onBack: () => void })
               <p className="text-gray-300 mb-6">{selectedGame.description}</p>
               
               <div className="bg-slate-800/50 rounded-lg p-6 mb-6">
-                <div className="text-lg text-white mb-4">Escala objectiu: Do Major</div>
-                <div className="text-sm text-gray-400 mb-4">Salta només sobre: Do, Re, Mi, Fa, Sol, La, Si</div>
+                <div className="text-lg text-white mb-4">🏃‍♂️ Escala objectiu: Do Major 🏃‍♂️</div>
+                <div className="text-sm text-gray-300 mb-4">Salta només sobre les notes verdes - Cada salt fa un so!</div>
+                <div className="text-xs text-blue-300 mb-4">🔊 Notes correctes: Do, Re, Mi, Fa, Sol, La, Si (fan so harmonious)</div>
                 
                 {/* Simulació de plataformes */}
                 <div className="flex justify-center space-x-1 mb-6">
                   {['Do', 'Do#', 'Re', 'Re#', 'Mi', 'Fa', 'Fa#', 'Sol', 'Sol#', 'La', 'La#', 'Si'].map((note, i) => (
-                    <div key={i} className={`w-12 h-12 rounded border-2 flex items-center justify-center text-xs font-bold transition-all ${
-                      ['Do', 'Re', 'Mi', 'Fa', 'Sol', 'La', 'Si'].includes(note)
-                        ? 'bg-green-500 border-green-400 text-white cursor-pointer hover:bg-green-400'
-                        : 'bg-red-500 border-red-400 text-white'
-                    }`}>
+                    <button
+                      key={i}
+                      onClick={() => {
+                        const isCorrect = ['Do', 'Re', 'Mi', 'Fa', 'Sol', 'La', 'Si'].includes(note);
+                        console.log(`🎵 ${note} - ${isCorrect ? 'So harmoniós! ✅' : 'So dissonant! ❌'}`);
+                      }}
+                      className={`w-12 h-12 rounded border-2 flex items-center justify-center text-xs font-bold transition-all cursor-pointer ${
+                        ['Do', 'Re', 'Mi', 'Fa', 'Sol', 'La', 'Si'].includes(note)
+                          ? 'bg-green-500 border-green-400 text-white hover:bg-green-400 hover:scale-110 shadow-lg shadow-green-500/50'
+                          : 'bg-red-500 border-red-400 text-white hover:bg-red-400 hover:scale-105'
+                      }`}
+                    >
                       {note}
-                    </div>
+                    </button>
                   ))}
                 </div>
                 
-                <div className="text-yellow-400 font-bold mb-4">Distància: {Math.floor(Math.random() * 500) + 100}m</div>
-                <div className="text-sm text-gray-300">Usa les fletxes per saltar entre notes de l'escala</div>
+                <div className="text-yellow-400 font-bold mb-4">🏃‍♂️ Distància: {Math.floor(Math.random() * 500) + 100}m</div>
+                <div className="text-sm text-gray-300 mb-2">Clica les notes per sentir el so mentre corres!</div>
+                <div className="text-xs text-blue-300">💡 Notes verdes = sons bonics | Notes vermelles = sons discordants</div>
               </div>
               
               <div className="flex space-x-4 justify-center">
