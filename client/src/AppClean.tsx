@@ -536,8 +536,8 @@ function GameComponent({ mode, onBack }: { mode: GameMode; onBack: () => void })
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
   const [timeLeft, setTimeLeft] = useState<number | null>(null);
   const [timeSettings, setTimeSettings] = useState({
-    speed: 5,
-    memory: 8,
+    speed: 15,
+    memory: 12,
     general: 30
   });
   const [showSettings, setShowSettings] = useState(false);
@@ -830,8 +830,8 @@ function GameComponent({ mode, onBack }: { mode: GameMode; onBack: () => void })
                   <label className="text-sm text-gray-400">Temps per pregunta: {timeSettings.speed}s</label>
                   <input 
                     type="range" 
-                    min="2" 
-                    max="15" 
+                    min="8" 
+                    max="30" 
                     value={timeSettings.speed}
                     onChange={(e) => setTimeSettings({...timeSettings, speed: parseInt(e.target.value)})}
                     className="w-full"
@@ -859,8 +859,8 @@ function GameComponent({ mode, onBack }: { mode: GameMode; onBack: () => void })
                 <label className="text-sm text-gray-400">Temps de memorització: {timeSettings.memory}s</label>
                 <input 
                   type="range" 
-                  min="3" 
-                  max="20" 
+                  min="8" 
+                  max="25" 
                   value={timeSettings.memory}
                   onChange={(e) => setTimeSettings({...timeSettings, memory: parseInt(e.target.value)})}
                   className="w-full"
