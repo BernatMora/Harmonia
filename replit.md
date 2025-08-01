@@ -92,3 +92,8 @@ shared/
   - **No Sound Elements**: Removed all audio simulations and sound references per user preference
   - **Chess-level Difficulty**: Each exercise requires deep musical analysis and professional knowledge
   - **Arcade Transformation**: Games now focus on harmonic analysis, voice leading, and complex theory
+- **2025-08-01**: Major improvements implemented per user feedback:
+  - **Adjustable Timing Controls**: Custom tempo settings for Speed and Memory modes (2-15s and 3-20s)
+  - **Expanded Exercise Content**: Added 15+ new ultra-advanced questions for Theory mode
+  - **Advanced Theory Section**: Complete new learning module with 4 chapters covering negative harmony, upper structures, Coltrane changes, and advanced voice leading
+  - **Professional Enhancement**: All content now requires chess-level strategic thinking and professional jazz knowledge

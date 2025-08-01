@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Music, Trophy, BookOpen, Volume2, Target, Puzzle, ArrowLeft, Play, Clock, CheckCircle, XCircle } from "lucide-react";
 import { getRandomProgression, getProgressionsByMode, getChordTypes } from "./data/progressions";
 
-type GameMode = 'home' | 'theory' | 'speed' | 'memory' | 'target' | 'puzzle' | 'arcade' | 'harmonia';
+type GameMode = 'home' | 'theory' | 'speed' | 'memory' | 'target' | 'puzzle' | 'arcade' | 'harmonia' | 'advanced-theory';
 
 // Contingut educatiu ultra-avançat per cada joc
 const gameContent = {
@@ -57,32 +57,60 @@ const gameContent = {
       level: "Expert"
     },
     {
-      question: "Un acord de sèptima dominant en Do major és:",
-      options: ["Do7", "Sol7", "Fa7", "Re7"],
-      correct: 1,
-      explanation: "Sol7 és l'acord de sèptima dominant en Do major (V7).",
-      level: "Avançat"
-    },
-    {
-      question: "El mode dòric es caracteritza per:",
-      options: ["2a menor, 7a major", "2a menor, 6a menor", "3a menor, 6a major", "3a menor, 7a menor"],
-      correct: 2,
-      explanation: "El mode dòric té 3a menor i 6a major, donant-li un caràcter únic.",
-      level: "Avançat"
-    },
-    {
-      question: "La progressió vi-IV-I-V és típica en:",
-      options: ["Música clàssica", "Música pop", "Jazz", "Blues"],
-      correct: 1,
-      explanation: "Aquesta progressió és molt comuna en la música pop contemporània.",
-      level: "Avançat"
-    },
-    {
-      question: "Un acord half-diminished conté:",
-      options: ["3a menor + 5a disminuïda + 7a menor", "3a menor + 5a disminuïda + 7a major", "3a major + 5a disminuïda + 7a menor", "3a menor + 5a justa + 7a menor"],
+      question: "En Cherokee Bar 9-12, la progressió Gm7b5-C7-Fm indica:",
+      options: ["ii-V-i en F menor", "Tonicització temporal", "Modal shift", "Relative approach"],
       correct: 0,
-      explanation: "L'acord half-diminished (ø7) té 3a menor, 5a disminuïda i 7a menor.",
-      level: "Avançat"
+      explanation: "Gm7b5-C7-Fm és un ii-V-i clàssic en F menor, canvi modal temporal dins Cherokee.",
+      level: "Professional"
+    },
+    {
+      question: "L'escala sobre G7alt en resolució a Cmaj7 més apropiada és:",
+      options: ["G altered (Ab melodic minor)", "G mixolydian b6", "G whole-half diminished", "G harmonic minor 5th mode"],
+      correct: 0,
+      explanation: "G altered scale (Ab melodic minor) conté totes les alteracions: b9, #9, #11, b13.",
+      level: "Master"
+    },
+    {
+      question: "El polychord Dm/G indica funcionalment:",
+      options: ["G11", "G13sus4", "Gmaj9no3", "G7add11"],
+      correct: 1,
+      explanation: "Dm/G = G13sus4, amb Dm triad (D-F-A) proporcionant 5th, b7th, 9th sobre G.",
+      level: "Expert"
+    },
+    {
+      question: "En 'Stella By Starlight', el Gm7b5 funciona com:",
+      options: ["ii7b5/V del Bb major", "Modal interchange", "Chromatic approach", "Substitute dominant"],
+      correct: 0,
+      explanation: "Gm7b5 és ii7b5 que resol a C7, V7 del F major, tonicització clàssica.",
+      level: "Professional"
+    },
+    {
+      question: "La progressió Cmaj7-B7-Em7-Eb7-Dm7-G7 usa el principi:",
+      options: ["Chromatic root motion", "Circle of 5ths", "Tritone substitution", "Modal interchange"],
+      correct: 0,
+      explanation: "Root motion cromàtic: C-B-E-Eb-D-G, alternant moviment cromàtic amb resolucions.",
+      level: "Master"
+    },
+    {
+      question: "Sobre EMaj7#11, l'upper structure més efectiu és:",
+      options: ["F#m/E", "G#dim/E", "Bm/E", "D#m/E"],
+      correct: 0,
+      explanation: "F#m triad sobre E crea EMaj13#11, amb tensions 9(F#), #11(A#), 13(C#).",
+      level: "Expert"
+    },
+    {
+      question: "En análisi de 'Body and Soul', el Ebm6 funciona com:",
+      options: ["iv6 en Bb major", "Modal interchange", "Chromatic mediant", "Parallel minor chord"],
+      correct: 1,
+      explanation: "Ebm6 ve del Bb menor (parallel minor), exemple clàssic d'interchange modal.",
+      level: "Professional"
+    },
+    {
+      question: "La resolució de F#ø7-B7alt-Em7 segueix el principi:",
+      options: ["ii-V-i relatiu", "Tonicització cromàtica", "Negative harmony", "Modal substitution"],
+      correct: 0,
+      explanation: "F#ø7-B7alt-Em7 és ii-V-i en Em, tonicització del relatiu menor.",
+      level: "Expert"
     }
   ],
   speed: [
@@ -431,6 +459,13 @@ const gameTypes = [
     description: 'Progressions harmòniques reals',
     icon: Trophy,
     color: 'from-gold-500 to-yellow-600'
+  },
+  {
+    id: 'advanced-theory',
+    title: 'Teoria Musical Avançada',
+    description: 'Estudi complet dels conceptes més complexos',
+    icon: BookOpen,
+    color: 'from-indigo-500 to-purple-600'
   }
 ];
 
@@ -442,6 +477,12 @@ function GameComponent({ mode, onBack }: { mode: GameMode; onBack: () => void })
   const [showResult, setShowResult] = useState(false);
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
   const [timeLeft, setTimeLeft] = useState<number | null>(null);
+  const [timeSettings, setTimeSettings] = useState({
+    speed: 5,
+    memory: 8,
+    general: 30
+  });
+  const [showSettings, setShowSettings] = useState(false);
   const [memoryPhase, setMemoryPhase] = useState<'show' | 'input' | 'result'>('show');
   const [userPattern, setUserPattern] = useState<string[]>([]);
   const [currentChallenge, setCurrentChallenge] = useState(0);
@@ -515,7 +556,7 @@ function GameComponent({ mode, onBack }: { mode: GameMode; onBack: () => void })
     setSelectedNotes([]);
     
     if (mode === 'speed' && content && content[0] && 'timeLimit' in content[0]) {
-      setTimeLeft(content[0].timeLimit || 5);
+      setTimeLeft(content[0].timeLimit || timeSettings.speed);
     }
   };
 
@@ -664,13 +705,39 @@ function GameComponent({ mode, onBack }: { mode: GameMode; onBack: () => void })
         <div className="bg-slate-700/50 rounded-lg p-6 mb-8 max-w-md mx-auto">
           <h3 className="text-lg font-semibold text-white mb-4">Com jugar:</h3>
           {mode === 'theory' && (
-            <p className="text-gray-300">Respon preguntes sobre teoria musical. Cada resposta correcta suma un punt.</p>
+            <p className="text-gray-300">Respon preguntes ultra-avançades sobre jazz i harmonia complexa. Només per professionals.</p>
           )}
           {mode === 'speed' && (
-            <p className="text-gray-300">Respon tan ràpid com puguis! Tens temps limitat per cada pregunta.</p>
+            <>
+              <p className="text-gray-300">Análisi harmònic ràpid! Temps personalitzable per pregunta.</p>
+              <div className="mt-4 space-y-2">
+                <label className="text-sm text-gray-400">Temps per pregunta: {timeSettings.speed}s</label>
+                <input 
+                  type="range" 
+                  min="2" 
+                  max="15" 
+                  value={timeSettings.speed}
+                  onChange={(e) => setTimeSettings({...timeSettings, speed: parseInt(e.target.value)})}
+                  className="w-full"
+                />
+              </div>
+            </>
           )}
           {mode === 'memory' && (
-            <p className="text-gray-300">Memoritza les seqüències de notes i reprodueix-les correctament.</p>
+            <>
+              <p className="text-gray-300">Memoritza progressions complexes i patrons harmònics.</p>
+              <div className="mt-4 space-y-2">
+                <label className="text-sm text-gray-400">Temps de memorització: {timeSettings.memory}s</label>
+                <input 
+                  type="range" 
+                  min="3" 
+                  max="20" 
+                  value={timeSettings.memory}
+                  onChange={(e) => setTimeSettings({...timeSettings, memory: parseInt(e.target.value)})}
+                  className="w-full"
+                />
+              </div>
+            </>
           )}
           {mode === 'target' && (
             <p className="text-gray-300">Completa reptes específics per guanyar medalles i recompenses.</p>
@@ -1695,12 +1762,12 @@ function App() {
         {/* Estadístiques */}
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
           <div className="bg-gradient-to-br from-blue-500/10 to-blue-600/10 p-6 rounded-2xl border border-blue-500/20 text-center">
-            <div className="text-3xl font-bold text-blue-400 mb-2">7</div>
+            <div className="text-3xl font-bold text-blue-400 mb-2">8</div>
             <div className="text-gray-300">Modes de Joc</div>
           </div>
           <div className="bg-gradient-to-br from-purple-500/10 to-purple-600/10 p-6 rounded-2xl border border-purple-500/20 text-center">
-            <div className="text-3xl font-bold text-purple-400 mb-2">∞</div>
-            <div className="text-gray-300">Exercicis</div>
+            <div className="text-3xl font-bold text-purple-400 mb-2">Chess-level</div>
+            <div className="text-gray-300">Dificultat Mental</div>
           </div>
           <div className="bg-gradient-to-br from-pink-500/10 to-pink-600/10 p-6 rounded-2xl border border-pink-500/20 text-center">
             <div className="text-3xl font-bold text-pink-400 mb-2">9966</div>
@@ -1713,6 +1780,10 @@ function App() {
 
   const renderGame = (mode: GameMode) => {
     const game = gameTypes.find(g => g.id === mode);
+    
+    if (mode === 'advanced-theory') {
+      return <AdvancedTheoryComponent onBack={() => handleNavigate('home')} />;
+    }
     
     return (
       <div className="min-h-screen bg-gradient-to-br from-slate-900 to-slate-800 p-6">
