@@ -462,13 +462,7 @@ const gameTypes = [
     icon: Trophy,
     color: 'from-gold-500 to-yellow-600'
   },
-  {
-    id: 'advanced-theory',
-    title: 'Teoria Musical Avançada',
-    description: 'Estudi complet dels conceptes més complexos',
-    icon: BookOpen,
-    color: 'from-indigo-500 to-purple-600'
-  },
+
   {
     id: 'education-system',
     title: 'Biblioteca d\'Aprenentatge',
@@ -3132,21 +3126,7 @@ function App() {
   const renderGame = (mode: GameMode) => {
     const game = gameTypes.find(g => g.id === mode);
     
-    if (mode === 'advanced-theory') {
-      return (
-        <div className="text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">Teoria Musical Avançada</h2>
-          <p className="text-gray-300 mb-8">Contingut en desenvolupament</p>
-          <button
-            onClick={() => handleNavigate('home')}
-            className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg"
-          >
-            Tornar al menú
-          </button>
-        </div>
-      );
-    }
-    
+
     if (mode === 'composition-lab') {
       return <CompositionLabComponent />;
     }
