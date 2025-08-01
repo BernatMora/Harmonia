@@ -97,3 +97,8 @@ shared/
   - **Expanded Exercise Content**: Added 15+ new ultra-advanced questions for Theory mode
   - **Advanced Theory Section**: Complete new learning module with 4 chapters covering negative harmony, upper structures, Coltrane changes, and advanced voice leading
   - **Professional Enhancement**: All content now requires chess-level strategic thinking and professional jazz knowledge
+- **2025-08-01**: New puzzle-based learning modes for maximum mental challenge:
+  - **Composition Laboratory**: Create progressions with complex harmonic restrictions (chromatic motion, modal constraints, negative harmony challenges)
+  - **Analysis Master**: Decode real transcriptions from Bill Evans, Herbie Hancock with function analysis, voicing identification, and scale selection
+  - **Interactive Challenges**: 10 total game modes now available, each requiring deep musical analysis and creative problem-solving
+  - **Personal Learning Focus**: Designed for single advanced user with personalized difficulty that scales infinitely

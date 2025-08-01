@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Music, Trophy, BookOpen, Volume2, Target, Puzzle, ArrowLeft, Play, Clock, CheckCircle, XCircle } from "lucide-react";
 import { getRandomProgression, getProgressionsByMode, getChordTypes } from "./data/progressions";
 
-type GameMode = 'home' | 'theory' | 'speed' | 'memory' | 'target' | 'puzzle' | 'arcade' | 'harmonia' | 'advanced-theory';
+type GameMode = 'home' | 'theory' | 'speed' | 'memory' | 'target' | 'puzzle' | 'arcade' | 'harmonia' | 'advanced-theory' | 'composition-lab' | 'analysis-master';
 
 // Contingut educatiu ultra-avançat per cada joc
 const gameContent = {
@@ -466,6 +466,20 @@ const gameTypes = [
     description: 'Estudi complet dels conceptes més complexos',
     icon: BookOpen,
     color: 'from-indigo-500 to-purple-600'
+  },
+  {
+    id: 'composition-lab',
+    title: 'Laboratori de Composició',
+    description: 'Crea progressions amb restriccions complexes',
+    icon: Trophy,
+    color: 'from-emerald-500 to-teal-600'
+  },
+  {
+    id: 'analysis-master',
+    title: 'Anàlisi de Masters',
+    description: 'Desxifra transcripcions de Bill Evans, Herbie Hancock',
+    icon: Music,
+    color: 'from-amber-500 to-orange-600'
   }
 ];
 
@@ -1762,7 +1776,7 @@ function App() {
         {/* Estadístiques */}
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
           <div className="bg-gradient-to-br from-blue-500/10 to-blue-600/10 p-6 rounded-2xl border border-blue-500/20 text-center">
-            <div className="text-3xl font-bold text-blue-400 mb-2">8</div>
+            <div className="text-3xl font-bold text-blue-400 mb-2">10</div>
             <div className="text-gray-300">Modes de Joc</div>
           </div>
           <div className="bg-gradient-to-br from-purple-500/10 to-purple-600/10 p-6 rounded-2xl border border-purple-500/20 text-center">
@@ -1778,11 +1792,247 @@ function App() {
     </div>
   );
 
+  // Component del Laboratori de Composició
+  const CompositionLabComponent = () => {
+    const [currentChallenge, setCurrentChallenge] = useState(0);
+    const [userProgression, setUserProgression] = useState<string[]>([]);
+    const [isComplete, setIsComplete] = useState(false);
+    const [score, setScore] = useState(0);
+
+    const challenges = [
+      {
+        title: "Progressió Cromàtica Descendente",
+        instruction: "Crea una progressió de 8 acords on cada root baixi cromàticament, mantenint voice leading suau",
+        constraints: ["Root motion cromàtic", "Voice leading < 2 semitons", "Mínim 3 extensions"],
+        startingChord: "Cmaj9",
+        targetLength: 8
+      },
+      {
+        title: "Reharmonització Modal",
+        instruction: "Reharmonitza 'Autumn Leaves' bars 1-8 usant només acords de D mixolidi",
+        constraints: ["Només D mixolidi", "Mantén la melodia", "Voice leading cromàtic"],
+        startingChord: "Dm11",
+        targetLength: 8
+      },
+      {
+        title: "Negative Harmony Challenge",
+        instruction: "Crea la versió negative harmony de ii-V-I-vi amb substitucions tritòniques",
+        constraints: ["Armonia negativa", "Substitucions tritòniques", "Upper structures"],
+        startingChord: "Dm7",
+        targetLength: 4
+      }
+    ];
+
+    const availableChords = [
+      "Cmaj7", "Dm7", "Em7", "Fmaj7", "G7", "Am7", "Bø7",
+      "C7alt", "F#ø7", "B7alt", "Ebmaj7#11", "Abmaj7", "Dbmaj7",
+      "Fm(maj7)", "Bb13", "E7#11", "A7alt", "D7alt", "G7alt"
+    ];
+
+    const addChord = (chord: string) => {
+      if (userProgression.length < challenges[currentChallenge].targetLength) {
+        setUserProgression([...userProgression, chord]);
+      }
+      if (userProgression.length + 1 === challenges[currentChallenge].targetLength) {
+        setIsComplete(true);
+        setScore(score + 75); // Puntuació base per completar
+      }
+    };
+
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900/20 to-slate-900 text-white p-6">
+        <div className="max-w-6xl mx-auto">
+          <div className="flex items-center mb-8">
+            <button onClick={() => handleNavigate('home')} className="mr-4 p-2 rounded-lg bg-white/10 hover:bg-white/20">
+              <ArrowLeft className="h-6 w-6" />
+            </button>
+            <div>
+              <h1 className="text-4xl font-bold mb-2">Laboratori de Composició</h1>
+              <p className="text-gray-300">Crea progressions amb restriccions harmòniques ultra-complexes</p>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {/* Challenge Info */}
+            <div className="lg:col-span-1">
+              <div className="bg-slate-800/50 rounded-lg p-6">
+                <h3 className="text-xl font-bold mb-4">Desafiament {currentChallenge + 1}</h3>
+                <h4 className="text-emerald-400 font-semibold mb-3">{challenges[currentChallenge].title}</h4>
+                <p className="text-gray-300 mb-4">{challenges[currentChallenge].instruction}</p>
+                
+                <div className="mb-4">
+                  <h5 className="font-semibold mb-2">Restriccions:</h5>
+                  <ul className="text-sm text-gray-400 space-y-1">
+                    {challenges[currentChallenge].constraints.map((constraint, i) => (
+                      <li key={i}>• {constraint}</li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="bg-slate-700/50 p-3 rounded">
+                  <div className="text-sm text-gray-400">Acord inicial:</div>
+                  <div className="text-emerald-400 font-bold">{challenges[currentChallenge].startingChord}</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Composition Area */}
+            <div className="lg:col-span-2">
+              <div className="bg-slate-800/50 rounded-lg p-6">
+                <h3 className="text-xl font-bold mb-4">La teva progressió:</h3>
+                
+                <div className="grid grid-cols-4 gap-2 mb-6">
+                  {Array.from({ length: challenges[currentChallenge].targetLength }).map((_, i) => (
+                    <div key={i} className={`h-16 rounded border-2 border-dashed flex items-center justify-center ${
+                      userProgression[i] ? 'bg-emerald-600 border-emerald-500' : 'border-gray-600'
+                    }`}>
+                      <span className="font-bold">{userProgression[i] || `${i + 1}`}</span>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="mb-6">
+                  <h4 className="font-semibold mb-3">Acords disponibles:</h4>
+                  <div className="grid grid-cols-3 gap-2">
+                    {availableChords.map((chord, i) => (
+                      <button
+                        key={i}
+                        onClick={() => addChord(chord)}
+                        disabled={userProgression.length >= challenges[currentChallenge].targetLength}
+                        className="p-2 bg-slate-700 hover:bg-slate-600 rounded text-sm disabled:opacity-50"
+                      >
+                        {chord}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
+                {isComplete && (
+                  <div className="bg-emerald-600/20 border border-emerald-500 rounded-lg p-4">
+                    <h4 className="font-bold text-emerald-400 mb-2">Progressió completada!</h4>
+                    <p className="text-gray-300 mb-2">Puntuació: {score}/100</p>
+                    <button 
+                      onClick={() => {
+                        setCurrentChallenge((currentChallenge + 1) % challenges.length);
+                        setUserProgression([]);
+                        setIsComplete(false);
+                      }}
+                      className="bg-emerald-600 hover:bg-emerald-700 px-4 py-2 rounded"
+                    >
+                      Següent desafiament
+                    </button>
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  };
+
   const renderGame = (mode: GameMode) => {
     const game = gameTypes.find(g => g.id === mode);
     
     if (mode === 'advanced-theory') {
       return <AdvancedTheoryComponent onBack={() => handleNavigate('home')} />;
+    }
+    
+    if (mode === 'composition-lab') {
+      return <CompositionLabComponent />;
+    }
+    
+    if (mode === 'analysis-master') {
+      return (
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-amber-900/20 to-slate-900 text-white p-6">
+          <div className="max-w-6xl mx-auto">
+            <div className="flex items-center mb-8">
+              <button onClick={() => handleNavigate('home')} className="mr-4 p-2 rounded-lg bg-white/10 hover:bg-white/20">
+                <ArrowLeft className="h-6 w-6" />
+              </button>
+              <div>
+                <h1 className="text-4xl font-bold mb-2">Anàlisi de Masters</h1>
+                <p className="text-gray-300">Desxifra transcripcions reals dels grans del jazz</p>
+              </div>
+            </div>
+
+            <div className="bg-slate-800/50 rounded-lg p-8">
+              <div className="mb-6">
+                <h2 className="text-2xl font-bold text-amber-400 mb-2">Bill Evans - Waltz for Debby</h2>
+                <p className="text-gray-300 mb-4">Compassos 1-8</p>
+                <p className="text-amber-300">Identifica les funcions harmòniques, voicings i escales apropiades</p>
+              </div>
+
+              <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 mb-6">
+                {["Fmaj7", "E7alt", "Am7", "D7", "Gm7", "C7", "Fmaj7", "Fmaj7"].map((chord, i) => (
+                  <div key={i} className="bg-slate-700/50 rounded-lg p-4">
+                    <div className="text-center font-bold text-amber-400 mb-3">{chord}</div>
+                    
+                    <div className="space-y-2">
+                      <select className="w-full bg-slate-600 rounded p-1 text-xs">
+                        <option value="">Funció</option>
+                        <option value="I">I</option>
+                        <option value="V/iii">V/iii</option>
+                        <option value="iii">iii</option>
+                        <option value="V/ii">V/ii</option>
+                        <option value="ii">ii</option>
+                        <option value="V">V</option>
+                      </select>
+                      
+                      <select className="w-full bg-slate-600 rounded p-1 text-xs">
+                        <option value="">Voicing</option>
+                        <option value="Drop 2">Drop 2</option>
+                        <option value="Rootless A">Rootless A</option>
+                        <option value="Rootless B">Rootless B</option>
+                        <option value="Shell">Shell</option>
+                      </select>
+                      
+                      <select className="w-full bg-slate-600 rounded p-1 text-xs">
+                        <option value="">Escala</option>
+                        <option value="Ionian">Ionian</option>
+                        <option value="Altered">Altered</option>
+                        <option value="Dorian">Dorian</option>
+                        <option value="Mixolydian">Mixolydian</option>
+                      </select>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="flex gap-4 mb-6">
+                <button className="bg-amber-600 hover:bg-amber-700 px-6 py-2 rounded">
+                  Comprovar Anàlisi
+                </button>
+                <button className="bg-slate-600 hover:bg-slate-700 px-6 py-2 rounded">
+                  Següent Transcripció
+                </button>
+              </div>
+
+              <div className="bg-amber-600/20 border border-amber-500 rounded-lg p-6">
+                <h3 className="font-bold text-amber-400 mb-4">Transcripcions Disponibles:</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="bg-slate-700/50 p-4 rounded">
+                    <h4 className="font-semibold text-white">Bill Evans</h4>
+                    <ul className="text-sm text-gray-300 mt-2">
+                      <li>• Waltz for Debby (bars 1-8)</li>
+                      <li>• Autumn Leaves (solo section)</li>
+                      <li>• Blue in Green (intro)</li>
+                    </ul>
+                  </div>
+                  <div className="bg-slate-700/50 p-4 rounded">
+                    <h4 className="font-semibold text-white">Herbie Hancock</h4>
+                    <ul className="text-sm text-gray-300 mt-2">
+                      <li>• Dolphin Dance (bars 9-16)</li>
+                      <li>• Maiden Voyage (comping)</li>
+                      <li>• Speak Like a Child (intro)</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      );
     }
     
     return (
