@@ -53,17 +53,18 @@ export default function GamePage() {
   };
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-8 mobile-safe">
       {/* Header */}
-      <div className="flex items-center justify-between mb-8">
+      <div className="flex items-center justify-between mb-4 sm:mb-8 flex-wrap gap-2">
         <div className="flex items-center">
           <Link href="/">
-            <Button variant="ghost" size="sm" className="text-white hover:bg-white/10 mr-4">
-              <ArrowLeft className="h-4 w-4 mr-2" />
-              Tornar
+            <Button variant="ghost" size="sm" className="text-white hover:bg-white/10 mr-2 sm:mr-4 mobile-button">
+              <ArrowLeft className="h-4 w-4 mr-1 sm:mr-2" />
+              <span className="hidden sm:inline">Tornar</span>
+              <span className="sm:hidden">←</span>
             </Button>
           </Link>
-          <h1 className="text-3xl font-bold text-white">{getGameTitle()}</h1>
+          <h1 className="text-lg sm:text-xl lg:text-2xl font-bold text-white">{getGameTitle()}</h1>
         </div>
       </div>
 

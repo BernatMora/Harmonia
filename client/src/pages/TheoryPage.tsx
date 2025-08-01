@@ -63,25 +63,26 @@ export default function TheoryPage() {
   };
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-8 mobile-safe">
       {/* Header */}
-      <div className="flex items-center justify-between mb-8">
-        <div className="flex items-center">
+      <div className="flex items-center justify-between mb-4 sm:mb-8 flex-wrap gap-4">
+        <div className="flex items-center min-w-0 flex-1">
           <Link href="/">
-            <Button variant="ghost" size="sm" className="text-white hover:bg-white/10 mr-4">
-              <ArrowLeft className="h-4 w-4 mr-2" />
-              Tornar
+            <Button variant="ghost" size="sm" className="text-white hover:bg-white/10 mr-2 sm:mr-4 mobile-button">
+              <ArrowLeft className="h-4 w-4 mr-1 sm:mr-2" />
+              <span className="hidden sm:inline">Tornar</span>
+              <span className="sm:hidden">←</span>
             </Button>
           </Link>
-          <div className="flex items-center">
-            <BookOpen className="h-8 w-8 text-blue-400 mr-3" />
-            <h1 className="text-3xl font-bold text-white">Teoria Musical</h1>
+          <div className="flex items-center min-w-0">
+            <BookOpen className="h-6 w-6 sm:h-8 sm:w-8 text-blue-400 mr-2 sm:mr-3 flex-shrink-0" />
+            <h1 className="text-lg sm:text-2xl lg:text-3xl font-bold text-white truncate">Teoria Musical</h1>
           </div>
         </div>
         
-        <div className="text-right">
-          <div className="text-white font-semibold">Puntuació Total</div>
-          <div className="text-2xl font-bold text-blue-400">{(stats as any)?.totalScore || 0}</div>
+        <div className="text-right flex-shrink-0">
+          <div className="text-white font-semibold text-sm sm:text-base">Puntuació Total</div>
+          <div className="text-xl sm:text-2xl font-bold text-blue-400">{(stats as any)?.totalScore || 0}</div>
         </div>
       </div>
 

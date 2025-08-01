@@ -35,3 +35,108 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Mobile optimizations */
+@layer utilities {
+  .mobile-safe {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  
+  .mobile-header {
+    padding-top: env(safe-area-inset-top);
+  }
+  
+  .touch-manipulation {
+    touch-action: manipulation;
+  }
+  
+  .mobile-scroll {
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  /* Better button sizing for mobile */
+  .mobile-button {
+    @apply min-h-[44px] min-w-[44px];
+  }
+  
+  /* Improved text readability on mobile */
+  .mobile-text {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+}
+
+/* Custom responsive breakpoints */
+@media (max-width: 375px) {
+  .container {
+    @apply px-3;
+  }
+}
+
+@media (max-width: 480px) {
+  .text-responsive {
+    @apply text-base;
+  }
+  
+  .heading-responsive {
+    @apply text-2xl;
+  }
+}
+
+/* Custom animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Improved gradient animations */
+@keyframes gradientShift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradientShift 8s ease infinite;
+}
+
+/* Better scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(51, 65, 85, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(59, 130, 246, 0.5);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(59, 130, 246, 0.7);
+}
