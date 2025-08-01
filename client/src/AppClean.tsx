@@ -94,221 +94,229 @@ const gameContent = {
   ],
   speed: [
     {
-      question: "Do# és igual a:",
-      options: ["Reb", "Mib", "Fab", "Solb"],
+      question: "En un ii-V-I en Bb major, el tritó del V7 es resol a:",
+      options: ["3a i 7a del Imaj7", "Root i 5a del Imaj7", "9a i 13a del Imaj7", "11a i b13a del Imaj7"],
       correct: 0,
-      explanation: "Do# i Reb són enharmonies - la mateixa nota.",
-      timeLimit: 5
+      explanation: "El tritó F-B del F7 es resol a Eb-F (3a i 7a del Bbmaj7).",
+      timeLimit: 4
     },
     {
-      question: "Quants semitons té una octava?",
-      options: ["10", "11", "12", "13"],
+      question: "En Cherokee (Bb), l'acord Gm7b5 funciona com a:",
+      options: ["vi7b5/vi", "ii7b5/V", "iii7b5/ii", "iv7b5/I"],
+      correct: 1,
+      explanation: "Gm7b5 és ii7b5 que resol a C7 (V7/V) creant una progressió secundària.",
+      timeLimit: 3
+    },
+    {
+      question: "Quina escala s'usa sobre Am7b5 en un ii-V menor?",
+      options: ["A locri", "A frigi", "A dòric b2", "A melòdic menor"],
+      correct: 0,
+      explanation: "Am7b5 usa A locri (del Bb major) per mantenir les notes del ii-V menor.",
+      timeLimit: 4
+    },
+    {
+      question: "En Giant Steps, la progressió B-D7-G utilitza:",
+      options: ["Cicle de 5es", "Substitució tritònica", "Coltrane changes", "Intercambio modal"],
       correct: 2,
-      explanation: "Una octava té 12 semitons.",
-      timeLimit: 4
-    },
-    {
-      question: "La nota La central té la frequència:",
-      options: ["220 Hz", "440 Hz", "880 Hz", "110 Hz"],
-      correct: 1,
-      explanation: "La nota La central (A4) té 440 Hz.",
-      timeLimit: 6
-    },
-    {
-      question: "Do a Mi és un interval de:",
-      options: ["2a", "3a", "4a", "5a"],
-      correct: 1,
-      explanation: "Do a Mi és una tercera major.",
-      timeLimit: 3
-    },
-    {
-      question: "Sol# és igual a:",
-      options: ["Lab", "Sib", "Fab", "Mib"],
-      correct: 0,
-      explanation: "Sol# i Lab són enharmonies.",
-      timeLimit: 4
-    },
-    {
-      question: "Una blanca dura:",
-      options: ["1 temps", "2 temps", "3 temps", "4 temps"],
-      correct: 1,
-      explanation: "Una blanca equival a 2 temps en 4/4.",
-      timeLimit: 3
-    },
-    {
-      question: "L'armadura de Sol major té:",
-      options: ["0 alteracions", "1#", "2#", "1b"],
-      correct: 1,
-      explanation: "Sol major té un sostingut (Fa#).",
-      timeLimit: 4
-    },
-    {
-      question: "Un acord augmentat té:",
-      options: ["3a major + 5a justa", "3a major + 5a augmentada", "3a menor + 5a justa", "3a menor + 5a augmentada"],
-      correct: 1,
-      explanation: "L'acord augmentat conté tercera major i quinta augmentada.",
+      explanation: "Coltrane changes: moviment de terceres majors (B-G-Eb) amb dominants intermedis.",
       timeLimit: 5
+    },
+    {
+      question: "Sobre Cmaj7#11, quina escala genera l'#11?",
+      options: ["C lidi", "C mixolidi", "C jònic", "C dòric"],
+      correct: 0,
+      explanation: "C lidi (del G major) conté F# que és l'#11 característica.",
+      timeLimit: 3
+    },
+    {
+      question: "En un blues menor, el bVI7 (Ab7 en Cm) és:",
+      options: ["Substitució tritònica", "Dominant secundari", "bVII del relatiu major", "Interchange modal"],
+      correct: 3,
+      explanation: "Ab7 ve del C menor natural (interchange modal del parallel major).",
+      timeLimit: 4
+    },
+    {
+      question: "La progressió Cm-F7-Bbmaj7-Ebmaj7 usa el principi de:",
+      options: ["Voice leading cromàtic", "Moviment de 4es", "Progressió plagal", "Circle of 5ths"],
+      correct: 0,
+      explanation: "Voice leading: C-C-Bb-Bb (cromàtic) i Eb-F-F-Eb (stepwise motion).",
+      timeLimit: 5
+    },
+    {
+      question: "En 'Autumn Leaves', Am7b5-D7-Gm usa quina relació harmònica?",
+      options: ["ii-V-i menor", "iii-VI-ii relatiu", "Tonicització a Gm", "Modulació directa"],
+      correct: 0,
+      explanation: "ii7b5-V7-i: progressió modal menor clàssica en Gm.",
+      timeLimit: 4
     }
   ],
   memory: [
     {
-      pattern: ["Do", "Re", "Mi"],
-      description: "Memoritza aquesta seqüència de 3 notes",
-      difficulty: "Fàcil"
+      pattern: ["Cmaj7#11", "A7alt", "Dm7", "G7sus4"],
+      description: "Reharmonització de ii-V-I amb extensions",
+      difficulty: "Expert"
     },
     {
-      pattern: ["Do", "Mi", "Sol", "Do"],
-      description: "Acord de Do major",
-      difficulty: "Fàcil"
+      pattern: ["Bb", "G7/B", "Cm7", "F7/A", "Dm7b5", "G7", "Cm"],
+      description: "Cherokee - primera línia amb voice leading cromàtic",
+      difficulty: "Professional"
     },
     {
-      pattern: ["Do", "Re", "Mi", "Fa", "Sol"],
-      description: "Escala major (primera meitat)",
-      difficulty: "Mitjà"
+      pattern: ["Em7b5", "A7alt", "Dm7", "G7", "Cmaj7", "Am7", "D7", "Gmaj7"],
+      description: "Rhythm Changes bridge - Giant Steps approach",
+      difficulty: "Expert"
     },
     {
-      pattern: ["Do", "Mib", "Sol"],
-      description: "Acord de Do menor",
-      difficulty: "Mitjà"
+      pattern: ["F#ø7", "B7alt", "Em(maj7)", "Em7", "Am7", "D7"],
+      description: "ii-V menor amb resolució deceptiva",
+      difficulty: "Avançat"
     },
     {
-      pattern: ["Do", "Re", "Mi", "Fa", "Sol", "La"],
-      description: "Sis notes consecutives",
-      difficulty: "Mitjà"
+      pattern: ["B", "D7", "G", "Bb7", "Eb", "F#7", "B"],
+      description: "Giant Steps - Coltrane matrix complet",
+      difficulty: "Professional"
     },
     {
-      pattern: ["Do", "Mi", "Sol", "Si", "Re"],
-      description: "Acord de Do major amb 7a i 9a",
-      difficulty: "Difícil"
+      pattern: ["Cm(maj7)", "F13", "BbMaj7#11", "EbMaj7", "Am7b5", "D7alt"],
+      description: "Sophisticat reharmonització amb upper structures",
+      difficulty: "Expert"
     },
     {
-      pattern: ["Do", "Re", "Mi", "Fa", "Sol", "La", "Si"],
-      description: "Escala major completa",
-      difficulty: "Difícil"
+      pattern: ["DbMaj7", "Gb7#11", "Cmaj7", "E7alt", "Amaj7", "D7sus4", "GMaj7"],
+      description: "All The Things You Are - modulació per terceres",
+      difficulty: "Professional"
     },
     {
-      pattern: ["Do", "Reb", "Mi", "Fa", "Sol", "Lab", "Si"],
-      description: "Escala harmònica menor",
-      difficulty: "Difícil"
+      pattern: ["C7alt", "F7alt", "BbMaj7", "G7#5", "Cm7", "F7", "BbMaj7"],
+      description: "Strasbourg/St Denis - tritone substitutions cadenes",
+      difficulty: "Master"
     }
   ],
   target: [
     {
-      challenge: "Identifica 5 intervals correctament",
-      goal: 5,
-      reward: "🥉 Bronze en Intervals",
+      challenge: "Mestre en Armonia Negativa",
+      goal: 8,
+      reward: "🌑 Master en Negative Harmony",
       questions: [
-        { question: "Do a Mi", options: ["2a", "3a", "4a"], correct: 1 },
-        { question: "Do a Fa", options: ["3a", "4a", "5a"], correct: 1 },
-        { question: "Do a Sol", options: ["4a", "5a", "6a"], correct: 1 },
-        { question: "Do a La", options: ["5a", "6a", "7a"], correct: 1 },
-        { question: "Do a Si", options: ["6a", "7a", "8a"], correct: 1 },
-        { question: "Mi a Sol", options: ["2a", "3a", "4a"], correct: 1 },
-        { question: "Fa a La", options: ["2a", "3a", "4a"], correct: 1 }
+        { question: "En C major, l'equivalent negatiu de Am7 és:", options: ["Fm7", "Fm(maj7)", "F7", "Fmaj7"], correct: 1 },
+        { question: "G7 → Cmaj7 en negatiu és:", options: ["F7 → Cmaj7", "Fm7 → Fmaj7", "Fm(maj7) → Fmaj7", "F7 → Fmaj7"], correct: 2 },
+        { question: "El Dm7 negatiu de ii-V-I en C:", options: ["Bmaj7", "Bm(maj7)", "B7", "Bmaj7#11"], correct: 1 },
+        { question: "V7/V (D7) en negatiu:", options: ["Bb7", "Bbmaj7", "Bm(maj7)", "Bb(maj7)"], correct: 2 },
+        { question: "L'axis tonal en C major està entre:", options: ["G-F", "E-Ab", "D-A", "C-G"], correct: 1 },
+        { question: "Em7b5 negatiu en armonia de C:", options: ["Amaj7#11", "A(maj7)", "Am(maj7)", "A7#11"], correct: 0 },
+        { question: "Progressió negativa de vi-IV-I-V:", options: ["bIII-bVI-I-bII", "bIII(maj7)-bVImaj7-Imaj7-bII(maj7)", "iii-VI-I-ii", "bIII7-bVI7-I7-bII7"], correct: 1 },
+        { question: "F#ø7 negatiu en harmonia C:", options: ["Fm(maj7)", "F(maj7)", "Fmaj7#11", "F7alt"], correct: 0 }
       ]
     },
     {
-      challenge: "Completa 3 escales majors",
-      goal: 3,
-      reward: "🥈 Plata en Escales",
+      challenge: "Expert en Reharmonització Avançada",
+      goal: 6,
+      reward: "⚡ Reharmonization Genius",
       questions: [
-        { question: "Do major: Do, Re, ?, Fa, Sol, ?, Si", options: ["Mi, La", "Re, La", "Mi, Si"], correct: 0 },
-        { question: "Sol major: Sol, La, ?, Do, Re, ?, Fa#", options: ["Si, Mi", "La, Mi", "Si, Fa"], correct: 0 },
-        { question: "Fa major: Fa, Sol, ?, Sib, Do, ?, Mi", options: ["La, Re", "Si, Re", "La, Mi"], correct: 0 }
+        { question: "Reharmonitza Cmaj7 amb upper structure:", options: ["Em7/C", "G7sus4/C", "Am7/C", "F#ø7/C"], correct: 0 },
+        { question: "Substitució tritònica de G7 amb extensions:", options: ["Db13", "Db7alt", "Db7#11", "DbMaj7#11"], correct: 1 },
+        { question: "Chromatic voice leading per Dm7-G7-C:", options: ["Dm7-G7/B-C", "Dm7-Db7-C", "D#ø7-G7-C", "Dm7-G7/Ab-C"], correct: 1 },
+        { question: "Modal interchange per Am7:", options: ["Amaj7", "Am(maj7)", "A7", "Am7b5"], correct: 1 },
+        { question: "Upper structure triad sobre C13:", options: ["Dm/C", "D/C", "Em/C", "F#ø/C"], correct: 1 },
+        { question: "Coltrane substitution per V7:", options: ["bII7-V7", "bV7-IV7", "VII7-bVI7", "bIII7-bVI7"], correct: 0 }
       ]
     },
     {
-      challenge: "Reconeix 4 acords majors i menors",
-      goal: 4,
-      reward: "🥇 Or en Acords",
+      challenge: "Master en Voice Leading & Counterpoint",
+      goal: 7,
+      reward: "🎼 Counterpoint Master",
       questions: [
-        { question: "Do-Mi-Sol és:", options: ["Major", "Menor", "Augmentat"], correct: 0 },
-        { question: "Do-Mib-Sol és:", options: ["Major", "Menor", "Disminuït"], correct: 1 },
-        { question: "Re-Fa#-La és:", options: ["Major", "Menor", "Augmentat"], correct: 0 },
-        { question: "La-Do-Mi és:", options: ["Major", "Menor", "Disminuït"], correct: 1 },
-        { question: "Mi-Sol#-Si és:", options: ["Major", "Menor", "Augmentat"], correct: 0 },
-        { question: "Fa-Lab-Do és:", options: ["Major", "Menor", "Disminuït"], correct: 1 }
+        { question: "En Cmaj7-A7alt-Dm7, el voice leading òptim és:", options: ["C-C#-D", "B-Bb-A", "E-E-F", "G-G-F"], correct: 1 },
+        { question: "Parallel motion prohibit en contrapunt:", options: ["5es perfectes", "3es majors", "6es majors", "4es justes"], correct: 0 },
+        { question: "Voice leading cromàtic en ii-V:", options: ["Root motion", "3rd-7th resolution", "5th movement", "9th tension"], correct: 1 },
+        { question: "En Giant Steps, voice leading entre B-D7:", options: ["F#-F", "D#-D", "B-A", "F#-C"], correct: 2 },
+        { question: "Drop 2 voicing de Cmaj9:", options: ["E-G-B-D", "C-E-B-D", "G-B-D-E", "C-B-D-E"], correct: 1 },
+        { question: "Leading tone resolution en Bb:", options: ["A→Bb", "F→G", "D→Eb", "C→D"], correct: 0 },
+        { question: "Best voice leading Fm7-Bb7-Eb:", options: ["Stepwise motion", "Contrary motion", "Common tones", "Chromatic lines"], correct: 2 }
       ]
     },
     {
-      challenge: "Mestre en Progressions Harmòniques",
-      goal: 5,
-      reward: "💎 Diamant en Harmonia",
+      challenge: "Ultimate Jazz Harmony & Modal Theory",
+      goal: 10,
+      reward: "👑 Supreme Jazz Master",
       questions: [
-        { question: "En Fa major, la progressió vi-IV-I-V és:", options: ["Dm-Bb-F-C", "Am-F-C-G", "Gm-Eb-Bb-F"], correct: 0 },
-        { question: "Un acord half-diminished té:", options: ["3a menor + 5a dim + 7a menor", "3a menor + 5a dim + 7a major", "3a major + 5a dim + 7a menor"], correct: 0 },
-        { question: "La progressió ii°-V-i és típica de:", options: ["Mode major", "Mode menor", "Mode dòric"], correct: 1 },
-        { question: "En Am, l'acord VII és:", options: ["G", "G#", "Gmaj7"], correct: 0 },
-        { question: "Un acord de dominant conté:", options: ["7a menor", "7a major", "6a major"], correct: 0 },
-        { question: "La cadència plagal és:", options: ["V-I", "IV-I", "ii-V"], correct: 1 },
-        { question: "En el mode menor, el VI grau és:", options: ["Major", "Menor", "Augmentat"], correct: 0 }
+        { question: "Escala sobre Cmaj7#11 en contexte lidi:", options: ["C lidi", "G major", "F# locri", "D mixolidi"], correct: 0 },
+        { question: "Altered scale conté quines alteracions:", options: ["b9,#9,#11,b13", "b9,#9,b13,b7", "b9,#9,#11,b13,b7", "#9,#11,b13"], correct: 0 },
+        { question: "Sobre G7alt en ii-V, millor opció:", options: ["G altered", "G mixolidi b6", "G whole-half dim", "Ab lidi b7"], correct: 0 },
+        { question: "Quartal harmony sobre Dm7:", options: ["D-G-C-F", "A-D-G-C", "G-C-F-Bb", "F-Bb-Eb-Ab"], correct: 1 },
+        { question: "Polychord C/D indica:", options: ["Dmaj9sus4", "D13sus4", "Dmaj13no3", "D7add9"], correct: 1 },
+        { question: "Best scale per Am7b5 en ii-V menor:", options: ["A locri #2", "A locri", "A frigi", "A aeoli b5"], correct: 1 },
+        { question: "Harmonic minor V7 conté:", options: ["Natural 7th", "b9 i natural 13", "b9,b13", "#5,b9"], correct: 2 },
+        { question: "En Cherokee, Gm7b5-C7 analitzar com:", options: ["ii-V/V", "ii-V/ii", "ii-V/vi", "iv-V/I"], correct: 2 },
+        { question: "Tension notes per Fmaj7#11:", options: ["9,#11,13", "9,11,13", "b9,#11,b13", "9,#11,b13"], correct: 0 },
+        { question: "Giant Steps key centers són:", options: ["B-G-Eb", "C-A-F#", "Db-A-F", "F#-D-Bb"], correct: 0 }
       ]
     }
   ],
   puzzle: [
     {
-      question: "Completa l'escala de Do major:",
-      text: "Do, Re, __, Fa, Sol, __, Si, Do",
-      blanks: 2,
-      options: ["Mi", "Fa#", "La", "Sib", "Mib", "Lab"],
-      correct: [0, 2],
-      explanation: "L'escala de Do major és: Do, Re, Mi, Fa, Sol, La, Si, Do"
-    },
-    {
-      question: "Completa l'acord de La menor:",
-      text: "La, __, Mi",
+      question: "Completa la substitució tritònica amb extensions:",
+      text: "Dm7 - __ - Cmaj7 (en lloc de Dm7-G7-Cmaj7)",
       blanks: 1,
-      options: ["Do", "Do#", "Reb", "Re"],
-      correct: [0],
-      explanation: "L'acord de La menor és: La, Do, Mi"
-    },
-    {
-      question: "Completa l'escala de Sol major:",
-      text: "Sol, La, __, Do, Re, __, Fa#, Sol",
-      blanks: 2,
-      options: ["Si", "Sib", "Mi", "Mib", "Fa"],
-      correct: [0, 2],
-      explanation: "L'escala de Sol major és: Sol, La, Si, Do, Re, Mi, Fa#, Sol"
-    },
-    {
-      question: "Completa la progressió d'acords:",
-      text: "Do major - __ menor - Sol major - __ major",
-      blanks: 2,
-      options: ["La", "Re", "Mi", "Fa", "Si"],
-      correct: [0, 3],
-      explanation: "Progressió típica: Do major - La menor - Sol major - Fa major (vi-IV-V-I)"
-    },
-    {
-      question: "Completa l'interval:",
-      text: "Do a __ = Quinta justa",
-      blanks: 1,
-      options: ["Fa", "Sol", "La", "Si"],
+      options: ["Db13", "Db7alt", "Db7#11", "DbMaj7"],
       correct: [1],
-      explanation: "Una quinta justa des de Do és Sol (7 semitons)"
+      explanation: "Db7alt substitueix G7 per tritò, mantenint la tensió de resolució"
     },
     {
-      question: "Completa la progressió en F menor:",
-      text: "__ - Gm - __ - Bb",
-      blanks: 2,
-      options: ["Dm", "Fm", "Ab", "C", "Eb"],
-      correct: [1, 2],
-      explanation: "Progressió vi-I-ii-IV en F major: Dm-F-Gm-Bb"
-    },
-    {
-      question: "Identifica el tipus d'acord:",
-      text: "C - E - G - B♭ és un acord __",
+      question: "Completa l'armonia negativa de G7→C:",
+      text: "__ → Fmaj7 (equivalent negatiu)",
       blanks: 1,
-      options: ["major", "menor", "dominant", "augmentat"],
-      correct: [2],
-      explanation: "C7 (Do dominant) conté 3a major i 7a menor, característic dels acords dominants"
+      options: ["Fm7", "Fm(maj7)", "F7", "F#ø7"],
+      correct: [1],
+      explanation: "G7→C es transforma en Fm(maj7)→Fmaj7 en armonia negativa"
     },
     {
-      question: "Completa la cadència:",
-      text: "Am - __ - G - __",
+      question: "Completa la progressió de Giant Steps:",
+      text: "B - __ - G - __ - Eb",
       blanks: 2,
-      options: ["F", "C", "Dm", "Em"],
-      correct: [0, 1],
-      explanation: "Progressió vi-IV-V-I: Am-F-G-C"
+      options: ["D7", "F#7", "Bb7", "C7", "A7"],
+      correct: [0, 2],
+      explanation: "Giant Steps: B-D7-G-Bb7-Eb (Coltrane changes per terceres majors)"
+    },
+    {
+      question: "Completa la reharmonització modal:",
+      text: "Cmaj7 - __ - Am7 - __ (intercambio modal)",
+      blanks: 2,
+      options: ["Fm7", "F7", "Dm7b5", "DbMaj7", "Fm(maj7)"],
+      correct: [0, 2],
+      explanation: "Intercambio modal: Cmaj7-Fm7-Am7-Dm7b5 (del C menor)"
+    },
+    {
+      question: "Completa l'upper structure triad:",
+      text: "C13 = __ triangle sobre C7",
+      blanks: 1,
+      options: ["Am", "Dm", "D", "Em"],
+      correct: [2],
+      explanation: "C13 conté D triad (D-F#-A) sobre C7 per crear C13"
+    },
+    {
+      question: "Completa el voice leading cromàtic:",
+      text: "Am7 - __ - G7 - __ (bass line cromàtic)",
+      blanks: 2,
+      options: ["Ab7", "Abmaj7", "C6", "C/G", "Gmaj7"],
+      correct: [0, 3],
+      explanation: "Voice leading: Am7-Ab7-G7-C/G (baixos A-Ab-G-G cromàtics)"
+    },
+    {
+      question: "Completa la substitució Coltrane:",
+      text: "Cmaj7 → __ → F#maj7 (terceres majors)",
+      blanks: 1,
+      options: ["A7", "E7", "Ab7", "Eb7"],
+      correct: [0],
+      explanation: "Coltrane changes: moviment per terceres majors C-A-F# amb A7 com dominant"
+    },
+    {
+      question: "Completa l'anàlisi de Cherokee:",
+      text: "Bb - __ - Cm7 - F7 (tonicització)",
+      blanks: 1,
+      options: ["G7/B", "Gm7", "G7", "Gm7b5"],
+      correct: [0],
+      explanation: "Cherokee: Bb-G7/B-Cm7-F7 (voice leading cromàtic amb inversió)"
     }
   ],
   arcade: [

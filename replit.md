@@ -51,8 +51,11 @@ shared/
 
 ## User Preferences
 - Language: Catalan (UI text in Catalan)
-- Learning approach: Interactive, gamified music theory
-- Difficulty progression: Beginner to Expert levels
+- Target User: Advanced jazz musician requiring professional-level challenges
+- Learning approach: Ultra-intensive, mentally challenging exercises
+- Philosophy: "Pocs jocs però molt intensos" - fewer games but extremely demanding
+- Difficulty level: Expert to Master level only - eliminate simple exercises
+- Special focus: Negative harmony, advanced reharmonization, voice leading
 
 ## Recent Changes
 - **2025-08-01**: Completed migration from Bolt to Replit
@@ -76,3 +79,10 @@ shared/
   - Dynamic question generation from authentic musical data
   - Roman numeral analysis with detailed chord breakdowns
   - Progressive difficulty with major/minor mode recognition
+- **2025-08-01**: Complete transformation to professional jazz level:
+  - **Speed Mode**: Advanced concepts (ii-V-I analysis, Cherokee, Giant Steps, Coltrane changes)
+  - **Memory Mode**: Complex progressions (Cherokee voice leading, Giant Steps matrix, negative harmony)
+  - **Target Mode**: Four ultra-challenging categories including Negative Harmony mastery
+  - **Puzzle Mode**: Advanced harmonic concepts (tritone substitutions, upper structures, voice leading)
+  - **Elimination**: Removed all basic exercises (intervals, simple scales, basic chords)
+  - **Focus**: Negative harmony, reharmonization, voice leading, modal theory, Coltrane changes
