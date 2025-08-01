@@ -1,4 +1,4 @@
-import { Link, useLocation } from "wouter";
+import { useLocation } from "wouter";
 import { Music, Trophy, BookOpen, Volume2, Target, Puzzle } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -58,14 +58,16 @@ export default function HomePage() {
   const [location, setLocation] = useLocation();
 
   const handleCardClick = (path: string) => {
+    console.log('=== NAVIGATION DEBUG ===');
     console.log('Current location:', location);
-    console.log('Attempting navigation to:', path);
+    console.log('Target path:', path);
+    console.log('setLocation function:', typeof setLocation);
     
-    // Force immediate navigation with proper state update
-    setTimeout(() => {
-      setLocation(path);
-      console.log('Navigation completed to:', path);
-    }, 10);
+    // Test if the function is working
+    setLocation(path);
+    
+    console.log('Navigation command sent');
+    console.log('========================');
   };
 
   return (
@@ -105,8 +107,18 @@ export default function HomePage() {
             const IconComponent = game.icon;
             
             return (
-              <Link key={game.id} href={game.path} className="block h-full">
+              <div key={game.id} className="h-full">
                 <Card 
+                  onClick={() => handleCardClick(game.path)}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      handleCardClick(game.path);
+                    }
+                  }}
+                  tabIndex={0}
+                  role="button"
+                  aria-label={`Go to ${game.title}`}
                   className="relative bg-gradient-to-br from-slate-800/80 to-slate-900/80 border-slate-700/50 hover:border-slate-600 hover:shadow-2xl hover:shadow-blue-500/10 active:scale-95 transition-all duration-300 cursor-pointer h-full backdrop-blur-sm overflow-hidden touch-manipulation group focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-slate-900"
                   style={{
                     animation: `fadeInUp 0.6s ease-out ${index * 0.1}s both`
@@ -133,7 +145,7 @@ export default function HomePage() {
                     </div>
                   </CardContent>
                 </Card>
-              </Link>
+              </div>
             );
           })}
         </div>
