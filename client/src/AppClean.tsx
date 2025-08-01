@@ -4,64 +4,57 @@ import { getRandomProgression, getProgressionsByMode, getChordTypes } from "./da
 
 type GameMode = 'home' | 'theory' | 'speed' | 'memory' | 'target' | 'puzzle' | 'arcade' | 'harmonia';
 
-// Contingut educatiu real per cada joc
+// Contingut educatiu ultra-avançat per cada joc
 const gameContent = {
   theory: [
     {
-      question: "Quantes notes té l'escala major?",
-      options: ["5", "7", "8", "12"],
-      correct: 1,
-      explanation: "L'escala major té 7 notes diferents més l'octava repetició.",
-      level: "Principiant"
-    },
-    {
-      question: "Quin és l'interval entre Do i Sol?",
-      options: ["Quarta", "Quinta", "Sexta", "Sèptima"],
-      correct: 1,
-      explanation: "Entre Do i Sol hi ha una quinta justa (7 semitons).",
-      level: "Principiant"
-    },
-    {
-      question: "Quantes línies té el pentagrama?",
-      options: ["4", "5", "6", "7"],
-      correct: 1,
-      explanation: "El pentagrama té 5 línies horitzontals.",
-      level: "Principiant"
-    },
-    {
-      question: "L'acord de Do major consta de:",
-      options: ["Do-Mi-Sol", "Do-Re-Mi", "Do-Fa-Sol", "Do-Mi-La"],
+      question: "En la progressió Cmaj7-E7alt-Am7-D7alt-Dm7-G7alt-Cmaj7, el E7alt funciona com:",
+      options: ["V7/vi amb altered scale", "Substitució tritònica de Bb7", "Secondary dominant cromàtic", "Intercambio modal"],
       correct: 0,
-      explanation: "L'acord de Do major consta de Do, Mi i Sol.",
-      level: "Principiant"
+      explanation: "E7alt és V7/vi (dominant secundari d'Am7) amb escala altered per crear tensió màxima.",
+      level: "Master"
     },
     {
-      question: "Quin és el relatiu menor de Do major?",
-      options: ["Re menor", "La menor", "Mi menor", "Sol menor"],
-      correct: 1,
-      explanation: "La menor és el relatiu menor de Do major (mateix armadura).",
-      level: "Intermedi"
+      question: "En armonia negativa de C major, la progressió Am7-Dm7-G7-Cmaj7 es transforma en:",
+      options: ["Fmaj7-Bmaj7-Fm(maj7)-Fmaj7", "F(maj7)-B(maj7)-F7-Fmaj7", "Fm(maj7)-Bm(maj7)-Fm7-Fmaj7", "Fmaj7-Bmaj7-F(maj7)-Fmaj7"],
+      correct: 0,
+      explanation: "En negative harmony, cada acord es reflecteix al voltant de l'axis E-Ab: Am7→Fmaj7, Dm7→Bmaj7, G7→Fm(maj7).",
+      level: "Master"
     },
     {
-      question: "Una escala cromàtica té:",
-      options: ["7 notes", "12 notes", "8 notes", "24 notes"],
-      correct: 1,
-      explanation: "L'escala cromàtica conté les 12 notes possibles dins d'una octava.",
-      level: "Intermedi"
+      question: "La reharmonització de 'All The Things You Are' primer 8 compassos utilitza:",
+      options: ["Tritone subs consecutius", "Coltrane matrix", "Chromatic voice leading", "Quartal harmony"],
+      correct: 2,
+      explanation: "ATTYA usa chromatic voice leading: Fm7-Bb7/D-EbMaj7-AbMaj7 amb baixos cromàtics F-D-Eb-Ab.",
+      level: "Professional"
     },
     {
-      question: "L'interval de tritó té:",
-      options: ["5 semitons", "6 semitons", "7 semitons", "8 semitons"],
-      correct: 1,
-      explanation: "El tritó (quarta augmentada o quinta disminuïda) té 6 semitons.",
-      level: "Intermedi"
+      question: "Sobre Cmaj7#11, l'upper structure triad més efectiu és:",
+      options: ["D/C", "F#dim/C", "Em/C", "Bm/C"],
+      correct: 0,
+      explanation: "D major triad sobre C7 crea C13#11, amb tensions 9(D), #11(F#), 13(A).",
+      level: "Expert"
     },
     {
-      question: "En una cadència V-I, l'acord V és:",
-      options: ["Subdominant", "Dominant", "Tònic", "Supertònic"],
+      question: "En Giant Steps, la modulació de B a G segueix el principi:",
+      options: ["Cycle of 5ths", "Chromatic mediant", "Major 3rd root motion", "Tritone substitution"],
+      correct: 2,
+      explanation: "Giant Steps usa major 3rd root motion: B-G-Eb-B, dividint l'octava en tres parts iguals.",
+      level: "Professional"
+    },
+    {
+      question: "La progressió Em7b5-A7alt-Dm7-G7-Cmaj7 en minor ii-V indica:",
+      options: ["Tonicització de Dm", "Substitució de Am", "Modal interchange", "Relative minor approach"],
+      correct: 0,
+      explanation: "Em7b5-A7alt és ii-V/ii, tonicitzant Dm7 abans de continuar amb ii-V-I principal.",
+      level: "Expert"
+    },
+    {
+      question: "El voicing de Cmaj9 en Drop 2 des de la 5a inversió és:",
+      options: ["G-B-D-E", "G-E-B-D", "E-G-B-D", "B-D-E-G"],
       correct: 1,
-      explanation: "L'acord V és el dominant, que resol naturalment al tònic (I).",
-      level: "Avançat"
+      explanation: "Drop 2 de Cmaj9 (5a inversió): G al baix, després E-B-D from top-down.",
+      level: "Expert"
     },
     {
       question: "Un acord de sèptima dominant en Do major és:",
@@ -1037,31 +1030,40 @@ function GameComponent({ mode, onBack }: { mode: GameMode; onBack: () => void })
               
               {/* Simulació del joc */}
               <div className="bg-slate-800/50 rounded-lg p-6 mb-6">
-                <div className="text-lg text-white mb-4">🎵 Notes que cauen - Reacciona ràpid! 🎵</div>
-                <div className="text-sm text-gray-300 mb-4">Notes aleatòries, velocitats diferents, múltiples colors!</div>
+                <div className="text-lg text-white mb-4">🎼 Anàlisi Harmònic Instantani 🎼</div>
+                <div className="text-sm text-gray-300 mb-4">Identifica progressions, extensions i substitucions en temps real!</div>
                 
-                {/* Notes aleatòries amb dificultats variables */}
+                {/* Progressions harmòniques complexes que apareixen */}
                 <div className="flex justify-center space-x-2 mb-4 flex-wrap">
-                  {['Do', 'Do#', 'Re', 'Re#', 'Mi', 'Fa', 'Fa#', 'Sol', 'Sol#', 'La', 'La#', 'Si', 'Db', 'Eb', 'Gb', 'Ab', 'Bb'].slice(0, 7 + Math.floor(Math.random() * 5)).map((note, i) => {
-                    const speed = Math.random() * 3000 + 1000;
-                    const color = ['bg-blue-500', 'bg-red-500', 'bg-green-500', 'bg-purple-500', 'bg-yellow-500', 'bg-pink-500'][Math.floor(Math.random() * 6)];
-                    const isMoving = Math.random() > 0.3;
+                  {[
+                    { chord: "Cmaj7#11", analysis: "I lidi" },
+                    { chord: "Am7", analysis: "vi" },
+                    { chord: "F#ø7", analysis: "viiø/V" },
+                    { chord: "B7alt", analysis: "V7/iii" },
+                    { chord: "Em7b5", analysis: "iii7b5" },
+                    { chord: "A7alt", analysis: "V7/ii" },
+                    { chord: "Dm9", analysis: "ii9" },
+                    { chord: "G13", analysis: "V13" },
+                    { chord: "DbMaj7#11", analysis: "bII lidi" },
+                    { chord: "Fm(maj7)", analysis: "iv(maj7)" }
+                  ].slice(0, 5 + Math.floor(Math.random() * 3)).map((item, i) => {
+                    const difficulty = Math.random();
+                    const color = difficulty > 0.7 ? 'bg-red-600' : difficulty > 0.4 ? 'bg-orange-600' : 'bg-green-600';
+                    const isActive = Math.random() > 0.3;
+                    
                     return (
                       <button
                         key={i}
                         onClick={() => {
-                          const points = Math.floor(Math.random() * 50) + 10;
-                          console.log(`🎵 ${note} capturada! +${points} punts! Velocitat: ${speed.toFixed(0)}ms`);
+                          const points = Math.floor(difficulty * 100) + 20;
+                          console.log(`🎼 ${item.chord} analitzat com ${item.analysis}! +${points} punts!`);
                         }}
-                        className={`w-12 h-12 rounded-full flex items-center justify-center text-white font-bold text-xs transition-all duration-500 cursor-pointer hover:scale-110 ${color} ${
-                          isMoving ? 'animate-bounce' : ''
-                        } shadow-lg`}
-                        style={{
-                          animationDuration: `${speed}ms`,
-                          transform: isMoving ? `translateY(${Math.sin(Date.now() / speed) * 10}px)` : 'none'
-                        }}
+                        className={`p-3 rounded border-2 flex flex-col items-center justify-center text-white font-bold text-xs transition-all cursor-pointer hover:scale-110 ${color} ${
+                          isActive ? 'animate-pulse' : ''
+                        } shadow-lg border-white/20`}
                       >
-                        {note}
+                        <div>{item.chord}</div>
+                        <div className="text-xs opacity-75">{item.analysis}</div>
                       </button>
                     );
                   })}
@@ -1074,7 +1076,7 @@ function GameComponent({ mode, onBack }: { mode: GameMode; onBack: () => void })
                   <div className="text-blue-400">Nivell: {Math.floor(Math.random() * 20) + 1}</div>
                 </div>
                 
-                <div className="text-xs text-gray-400">💡 Notes sostingudes valen més punts! Velocitat augmenta cada 10 captures!</div>
+                <div className="text-xs text-gray-400">💡 Extensions i alteracions valen més punts! Anàlisi correcte incrementa la dificultat!</div>
               </div>
               
               <div className="flex space-x-4 justify-center">
@@ -1111,8 +1113,8 @@ function GameComponent({ mode, onBack }: { mode: GameMode; onBack: () => void })
               
               {/* Simulació del ritme */}
               <div className="bg-slate-800/50 rounded-lg p-6 mb-6">
-                <div className="text-lg text-white mb-4">🥁 Ritmes complexos en temps real! 🥁</div>
-                <div className="text-sm text-gray-300 mb-4">Patrons aleatòris, signatures de temps variables, polyrhythms!</div>
+                <div className="text-lg text-white mb-4">🎭 Voice Leading Master 🎭</div>
+                <div className="text-sm text-gray-300 mb-4">Resolucions cromàtiques, moviment de veus, counterpoint avançat!</div>
                 
                 {/* Patrons rítmics complexos i aleatòris */}
                 <div className="space-y-4 mb-6">
@@ -1194,16 +1196,16 @@ function GameComponent({ mode, onBack }: { mode: GameMode; onBack: () => void })
                   <div className="text-red-400">Streak: {Math.floor(Math.random() * 25)}</div>
                 </div>
                 
-                <div className="text-xs text-gray-400 mb-4">💡 Múltiples layers rítmics! Cada color = instrument diferent</div>
+                <div className="text-xs text-gray-400 mb-4">💡 Moviment de veus simultàni! Cada línia = veu independent</div>
                 <div className="flex space-x-2 justify-center">
                   <button className="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded text-sm font-bold">
-                    🥁 KICK
+                    🎼 SOPRANO
                   </button>
                   <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded text-sm font-bold">
-                    🔔 SNARE
+                    🎵 ALTO
                   </button>
                   <button className="bg-yellow-600 hover:bg-yellow-700 text-white px-4 py-2 rounded text-sm font-bold">
-                    ⚡ HI-HAT
+                    🎶 BASS
                   </button>
                 </div>
               </div>
