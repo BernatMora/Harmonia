@@ -100,5 +100,6 @@ shared/
 - **2025-08-01**: New puzzle-based learning modes for maximum mental challenge:
   - **Composition Laboratory**: Create progressions with complex harmonic restrictions (chromatic motion, modal constraints, negative harmony challenges)
   - **Analysis Master**: Decode real transcriptions from Bill Evans, Herbie Hancock with function analysis, voicing identification, and scale selection
-  - **Interactive Challenges**: 10 total game modes now available, each requiring deep musical analysis and creative problem-solving
+  - **Musical Theory Easter Egg Hunt**: Progressive treasure hunt through hidden harmonic secrets with unlockable knowledge rewards
+  - **Interactive Challenges**: 11 total game modes now available, each requiring deep musical analysis and creative problem-solving
   - **Personal Learning Focus**: Designed for single advanced user with personalized difficulty that scales infinitely

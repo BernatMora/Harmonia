@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Music, Trophy, BookOpen, Volume2, Target, Puzzle, ArrowLeft, Play, Clock, CheckCircle, XCircle } from "lucide-react";
 import { getRandomProgression, getProgressionsByMode, getChordTypes } from "./data/progressions";
 
-type GameMode = 'home' | 'theory' | 'speed' | 'memory' | 'target' | 'puzzle' | 'arcade' | 'harmonia' | 'advanced-theory' | 'composition-lab' | 'analysis-master';
+type GameMode = 'home' | 'theory' | 'speed' | 'memory' | 'target' | 'puzzle' | 'arcade' | 'harmonia' | 'advanced-theory' | 'composition-lab' | 'analysis-master' | 'easter-hunt';
 
 // Contingut educatiu ultra-avançat per cada joc
 const gameContent = {
@@ -480,6 +480,13 @@ const gameTypes = [
     description: 'Desxifra transcripcions de Bill Evans, Herbie Hancock',
     icon: Music,
     color: 'from-amber-500 to-orange-600'
+  },
+  {
+    id: 'easter-hunt',
+    title: 'Caça del Tresor Musical',
+    description: 'Descobreix secrets harmònics amagats',
+    icon: Target,
+    color: 'from-purple-500 to-pink-600'
   }
 ];
 
@@ -1776,7 +1783,7 @@ function App() {
         {/* Estadístiques */}
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
           <div className="bg-gradient-to-br from-blue-500/10 to-blue-600/10 p-6 rounded-2xl border border-blue-500/20 text-center">
-            <div className="text-3xl font-bold text-blue-400 mb-2">10</div>
+            <div className="text-3xl font-bold text-blue-400 mb-2">11</div>
             <div className="text-gray-300">Modes de Joc</div>
           </div>
           <div className="bg-gradient-to-br from-purple-500/10 to-purple-600/10 p-6 rounded-2xl border border-purple-500/20 text-center">
@@ -1791,6 +1798,252 @@ function App() {
       </div>
     </div>
   );
+
+  // Component de la Caça del Tresor Musical
+  const EasterHuntComponent = () => {
+    const [currentLevel, setCurrentLevel] = useState(0);
+    const [foundSecrets, setFoundSecrets] = useState<string[]>([]);
+    const [showHint, setShowHint] = useState(false);
+    const [userInput, setUserInput] = useState('');
+    const [discoveredTreasures, setDiscoveredTreasures] = useState<any[]>([]);
+
+    const easterEggs = [
+      {
+        title: "El Secret del Tritó",
+        clue: "En el centre de l'octava, dividint perfectament... Quants semitons conté el diabolus in musica?",
+        hint: "Els medievals el van banir de l'església per la seva sonoritat inquietant",
+        answer: "6",
+        treasure: {
+          name: "Substitució Tritònica",
+          description: "Descobreixes que pots substituir qualsevol V7 pel seu tritó! G7 → Db7",
+          musical_secret: "El tritó F-B en G7 es converteix en F-Cb (B) en Db7, mantenint la tensió."
+        }
+      },
+      {
+        title: "L'Enigma de Coltrane",
+        clue: "Tres centres tonals que divideixen l'octava en parts iguals. Comença amb B, continua amb...?",
+        hint: "Giant Steps révela la matriu geomètrica de terceres majors",
+        answer: "G Eb",
+        treasure: {
+          name: "Coltrane Matrix",
+          description: "Desbloqueja la geometria harmònica de Giant Steps!",
+          musical_secret: "B-G-Eb (terceres majors) = 0-4-8 semitons, dividint l'octava en tres."
+        }
+      },
+      {
+        title: "El Misteri de l'Harmonia Negativa",
+        clue: "Si Am7 es converteix en Fmaj7 quan es reflecteix, quin acord és la reflexió de G7?",
+        hint: "L'axis està entre E i Ab en C major...",
+        answer: "Fm(maj7)",
+        treasure: {
+          name: "Reflexió Harmònica",
+          description: "Domines l'art de Jacob Collier!",
+          musical_secret: "G7 (G-B-D-F) reflectit = F-D-Bb-G# = Fm(maj7)"
+        }
+      },
+      {
+        title: "El Código Bill Evans",
+        clue: "Rootless voicing tipus A sobre Cmaj7. Quines notes contenen les veus superiors?",
+        hint: "So What chord... les veus que Bill Evans feia famoses",
+        answer: "E G B D",
+        treasure: {
+          name: "Voicings Rootless",
+          description: "Desbloquejes els voicings de pianista professional!",
+          musical_secret: "Tipus A = 3-5-7-9, eliminant la root per evitar conflictes amb el baix."
+        }
+      },
+      {
+        title: "L'Upper Structure Secret",
+        clue: "D major triad sobre C7. Quines tensions generes?",
+        hint: "Pensa en les notes D-F#-A sobre C-E-G-Bb...",
+        answer: "9 #11 13",
+        treasure: {
+          name: "Upper Structures",
+          description: "Descobreixes l'alquímia dels polychords!",
+          musical_secret: "D/C7 = C7(9,#11,13) - D(9th), F#(#11th), A(13th)"
+        }
+      },
+      {
+        title: "El Misteri Modal",
+        clue: "Mode amb 3a menor i 6a major, el favorit de Miles Davis...",
+        hint: "So What està en aquest mode, començant per D",
+        answer: "Dorian",
+        treasure: {
+          name: "Modalitat Avançada",
+          description: "Entens els secrets dels modes grecs!",
+          musical_secret: "Dòric = escala menor natural amb 6a major, perfecte per al jazz modal."
+        }
+      }
+    ];
+
+    const checkAnswer = () => {
+      const currentEgg = easterEggs[currentLevel];
+      const normalizedInput = userInput.toLowerCase().trim();
+      const normalizedAnswer = currentEgg.answer.toLowerCase();
+
+      if (normalizedInput === normalizedAnswer || 
+          normalizedInput.includes(normalizedAnswer) ||
+          (currentEgg.answer === "G Eb" && (normalizedInput.includes("g") && normalizedInput.includes("eb")))) {
+        
+        setFoundSecrets([...foundSecrets, currentEgg.title]);
+        setDiscoveredTreasures([...discoveredTreasures, currentEgg.treasure]);
+        
+        if (currentLevel < easterEggs.length - 1) {
+          setCurrentLevel(currentLevel + 1);
+          setUserInput('');
+          setShowHint(false);
+        }
+        return true;
+      }
+      return false;
+    };
+
+    const isComplete = foundSecrets.length === easterEggs.length;
+    const progress = (foundSecrets.length / easterEggs.length) * 100;
+
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900/30 to-pink-900/20 text-white p-6">
+        <div className="max-w-6xl mx-auto">
+          <div className="flex items-center mb-8">
+            <button onClick={() => handleNavigate('home')} className="mr-4 p-2 rounded-lg bg-white/10 hover:bg-white/20">
+              <ArrowLeft className="h-6 w-6" />
+            </button>
+            <div>
+              <h1 className="text-4xl font-bold mb-2">🎯 Caça del Tresor Musical</h1>
+              <p className="text-gray-300">Descobreix els secrets harmònics més profunds del jazz</p>
+            </div>
+          </div>
+
+          {/* Progress Bar */}
+          <div className="mb-8">
+            <div className="flex justify-between text-sm text-gray-400 mb-2">
+              <span>Progres de la caça</span>
+              <span>{foundSecrets.length}/{easterEggs.length} secrets descoberts</span>
+            </div>
+            <div className="w-full bg-slate-700 rounded-full h-3">
+              <div 
+                className="bg-gradient-to-r from-purple-500 to-pink-500 h-3 rounded-full transition-all duration-500"
+                style={{ width: `${progress}%` }}
+              />
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* Current Challenge */}
+            <div className="bg-slate-800/50 rounded-lg p-6 border border-purple-500/20">
+              {!isComplete ? (
+                <>
+                  <h2 className="text-2xl font-bold text-purple-400 mb-4">
+                    {easterEggs[currentLevel].title}
+                  </h2>
+                  
+                  <div className="mb-6">
+                    <div className="bg-slate-700/50 p-4 rounded-lg mb-4">
+                      <h3 className="font-semibold text-purple-300 mb-2">🔍 Pista:</h3>
+                      <p className="text-gray-300">{easterEggs[currentLevel].clue}</p>
+                    </div>
+
+                    {showHint && (
+                      <div className="bg-yellow-900/20 border border-yellow-500/30 p-4 rounded-lg mb-4">
+                        <h3 className="font-semibold text-yellow-400 mb-2">💡 Ajuda:</h3>
+                        <p className="text-yellow-200">{easterEggs[currentLevel].hint}</p>
+                      </div>
+                    )}
+                  </div>
+
+                  <div className="space-y-4">
+                    <input
+                      type="text"
+                      value={userInput}
+                      onChange={(e) => setUserInput(e.target.value)}
+                      placeholder="Escriu la teva resposta..."
+                      className="w-full p-3 bg-slate-700 border border-slate-600 rounded-lg text-white"
+                      onKeyPress={(e) => e.key === 'Enter' && checkAnswer()}
+                    />
+                    
+                    <div className="flex gap-3">
+                      <button
+                        onClick={checkAnswer}
+                        className="bg-purple-600 hover:bg-purple-700 px-6 py-2 rounded-lg font-semibold"
+                      >
+                        Comprovar
+                      </button>
+                      
+                      <button
+                        onClick={() => setShowHint(!showHint)}
+                        className="bg-yellow-600 hover:bg-yellow-700 px-6 py-2 rounded-lg font-semibold"
+                      >
+                        {showHint ? 'Amagar' : 'Ajuda'}
+                      </button>
+                    </div>
+                  </div>
+                </>
+              ) : (
+                <div className="text-center">
+                  <div className="text-6xl mb-4">🏆</div>
+                  <h2 className="text-3xl font-bold text-purple-400 mb-4">Caça Completada!</h2>
+                  <p className="text-gray-300 mb-6">
+                    Has descobert tots els secrets harmònics. Ara ets un veritable mestre del jazz!
+                  </p>
+                  <button
+                    onClick={() => {
+                      setCurrentLevel(0);
+                      setFoundSecrets([]);
+                      setDiscoveredTreasures([]);
+                      setUserInput('');
+                      setShowHint(false);
+                    }}
+                    className="bg-purple-600 hover:bg-purple-700 px-8 py-3 rounded-lg font-bold"
+                  >
+                    Començar Nova Caça
+                  </button>
+                </div>
+              )}
+            </div>
+
+            {/* Discovered Treasures */}
+            <div className="bg-slate-800/50 rounded-lg p-6 border border-pink-500/20">
+              <h2 className="text-2xl font-bold text-pink-400 mb-4">🎁 Tresors Descoberts</h2>
+              
+              <div className="space-y-4 max-h-96 overflow-y-auto">
+                {discoveredTreasures.map((treasure, index) => (
+                  <div key={index} className="bg-pink-900/20 border border-pink-500/30 rounded-lg p-4">
+                    <h3 className="font-bold text-pink-300 mb-2">{treasure.name}</h3>
+                    <p className="text-gray-300 text-sm mb-2">{treasure.description}</p>
+                    <div className="bg-slate-700/50 p-2 rounded text-xs">
+                      <strong className="text-pink-400">Secret Musical:</strong>
+                      <p className="text-gray-400 mt-1">{treasure.musical_secret}</p>
+                    </div>
+                  </div>
+                ))}
+                
+                {discoveredTreasures.length === 0 && (
+                  <div className="text-center text-gray-500 py-8">
+                    <Target className="h-12 w-12 mx-auto mb-3 opacity-50" />
+                    <p>Els teus tresors apareixeran aquí quan resolguis les pistes...</p>
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+
+          {/* Secrets Found List */}
+          {foundSecrets.length > 0 && (
+            <div className="mt-8 bg-slate-800/30 rounded-lg p-6">
+              <h3 className="text-xl font-bold text-purple-400 mb-4">🌟 Secrets Desbloquejats</h3>
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                {foundSecrets.map((secret, index) => (
+                  <div key={index} className="bg-purple-600/20 border border-purple-500/30 rounded-lg p-3 text-center">
+                    <div className="text-sm font-semibold text-purple-300">{secret}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+    );
+  };
 
   // Component del Laboratori de Composició
   const CompositionLabComponent = () => {
@@ -1942,6 +2195,10 @@ function App() {
       return <CompositionLabComponent />;
     }
     
+    if (mode === 'easter-hunt') {
+      return <EasterHuntComponent />;
+    }
+
     if (mode === 'analysis-master') {
       return (
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-amber-900/20 to-slate-900 text-white p-6">
