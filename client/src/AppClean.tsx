@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Music, Trophy, BookOpen, Volume2, Target, Puzzle, ArrowLeft, Play, Clock, CheckCircle, XCircle } from "lucide-react";
 import { getRandomProgression, getProgressionsByMode, getChordTypes } from "./data/progressions";
+import { questionService, type GeneratedQuestion } from "./lib/questionService";
 
 type GameMode = 'home' | 'theory' | 'speed' | 'memory' | 'target' | 'puzzle' | 'arcade' | 'harmonia' | 'advanced-theory' | 'composition-lab' | 'analysis-master' | 'easter-hunt' | 'chord-builder' | 'progression-lab' | 'guitar-voicings' | 'fretboard-master';
 
@@ -543,6 +544,12 @@ function GameComponent({ mode, onBack }: { mode: GameMode; onBack: () => void })
   const [harmoniaQuestions, setHarmoniaQuestions] = useState<any[]>([]);
   const [chordTarget] = useState(['Do', 'Mi', 'Sol']);
   const [selectedNotes, setSelectedNotes] = useState<string[]>([]);
+  
+  // Sistema de preguntes dinàmiques amb OpenAI
+  const [dynamicQuestions, setDynamicQuestions] = useState<GeneratedQuestion[]>([]);
+  const [loadingQuestions, setLoadingQuestions] = useState(false);
+  const [questionError, setQuestionError] = useState<string | null>(null);
+  const [useDynamicQuestions, setUseDynamicQuestions] = useState(false);
 
   // useEffect per al mode harmonia - ha d'estar al principi
   useEffect(() => {
@@ -587,7 +594,32 @@ function GameComponent({ mode, onBack }: { mode: GameMode; onBack: () => void })
     }
   }, [timeLeft, mode, gameStarted]);
 
-  const startGame = () => {
+  const loadDynamicQuestions = async () => {
+    if (!useDynamicQuestions) return;
+    
+    setLoadingQuestions(true);
+    setQuestionError(null);
+    
+    try {
+      console.log(`🧠 Loading dynamic questions for ${mode}...`);
+      const questions = await questionService.getQuestionsForGame(mode, 10);
+      
+      if (questions.length === 0) {
+        throw new Error('No questions generated');
+      }
+      
+      setDynamicQuestions(questions);
+      console.log(`✅ Successfully loaded ${questions.length} unique questions`);
+    } catch (error) {
+      console.error('Error loading dynamic questions:', error);
+      setQuestionError('Error carregant preguntes noves. Intentant amb preguntes estàtiques...');
+      setUseDynamicQuestions(false);
+    } finally {
+      setLoadingQuestions(false);
+    }
+  };
+
+  const startGame = async () => {
     setGameStarted(true);
     setCurrentQuestion(0);
     setScore(0);
@@ -604,6 +636,11 @@ function GameComponent({ mode, onBack }: { mode: GameMode; onBack: () => void })
     setArcadeGame(0);
     setSelectedNotes([]);
     
+    // Carrega preguntes dinàmiques si està activat
+    if (useDynamicQuestions && (mode === 'theory' || mode === 'speed')) {
+      await loadDynamicQuestions();
+    }
+    
     if (mode === 'speed' && content && content[0] && 'timeLimit' in content[0]) {
       setTimeLeft(content[0].timeLimit || timeSettings.speed);
     }
@@ -611,7 +648,9 @@ function GameComponent({ mode, onBack }: { mode: GameMode; onBack: () => void })
 
   const handleAnswer = (answerIndex: number) => {
     if (mode === 'theory' || mode === 'speed') {
-      const questions = content as any[];
+      // Usa preguntes dinàmiques si estan disponibles
+      const questions = useDynamicQuestions && dynamicQuestions.length > 0 ? dynamicQuestions : content as any[];
+      
       if (questions && questions[currentQuestion]) {
         const isCorrect = answerIndex === questions[currentQuestion].correct;
         if (isCorrect) setScore(score + 1);
@@ -754,21 +793,54 @@ function GameComponent({ mode, onBack }: { mode: GameMode; onBack: () => void })
         <div className="bg-slate-700/50 rounded-lg p-6 mb-8 max-w-md mx-auto">
           <h3 className="text-lg font-semibold text-white mb-4">Com jugar:</h3>
           {mode === 'theory' && (
-            <p className="text-gray-300">Respon preguntes ultra-avançades sobre jazz i harmonia complexa. Només per professionals.</p>
+            <>
+              <p className="text-gray-300">Respon preguntes ultra-avançades sobre jazz i harmonia complexa. Només per professionals.</p>
+              <div className="mt-4 space-y-3">
+                <div className="flex items-center space-x-3">
+                  <input 
+                    type="checkbox" 
+                    id="dynamic-questions"
+                    checked={useDynamicQuestions}
+                    onChange={(e) => setUseDynamicQuestions(e.target.checked)}
+                    className="w-4 h-4 rounded"
+                  />
+                  <label htmlFor="dynamic-questions" className="text-sm text-gray-300">
+                    🧠 Preguntes úniques amb IA (recomanat)
+                  </label>
+                </div>
+                {questionError && (
+                  <p className="text-red-400 text-xs">{questionError}</p>
+                )}
+              </div>
+            </>
           )}
           {mode === 'speed' && (
             <>
               <p className="text-gray-300">Análisi harmònic ràpid! Temps personalitzable per pregunta.</p>
-              <div className="mt-4 space-y-2">
-                <label className="text-sm text-gray-400">Temps per pregunta: {timeSettings.speed}s</label>
-                <input 
-                  type="range" 
-                  min="2" 
-                  max="15" 
-                  value={timeSettings.speed}
-                  onChange={(e) => setTimeSettings({...timeSettings, speed: parseInt(e.target.value)})}
-                  className="w-full"
-                />
+              <div className="mt-4 space-y-3">
+                <div>
+                  <label className="text-sm text-gray-400">Temps per pregunta: {timeSettings.speed}s</label>
+                  <input 
+                    type="range" 
+                    min="2" 
+                    max="15" 
+                    value={timeSettings.speed}
+                    onChange={(e) => setTimeSettings({...timeSettings, speed: parseInt(e.target.value)})}
+                    className="w-full"
+                  />
+                </div>
+                <div className="flex items-center space-x-3">
+                  <input 
+                    type="checkbox" 
+                    id="dynamic-questions-speed"
+                    checked={useDynamicQuestions}
+                    onChange={(e) => setUseDynamicQuestions(e.target.checked)}
+                    className="w-4 h-4 rounded"
+                  />
+                  <label htmlFor="dynamic-questions-speed" className="text-sm text-gray-300">
+                    🧠 Preguntes úniques amb IA
+                  </label>
+                </div>
               </div>
             </>
           )}
@@ -815,16 +887,35 @@ function GameComponent({ mode, onBack }: { mode: GameMode; onBack: () => void })
 
   // Joc de teoria i velocitat
   if (mode === 'theory' || mode === 'speed') {
-    const questions = content as any[];
-    const question = questions[currentQuestion];
+    // Usa preguntes dinàmiques si estan disponibles, sinó les estàtiques
+    const questions = useDynamicQuestions && dynamicQuestions.length > 0 ? dynamicQuestions : content as any[];
+    const question = questions?.[currentQuestion];
+    
+    // Mostra loading si s'estan carregant preguntes dinàmiques
+    if (loadingQuestions) {
+      return (
+        <div className="max-w-2xl mx-auto text-center">
+          <div className="animate-spin w-8 h-8 border-2 border-blue-500 border-t-transparent rounded-full mx-auto mb-4"></div>
+          <p className="text-white">🧠 Generant preguntes úniques amb IA...</p>
+          <p className="text-gray-400 text-sm mt-2">Això pot trigar uns segons</p>
+        </div>
+      );
+    }
     
     return (
       <div className="max-w-2xl mx-auto">
         {/* Header del joc */}
         <div className="flex justify-between items-center mb-6">
           <div className="text-white">
-            <span className="text-lg">Pregunta {currentQuestion + 1} de {questions.length}</span>
-            <div className="text-sm text-gray-400">Puntuació: {score}/{questions.length}</div>
+            <div className="flex items-center gap-3">
+              <span className="text-lg">Pregunta {currentQuestion + 1} de {questions?.length || 0}</span>
+              {useDynamicQuestions && dynamicQuestions.length > 0 && (
+                <span className="bg-blue-500/20 text-blue-300 px-2 py-1 rounded-lg text-xs">
+                  🧠 IA
+                </span>
+              )}
+            </div>
+            <div className="text-sm text-gray-400">Puntuació: {score}/{questions?.length || 0}</div>
           </div>
           {mode === 'speed' && timeLeft !== null && (
             <div className={`text-2xl font-bold flex items-center ${timeLeft <= 2 ? 'text-red-400' : 'text-blue-400'}`}>

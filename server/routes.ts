@@ -6,12 +6,15 @@ import {
   insertGameStatsSchema,
   type Level 
 } from "@shared/schema";
+import { QuestionGenerator } from "./questionGenerator";
 
 // Import levels data from the client
 import fs from 'fs';
 import path from 'path';
 
 export async function registerRoutes(app: Express): Promise<Server> {
+  const questionGenerator = QuestionGenerator.getInstance();
+  
   // Initialize levels data on startup
   try {
     const levelsPath = path.resolve(import.meta.dirname, '../client/src/data/levels.ts');
@@ -123,6 +126,45 @@ export async function registerRoutes(app: Express): Promise<Server> {
       res.json(stats);
     } catch (error) {
       res.status(400).json({ error: "Failed to update stats" });
+    }
+  });
+
+  // Generate new questions for a game mode
+  app.post("/api/questions/:gameMode", async (req, res) => {
+    try {
+      const gameMode = req.params.gameMode;
+      const count = parseInt(req.query.count as string) || 10;
+      
+      console.log(`Generating ${count} questions for ${gameMode}...`);
+      const questions = await questionGenerator.generateQuestions(gameMode, count);
+      
+      console.log(`Generated ${questions.length} questions successfully`);
+      res.json({ questions, count: questions.length });
+    } catch (error) {
+      console.error('Error generating questions:', error);
+      res.status(500).json({ error: "Failed to generate questions" });
+    }
+  });
+
+  // Get statistics about generated questions
+  app.get("/api/questions/stats/:gameMode", async (req, res) => {
+    try {
+      const gameMode = req.params.gameMode;
+      const count = questionGenerator.getGeneratedCount(gameMode);
+      res.json({ gameMode, generatedCount: count });
+    } catch (error) {
+      res.status(500).json({ error: "Failed to get question stats" });
+    }
+  });
+
+  // Clear generated questions for a game mode (optional reset)
+  app.delete("/api/questions/:gameMode", async (req, res) => {
+    try {
+      const gameMode = req.params.gameMode;
+      questionGenerator.clearGeneratedQuestions(gameMode);
+      res.json({ message: `Cleared questions for ${gameMode}` });
+    } catch (error) {
+      res.status(500).json({ error: "Failed to clear questions" });
     }
   });
 
