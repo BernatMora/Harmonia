@@ -4,12 +4,6 @@ import { getRandomProgression, getProgressionsByMode, getChordTypes } from "./da
 
 type GameMode = 'home' | 'theory' | 'speed' | 'memory' | 'target' | 'puzzle' | 'arcade' | 'harmonia' | 'advanced-theory' | 'composition-lab' | 'analysis-master' | 'easter-hunt' | 'chord-builder' | 'progression-lab' | 'guitar-voicings' | 'fretboard-master';
 
-// Sistema de generació aleatòria de preguntes
-const generateRandomQuestions = (questionPool: any[], count: number = 25) => {
-  const shuffled = [...questionPool].sort(() => Math.random() - 0.5);
-  return shuffled.slice(0, Math.min(count, shuffled.length));
-};
-
 // Contingut educatiu ultra-avançat per cada joc
 const gameContent = {
   theory: [
@@ -117,139 +111,6 @@ const gameContent = {
       correct: 0,
       explanation: "F#ø7-B7alt-Em7 és ii-V-i en Em, tonicització del relatiu menor.",
       level: "Expert"
-    },
-    {
-      question: "En 'All of Me', el C7-F7-C7 del bridge usa:",
-      options: ["Circle of 5ths", "Plagal motion", "Chromatic voice leading", "Secondary dominants"],
-      correct: 1,
-      explanation: "C7-F7-C7 és una progressió plagal (IV7-I7) típica del blues i jazz tradicional.",
-      level: "Professional"
-    },
-    {
-      question: "La progressió DbMaj7-C7-FMaj7 utilitza:",
-      options: ["bII-V-I (Neapolitan)", "Tritone substitution", "Chromatic mediant", "Modal interchange"],
-      correct: 0,
-      explanation: "DbMaj7 és bII de C major, progressió neapolitana que resol cromàticament.",
-      level: "Expert"
-    },
-    {
-      question: "En harmonia quartal, Dm11 es construeix amb:",
-      options: ["Terceres apilades", "Quartes justes apilades", "Quintes apilades", "Segons apilades"],
-      correct: 1,
-      explanation: "Harmonia quartal usa intervals de 4a justa: D-G-C-F per Dm11.",
-      level: "Master"
-    },
-    {
-      question: "El voicing de E7alt més tens és:",
-      options: ["E-G#-Bb-D", "E-Ab-Bb-Db", "E-G-Bb-C#", "E-Ab-A-Db"],
-      correct: 3,
-      explanation: "E-Ab-A-Db conté b9, #9, #11, b13 - màxima tensió altèria.",
-      level: "Master"
-    },
-    {
-      question: "En 'Have You Met Miss Jones', Bbm6 funciona com:",
-      options: ["Substitut de G7b13", "Interchange modal", "Relative minor", "Chromatic approach"],
-      correct: 1,
-      explanation: "Bbm6 ve del parallel minor (Bb menor), exemple d'interchange modal.",
-      level: "Professional"
-    },
-    {
-      question: "La progressió Am7-Dm7-GM7-CM7 segueix:",
-      options: ["vi-ii-V-I", "Circle of 5ths ascendent", "Diatònic per terceres", "Modal rotation"],
-      correct: 2,
-      explanation: "Am-Dm-G-C és moviment diatònic per terceres: A-D-G-C.",
-      level: "Expert"
-    },
-    {
-      question: "En Giant Steps compassos 5-8, les tonalitats són:",
-      options: ["G-Bb-Eb", "G-Eb-B", "B-G-Eb", "Eb-G-B"],
-      correct: 1,
-      explanation: "Giant Steps modula G-Eb-B, seguint el cicle de terceres majors de Coltrane.",
-      level: "Professional"
-    },
-    {
-      question: "L'upper structure A/G indica:",
-      options: ["G13", "Gadd9", "G6/9", "G11"],
-      correct: 0,
-      explanation: "A major triad sobre G7 crea G13 amb tensions 9(A), #11(C#), 13(E).",
-      level: "Expert"
-    },
-    {
-      question: "En 'Alone Together', F#m7b5-B7-Em utilitzes:",
-      options: ["ii-V menor", "Tonicització relativa", "Modal substitution", "Chromatic approach"],
-      correct: 0,
-      explanation: "F#m7b5-B7-Em és ii-V-i clàssic en Em menor.",
-      level: "Professional"
-    },
-    {
-      question: "La progressió C-E7/B-Am-F#dim-G7 usa:",
-      options: ["Chromatic bass line", "Secondary dominants", "Diminished passing", "Totes les anteriors"],
-      correct: 3,
-      explanation: "Combina chromatic bass (C-B-A-F#-G), V7/vi (E7), i dim passing (F#dim).",
-      level: "Master"
-    },
-    {
-      question: "En mode frigildi dominant, sobre G7 uses:",
-      options: ["G mixolydian b6", "G altered", "G mixolydian", "G phrygian dominant"],
-      correct: 3,
-      explanation: "G phrygian dominant (C harmonic minor) té b9, 3, #11, b13 - perfect per resolucions exòtiques.",
-      level: "Master"
-    },
-    {
-      question: "El polychord Eb/F indica funcionalment:",
-      options: ["F11", "F13sus4", "Fmaj9#11", "F7sus4b9"],
-      correct: 1,
-      explanation: "Eb/F = F13sus4, amb Eb triad proporcionant 4th, 6th, i root sobre F.",
-      level: "Expert"
-    },
-    {
-      question: "En 'Inner Urge', la progressió Em-A7-DM7 usa:",
-      options: ["ii-V-I en D", "Modal rotation", "Chromatic approach", "Circle of 5ths"],
-      correct: 0,
-      explanation: "Em(ii)-A7(V)-DM7(I) és ii-V-I estàndard en D major.",
-      level: "Professional"
-    },
-    {
-      question: "La reharmonització de C-Am-F-G amb tritones:",
-      options: ["C-Eb7-Bb7-Db7", "C-Eb7-F-Db7", "C-A7-F-G", "Gb7-A7-Bb7-Db7"],
-      correct: 1,
-      explanation: "C-Eb7(tritone sub d'A7)-F-Db7(tritone sub de G7).",
-      level: "Expert"
-    },
-    {
-      question: "En harmonia negativa, el G7-Cmaj7 es converteix en:",
-      options: ["F7-Fmaj7", "Fm(maj7)-Fmaj7", "F-C", "Fm7-Fmaj7"],
-      correct: 1,
-      explanation: "G7→Fm(maj7), Cmaj7→Fmaj7 en l'eix negative E-Ab.",
-      level: "Master"
-    },
-    {
-      question: "El voicing més obert per Cmaj9 és:",
-      options: ["C-G-B-D-E", "C-E-G-B-D", "G-B-D-E-C", "E-G-B-D-C"],
-      correct: 2,
-      explanation: "G-B-D-E-C distribueix les tensions àmpliament per màxima ressonància.",
-      level: "Expert"
-    },
-    {
-      question: "En 'So What', Dm11-Ebm11 són:",
-      options: ["Modal parallel motion", "Chromatic substitution", "Circle of 5ths", "Relative modulation"],
-      correct: 0,
-      explanation: "Movement parallel cromàtic mantenint la sonoritat modal Dm11.",
-      level: "Professional"
-    },
-    {
-      question: "'Round Midnight' usa quin tipus de progressió al bridge?",
-      options: ["ii-V chains", "Circle of 5ths", "Chromatic mediants", "Modal interchange"],
-      correct: 3,
-      explanation: "Modal interchange abundant: Em7b5, EbMaj7, altres acords del minor parallel.",
-      level: "Professional"
-    },
-    {
-      question: "La progressió Cm-Fm-Bb7-EbMaj7 en C minor és:",
-      options: ["i-iv-V7/bIII-bIII", "i-iv-V7-bVI", "Modal cadence", "Circle progression"],
-      correct: 0,
-      explanation: "Cm(i)-Fm(iv)-Bb7(V7/bIII)-EbMaj7(bIII), tonicització temporal d'Eb.",
-      level: "Expert"
     }
   ],
   speed: [
@@ -308,139 +169,6 @@ const gameContent = {
       correct: 0,
       explanation: "ii7b5-V7-i: progressió modal menor clàssica en Gm.",
       timeLimit: 4
-    },
-    {
-      question: "En un reharmonització de 'Fly Me To The Moon', Am7-D7 es pot substituir per:",
-      options: ["Ebm7-Ab7", "A7alt-D7alt", "Am11-D13sus4", "F#m7b5-B7"],
-      correct: 0,
-      explanation: "Ebm7-Ab7 és tritone substitution completa: Am7→Ebm7, D7→Ab7.",
-      timeLimit: 5
-    },
-    {
-      question: "Sobre EMaj7#11, quina escala conté l'#11 necessària?",
-      options: ["E ionian", "E lydian", "E mixolydian", "E dorian"],
-      correct: 1,
-      explanation: "E lydian conté A# (l'#11) que crea la sonoritat característica.",
-      timeLimit: 3
-    },
-    {
-      question: "En Giant Steps, quin interval separa les tonalitats principals?",
-      options: ["4a justa", "3a major", "5a justa", "2a major"],
-      correct: 1,
-      explanation: "B-G-Eb estan separades per terceres majors (major 3rd intervals).",
-      timeLimit: 4
-    },
-    {
-      question: "La progressió Dm-G7/B-Bb-A7 usa:",
-      options: ["Circle of 5ths", "Chromatic bass descent", "Modal interchange", "Secondary dominants"],
-      correct: 1,
-      explanation: "Bass line cromàtic: D-B-Bb-A, típic del bebop.",
-      timeLimit: 5
-    },
-    {
-      question: "En harmonia quartal, quin acord es forma amb G-C-F-Bb?",
-      options: ["Gm11", "G7sus4", "C6/9", "F11/G"],
-      correct: 0,
-      explanation: "G-C-F-Bb forma Gm11 amb intervals de quarta perfecta.",
-      timeLimit: 4
-    },
-    {
-      question: "La substitució de C7 per F#7 es basa en:",
-      options: ["Common tones", "Tritone relationship", "Circle of 5ths", "Modal relationship"],
-      correct: 1,
-      explanation: "C7 i F#7 comparteixen el mateix tritó (E-Bb), permeten substitució.",
-      timeLimit: 3
-    },
-    {
-      question: "En 'Blue Bossa', l'acord Dm7b5 funciona com:",
-      options: ["ii7b5/vi", "iv7b5", "Modal interchange", "Passing chord"],
-      correct: 0,
-      explanation: "Dm7b5 és ii7b5 que resol a G7 (V7/vi) vers Am.",
-      timeLimit: 4
-    },
-    {
-      question: "L'upper structure F/G7 indica quines tensions?",
-      options: ["b9, #11, b13", "9, #11, 13", "b9, 11, 13", "#9, #11, b13"],
-      correct: 1,
-      explanation: "F major triad sobre G7: F(b7), A(9), C(#11), tensions naturals.",
-      timeLimit: 5
-    },
-    {
-      question: "En modal jazz, Dm11 es pot abordar amb:",
-      options: ["D dorian", "D natural minor", "D harmonic minor", "D melodic minor"],
-      correct: 0,
-      explanation: "D dorian (del C major) és l'escala modal clàssica per Dm11.",
-      timeLimit: 3
-    },
-    {
-      question: "La progressió i-bVII-bVI-bVII en Am és:",
-      options: ["Am-G-F-G", "Am-F-G-C", "Am-C-F-G", "Am-Dm-G-C"],
-      correct: 0,
-      explanation: "Am(i)-G(bVII)-F(bVI)-G(bVII), progressió modal menor típica.",
-      timeLimit: 4
-    },
-    {
-      question: "En 'Stella by Starlight', Em7b5 funciona com:",
-      options: ["ii7b5/V del A", "vi7b5", "Modal interchange", "Passing chord"],
-      correct: 0,
-      explanation: "Em7b5 és ii7b5 que prepara A7, V7 del D minor.",
-      timeLimit: 5
-    },
-    {
-      question: "Quina escala s'usa sobre B7alt en resolució a Em?",
-      options: ["B altered", "B mixolydian b6", "B harmonic minor 5th", "B diminished"],
-      correct: 0,
-      explanation: "B altered (C melodic minor) conté totes les alteracions necessàries.",
-      timeLimit: 3
-    },
-    {
-      question: "La reharmonització amb coltrane changes de C-Am-F-G és:",
-      options: ["C-A7-DMaj7-G", "C-E7-AMaj7-F#7-BMaj7-G", "C-Em-Am-F-G", "C-F#7-BMaj7-Bb7-EbMaj7-G"],
-      correct: 1,
-      explanation: "Insereix coltrane changes: E7-AMaj7-F#7-BMaj7 entre C i G.",
-      timeLimit: 6
-    },
-    {
-      question: "En 'Body and Soul', l'acord Db7 al bridge funciona com:",
-      options: ["bII7", "Tritone sub", "Modal interchange", "Secondary dominant"],
-      correct: 1,
-      explanation: "Db7 és tritone substitution de G7, creant chromatic motion.",
-      timeLimit: 4
-    },
-    {
-      question: "El voicing C-E-Bb-D indica:",
-      options: ["C7", "CMaj7", "C9", "C6"],
-      correct: 0,
-      explanation: "C-E-Bb-D forma C7 amb root, 3rd, b7th, 9th.",
-      timeLimit: 3
-    },
-    {
-      question: "En harmonia negativa de G major, Am7 es converteix en:",
-      options: ["Fm7", "FMaj7", "Fm(maj7)", "F7"],
-      correct: 2,
-      explanation: "Am7 en negative harmony (axis D-Ab) esdevé Fm(maj7).",
-      timeLimit: 5
-    },
-    {
-      question: "La progressió Gm-C7-F-Bb usa:",
-      options: ["ii-V-I-IV", "Circle of 5ths", "Modal sequence", "Parallel motion"],
-      correct: 1,
-      explanation: "Roots G-C-F-Bb segueixen el circle of 5ths descendent.",
-      timeLimit: 4
-    },
-    {
-      question: "En 'Confirmation', el Bb7 funciona com:",
-      options: ["I7", "V7/IV", "Tritone sub", "Secondary dominant"],
-      correct: 1,
-      explanation: "Bb7 és V7/IV (dominant d'EbMaj7) en F major.",
-      timeLimit: 3
-    },
-    {
-      question: "Sobre Fmaj7#11, l'upper structure més efectiu és:",
-      options: ["Bm/F", "G/F", "Em/F", "Am/F"],
-      correct: 1,
-      explanation: "G major triad sobre F crea FMaj13#11 amb tensions perfectes.",
-      timeLimit: 5
     }
   ],
   memory: [
@@ -483,91 +211,6 @@ const gameContent = {
       pattern: ["C7alt", "F7alt", "BbMaj7", "G7#5", "Cm7", "F7", "BbMaj7"],
       description: "Strasbourg/St Denis - tritone substitutions cadenes",
       difficulty: "Master"
-    },
-    {
-      pattern: ["Am7", "D7", "Bm7b5", "E7alt", "Am7", "C#m7b5", "F#7", "Bm7"],
-      description: "Circle of 5ths amb tonicitzacions menors",
-      difficulty: "Expert"
-    },
-    {
-      pattern: ["FMaj7#11", "Em7", "Dm7", "Cmaj7", "Bm7b5", "Bb7#11", "Am7"],
-      description: "Stepwise descending roots amb extensions",
-      difficulty: "Professional"
-    },
-    {
-      pattern: ["Ebm7", "Ab7", "DbMaj7", "C7", "Fm7", "Bb7", "EbMaj7"],
-      description: "Rhythm Changes bridge reharmonitzat",
-      difficulty: "Expert"
-    },
-    {
-      pattern: ["C", "E7/B", "Am", "Am/G", "F", "F#dim", "G7sus4", "G7"],
-      description: "Voice leading cromàtic amb acords de pas",
-      difficulty: "Professional"
-    },
-    {
-      pattern: ["Gm7", "C7", "Am7b5", "D7", "Gm7", "Eb7", "Dm7b5", "G7"],
-      description: "Minor ii-V chains amb substitucions",
-      difficulty: "Expert"
-    },
-    {
-      pattern: ["BMaj7", "D#m7", "G#m7", "C#7", "F#Maj7", "Bb7", "EbMaj7"],
-      description: "Giant Steps reducit amb voice leading",
-      difficulty: "Master"
-    },
-    {
-      pattern: ["Am(maj7)", "Am7", "Am6", "Am", "Dm9", "G13", "Cmaj9"],
-      description: "Minor major 7th descendint amb tensions",
-      difficulty: "Expert"
-    },
-    {
-      pattern: ["F7", "E7", "Eb7", "D7", "Db7", "C7", "F7"],
-      description: "Dominant cycle cromàtic descendent",
-      difficulty: "Professional"
-    },
-    {
-      pattern: ["Cmaj7", "Am7", "F#m7b5", "B7", "Em7", "C#m7b5", "F#7", "Bm7"],
-      description: "Relatives amb ii-V intercalats",
-      difficulty: "Expert"
-    },
-    {
-      pattern: ["DbMaj7", "Dm7", "G7", "Cmaj7", "C#m7", "F#7", "BMaj7"],
-      description: "Chromatic mediants amb ii-V resolucions",
-      difficulty: "Master"
-    },
-    {
-      pattern: ["Em11", "A7sus4", "Dm11", "G7sus4", "Cmaj9", "Am11", "D7sus4"],
-      description: "Sus4 dominants amb moviment quartal",
-      difficulty: "Expert"
-    },
-    {
-      pattern: ["Gm6", "C7", "Fm6", "Bb7", "EbMaj7", "Ab7", "DbMaj7"],
-      description: "Minor 6th chords amb circle progression",
-      difficulty: "Professional"
-    },
-    {
-      pattern: ["B7alt", "E7alt", "A7alt", "D7alt", "G7alt", "C7alt", "F7alt"],
-      description: "Altered dominant cycle complet",
-      difficulty: "Master"
-    },
-    {
-      pattern: ["Cmaj7/E", "Am7/C", "Fmaj7/A", "Dm7/F", "G7/B", "Em7/G", "Am7"],
-      description: "Slash chords amb bass line escalar",
-      difficulty: "Expert"
-    },
-    {
-      pattern: ["F#m7", "B7", "EMaj7", "Gm7", "C7", "FMaj7", "F#m7"],
-      description: "Remote key tonicizations",
-      difficulty: "Professional"
-    },
-    {
-      pattern: ["C69", "Dm11", "Em11", "F#m7b5", "G13sus4", "Am(maj9)", "Bm11b5"],
-      description: "Extended harmonies en progressió diatònica",
-      difficulty: "Master"
-    },
-    {
-      pattern: ["Db7#11", "C7alt", "B7#5", "Bb7sus4", "A7alt", "Ab7#11", "G7alt"],
-      description: "Chromatic dominant descent amb alteracions",
-      difficulty: "Master"
     }
   ],
   target: [
@@ -580,72 +223,12 @@ const gameContent = {
         { question: "G7 → Cmaj7 en negatiu és:", options: ["F7 → Cmaj7", "Fm7 → Fmaj7", "Fm(maj7) → Fmaj7", "F7 → Fmaj7"], correct: 2 },
         { question: "El Dm7 negatiu de ii-V-I en C:", options: ["Bmaj7", "Bm(maj7)", "B7", "Bmaj7#11"], correct: 1 },
         { question: "V7/V (D7) en negatiu:", options: ["Bb7", "Bbmaj7", "Bm(maj7)", "Bb(maj7)"], correct: 2 },
-        { question: "ii-V-I negatiu complet:", options: ["Bmaj7-Fm(maj7)-Fmaj7", "Bm(maj7)-Fm7-Fmaj7", "BMaj7-F7-Fmaj7", "Bm7-Fm(maj7)-Fmaj7"], correct: 0 },
-        { question: "Circle of 5ths negatiu de C:", options: ["C-F-Bb-Eb", "C-Ab-Eb-Bb", "C-G-D-A", "Fmaj7-Bmaj7-Emaj7-Amaj7"], correct: 3 },
-        { question: "Dominant substitut de G7:", options: ["Db7", "Fm(maj7)", "F7", "Fm7"], correct: 1 },
-        { question: "Am7-D7-Gmaj7 en negatiu:", options: ["Fmaj7-Bm(maj7)-F", "FMaj7-Bb(maj7)-Fmaj7", "Fm7-Bb7-Fmaj7", "F-Bb-F"], correct: 1 }
+        { question: "L'axis tonal en C major està entre:", options: ["G-F", "E-Ab", "D-A", "C-G"], correct: 1 },
+        { question: "Em7b5 negatiu en armonia de C:", options: ["Amaj7#11", "A(maj7)", "Am(maj7)", "A7#11"], correct: 0 },
+        { question: "Progressió negativa de vi-IV-I-V:", options: ["bIII-bVI-I-bII", "bIII(maj7)-bVImaj7-Imaj7-bII(maj7)", "iii-VI-I-ii", "bIII7-bVI7-I7-bII7"], correct: 1 },
+        { question: "F#ø7 negatiu en harmonia C:", options: ["Fm(maj7)", "F(maj7)", "Fmaj7#11", "F7alt"], correct: 0 }
       ]
     },
-    {
-      challenge: "Especialista en Upper Structures",
-      goal: 10,
-      reward: "🏗️ Master en Upper Structures",
-      questions: [
-        { question: "D/C7 indica quines tensions?", options: ["9, #11, 13", "b9, #11, b13", "#9, #11, 13", "9, 11, 13"], correct: 0 },
-        { question: "Bb/Am7 forma quin acord?", options: ["Am11", "Am9", "Am13", "Am7add11"], correct: 0 },
-        { question: "E/Dm7 crea:", options: ["Dm(maj9)", "Dm9#11", "Dm13", "DmMaj13"], correct: 2 },
-        { question: "F#dim/G7 proporciona:", options: ["Altered tensions", "Sus4 resolution", "Natural tensions", "Modal extensions"], correct: 0 },
-        { question: "A/F#m7 esdevé:", options: ["F#m11", "F#m(maj9)", "F#m13", "F#mMaj11"], correct: 2 },
-        { question: "Gb/F7 (tritone relation):", options: ["F7alt complet", "F13b5", "F7#11b13", "F7sus4"], correct: 0 },
-        { question: "C/Bb7 forma:", options: ["Bb13", "Bb9", "Bb13#11", "Bb7add9"], correct: 2 },
-        { question: "Em/D7 crea quina sonoritat?", options: ["D7sus4", "D9", "D13", "D7#11"], correct: 2 },
-        { question: "Ab/G7 (upper structure):", options: ["G7b9b13", "G7alt", "G13b5", "G7#11b13"], correct: 1 },
-        { question: "Bm/A7 indica:", options: ["A13", "A9", "A11", "A7sus4"], correct: 0 }
-      ]
-    },
-    {
-      challenge: "Expert en Coltrane Changes",
-      goal: 12,
-      reward: "🌊 Master en Coltrane Matrix",
-      questions: [
-        { question: "Giant Steps cycle primari:", options: ["B-G-Eb-B", "C-A-F-C", "G-E-C-G", "F-D-Bb-F"], correct: 0 },
-        { question: "Countdown bridge usa:", options: ["ii-V chains", "Coltrane matrix", "Circle of 5ths", "Modal interchange"], correct: 1 },
-        { question: "B7-EMaj7-G7-CMaj7 és:", options: ["V-I-V-I", "Coltrane changes", "ii-V chains", "Circle progression"], correct: 1 },
-        { question: "26-2 introdueix Coltrane a:", options: ["Primer A", "Bridge", "Segon A", "Coda"], correct: 1 },
-        { question: "Central Park West usa:", options: ["Standard changes", "Modal harmony", "Coltrane harmony", "Rhythm changes"], correct: 2 },
-        { question: "Thirds cycle de C:", options: ["C-E-Ab-C", "C-Eb-Gb-A", "C-A-F#-Eb", "C-F-Bb-Eb"], correct: 0 },
-        { question: "Resolution Africa uses:", options: ["ii-V chains", "Pentatònic", "Coltrane matrix", "Blues changes"], correct: 2 },
-        { question: "Naima harmonia:", options: ["Standard ii-V", "Pedal points", "Coltrane changes", "Circle of 5ths"], correct: 1 },
-        { question: "Moment's Notice intro:", options: ["ii-V-I", "Coltrane matrix", "Modal vamp", "Blues form"], correct: 1 },
-        { question: "Fifth House progression:", options: ["Rhythm changes", "ii-V chains", "Coltrane matrix", "Modal jazz"], correct: 2 },
-        { question: "Satellite cycle base:", options: ["Circle of 5ths", "Coltrane thirds", "Modal rotation", "ii-V chains"], correct: 1 },
-        { question: "Impressions vs Giant Steps:", options: ["Modal vs Coltrane", "Blues vs jazz", "Simple vs complex", "Old vs new"], correct: 0 }
-      ]
-    },
-    {
-      challenge: "Mestre en Reharmonització",
-      goal: 15,
-      reward: "🎭 Master en Reharmonització Avançada",
-      questions: [
-        { question: "C-Am-F-G amb tritones:", options: ["C-Eb7-F-Db7", "C-A7-F-G7", "Gb7-Eb7-B7-Db7", "C-Eb7-Bb7-Db7"], correct: 0 },
-        { question: "Autumn Leaves bridge reharmonized:", options: ["Am7b5-D7-Gm", "F#m7b5-B7-Em-C#m7b5-F#7-Bm", "Dm7-G7-C", "Gm7-C7-F"], correct: 1 },
-        { question: "All of Me C7-F7 substitute:", options: ["Gb7-B7", "C7alt-F7alt", "Dm7-G7", "C7-Cb7"], correct: 0 },
-        { question: "Body and Soul bars 5-8:", options: ["Standard ii-V", "Chromatic mediants", "Circle of 5ths", "Modal interchange"], correct: 3 },
-        { question: "Summertime Em-C7:", options: ["Em-C7", "Em-Gb7", "Em-A7", "Em-F#7"], correct: 1 },
-        { question: "Cherokee turnaround:", options: ["Bb-G7-Cm7-F7", "Bb-Db7-Cm7-B7", "Bb-E7-Cm7-F7", "Bb-Ab7-Cm7-F7"], correct: 1 },
-        { question: "Stella bridge reharmonization:", options: ["Em7b5-A7-Dm", "Em7b5-Eb7-Dm-Db7", "Em7b5-A7alt-Dm-G7", "Bbm7-Eb7-Ab"], correct: 1 },
-        { question: "How High the Moon bridge:", options: ["Standard ii-V", "Coltrane changes", "Circle of 5ths", "Chromatic ii-V"], correct: 3 },
-        { question: "Fly Me to the Moon bars 1-4:", options: ["Am7-Dm7-G7-C", "Am7-Ab7-Dm7-Db7-G7-C", "Am7-D7-G7-C", "Ebm7-Ab7-Db"], correct: 1 },
-        { question: "All the Things bars 1-4:", options: ["Fm7-Bb7-Eb", "Fm7-E7-Eb-D7", "Fm7-Bb7-Eb-Ab", "F#m7-B7-E-A"], correct: 1 },
-        { question: "Blue Bossa bars 5-8:", options: ["Dm7b5-G7-Cm", "Dm7b5-Db7-Cm-B7", "Dm7b5-G7alt-Cm", "D7alt-G7alt-Cm"], correct: 1 },
-        { question: "There Will Never Be bars 9-12:", options: ["Standard turnaround", "Chromatic descent", "Circle of 5ths", "Modal interchange"], correct: 1 },
-        { question: "Solar bars 13-16:", options: ["Gm7-C7-F", "Gm7-Gb7-F-E7", "Gm7-C7-Fm-Bb7", "G7-C7-F"], correct: 1 },
-        { question: "On Green Dolphin Street bridge:", options: ["ii-V chains", "Coltrane changes", "Chromatic ii-V", "Circle progression"], correct: 2 },
-        { question: "What Is This Thing bars 17-20:", options: ["C-A7-Dm-G7", "C-Eb7-Dm-Db7-G7", "C-F#7-Dm-G7", "C-Ab7-Dm-G7"], correct: 1 }
-      ]
-    }
-  ],
-  puzzle: [
     {
       challenge: "Expert en Reharmonització Avançada",
       goal: 6,
@@ -691,7 +274,7 @@ const gameContent = {
       ]
     }
   ],
-  arcade: [
+  puzzle: [
     {
       question: "Completa la substitució tritònica amb extensions:",
       text: "Dm7 - __ - Cmaj7 (en lloc de Dm7-G7-Cmaj7)",
