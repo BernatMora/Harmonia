@@ -99,15 +99,14 @@ export default function HomePage() {
             const IconComponent = game.icon;
             
             return (
-              <div 
+              <Card 
                 key={game.id} 
-                onClick={() => handleCardClick(game.path)} 
-                className="touch-manipulation group"
+                onClick={() => handleCardClick(game.path)}
+                className="relative bg-gradient-to-br from-slate-800/80 to-slate-900/80 border-slate-700/50 hover:border-slate-600 hover:shadow-2xl hover:shadow-blue-500/10 active:scale-95 transition-all duration-300 cursor-pointer h-full backdrop-blur-sm overflow-hidden touch-manipulation group"
                 style={{
                   animation: `fadeInUp 0.6s ease-out ${index * 0.1}s both`
                 }}
               >
-                <Card className="relative bg-gradient-to-br from-slate-800/80 to-slate-900/80 border-slate-700/50 hover:border-slate-600 hover:shadow-2xl hover:shadow-blue-500/10 active:scale-95 transition-all duration-300 cursor-pointer h-full backdrop-blur-sm overflow-hidden">
                   {/* Glow effect */}
                   <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   
@@ -124,11 +123,7 @@ export default function HomePage() {
                   </CardHeader>
                   <CardContent className="pt-0 relative z-10">
                     <Button 
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        handleCardClick(game.path);
-                      }}
-                      className="w-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 hover:from-blue-500/30 hover:to-purple-500/30 active:from-blue-500/40 active:to-purple-500/40 text-white border border-blue-500/30 hover:border-blue-400/50 mobile-button text-sm sm:text-base font-semibold shadow-lg hover:shadow-blue-500/20 transition-all duration-300"
+                      className="w-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 hover:from-blue-500/30 hover:to-purple-500/30 active:from-blue-500/40 active:to-purple-500/40 text-white border border-blue-500/30 hover:border-blue-400/50 mobile-button text-sm sm:text-base font-semibold shadow-lg hover:shadow-blue-500/20 transition-all duration-300 pointer-events-none"
                       variant="outline"
                     >
                       <span className="relative z-10">Començar</span>
@@ -136,7 +131,6 @@ export default function HomePage() {
                     </Button>
                   </CardContent>
                 </Card>
-              </div>
             );
           })}
         </div>
