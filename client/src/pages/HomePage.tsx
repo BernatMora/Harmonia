@@ -129,14 +129,15 @@ export default function HomePage() {
         </div>
 
         {/* Advanced Features */}
-        <div className="mt-16 sm:mt-20">
+        <div className="mt-16 sm:mt-20 bg-gradient-to-br from-slate-800/20 to-purple-900/20 rounded-3xl p-6 sm:p-8 border border-slate-600/30">
           <div className="text-center mb-8">
-            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-4">
               🚀 Funcions Avançades
             </h2>
-            <p className="text-gray-300 text-sm sm:text-base">
-              Descobreix les noves funcionalitats d'IA, recompenses i estudi personalitzat
+            <p className="text-gray-300 text-base sm:text-lg">
+              IA, estadístiques detallades, recompenses i estudi personalitzat
             </p>
+            <div className="h-1 w-32 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full mx-auto mt-4"></div>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 max-w-7xl mx-auto">
             <ProgressTracker />

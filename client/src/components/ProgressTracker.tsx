@@ -27,11 +27,14 @@ export default function ProgressTracker() {
   const improvementTrend = accuracyRate > 0.7 ? 'up' : accuracyRate > 0.5 ? 'stable' : 'down';
 
   return (
-    <div className="bg-white/5 backdrop-blur-sm rounded-xl p-3 sm:p-4 border border-white/10">
-      <h2 className="text-white font-semibold mb-4 flex items-center">
-        <TrendingUp className="w-5 h-5 mr-2 text-blue-400" />
-        Estadístiques Avançades
-      </h2>
+    <div className="bg-gradient-to-br from-slate-800/80 to-slate-900/80 backdrop-blur-sm rounded-xl p-4 sm:p-6 border border-slate-600/50 shadow-2xl">
+      <div className="bg-gradient-to-r from-blue-500/20 to-purple-500/20 p-3 rounded-lg mb-4 border border-blue-500/30">
+        <h2 className="text-white font-bold text-lg sm:text-xl mb-1 flex items-center">
+          <TrendingUp className="w-6 h-6 mr-2 text-blue-400" />
+          📊 Estadístiques Avançades
+        </h2>
+        <p className="text-blue-200 text-sm">Analítica detallada del teu rendiment</p>
+      </div>
       
       {/* Overall Progress */}
       <div className="mb-4 sm:mb-6">
@@ -155,6 +158,14 @@ export default function ProgressTracker() {
               {accuracyRate < 0.6 ? 'Harmonia Avançada' : 'Velocitat'}
             </div>
           </div>
+        </div>
+      </div>
+
+      {/* Status Indicator */}
+      <div className="mb-4 p-2 bg-green-500/10 rounded-lg border border-green-500/20">
+        <div className="flex items-center justify-center text-green-400 text-xs">
+          <div className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></div>
+          Sistema d'estadístiques actiu i funcionant
         </div>
       </div>
 
