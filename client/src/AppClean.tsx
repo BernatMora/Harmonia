@@ -1831,8 +1831,6 @@ function App() {
   const GuitarVoicingsComponent = () => {
     const [selectedVoicing, setSelectedVoicing] = useState('');
     const [currentChord, setCurrentChord] = useState('Cmaj7');
-    const [fretPosition, setFretPosition] = useState(0);
-    const [showFingering, setShowFingering] = useState(false);
     const [masteredVoicings, setMasteredVoicings] = useState<string[]>([]);
 
     const voicingConcepts = {
@@ -1961,22 +1959,13 @@ function App() {
                   </select>
                 </div>
 
-                <div className="flex gap-2">
-                  <button
-                    onClick={() => setShowFingering(!showFingering)}
-                    className="flex-1 bg-orange-600 hover:bg-orange-700 px-4 py-2 rounded text-sm"
-                  >
-                    {showFingering ? 'Amagar' : 'Mostrar'} Digitació
-                  </button>
-                  
-                  <button
-                    onClick={testVoicing}
-                    disabled={!selectedVoicing}
-                    className="flex-1 bg-amber-600 hover:bg-amber-700 disabled:bg-gray-600 px-4 py-2 rounded text-sm"
-                  >
-                    Marcar Dominat
-                  </button>
-                </div>
+                <button
+                  onClick={testVoicing}
+                  disabled={!selectedVoicing}
+                  className="w-full bg-amber-600 hover:bg-amber-700 disabled:bg-gray-600 px-4 py-2 rounded text-sm"
+                >
+                  Marcar Voicing Dominat
+                </button>
               </div>
 
               <div className="mt-6">
@@ -2037,10 +2026,6 @@ function App() {
   const FretboardMasterComponent = () => {
     const [selectedScale, setSelectedScale] = useState('major');
     const [rootNote, setRootNote] = useState('C');
-    const [showNotes, setShowNotes] = useState(true);
-    const [showIntervals, setShowIntervals] = useState(false);
-    const [currentPosition, setCurrentPosition] = useState(0);
-    const [quizMode, setQuizMode] = useState(false);
 
     const scales = {
       major: [0, 2, 4, 5, 7, 9, 11],
@@ -2110,13 +2095,7 @@ function App() {
       );
     };
 
-    const cagShapes = [
-      { name: 'Forma C', position: 0, description: 'Acords oberts, posició 1-3' },
-      { name: 'Forma A', position: 5, description: 'Barre 5è fret, posició 5-7' },
-      { name: 'Forma G', position: 7, description: 'Posició central, 7-10' },
-      { name: 'Forma E', position: 10, description: 'Posició aguda, 10-12' },
-      { name: 'Forma D', position: 12, description: 'Octava alta, 12-15' }
-    ];
+
 
     return (
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900/30 to-emerald-900/20 text-white p-6">
@@ -2166,42 +2145,20 @@ function App() {
                   </select>
                 </div>
 
-                <div className="space-y-2">
-                  <button
-                    onClick={() => setShowNotes(!showNotes)}
-                    className={`w-full px-4 py-2 rounded text-sm ${
-                      showNotes ? 'bg-green-600 hover:bg-green-700' : 'bg-slate-600 hover:bg-slate-700'
-                    }`}
-                  >
-                    {showNotes ? 'Amagar' : 'Mostrar'} Notes
-                  </button>
-                  
-                  <button
-                    onClick={() => setShowIntervals(!showIntervals)}
-                    className={`w-full px-4 py-2 rounded text-sm ${
-                      showIntervals ? 'bg-green-600 hover:bg-green-700' : 'bg-slate-600 hover:bg-slate-700'
-                    }`}
-                  >
-                    {showIntervals ? 'Amagar' : 'Mostrar'} Intervals
-                  </button>
+                <div className="bg-green-600/20 border border-green-500/30 p-3 rounded">
+                  <p className="text-sm text-green-300">
+                    Selecciona una escala i nota fonamental per veure l'anàlisi teòric complet.
+                  </p>
                 </div>
               </div>
 
               <div className="mt-6">
-                <h3 className="font-semibold mb-3">Posicions CAGED:</h3>
-                <div className="space-y-2">
-                  {cagShapes.map((shape, index) => (
-                    <button
-                      key={index}
-                      onClick={() => setCurrentPosition(shape.position)}
-                      className={`w-full bg-slate-700/50 hover:bg-slate-600/50 p-2 rounded text-left text-sm ${
-                        currentPosition === shape.position ? 'bg-green-600/50' : ''
-                      }`}
-                    >
-                      <div className="font-semibold text-green-300">{shape.name}</div>
-                      <div className="text-xs text-gray-400">{shape.description}</div>
-                    </button>
-                  ))}
+                <h3 className="font-semibold mb-3">Sistema CAGED:</h3>
+                <div className="bg-slate-700/50 p-3 rounded">
+                  <p className="text-sm text-gray-300">
+                    El sistema CAGED divideix el mànec en 5 formes bàsiques que es repeteixen. 
+                    Cada escala es pot tocar en aquestes 5 posicions diferents al llarg del mànec.
+                  </p>
                 </div>
               </div>
             </div>
