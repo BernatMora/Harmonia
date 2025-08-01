@@ -63,7 +63,7 @@ export default function MemoryGame() {
     setPattern(newPattern);
     setPlayerInput([]);
   };
-  
+
   const startGame = () => {
     setIsPlaying(true);
     setGameOver(false);

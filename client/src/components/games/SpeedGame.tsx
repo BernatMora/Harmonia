@@ -27,10 +27,6 @@ export default function SpeedGame() {
   const [startTime, setStartTime] = useState<number>(0);
 
   useEffect(() => {
-    generateQuestions();
-  }, []);
-
-  useEffect(() => {
     if (isPlaying && timeLeft > 0) {
       const timer = setTimeout(() => setTimeLeft(timeLeft - 1), 1000);
       return () => clearTimeout(timer);
@@ -265,14 +261,14 @@ export default function SpeedGame() {
   };
 
   const startGame = () => {
+    // SEMPRE generar noves preguntes primer
+    generateQuestions();
     setIsPlaying(true);
     setGameOver(false);
     setScore(0);
     setCurrentQuestion(0);
     setTimeLeft(60);
     setStartTime(Date.now());
-    // Sempre generar noves preguntes
-    generateQuestions();
   };
 
   const handleAnswer = async (answer: string) => {

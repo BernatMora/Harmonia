@@ -89,14 +89,16 @@ export default function ArcadeGame() {
   }, [isPlaying, timeLeft]);
 
   const startGame = () => {
+    // Generar noves preguntes aleatòries
+    const shuffledQuestions = [...harmoniaAdvancedQuestions].sort(() => 0.5 - Math.random()).slice(0, 15);
+    setQuestionPool(shuffledQuestions);
     setIsPlaying(true);
     setGameOver(false);
     setLives(3);
     setScore(0);
     setLevel(1);
     setCurrentQuestion(0);
-    setStartTime(Date.now());
-    // Sempre generar noves preguntes quan es comença
+    setStartTime(Date.now());untes quan es comença
     generateQuestions();
     setTimeLeft(10);
   };
