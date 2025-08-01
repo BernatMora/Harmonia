@@ -450,6 +450,8 @@ function GameComponent({ mode, onBack }: { mode: GameMode; onBack: () => void })
   const [gameCompleted, setGameCompleted] = useState(false);
   const [currentHarmonia, setCurrentHarmonia] = useState(0);
   const [harmoniaQuestions, setHarmoniaQuestions] = useState<any[]>([]);
+  const [chordTarget] = useState(['Do', 'Mi', 'Sol']);
+  const [selectedNotes, setSelectedNotes] = useState<string[]>([]);
 
   const game = gameTypes.find(g => g.id === mode);
   const content = gameContent[mode as keyof typeof gameContent];
@@ -479,6 +481,7 @@ function GameComponent({ mode, onBack }: { mode: GameMode; onBack: () => void })
     setCurrentHarmonia(0);
     setHarmoniaQuestions([]);
     setArcadeGame(0);
+    setSelectedNotes([]);
     
     if (mode === 'speed' && content && content[0] && 'timeLimit' in content[0]) {
       setTimeLeft(content[0].timeLimit || 5);
@@ -1074,8 +1077,6 @@ function GameComponent({ mode, onBack }: { mode: GameMode; onBack: () => void })
       
       // Chord Builder Game
       if (selectedGame.type === 'construction') {
-        const [chordTarget] = useState(['Do', 'Mi', 'Sol']);
-        const [selectedNotes, setSelectedNotes] = useState<string[]>([]);
         const notes = ['Do', 'Re', 'Mi', 'Fa', 'Sol', 'La', 'Si'];
         
         return (
