@@ -1983,21 +1983,7 @@ function App() {
           })}
         </div>
 
-        {/* Estadístiques */}
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-          <div className="bg-gradient-to-br from-blue-500/10 to-blue-600/10 p-6 rounded-2xl border border-blue-500/20 text-center">
-            <div className="text-3xl font-bold text-blue-400 mb-2">15</div>
-            <div className="text-gray-300">Modes de Joc</div>
-          </div>
-          <div className="bg-gradient-to-br from-purple-500/10 to-purple-600/10 p-6 rounded-2xl border border-purple-500/20 text-center">
-            <div className="text-3xl font-bold text-purple-400 mb-2">Chess-level</div>
-            <div className="text-gray-300">Dificultat Mental</div>
-          </div>
-          <div className="bg-gradient-to-br from-pink-500/10 to-pink-600/10 p-6 rounded-2xl border border-pink-500/20 text-center">
-            <div className="text-3xl font-bold text-pink-400 mb-2">9966</div>
-            <div className="text-gray-300">Progressions Reals</div>
-          </div>
-        </div>
+
       </div>
     </div>
   );
