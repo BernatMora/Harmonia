@@ -51,11 +51,12 @@ shared/
 
 ## User Preferences
 - Language: Catalan (UI text in Catalan)
-- Target User: Advanced jazz musician requiring professional-level challenges
+- Target User: Advanced jazz guitarist requiring professional-level challenges
+- Instrument: Guitar (jazz guitarist - requires guitar-specific voicings, fretboard navigation, and chord shapes)
 - Learning approach: Ultra-intensive, mentally challenging exercises
 - Philosophy: "Pocs jocs però molt intensos" - fewer games but extremely demanding
 - Difficulty level: Expert to Master level only - eliminate simple exercises
-- Special focus: Negative harmony, advanced reharmonization, voice leading
+- Special focus: Guitar voicings, fretboard mastery, negative harmony, advanced reharmonization, voice leading
 
 ## Recent Changes
 - **2025-08-01**: Completed migration from Bolt to Replit
@@ -103,5 +104,8 @@ shared/
   - **Musical Theory Easter Egg Hunt**: Progressive treasure hunt through hidden harmonic secrets with unlockable knowledge rewards
   - **Chord Builder Extreme**: Construct ultra-complex chords note by note with real-time harmonic analysis and interval identification
   - **Progression Laboratory**: Advanced harmonic analysis tools for jazz standards with voice leading visualization and substitution suggestions
-  - **Interactive Challenges**: 13 total game modes now available, each requiring deep musical analysis and creative problem-solving
+  - **Guitar Voicings Jazz**: Master advanced guitar voicings with drop 2, drop 3, shell, and quartal harmony shapes
+  - **Fretboard Master**: Complete fretboard navigation with scales, modes, CAGED system, and position playing
+  - **Interactive Challenges**: 15 total game modes now available, each requiring deep musical analysis and creative problem-solving
+  - **Guitar-Specific Focus**: Specialized for jazz guitarist with authentic fingerings, positions, and guitar-centric harmonic concepts
   - **Personal Learning Focus**: Designed for single advanced user with personalized difficulty that scales infinitely

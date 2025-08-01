@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Music, Trophy, BookOpen, Volume2, Target, Puzzle, ArrowLeft, Play, Clock, CheckCircle, XCircle } from "lucide-react";
 import { getRandomProgression, getProgressionsByMode, getChordTypes } from "./data/progressions";
 
-type GameMode = 'home' | 'theory' | 'speed' | 'memory' | 'target' | 'puzzle' | 'arcade' | 'harmonia' | 'advanced-theory' | 'composition-lab' | 'analysis-master' | 'easter-hunt' | 'chord-builder' | 'progression-lab';
+type GameMode = 'home' | 'theory' | 'speed' | 'memory' | 'target' | 'puzzle' | 'arcade' | 'harmonia' | 'advanced-theory' | 'composition-lab' | 'analysis-master' | 'easter-hunt' | 'chord-builder' | 'progression-lab' | 'guitar-voicings' | 'fretboard-master';
 
 // Contingut educatiu ultra-avançat per cada joc
 const gameContent = {
@@ -501,6 +501,20 @@ const gameTypes = [
     description: 'Analitza i crea cadenes harmòniques avançades',
     icon: Music,
     color: 'from-cyan-500 to-blue-600'
+  },
+  {
+    id: 'guitar-voicings',
+    title: 'Voicings de Guitarra Jazz',
+    description: 'Domineu els voicings avançats per a guitarra',
+    icon: Target,
+    color: 'from-orange-500 to-red-600'
+  },
+  {
+    id: 'fretboard-master',
+    title: 'Mestre del Mànec',
+    description: 'Navegació avançada per tot el mànec',
+    icon: Puzzle,
+    color: 'from-green-500 to-emerald-600'
   }
 ];
 
@@ -1797,7 +1811,7 @@ function App() {
         {/* Estadístiques */}
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
           <div className="bg-gradient-to-br from-blue-500/10 to-blue-600/10 p-6 rounded-2xl border border-blue-500/20 text-center">
-            <div className="text-3xl font-bold text-blue-400 mb-2">13</div>
+            <div className="text-3xl font-bold text-blue-400 mb-2">15</div>
             <div className="text-gray-300">Modes de Joc</div>
           </div>
           <div className="bg-gradient-to-br from-purple-500/10 to-purple-600/10 p-6 rounded-2xl border border-purple-500/20 text-center">
@@ -1812,6 +1826,422 @@ function App() {
       </div>
     </div>
   );
+
+  // Component Voicings de Guitarra Jazz
+  const GuitarVoicingsComponent = () => {
+    const [selectedVoicing, setSelectedVoicing] = useState('');
+    const [currentChord, setCurrentChord] = useState('Cmaj7');
+    const [fretPosition, setFretPosition] = useState(0);
+    const [showFingering, setShowFingering] = useState(false);
+    const [masteredVoicings, setMasteredVoicings] = useState<string[]>([]);
+
+    const voicingConcepts = {
+      'drop2': {
+        description: "Drop 2: Segona veu més aguda baixada una octava",
+        theory: "Crea voicings compactes amb bona sonoritat i facilitat de digitació",
+        example: "Cmaj7: C-G-B-E (root-5th-7th-3rd)"
+      },
+      'drop3': {
+        description: "Drop 3: Tercera veu més aguda baixada una octava", 
+        theory: "Permet extensions naturals i conexions suaus entre acords",
+        example: "Cmaj7: C-E-G-B (root-3rd-5th-7th)"
+      },
+      'shell': {
+        description: "Shell Voicing: Només les notes essencials (3a i 7a)",
+        theory: "Defineix la qualitat de l'acord amb el mínim de notes",
+        example: "Cmaj7: E-B (3rd-7th), root i 5th opcionals"
+      },
+      'quartal': {
+        description: "Quartal: Intervals de 4a justa apilades",
+        theory: "Sonoritat moderna, ambigua tonalment, molt utilitzada en jazz contemporani",
+        example: "Cmaj7: G-C-F-B (intervals de 4a)"
+      }
+    };
+
+    const voicingTypes = ['drop2', 'drop3', 'shell', 'quartal'];
+    const jazzChords = ['Cmaj7', 'Dm7', 'Em7', 'Fmaj7', 'G7', 'Am7', 'Bø7', 'G7alt', 'Fm7', 'Bb7'];
+
+    const getCurrentVoicingConcept = () => {
+      return voicingConcepts[selectedVoicing as keyof typeof voicingConcepts];
+    };
+
+    const renderVoicingTheory = () => {
+      const concept = getCurrentVoicingConcept();
+      if (!concept) return null;
+      
+      return (
+        <div className="bg-amber-900/20 p-6 rounded-lg">
+          <h3 className="font-semibold text-orange-300 mb-4">Concepte: {selectedVoicing.toUpperCase()}</h3>
+          
+          <div className="space-y-4">
+            <div className="bg-slate-700/50 p-4 rounded">
+              <h4 className="font-semibold text-orange-200 mb-2">Definició:</h4>
+              <p className="text-gray-300 text-sm">{concept.description}</p>
+            </div>
+            
+            <div className="bg-slate-700/50 p-4 rounded">
+              <h4 className="font-semibold text-orange-200 mb-2">Teoria Harmònica:</h4>
+              <p className="text-gray-300 text-sm">{concept.theory}</p>
+            </div>
+            
+            <div className="bg-slate-700/50 p-4 rounded">
+              <h4 className="font-semibold text-orange-200 mb-2">Exemple amb {currentChord}:</h4>
+              <p className="text-gray-300 text-sm font-mono">{concept.example}</p>
+            </div>
+            
+            <div className="bg-orange-600/20 border border-orange-500/30 p-4 rounded">
+              <h4 className="font-semibold text-orange-300 mb-2">Aplicació Pràctica:</h4>
+              <ul className="text-sm text-gray-300 space-y-1">
+                <li>• Busca aquestes notes al mànec en diferents posicions</li>
+                <li>• Experimenta amb diferents inversions</li>
+                <li>• Connecta amb altres acords usant voice leading</li>
+                <li>• Prova substitucions harmòniques mantenint el voicing</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      );
+    };
+
+    const testVoicing = () => {
+      const voicingKey = `${currentChord}-${selectedVoicing}`;
+      if (!masteredVoicings.includes(voicingKey)) {
+        setMasteredVoicings([...masteredVoicings, voicingKey]);
+      }
+    };
+
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-orange-900/30 to-amber-900/20 text-white p-6">
+        <div className="max-w-6xl mx-auto">
+          <div className="flex items-center mb-8">
+            <button onClick={() => handleNavigate('home')} className="mr-4 p-2 rounded-lg bg-white/10 hover:bg-white/20">
+              <ArrowLeft className="h-6 w-6" />
+            </button>
+            <div>
+              <h1 className="text-4xl font-bold mb-2">🎸 Voicings de Guitarra Jazz</h1>
+              <p className="text-gray-300">Domina els voicings professionals per a guitarra jazz</p>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {/* Controls */}
+            <div className="bg-slate-800/50 rounded-lg p-6">
+              <h2 className="text-xl font-bold text-orange-400 mb-4">Selector d'Acords</h2>
+              
+              <div className="space-y-4">
+                <div>
+                  <label className="block text-sm font-semibold mb-2">Acord:</label>
+                  <select 
+                    value={currentChord}
+                    onChange={(e) => setCurrentChord(e.target.value)}
+                    className="w-full bg-slate-700 rounded p-2"
+                  >
+                    {jazzChords.map(chord => (
+                      <option key={chord} value={chord}>{chord}</option>
+                    ))}
+                  </select>
+                </div>
+
+                <div>
+                  <label className="block text-sm font-semibold mb-2">Tipus de Voicing:</label>
+                  <select 
+                    value={selectedVoicing}
+                    onChange={(e) => setSelectedVoicing(e.target.value)}
+                    className="w-full bg-slate-700 rounded p-2"
+                  >
+                    <option value="">Selecciona...</option>
+                    {voicingTypes.map(type => (
+                      <option key={type} value={type}>
+                        {type === 'drop2' ? 'Drop 2' : 
+                         type === 'drop3' ? 'Drop 3' : 
+                         type === 'shell' ? 'Shell Voicing' : 
+                         'Quartal Harmony'}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+
+                <div className="flex gap-2">
+                  <button
+                    onClick={() => setShowFingering(!showFingering)}
+                    className="flex-1 bg-orange-600 hover:bg-orange-700 px-4 py-2 rounded text-sm"
+                  >
+                    {showFingering ? 'Amagar' : 'Mostrar'} Digitació
+                  </button>
+                  
+                  <button
+                    onClick={testVoicing}
+                    disabled={!selectedVoicing}
+                    className="flex-1 bg-amber-600 hover:bg-amber-700 disabled:bg-gray-600 px-4 py-2 rounded text-sm"
+                  >
+                    Marcar Dominat
+                  </button>
+                </div>
+              </div>
+
+              <div className="mt-6">
+                <h3 className="font-semibold mb-3">Progressió ii-V-I Ràpida:</h3>
+                <div className="space-y-2">
+                  <button 
+                    onClick={() => { setCurrentChord('Dm7'); setSelectedVoicing('drop2'); }}
+                    className="w-full bg-slate-700/50 hover:bg-slate-600/50 p-2 rounded text-left text-sm"
+                  >
+                    Dm7 (Drop 2) → ii
+                  </button>
+                  <button 
+                    onClick={() => { setCurrentChord('G7alt'); setSelectedVoicing('drop2'); }}
+                    className="w-full bg-slate-700/50 hover:bg-slate-600/50 p-2 rounded text-left text-sm"
+                  >
+                    G7alt (Drop 2) → V
+                  </button>
+                  <button 
+                    onClick={() => { setCurrentChord('Cmaj7'); setSelectedVoicing('drop2'); }}
+                    className="w-full bg-slate-700/50 hover:bg-slate-600/50 p-2 rounded text-left text-sm"
+                  >
+                    Cmaj7 (Drop 2) → I
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            {/* Voicing Theory Display */}
+            <div className="lg:col-span-2">
+              {selectedVoicing && currentChord ? renderVoicingTheory() : (
+                <div className="bg-slate-800/50 rounded-lg p-6 text-center text-gray-500">
+                  <Target className="h-16 w-16 mx-auto mb-4 opacity-50" />
+                  <p>Selecciona un acord i tipus de voicing per veure la teoria...</p>
+                </div>
+              )}
+
+              {/* Mastered Voicings */}
+              {masteredVoicings.length > 0 && (
+                <div className="mt-6 bg-slate-800/50 rounded-lg p-6">
+                  <h3 className="text-xl font-bold text-orange-400 mb-4">Voicings Dominats</h3>
+                  <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                    {masteredVoicings.map((voicing, index) => (
+                      <div key={index} className="bg-orange-600/20 border border-orange-500/30 rounded-lg p-3 text-center">
+                        <div className="text-sm font-semibold text-orange-300">{voicing}</div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  };
+
+  // Component Mestre del Mànec
+  const FretboardMasterComponent = () => {
+    const [selectedScale, setSelectedScale] = useState('major');
+    const [rootNote, setRootNote] = useState('C');
+    const [showNotes, setShowNotes] = useState(true);
+    const [showIntervals, setShowIntervals] = useState(false);
+    const [currentPosition, setCurrentPosition] = useState(0);
+    const [quizMode, setQuizMode] = useState(false);
+
+    const scales = {
+      major: [0, 2, 4, 5, 7, 9, 11],
+      dorian: [0, 2, 3, 5, 7, 9, 10],
+      mixolydian: [0, 2, 4, 5, 7, 9, 10],
+      altered: [0, 1, 3, 4, 6, 8, 10],
+      diminished: [0, 2, 3, 5, 6, 8, 9, 11],
+      wholeTone: [0, 2, 4, 6, 8, 10]
+    };
+
+    const chromaticNotes = ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B'];
+    const intervalNames = ['1', 'b2', '2', 'b3', '3', '4', 'b5', '5', 'b6', '6', 'b7', '7'];
+
+    const getScaleNotes = () => {
+      const rootIndex = chromaticNotes.indexOf(rootNote);
+      const scaleIntervals = scales[selectedScale as keyof typeof scales];
+      return scaleIntervals.map(interval => chromaticNotes[(rootIndex + interval) % 12]);
+    };
+
+    const renderScaleTheory = () => {
+      const scaleNotes = getScaleNotes();
+      const scaleIntervals = scales[selectedScale as keyof typeof scales];
+      
+      return (
+        <div className="bg-green-900/20 p-6 rounded-lg">
+          <h3 className="font-semibold text-green-300 mb-4">
+            {rootNote} {selectedScale.charAt(0).toUpperCase() + selectedScale.slice(1)}
+          </h3>
+          
+          <div className="space-y-4">
+            <div className="bg-slate-700/50 p-4 rounded">
+              <h4 className="font-semibold text-green-200 mb-2">Notes de l'escala:</h4>
+              <div className="flex flex-wrap gap-2">
+                {scaleNotes.map((note, index) => (
+                  <span key={index} className={`px-3 py-1 rounded text-sm ${
+                    note === rootNote ? 'bg-green-500 text-white font-bold' : 'bg-green-600/60 text-white'
+                  }`}>
+                    {note}
+                  </span>
+                ))}
+              </div>
+            </div>
+            
+            <div className="bg-slate-700/50 p-4 rounded">
+              <h4 className="font-semibold text-green-200 mb-2">Intervals:</h4>
+              <div className="flex flex-wrap gap-2">
+                {scaleIntervals.map((interval, index) => (
+                  <span key={index} className="bg-slate-600 px-2 py-1 rounded text-sm">
+                    {intervalNames[interval]}
+                  </span>
+                ))}
+              </div>
+            </div>
+            
+            <div className="bg-green-600/20 border border-green-500/30 p-4 rounded">
+              <h4 className="font-semibold text-green-300 mb-2">Conceptes per Guitarrista:</h4>
+              <ul className="text-sm text-gray-300 space-y-1">
+                <li>• Busca patrons repetitius al llarg del mànec</li>
+                <li>• Identifica les notes fonamentals en cada corda</li>
+                <li>• Practica canvis de posició mantenint l'escala</li>
+                <li>• Combina amb acords de la tonalitat</li>
+                <li>• Experimenta amb bending i hammer-ons dins l'escala</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      );
+    };
+
+    const cagShapes = [
+      { name: 'Forma C', position: 0, description: 'Acords oberts, posició 1-3' },
+      { name: 'Forma A', position: 5, description: 'Barre 5è fret, posició 5-7' },
+      { name: 'Forma G', position: 7, description: 'Posició central, 7-10' },
+      { name: 'Forma E', position: 10, description: 'Posició aguda, 10-12' },
+      { name: 'Forma D', position: 12, description: 'Octava alta, 12-15' }
+    ];
+
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900/30 to-emerald-900/20 text-white p-6">
+        <div className="max-w-6xl mx-auto">
+          <div className="flex items-center mb-8">
+            <button onClick={() => handleNavigate('home')} className="mr-4 p-2 rounded-lg bg-white/10 hover:bg-white/20">
+              <ArrowLeft className="h-6 w-6" />
+            </button>
+            <div>
+              <h1 className="text-4xl font-bold mb-2">🎯 Mestre del Mànec</h1>
+              <p className="text-gray-300">Navega per tot el mànec amb confiança total</p>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
+            {/* Controls */}
+            <div className="bg-slate-800/50 rounded-lg p-6">
+              <h2 className="text-xl font-bold text-green-400 mb-4">Controls</h2>
+              
+              <div className="space-y-4">
+                <div>
+                  <label className="block text-sm font-semibold mb-2">Nota Fonamental:</label>
+                  <select 
+                    value={rootNote}
+                    onChange={(e) => setRootNote(e.target.value)}
+                    className="w-full bg-slate-700 rounded p-2"
+                  >
+                    {chromaticNotes.map(note => (
+                      <option key={note} value={note}>{note}</option>
+                    ))}
+                  </select>
+                </div>
+
+                <div>
+                  <label className="block text-sm font-semibold mb-2">Escala/Mode:</label>
+                  <select 
+                    value={selectedScale}
+                    onChange={(e) => setSelectedScale(e.target.value)}
+                    className="w-full bg-slate-700 rounded p-2"
+                  >
+                    <option value="major">Major (Ionian)</option>
+                    <option value="dorian">Dorian</option>
+                    <option value="mixolydian">Mixolydian</option>
+                    <option value="altered">Altered</option>
+                    <option value="diminished">Diminished</option>
+                    <option value="wholeTone">Whole Tone</option>
+                  </select>
+                </div>
+
+                <div className="space-y-2">
+                  <button
+                    onClick={() => setShowNotes(!showNotes)}
+                    className={`w-full px-4 py-2 rounded text-sm ${
+                      showNotes ? 'bg-green-600 hover:bg-green-700' : 'bg-slate-600 hover:bg-slate-700'
+                    }`}
+                  >
+                    {showNotes ? 'Amagar' : 'Mostrar'} Notes
+                  </button>
+                  
+                  <button
+                    onClick={() => setShowIntervals(!showIntervals)}
+                    className={`w-full px-4 py-2 rounded text-sm ${
+                      showIntervals ? 'bg-green-600 hover:bg-green-700' : 'bg-slate-600 hover:bg-slate-700'
+                    }`}
+                  >
+                    {showIntervals ? 'Amagar' : 'Mostrar'} Intervals
+                  </button>
+                </div>
+              </div>
+
+              <div className="mt-6">
+                <h3 className="font-semibold mb-3">Posicions CAGED:</h3>
+                <div className="space-y-2">
+                  {cagShapes.map((shape, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setCurrentPosition(shape.position)}
+                      className={`w-full bg-slate-700/50 hover:bg-slate-600/50 p-2 rounded text-left text-sm ${
+                        currentPosition === shape.position ? 'bg-green-600/50' : ''
+                      }`}
+                    >
+                      <div className="font-semibold text-green-300">{shape.name}</div>
+                      <div className="text-xs text-gray-400">{shape.description}</div>
+                    </button>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Scale Theory */}
+            <div className="lg:col-span-3">
+              {renderScaleTheory()}
+              
+              <div className="mt-6 bg-slate-800/50 rounded-lg p-6">
+                <h3 className="text-xl font-bold text-emerald-400 mb-4">Informació de l'Escala</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <h4 className="font-semibold text-green-300 mb-2">Notes de l'escala:</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {getScaleNotes().map((note, index) => (
+                        <span key={index} className="bg-green-600/30 px-2 py-1 rounded text-sm">
+                          {note}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-green-300 mb-2">Aplicacions Jazz:</h4>
+                    <ul className="text-sm text-gray-300 space-y-1">
+                      {selectedScale === 'major' && <li>• Acords maj7, progressions ii-V-I</li>}
+                      {selectedScale === 'dorian' && <li>• Acords m7, So What, modal jazz</li>}
+                      {selectedScale === 'mixolydian' && <li>• Acords 7, dominant, blues</li>}
+                      {selectedScale === 'altered' && <li>• Acords 7alt, tensió, bebop</li>}
+                      {selectedScale === 'diminished' && <li>• Acords dim, substitucions</li>}
+                      {selectedScale === 'wholeTone' && <li>• Acords aug, Debussy, modern</li>}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  };
 
   // Component Constructor d'Acords Extrems
   const ChordBuilderComponent = () => {
@@ -2582,6 +3012,14 @@ function App() {
     
     if (mode === 'progression-lab') {
       return <ProgressionLabComponent />;
+    }
+    
+    if (mode === 'guitar-voicings') {
+      return <GuitarVoicingsComponent />;
+    }
+    
+    if (mode === 'fretboard-master') {
+      return <FretboardMasterComponent />;
     }
 
     if (mode === 'analysis-master') {
