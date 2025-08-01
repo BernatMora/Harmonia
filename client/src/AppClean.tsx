@@ -453,6 +453,36 @@ function GameComponent({ mode, onBack }: { mode: GameMode; onBack: () => void })
   const [chordTarget] = useState(['Do', 'Mi', 'Sol']);
   const [selectedNotes, setSelectedNotes] = useState<string[]>([]);
 
+  // useEffect per al mode harmonia - ha d'estar al principi
+  useEffect(() => {
+    if (mode === 'harmonia' && gameStarted && harmoniaQuestions.length === 0) {
+      const questions = [];
+      for (let i = 0; i < 5; i++) {
+        const progression = getRandomProgression();
+        const wrongProgressions = getProgressionsByMode(progression.mode)
+          .filter(p => p.tonalitat !== progression.tonalitat)
+          .slice(0, 2);
+        
+        questions.push({
+          type: "identify_progression",
+          progression: progression,
+          question: `Identifica la progressió en ${progression.tonalitat} ${progression.mode}:`,
+          chords: progression.acords.map((a: any) => a.acord).join(" - "),
+          romanNumerals: progression.progressio_romana,
+          options: [
+            progression.progressio_romana,
+            wrongProgressions[0]?.progressio_romana || "I - V - vi - IV",
+            wrongProgressions[1]?.progressio_romana || "vi - IV - I - V",
+            "ii - V - I - vi"
+          ],
+          correct: 0,
+          explanation: `Aquesta progressió ${progression.progressio_romana} és característica del mode ${progression.mode} en ${progression.tonalitat}.`
+        });
+      }
+      setHarmoniaQuestions(questions);
+    }
+  }, [mode, gameStarted, harmoniaQuestions.length]);
+
   const game = gameTypes.find(g => g.id === mode);
   const content = gameContent[mode as keyof typeof gameContent];
 
@@ -1279,36 +1309,6 @@ function GameComponent({ mode, onBack }: { mode: GameMode; onBack: () => void })
 
   // Joc d'Harmonia (amb progressions reals)
   if (mode === 'harmonia') {
-
-    // Generar preguntes dinàmiques quan es carrega el joc
-    useEffect(() => {
-      if (gameStarted && harmoniaQuestions.length === 0) {
-        const questions = [];
-        for (let i = 0; i < 5; i++) {
-          const progression = getRandomProgression();
-          const wrongProgressions = getProgressionsByMode(progression.mode)
-            .filter(p => p.tonalitat !== progression.tonalitat)
-            .slice(0, 2);
-          
-          questions.push({
-            type: "identify_progression",
-            progression: progression,
-            question: `Identifica la progressió en ${progression.tonalitat} ${progression.mode}:`,
-            chords: progression.acords.map((a: any) => a.acord).join(" - "),
-            romanNumerals: progression.progressio_romana,
-            options: [
-              progression.progressio_romana,
-              wrongProgressions[0]?.progressio_romana || "I - V - vi - IV",
-              wrongProgressions[1]?.progressio_romana || "vi - IV - I - V",
-              "ii - V - I - vi"
-            ],
-            correct: 0,
-            explanation: `Aquesta progressió ${progression.progressio_romana} és característica del mode ${progression.mode} en ${progression.tonalitat}.`
-          });
-        }
-        setHarmoniaQuestions(questions);
-      }
-    }, [gameStarted]);
 
     if (gameCompleted) {
       return (
