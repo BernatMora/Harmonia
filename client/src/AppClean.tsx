@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
-import { Music, Trophy, BookOpen, Volume2, Target, Puzzle, ArrowLeft, Play, Clock, CheckCircle, XCircle } from "lucide-react";
+import { Music, Trophy, BookOpen, Volume2, Target, Puzzle, ArrowLeft, Play, Clock, CheckCircle, XCircle, Library } from "lucide-react";
 import { getRandomProgression, getProgressionsByMode, getChordTypes } from "./data/progressions";
 import { questionService, type GeneratedQuestion } from "./lib/questionService";
+import { EducationSystem } from "./components/EducationSystem";
 
-type GameMode = 'home' | 'theory' | 'speed' | 'memory' | 'target' | 'puzzle' | 'arcade' | 'harmonia' | 'advanced-theory' | 'composition-lab' | 'analysis-master' | 'easter-hunt' | 'chord-builder' | 'progression-lab' | 'guitar-voicings' | 'fretboard-master';
+type GameMode = 'home' | 'theory' | 'speed' | 'memory' | 'target' | 'puzzle' | 'arcade' | 'harmonia' | 'advanced-theory' | 'composition-lab' | 'analysis-master' | 'easter-hunt' | 'chord-builder' | 'progression-lab' | 'guitar-voicings' | 'fretboard-master' | 'education-system';
 
 // Contingut educatiu ultra-avançat per cada joc
 const gameContent = {
@@ -467,6 +468,13 @@ const gameTypes = [
     description: 'Estudi complet dels conceptes més complexos',
     icon: BookOpen,
     color: 'from-indigo-500 to-purple-600'
+  },
+  {
+    id: 'education-system',
+    title: 'Biblioteca d\'Aprenentatge',
+    description: 'Sistema educatiu complet amb tota la teoria explicada',
+    icon: Library,
+    color: 'from-emerald-500 to-green-600'
   },
   {
     id: 'composition-lab',
@@ -3043,7 +3051,18 @@ function App() {
     const game = gameTypes.find(g => g.id === mode);
     
     if (mode === 'advanced-theory') {
-      return <AdvancedTheoryComponent onBack={() => handleNavigate('home')} />;
+      return (
+        <div className="text-center">
+          <h2 className="text-3xl font-bold text-white mb-4">Teoria Musical Avançada</h2>
+          <p className="text-gray-300 mb-8">Contingut en desenvolupament</p>
+          <button
+            onClick={() => handleNavigate('home')}
+            className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg"
+          >
+            Tornar al menú
+          </button>
+        </div>
+      );
     }
     
     if (mode === 'composition-lab') {
@@ -3189,7 +3208,12 @@ function App() {
 
   return (
     <div>
-      {currentMode === 'home' ? renderHome() : renderGame(currentMode)}
+      {currentMode === 'home' ? renderHome() : 
+       currentMode === 'education-system' ? (
+         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 p-8">
+           <EducationSystem onBack={() => setCurrentMode('home')} />
+         </div>
+       ) : renderGame(currentMode)}
     </div>
   );
 }
