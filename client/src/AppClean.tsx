@@ -4,7 +4,7 @@ import { getRandomProgression, getProgressionsByMode, getChordTypes } from "./da
 import { questionService, type GeneratedQuestion } from "./lib/questionService";
 import { EducationSystem } from "./components/EducationSystem";
 
-type GameMode = 'home' | 'theory' | 'speed' | 'memory' | 'target' | 'puzzle' | 'arcade' | 'harmonia' | 'advanced-theory' | 'composition-lab' | 'analysis-master' | 'easter-hunt' | 'chord-builder' | 'progression-lab' | 'guitar-voicings' | 'fretboard-master' | 'education-system';
+type GameMode = 'home' | 'theory' | 'speed' | 'memory' | 'target' | 'puzzle' | 'arcade' | 'harmonia' | 'composition-lab' | 'analysis-master' | 'easter-hunt' | 'chord-builder' | 'progression-lab' | 'guitar-voicings' | 'fretboard-master' | 'education-system';
 
 // Contingut educatiu ultra-avançat per cada joc
 const gameContent = {
