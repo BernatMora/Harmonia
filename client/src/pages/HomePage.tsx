@@ -1,6 +1,9 @@
 import { useLocation } from "wouter";
 import { Music, Trophy, BookOpen, Volume2, Target, Puzzle } from "lucide-react";
 import NavigationCard from "@/components/NavigationCard";
+import ProgressTracker from "@/components/ProgressTracker";
+import RewardsSystem from "@/components/RewardsSystem";
+import StudyMode from "@/components/StudyMode";
 
 const gameTypes = [
   {
@@ -122,6 +125,15 @@ export default function HomePage() {
               <div className="text-gray-300 text-sm sm:text-base">Exercicis</div>
               <div className="text-xs text-gray-500 mt-1">Pràctica il·limitada</div>
             </div>
+          </div>
+        </div>
+
+        {/* Advanced Features */}
+        <div className="mt-16 sm:mt-20">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
+            <ProgressTracker />
+            <RewardsSystem />
+            <StudyMode />
           </div>
         </div>
 
