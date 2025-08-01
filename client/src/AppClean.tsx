@@ -1029,26 +1029,44 @@ function GameComponent({ mode, onBack }: { mode: GameMode; onBack: () => void })
               
               {/* Simulació del joc */}
               <div className="bg-slate-800/50 rounded-lg p-6 mb-6">
-                <div className="text-lg text-white mb-4">🎵 Notes que cauen - Clica per agafar-les! 🎵</div>
-                <div className="text-sm text-gray-300 mb-4">Cada nota fa un so diferent quan la cliques</div>
-                <div className="flex justify-center space-x-4 mb-4">
-                  {['Do', 'Re', 'Mi', 'Fa', 'Sol'].map((note, i) => (
-                    <button
-                      key={i}
-                      onClick={() => {
-                        // Simular so
-                        console.log(`🎵 ${note} suena!`);
-                      }}
-                      className={`w-12 h-12 rounded-full flex items-center justify-center text-white font-bold transition-all duration-500 cursor-pointer hover:scale-110 ${
-                        Math.random() > 0.5 ? 'bg-blue-500 animate-bounce shadow-lg shadow-blue-500/50' : 'bg-gray-600 hover:bg-gray-500'
-                      }`}
-                    >
-                      {note}
-                    </button>
-                  ))}
+                <div className="text-lg text-white mb-4">🎵 Notes que cauen - Reacciona ràpid! 🎵</div>
+                <div className="text-sm text-gray-300 mb-4">Notes aleatòries, velocitats diferents, múltiples colors!</div>
+                
+                {/* Notes aleatòries amb dificultats variables */}
+                <div className="flex justify-center space-x-2 mb-4 flex-wrap">
+                  {['Do', 'Do#', 'Re', 'Re#', 'Mi', 'Fa', 'Fa#', 'Sol', 'Sol#', 'La', 'La#', 'Si', 'Db', 'Eb', 'Gb', 'Ab', 'Bb'].slice(0, 7 + Math.floor(Math.random() * 5)).map((note, i) => {
+                    const speed = Math.random() * 3000 + 1000;
+                    const color = ['bg-blue-500', 'bg-red-500', 'bg-green-500', 'bg-purple-500', 'bg-yellow-500', 'bg-pink-500'][Math.floor(Math.random() * 6)];
+                    const isMoving = Math.random() > 0.3;
+                    return (
+                      <button
+                        key={i}
+                        onClick={() => {
+                          const points = Math.floor(Math.random() * 50) + 10;
+                          console.log(`🎵 ${note} capturada! +${points} punts! Velocitat: ${speed.toFixed(0)}ms`);
+                        }}
+                        className={`w-12 h-12 rounded-full flex items-center justify-center text-white font-bold text-xs transition-all duration-500 cursor-pointer hover:scale-110 ${color} ${
+                          isMoving ? 'animate-bounce' : ''
+                        } shadow-lg`}
+                        style={{
+                          animationDuration: `${speed}ms`,
+                          transform: isMoving ? `translateY(${Math.sin(Date.now() / speed) * 10}px)` : 'none'
+                        }}
+                      >
+                        {note}
+                      </button>
+                    );
+                  })}
                 </div>
-                <div className="text-yellow-400 font-bold mb-2">Puntuació: {Math.floor(Math.random() * 100)}</div>
-                <div className="text-xs text-gray-400">💡 Consell: Escolta el so de cada nota per aprendre!</div>
+                
+                <div className="grid grid-cols-2 gap-4 mb-4 text-sm">
+                  <div className="text-yellow-400 font-bold">Puntuació: {Math.floor(Math.random() * 1000) + 100}</div>
+                  <div className="text-red-400 font-bold">Combo: x{Math.floor(Math.random() * 10) + 1}</div>
+                  <div className="text-green-400">Velocitat: {Math.floor(Math.random() * 3) + 1}x</div>
+                  <div className="text-blue-400">Nivell: {Math.floor(Math.random() * 20) + 1}</div>
+                </div>
+                
+                <div className="text-xs text-gray-400">💡 Notes sostingudes valen més punts! Velocitat augmenta cada 10 captures!</div>
               </div>
               
               <div className="flex space-x-4 justify-center">
@@ -1085,30 +1103,101 @@ function GameComponent({ mode, onBack }: { mode: GameMode; onBack: () => void })
               
               {/* Simulació del ritme */}
               <div className="bg-slate-800/50 rounded-lg p-6 mb-6">
-                <div className="text-lg text-white mb-4">🥁 Segueix el ritme - Toca quan brilli! 🥁</div>
-                <div className="text-sm text-gray-300 mb-4">Escolta el pattern i toca quan veus la llum vermella</div>
-                <div className="flex justify-center space-x-2 mb-6">
-                  {[1,2,3,4,1,2,3,4].map((beat, i) => (
-                    <button
-                      key={i}
-                      onClick={() => {
-                        console.log(`🥁 BEAT ${beat} - ${i % 4 === 0 ? 'FORT!' : 'suau'}`);
-                      }}
-                      className={`w-10 h-10 rounded-full flex items-center justify-center text-white font-bold transition-all cursor-pointer hover:scale-110 ${
-                        i % 4 === 0 
-                          ? 'bg-red-500 shadow-lg shadow-red-500/50 animate-pulse' 
-                          : 'bg-blue-500 hover:bg-blue-400'
-                      }`}
-                    >
-                      {beat}
-                    </button>
-                  ))}
+                <div className="text-lg text-white mb-4">🥁 Ritmes complexos en temps real! 🥁</div>
+                <div className="text-sm text-gray-300 mb-4">Patrons aleatòris, signatures de temps variables, polyrhythms!</div>
+                
+                {/* Patrons rítmics complexos i aleatòris */}
+                <div className="space-y-4 mb-6">
+                  {/* Línia rítmica 1 - Principal */}
+                  <div className="flex justify-center space-x-1">
+                    <div className="text-xs text-gray-400 w-16">4/4:</div>
+                    {Array.from({length: 16}, (_, i) => {
+                      const isActive = Math.random() > 0.4;
+                      const intensity = Math.random();
+                      return (
+                        <button
+                          key={i}
+                          onClick={() => {
+                            const timing = i % 4 === 0 ? 'DOWNBEAT' : i % 2 === 0 ? 'Strong' : 'Weak';
+                            console.log(`🥁 Beat ${i + 1}/16 - ${timing} - Intensitat: ${(intensity * 100).toFixed(0)}%`);
+                          }}
+                          className={`w-6 h-6 rounded flex items-center justify-center text-xs font-bold transition-all cursor-pointer ${
+                            isActive 
+                              ? intensity > 0.7 ? 'bg-red-500 animate-pulse shadow-md' 
+                                : intensity > 0.4 ? 'bg-orange-500' 
+                                : 'bg-yellow-500'
+                              : 'bg-gray-600 hover:bg-gray-500'
+                          }`}
+                        >
+                          {isActive ? '●' : '○'}
+                        </button>
+                      );
+                    })}
+                  </div>
+                  
+                  {/* Línia rítmica 2 - Sincopat */}
+                  <div className="flex justify-center space-x-1">
+                    <div className="text-xs text-gray-400 w-16">Sync:</div>
+                    {Array.from({length: 12}, (_, i) => {
+                      const isActive = Math.random() > 0.6;
+                      return (
+                        <button
+                          key={i}
+                          onClick={() => {
+                            console.log(`🎵 Syncopation ${i + 1}/12 - ${isActive ? 'HIT' : 'rest'}`);
+                          }}
+                          className={`w-6 h-6 rounded flex items-center justify-center text-xs font-bold transition-all cursor-pointer ${
+                            isActive ? 'bg-blue-500 animate-bounce' : 'bg-gray-700 hover:bg-gray-600'
+                          }`}
+                        >
+                          {isActive ? '♪' : '∅'}
+                        </button>
+                      );
+                    })}
+                  </div>
+                  
+                  {/* Línia rítmica 3 - Polyrhythm */}
+                  <div className="flex justify-center space-x-1">
+                    <div className="text-xs text-gray-400 w-16">3/4:</div>
+                    {Array.from({length: 9}, (_, i) => {
+                      const isActive = Math.random() > 0.5;
+                      return (
+                        <button
+                          key={i}
+                          onClick={() => {
+                            console.log(`🎶 Polyrhythm ${i + 1}/9 - ${i % 3 === 0 ? 'STRONG' : 'weak'}`);
+                          }}
+                          className={`w-6 h-6 rounded flex items-center justify-center text-xs font-bold transition-all cursor-pointer ${
+                            isActive 
+                              ? i % 3 === 0 ? 'bg-purple-500 animate-pulse' : 'bg-indigo-500'
+                              : 'bg-gray-700 hover:bg-gray-600'
+                          }`}
+                        >
+                          {isActive ? '♫' : '·'}
+                        </button>
+                      );
+                    })}
+                  </div>
                 </div>
-                <div className="text-yellow-400 font-bold mb-4">🎯 Precisió: {Math.floor(Math.random() * 30) + 70}%</div>
-                <div className="text-xs text-gray-400 mb-4">💡 Els números vermells són temps forts - fan més so!</div>
-                <button className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-2 rounded-lg text-lg font-bold">
-                  🎵 ESPAI per tocar 🎵
-                </button>
+                
+                <div className="grid grid-cols-3 gap-4 mb-4 text-sm">
+                  <div className="text-yellow-400 font-bold">Precisió: {Math.floor(Math.random() * 40) + 60}%</div>
+                  <div className="text-green-400">BPM: {Math.floor(Math.random() * 100) + 80}</div>
+                  <div className="text-red-400">Streak: {Math.floor(Math.random() * 25)}</div>
+                </div>
+                
+                <div className="text-xs text-gray-400 mb-4">💡 Múltiples layers rítmics! Cada color = instrument diferent</div>
+                <div className="flex space-x-2 justify-center">
+                  <button className="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded text-sm font-bold">
+                    🥁 KICK
+                  </button>
+                  <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded text-sm font-bold">
+                    🔔 SNARE
+                  </button>
+                  <button className="bg-yellow-600 hover:bg-yellow-700 text-white px-4 py-2 rounded text-sm font-bold">
+                    ⚡ HI-HAT
+                  </button>
+                </div>
               </div>
               
               <div className="flex space-x-4 justify-center">
@@ -1137,8 +1226,32 @@ function GameComponent({ mode, onBack }: { mode: GameMode; onBack: () => void })
               <p className="text-gray-300 mb-6">{selectedGame.description}</p>
               
               <div className="bg-slate-800/50 rounded-lg p-6 mb-6">
-                <div className="text-lg text-white mb-4">🎼 Construeix l'acord: Do Major 🎼</div>
-                <div className="text-sm text-gray-300 mb-4">Objectiu: {chordTarget.join(' - ')} (Escoltaràs l'acord quan estigui complet!)</div>
+                {(() => {
+                  // Acords aleatoris complexos
+                  const chordTypes = [
+                    { name: "Do Major", notes: ["Do", "Mi", "Sol"], difficulty: "Fàcil" },
+                    { name: "La menor", notes: ["La", "Do", "Mi"], difficulty: "Fàcil" },
+                    { name: "Sol7", notes: ["Sol", "Si", "Re", "Fa"], difficulty: "Mitjà" },
+                    { name: "Dm7b5", notes: ["Re", "Fa", "Lab", "Do"], difficulty: "Difícil" },
+                    { name: "C#dim7", notes: ["Do#", "Mi", "Sol", "Sib"], difficulty: "Difícil" },
+                    { name: "Fmaj9", notes: ["Fa", "La", "Do", "Mi", "Sol"], difficulty: "Expert" },
+                    { name: "B♭13", notes: ["Sib", "Re", "Fa", "Lab", "Do", "Sol"], difficulty: "Expert" },
+                    { name: "E♭aug", notes: ["Mib", "Sol", "Si"], difficulty: "Mitjà" }
+                  ];
+                  const randomChord = chordTypes[Math.floor(Math.random() * chordTypes.length)];
+                  
+                  return (
+                    <>
+                      <div className="text-lg text-white mb-4">🎼 Construeix l'acord: {randomChord.name} 🎼</div>
+                      <div className="text-sm text-gray-300 mb-4">
+                        Objectiu: {randomChord.notes.join(' - ')} | Dificultat: {randomChord.difficulty}
+                      </div>
+                      <div className="text-xs text-blue-300 mb-4">
+                        💡 Acord generat aleatòriament - {randomChord.notes.length} notes necessàries
+                      </div>
+                    </>
+                  );
+                })()}
                 
                 <div className="mb-6">
                   <div className="text-white mb-2">🎵 Notes seleccionades:</div>
@@ -1156,26 +1269,56 @@ function GameComponent({ mode, onBack }: { mode: GameMode; onBack: () => void })
                   )}
                 </div>
                 
-                <div className="grid grid-cols-7 gap-2 mb-6">
-                  {notes.map((note, i) => (
-                    <button
-                      key={i}
-                      onClick={() => {
-                        if (!selectedNotes.includes(note) && selectedNotes.length < 3) {
-                          setSelectedNotes([...selectedNotes, note]);
-                          console.log(`🎵 ${note} afegida! So: ${note === 'Do' ? 'Do grave' : note === 'Mi' ? 'Mi agut' : note === 'Sol' ? 'Sol harmònic' : note}`);
-                        }
-                      }}
-                      disabled={selectedNotes.includes(note)}
-                      className={`p-3 rounded font-semibold transition-all ${
-                        selectedNotes.includes(note)
-                          ? 'bg-green-600 text-white'
-                          : 'bg-slate-700 hover:bg-slate-600 text-white'
-                      }`}
-                    >
-                      {note}
-                    </button>
-                  ))}
+                {/* Notes cromàtiques completes amb enharmonies */}
+                <div className="grid grid-cols-6 gap-1 mb-6">
+                  {['Do', 'Do#/Db', 'Re', 'Re#/Eb', 'Mi', 'Fa', 'Fa#/Gb', 'Sol', 'Sol#/Ab', 'La', 'La#/Bb', 'Si',
+                    'Dob', 'Reb', 'Mib', 'Fab', 'Solb', 'Lab', 'Sib', 'Dox', 'Rex', 'Mix', 'Fax', 'Solx', 'Lax', 'Six']
+                    .slice(0, 24).map((note, i) => {
+                    const isChromatic = note.includes('#') || note.includes('b') || note.includes('x');
+                    const octave = Math.floor(Math.random() * 4) + 3; // Octaves 3-6
+                    const fullNote = `${note}${octave}`;
+                    
+                    return (
+                      <button
+                        key={i}
+                        onClick={() => {
+                          if (!selectedNotes.includes(note) && selectedNotes.length < 6) {
+                            setSelectedNotes([...selectedNotes, note]);
+                            const frequency = 440 * Math.pow(2, (i - 9) / 12); // Càlcul de freqüència
+                            console.log(`🎵 ${fullNote} afegida! Freq: ${frequency.toFixed(1)}Hz, ${isChromatic ? 'Cromàtica' : 'Diatònica'}`);
+                          }
+                        }}
+                        disabled={selectedNotes.includes(note)}
+                        className={`p-2 rounded text-xs font-semibold transition-all ${
+                          selectedNotes.includes(note)
+                            ? 'bg-green-600 text-white shadow-lg'
+                            : isChromatic
+                            ? 'bg-purple-700 hover:bg-purple-600 text-white'
+                            : 'bg-slate-700 hover:bg-slate-600 text-white'
+                        } ${isChromatic ? 'border border-purple-400' : ''}`}
+                      >
+                        {note}
+                      </button>
+                    );
+                  })}
+                </div>
+                
+                {/* Inversions i voicings */}
+                <div className="mb-4">
+                  <div className="text-white text-sm mb-2">🔄 Inversions disponibles:</div>
+                  <div className="flex space-x-2 justify-center">
+                    {['Root', '1st Inv', '2nd Inv', '3rd Inv'].map((inversion, i) => (
+                      <button
+                        key={i}
+                        onClick={() => {
+                          console.log(`🎼 Inversió ${inversion} seleccionada - notes reordenades!`);
+                        }}
+                        className="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded text-xs"
+                      >
+                        {inversion}
+                      </button>
+                    ))}
+                  </div>
                 </div>
                 
                 {selectedNotes.length === 3 && (
@@ -1230,33 +1373,96 @@ function GameComponent({ mode, onBack }: { mode: GameMode; onBack: () => void })
               <p className="text-gray-300 mb-6">{selectedGame.description}</p>
               
               <div className="bg-slate-800/50 rounded-lg p-6 mb-6">
-                <div className="text-lg text-white mb-4">🏃‍♂️ Escala objectiu: Do Major 🏃‍♂️</div>
-                <div className="text-sm text-gray-300 mb-4">Salta només sobre les notes verdes - Cada salt fa un so!</div>
-                <div className="text-xs text-blue-300 mb-4">🔊 Notes correctes: Do, Re, Mi, Fa, Sol, La, Si (fan so harmonious)</div>
+                {(() => {
+                  // Escales aleatòries complexes
+                  const scales = [
+                    { name: "Do Major", notes: ["Do", "Re", "Mi", "Fa", "Sol", "La", "Si"], mode: "Ionian" },
+                    { name: "La menor natural", notes: ["La", "Si", "Do", "Re", "Mi", "Fa", "Sol"], mode: "Aeolian" },
+                    { name: "Re Dòric", notes: ["Re", "Mi", "Fa", "Sol", "La", "Si", "Do"], mode: "Dorian" },
+                    { name: "Mi Frigi", notes: ["Mi", "Fa", "Sol", "La", "Si", "Do", "Re"], mode: "Phrygian" },
+                    { name: "Fa Lidi", notes: ["Fa", "Sol", "La", "Si", "Do", "Re", "Mi"], mode: "Lydian" },
+                    { name: "Sol Mixolidi", notes: ["Sol", "La", "Si", "Do", "Re", "Mi", "Fa"], mode: "Mixolydian" },
+                    { name: "Si Locri", notes: ["Si", "Do", "Re", "Mi", "Fa", "Sol", "La"], mode: "Locrian" },
+                    { name: "Blues Do", notes: ["Do", "Mib", "Fa", "Fa#", "Sol", "Sib"], mode: "Blues" },
+                    { name: "Pentatònica La", notes: ["La", "Do", "Re", "Mi", "Sol"], mode: "Pentatonic" },
+                    { name: "Cromàtica", notes: ["Do", "Do#", "Re", "Re#", "Mi", "Fa", "Fa#", "Sol", "Sol#", "La", "La#", "Si"], mode: "Chromatic" }
+                  ];
+                  const randomScale = scales[Math.floor(Math.random() * scales.length)];
+                  const tempo = Math.floor(Math.random() * 60) + 80; // 80-140 BPM
+                  
+                  return (
+                    <>
+                      <div className="text-lg text-white mb-4">🏃‍♂️ Escala: {randomScale.name} ({randomScale.mode}) 🏃‍♂️</div>
+                      <div className="text-sm text-gray-300 mb-4">Velocitat: {tempo} BPM - Obstacles aleatoris apareixen!</div>
+                      <div className="text-xs text-blue-300 mb-4">
+                        🔊 Notes correctes ({randomScale.notes.length}): {randomScale.notes.join(', ')}
+                      </div>
+                    </>
+                  );
+                })()}
                 
-                {/* Simulació de plataformes */}
-                <div className="flex justify-center space-x-1 mb-6">
-                  {['Do', 'Do#', 'Re', 'Re#', 'Mi', 'Fa', 'Fa#', 'Sol', 'Sol#', 'La', 'La#', 'Si'].map((note, i) => (
-                    <button
-                      key={i}
-                      onClick={() => {
-                        const isCorrect = ['Do', 'Re', 'Mi', 'Fa', 'Sol', 'La', 'Si'].includes(note);
-                        console.log(`🎵 ${note} - ${isCorrect ? 'So harmoniós! ✅' : 'So dissonant! ❌'}`);
-                      }}
-                      className={`w-12 h-12 rounded border-2 flex items-center justify-center text-xs font-bold transition-all cursor-pointer ${
-                        ['Do', 'Re', 'Mi', 'Fa', 'Sol', 'La', 'Si'].includes(note)
-                          ? 'bg-green-500 border-green-400 text-white hover:bg-green-400 hover:scale-110 shadow-lg shadow-green-500/50'
-                          : 'bg-red-500 border-red-400 text-white hover:bg-red-400 hover:scale-105'
-                      }`}
-                    >
-                      {note}
-                    </button>
-                  ))}
+                {/* Plataformes dinàmiques amb obstacles múltiples */}
+                <div className="space-y-3 mb-6">
+                  {/* Línia 1 - Notes cromàtiques */}
+                  <div className="flex justify-center space-x-1">
+                    {Array.from({length: 20}, (_, i) => {
+                      const allNotes = ['Do', 'Do#', 'Re', 'Re#', 'Mi', 'Fa', 'Fa#', 'Sol', 'Sol#', 'La', 'La#', 'Si'];
+                      const note = allNotes[i % 12];
+                      const scaleNotes = ['Do', 'Re', 'Mi', 'Fa', 'Sol', 'La', 'Si']; // This would be dynamic
+                      const isCorrect = scaleNotes.includes(note);
+                      const hasObstacle = Math.random() > 0.7;
+                      const height = Math.floor(Math.random() * 3) + 1;
+                      
+                      return (
+                        <button
+                          key={i}
+                          onClick={() => {
+                            const points = isCorrect ? (height * 10) : -5;
+                            console.log(`🎵 ${note} ${isCorrect ? '✅' : '❌'} ${points > 0 ? '+' : ''}${points} punts! Altura: ${height}`);
+                          }}
+                          className={`w-8 rounded border-2 flex items-center justify-center text-xs font-bold transition-all cursor-pointer relative ${
+                            isCorrect
+                              ? 'bg-green-500 border-green-400 text-white hover:bg-green-400 hover:scale-110 shadow-lg shadow-green-500/50'
+                              : 'bg-red-500 border-red-400 text-white hover:bg-red-400 hover:scale-105'
+                          }`}
+                          style={{ height: `${height * 16 + 16}px` }}
+                        >
+                          {note}
+                          {hasObstacle && (
+                            <div className="absolute -top-2 -right-2 w-4 h-4 bg-orange-500 rounded-full text-xs flex items-center justify-center">
+                              ⚡
+                            </div>
+                          )}
+                        </button>
+                      );
+                    })}
+                  </div>
+                  
+                  {/* Línia 2 - Power-ups i bonus */}
+                  <div className="flex justify-center space-x-2">
+                    {['2x', '♪', '🔥', '⭐', '💎', '🎵', '⚡', '🌟'].map((powerup, i) => (
+                      <button
+                        key={i}
+                        onClick={() => {
+                          const effect = ['Doble punts', 'Nota perfecta', 'Combo multiplier', 'Estrella bonus', 'Diamant rar', 'So especial', 'Velocitat+', 'Super estrella'][i];
+                          console.log(`✨ Power-up! ${powerup} - ${effect}`);
+                        }}
+                        className="w-8 h-8 rounded-full bg-yellow-500 hover:bg-yellow-400 text-white font-bold text-xs transition-all hover:scale-125 animate-pulse shadow-lg shadow-yellow-500/50"
+                      >
+                        {powerup}
+                      </button>
+                    ))}
+                  </div>
                 </div>
                 
-                <div className="text-yellow-400 font-bold mb-4">🏃‍♂️ Distància: {Math.floor(Math.random() * 500) + 100}m</div>
-                <div className="text-sm text-gray-300 mb-2">Clica les notes per sentir el so mentre corres!</div>
-                <div className="text-xs text-blue-300">💡 Notes verdes = sons bonics | Notes vermelles = sons discordants</div>
+                <div className="grid grid-cols-4 gap-2 text-sm mb-4">
+                  <div className="text-yellow-400 font-bold">Distància: {Math.floor(Math.random() * 2000) + 500}m</div>
+                  <div className="text-green-400">Velocitat: {Math.floor(Math.random() * 50) + 10} km/h</div>
+                  <div className="text-blue-400">Combo: x{Math.floor(Math.random() * 15) + 1}</div>
+                  <div className="text-purple-400">Vides: {Math.floor(Math.random() * 3) + 1}/5</div>
+                </div>
+                <div className="text-sm text-gray-300 mb-2">Plataformes dinàmiques, obstacles mòbils, power-ups temporals!</div>
+                <div className="text-xs text-blue-300">💡 Altures variables = punts diferents | ⚡ = obstacles | ✨ = power-ups</div>
               </div>
               
               <div className="flex space-x-4 justify-center">
