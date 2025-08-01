@@ -1,4 +1,4 @@
-import { useLocation } from "wouter";
+
 import { Music, Trophy, BookOpen, Volume2, Target, Puzzle } from "lucide-react";
 import NavigationCard from "@/components/NavigationCard";
 import ProgressTracker from "@/components/ProgressTracker";
@@ -57,10 +57,6 @@ const gameTypes = [
 ];
 
 export default function HomePage() {
-  const [location] = useLocation();
-  
-  console.log('HomePage loaded, current location:', location);
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900/20 to-purple-900/20">
       {/* Background Pattern */}
@@ -92,8 +88,8 @@ export default function HomePage() {
           </p>
         </div>
 
-        {/* Game Selection Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-7xl mx-auto">
+        {/* Game Selection Grid - NOMÉS 6 MODES */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-7xl mx-auto mb-16">
           {gameTypes.map((game, index) => (
             <NavigationCard
               key={game.id}
@@ -108,7 +104,7 @@ export default function HomePage() {
         </div>
 
         {/* Stats Section */}
-        <div className="mt-16 sm:mt-20 text-center">
+        <div className="text-center mb-16">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 max-w-4xl mx-auto">
             <div className="bg-gradient-to-br from-blue-500/10 to-blue-600/10 p-6 rounded-2xl border border-blue-500/20 backdrop-blur-sm">
               <div className="text-3xl sm:text-4xl font-bold text-blue-400 mb-2">6</div>
@@ -128,17 +124,18 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* Advanced Features */}
-        <div className="mt-16 sm:mt-20 bg-gradient-to-br from-slate-800/20 to-purple-900/20 rounded-3xl p-6 sm:p-8 border border-slate-600/30">
+        {/* Advanced Features Section */}
+        <div className="bg-gradient-to-br from-slate-800/20 to-purple-900/20 rounded-3xl p-6 sm:p-8 border border-slate-600/30 mb-16">
           <div className="text-center mb-8">
             <h2 className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-4">
               🚀 Funcions Avançades
             </h2>
-            <p className="text-gray-300 text-base sm:text-lg">
+            <p className="text-gray-300 text-base sm:text-lg mb-4">
               IA, estadístiques detallades, recompenses i estudi personalitzat
             </p>
-            <div className="h-1 w-32 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full mx-auto mt-4"></div>
+            <div className="h-1 w-32 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full mx-auto"></div>
           </div>
+          
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 max-w-7xl mx-auto">
             <ProgressTracker />
             <RewardsSystem />
@@ -147,7 +144,7 @@ export default function HomePage() {
         </div>
 
         {/* Footer */}
-        <div className="text-center mt-12 sm:mt-20 text-gray-400 px-4">
+        <div className="text-center text-gray-400 px-4">
           <div className="max-w-md mx-auto">
             <p className="text-lg sm:text-xl font-medium text-white mb-2">
               🎼 Comença ara la teva aventura musical! 🎼
@@ -155,6 +152,11 @@ export default function HomePage() {
             <p className="text-sm sm:text-base text-gray-400">
               Selecciona un mode de joc per començar el teu viatge d'aprenentatge
             </p>
+            <div className="mt-8 pt-8 border-t border-gray-700">
+              <p className="text-xs text-gray-500">
+                Aplicació de Teoria Musical - Versió 1.0
+              </p>
+            </div>
           </div>
         </div>
       </div>
