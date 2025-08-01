@@ -1,0 +1,9966 @@
+[
+  {
+    "tonalitat": "F#m",
+    "mode": "minor",
+    "progressio_romana": "VI – v – VII",
+    "acords": [
+      {
+        "acord": "D7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "C#m7",
+        "tipus": "minor seventh"
+      },
+      {
+        "acord": "E",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Dm",
+    "mode": "minor",
+    "progressio_romana": "i – i – i – i",
+    "acords": [
+      {
+        "acord": "D",
+        "tipus": "minor"
+      },
+      {
+        "acord": "D",
+        "tipus": "minor"
+      },
+      {
+        "acord": "D",
+        "tipus": "minor"
+      },
+      {
+        "acord": "Dm7",
+        "tipus": "minor seventh"
+      }
+    ]
+  },
+  {
+    "tonalitat": "A",
+    "mode": "major",
+    "progressio_romana": "IV – vi – V",
+    "acords": [
+      {
+        "acord": "D7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F#",
+        "tipus": "minor"
+      },
+      {
+        "acord": "E",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Db",
+    "mode": "major",
+    "progressio_romana": "vi – I – I – iii",
+    "acords": [
+      {
+        "acord": "Bb",
+        "tipus": "minor"
+      },
+      {
+        "acord": "Db",
+        "tipus": "major"
+      },
+      {
+        "acord": "Db",
+        "tipus": "major"
+      },
+      {
+        "acord": "F",
+        "tipus": "minor"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Cm",
+    "mode": "minor",
+    "progressio_romana": "III – III – v – i – iv – VII",
+    "acords": [
+      {
+        "acord": "D#",
+        "tipus": "major"
+      },
+      {
+        "acord": "D#",
+        "tipus": "major"
+      },
+      {
+        "acord": "G",
+        "tipus": "minor"
+      },
+      {
+        "acord": "C",
+        "tipus": "minor"
+      },
+      {
+        "acord": "F",
+        "tipus": "minor"
+      },
+      {
+        "acord": "A#",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "F",
+    "mode": "major",
+    "progressio_romana": "vi – I – ii – IV – IV",
+    "acords": [
+      {
+        "acord": "D",
+        "tipus": "minor"
+      },
+      {
+        "acord": "F",
+        "tipus": "major"
+      },
+      {
+        "acord": "G",
+        "tipus": "minor"
+      },
+      {
+        "acord": "Bb",
+        "tipus": "major"
+      },
+      {
+        "acord": "Bb",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Bbm",
+    "mode": "minor",
+    "progressio_romana": "i – VI – ii° – v – i – v",
+    "acords": [
+      {
+        "acord": "Bbm7",
+        "tipus": "minor seventh"
+      },
+      {
+        "acord": "Gb",
+        "tipus": "major"
+      },
+      {
+        "acord": "C",
+        "tipus": "diminished"
+      },
+      {
+        "acord": "F",
+        "tipus": "minor"
+      },
+      {
+        "acord": "Bbm7",
+        "tipus": "minor seventh"
+      },
+      {
+        "acord": "F",
+        "tipus": "minor"
+      }
+    ]
+  },
+  {
+    "tonalitat": "D",
+    "mode": "major",
+    "progressio_romana": "ii – vii° – vii° – I – iii – V",
+    "acords": [
+      {
+        "acord": "E",
+        "tipus": "minor"
+      },
+      {
+        "acord": "C#",
+        "tipus": "diminished"
+      },
+      {
+        "acord": "C#",
+        "tipus": "diminished"
+      },
+      {
+        "acord": "D7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F#",
+        "tipus": "minor"
+      },
+      {
+        "acord": "A",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Bbm",
+    "mode": "minor",
+    "progressio_romana": "v – VII – i – VII – VI",
+    "acords": [
+      {
+        "acord": "F",
+        "tipus": "minor"
+      },
+      {
+        "acord": "Abmaj7",
+        "tipus": "major seventh"
+      },
+      {
+        "acord": "Bb",
+        "tipus": "minor"
+      },
+      {
+        "acord": "Ab",
+        "tipus": "major"
+      },
+      {
+        "acord": "Gb",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Gm",
+    "mode": "minor",
+    "progressio_romana": "ii° – VI – VII – III – III",
+    "acords": [
+      {
+        "acord": "Aø7",
+        "tipus": "half-diminished"
+      },
+      {
+        "acord": "D#maj7",
+        "tipus": "major seventh"
+      },
+      {
+        "acord": "F",
+        "tipus": "major"
+      },
+      {
+        "acord": "A#",
+        "tipus": "major"
+      },
+      {
+        "acord": "A#",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "A",
+    "mode": "major",
+    "progressio_romana": "ii – iii – vii°",
+    "acords": [
+      {
+        "acord": "B",
+        "tipus": "minor"
+      },
+      {
+        "acord": "C#",
+        "tipus": "minor"
+      },
+      {
+        "acord": "G#",
+        "tipus": "diminished"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Am",
+    "mode": "minor",
+    "progressio_romana": "v – III – VII – ii° – i",
+    "acords": [
+      {
+        "acord": "E",
+        "tipus": "minor"
+      },
+      {
+        "acord": "C7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "G",
+        "tipus": "major"
+      },
+      {
+        "acord": "B",
+        "tipus": "diminished"
+      },
+      {
+        "acord": "Am7",
+        "tipus": "minor seventh"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Db",
+    "mode": "major",
+    "progressio_romana": "iii – vii° – IV",
+    "acords": [
+      {
+        "acord": "F",
+        "tipus": "minor"
+      },
+      {
+        "acord": "Cø7",
+        "tipus": "half-diminished"
+      },
+      {
+        "acord": "Gb7",
+        "tipus": "dominant"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Eb",
+    "mode": "major",
+    "progressio_romana": "I – iii – vi – IV – IV",
+    "acords": [
+      {
+        "acord": "Eb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "G",
+        "tipus": "minor"
+      },
+      {
+        "acord": "C",
+        "tipus": "minor"
+      },
+      {
+        "acord": "Ab",
+        "tipus": "major"
+      },
+      {
+        "acord": "Ab",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "F",
+    "mode": "major",
+    "progressio_romana": "IV – V – iii – ii",
+    "acords": [
+      {
+        "acord": "Bb",
+        "tipus": "major"
+      },
+      {
+        "acord": "C",
+        "tipus": "major"
+      },
+      {
+        "acord": "A",
+        "tipus": "minor"
+      },
+      {
+        "acord": "G",
+        "tipus": "minor"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Bbm",
+    "mode": "minor",
+    "progressio_romana": "ii° – VI – ii° – VII – VI",
+    "acords": [
+      {
+        "acord": "C",
+        "tipus": "diminished"
+      },
+      {
+        "acord": "Gb",
+        "tipus": "major"
+      },
+      {
+        "acord": "C",
+        "tipus": "diminished"
+      },
+      {
+        "acord": "Abmaj7",
+        "tipus": "major seventh"
+      },
+      {
+        "acord": "Gb",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Eb",
+    "mode": "major",
+    "progressio_romana": "IV – vii° – iii",
+    "acords": [
+      {
+        "acord": "Ab",
+        "tipus": "major"
+      },
+      {
+        "acord": "D",
+        "tipus": "diminished"
+      },
+      {
+        "acord": "G",
+        "tipus": "minor"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Ab",
+    "mode": "major",
+    "progressio_romana": "ii – IV – vii° – V",
+    "acords": [
+      {
+        "acord": "Bb",
+        "tipus": "minor"
+      },
+      {
+        "acord": "Dbmaj7",
+        "tipus": "major seventh"
+      },
+      {
+        "acord": "G",
+        "tipus": "diminished"
+      },
+      {
+        "acord": "Eb",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Gm",
+    "mode": "minor",
+    "progressio_romana": "v – VII – VI – VI – ii° – III",
+    "acords": [
+      {
+        "acord": "D",
+        "tipus": "minor"
+      },
+      {
+        "acord": "F7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "D#",
+        "tipus": "major"
+      },
+      {
+        "acord": "D#",
+        "tipus": "major"
+      },
+      {
+        "acord": "A",
+        "tipus": "diminished"
+      },
+      {
+        "acord": "A#7",
+        "tipus": "dominant"
+      }
+    ]
+  },
+  {
+    "tonalitat": "E",
+    "mode": "major",
+    "progressio_romana": "vii° – IV – iii",
+    "acords": [
+      {
+        "acord": "D#ø7",
+        "tipus": "half-diminished"
+      },
+      {
+        "acord": "Amaj7",
+        "tipus": "major seventh"
+      },
+      {
+        "acord": "G#",
+        "tipus": "minor"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Bbm",
+    "mode": "minor",
+    "progressio_romana": "III – VII – iv",
+    "acords": [
+      {
+        "acord": "Db",
+        "tipus": "major"
+      },
+      {
+        "acord": "Ab",
+        "tipus": "major"
+      },
+      {
+        "acord": "Ebm7",
+        "tipus": "minor seventh"
+      }
+    ]
+  },
+  {
+    "tonalitat": "E",
+    "mode": "major",
+    "progressio_romana": "iii – I – vi – vi – IV",
+    "acords": [
+      {
+        "acord": "G#",
+        "tipus": "minor"
+      },
+      {
+        "acord": "E7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "C#",
+        "tipus": "minor"
+      },
+      {
+        "acord": "C#",
+        "tipus": "minor"
+      },
+      {
+        "acord": "A",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Ab",
+    "mode": "major",
+    "progressio_romana": "I – iii – iii – V – vii° – IV",
+    "acords": [
+      {
+        "acord": "Abmaj7",
+        "tipus": "major seventh"
+      },
+      {
+        "acord": "C",
+        "tipus": "minor"
+      },
+      {
+        "acord": "C",
+        "tipus": "minor"
+      },
+      {
+        "acord": "Eb",
+        "tipus": "major"
+      },
+      {
+        "acord": "Gø7",
+        "tipus": "half-diminished"
+      },
+      {
+        "acord": "Dbmaj7",
+        "tipus": "major seventh"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Em",
+    "mode": "minor",
+    "progressio_romana": "VI – iv – i – i – ii° – iv",
+    "acords": [
+      {
+        "acord": "Cmaj7",
+        "tipus": "major seventh"
+      },
+      {
+        "acord": "Am7",
+        "tipus": "minor seventh"
+      },
+      {
+        "acord": "Em7",
+        "tipus": "minor seventh"
+      },
+      {
+        "acord": "E",
+        "tipus": "minor"
+      },
+      {
+        "acord": "F#",
+        "tipus": "diminished"
+      },
+      {
+        "acord": "A",
+        "tipus": "minor"
+      }
+    ]
+  },
+  {
+    "tonalitat": "F#m",
+    "mode": "minor",
+    "progressio_romana": "i – VII – III – VI – ii°",
+    "acords": [
+      {
+        "acord": "F#",
+        "tipus": "minor"
+      },
+      {
+        "acord": "Emaj7",
+        "tipus": "major seventh"
+      },
+      {
+        "acord": "Amaj7",
+        "tipus": "major seventh"
+      },
+      {
+        "acord": "D7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "G#ø7",
+        "tipus": "half-diminished"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Dm",
+    "mode": "minor",
+    "progressio_romana": "ii° – VI – v – VI – ii° – v",
+    "acords": [
+      {
+        "acord": "E",
+        "tipus": "diminished"
+      },
+      {
+        "acord": "A#",
+        "tipus": "major"
+      },
+      {
+        "acord": "A",
+        "tipus": "minor"
+      },
+      {
+        "acord": "A#",
+        "tipus": "major"
+      },
+      {
+        "acord": "E",
+        "tipus": "diminished"
+      },
+      {
+        "acord": "Am7",
+        "tipus": "minor seventh"
+      }
+    ]
+  },
+  {
+    "tonalitat": "F#m",
+    "mode": "minor",
+    "progressio_romana": "ii° – VI – III",
+    "acords": [
+      {
+        "acord": "G#ø7",
+        "tipus": "half-diminished"
+      },
+      {
+        "acord": "D",
+        "tipus": "major"
+      },
+      {
+        "acord": "A",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "G#m",
+    "mode": "minor",
+    "progressio_romana": "v – VI – i – ii° – VI – VI",
+    "acords": [
+      {
+        "acord": "D#",
+        "tipus": "minor"
+      },
+      {
+        "acord": "E7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "G#",
+        "tipus": "minor"
+      },
+      {
+        "acord": "A#ø7",
+        "tipus": "half-diminished"
+      },
+      {
+        "acord": "E",
+        "tipus": "major"
+      },
+      {
+        "acord": "E",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "G#m",
+    "mode": "minor",
+    "progressio_romana": "i – ii° – ii° – v",
+    "acords": [
+      {
+        "acord": "G#m7",
+        "tipus": "minor seventh"
+      },
+      {
+        "acord": "A#ø7",
+        "tipus": "half-diminished"
+      },
+      {
+        "acord": "A#",
+        "tipus": "diminished"
+      },
+      {
+        "acord": "D#",
+        "tipus": "minor"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Db",
+    "mode": "major",
+    "progressio_romana": "iii – V – ii – V – IV – vii°",
+    "acords": [
+      {
+        "acord": "F",
+        "tipus": "minor"
+      },
+      {
+        "acord": "Ab",
+        "tipus": "major"
+      },
+      {
+        "acord": "Eb",
+        "tipus": "minor"
+      },
+      {
+        "acord": "Ab",
+        "tipus": "major"
+      },
+      {
+        "acord": "Gb",
+        "tipus": "major"
+      },
+      {
+        "acord": "Cø7",
+        "tipus": "half-diminished"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Bm",
+    "mode": "minor",
+    "progressio_romana": "III – ii° – III",
+    "acords": [
+      {
+        "acord": "D",
+        "tipus": "major"
+      },
+      {
+        "acord": "C#ø7",
+        "tipus": "half-diminished"
+      },
+      {
+        "acord": "D7",
+        "tipus": "dominant"
+      }
+    ]
+  },
+  {
+    "tonalitat": "E",
+    "mode": "major",
+    "progressio_romana": "ii – vii° – IV – iii – I",
+    "acords": [
+      {
+        "acord": "F#",
+        "tipus": "minor"
+      },
+      {
+        "acord": "D#ø7",
+        "tipus": "half-diminished"
+      },
+      {
+        "acord": "A",
+        "tipus": "major"
+      },
+      {
+        "acord": "G#",
+        "tipus": "minor"
+      },
+      {
+        "acord": "Emaj7",
+        "tipus": "major seventh"
+      }
+    ]
+  },
+  {
+    "tonalitat": "A",
+    "mode": "major",
+    "progressio_romana": "IV – ii – ii – I – iii – vii°",
+    "acords": [
+      {
+        "acord": "D7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Bm7",
+        "tipus": "minor seventh"
+      },
+      {
+        "acord": "B",
+        "tipus": "minor"
+      },
+      {
+        "acord": "Amaj7",
+        "tipus": "major seventh"
+      },
+      {
+        "acord": "C#",
+        "tipus": "minor"
+      },
+      {
+        "acord": "G#",
+        "tipus": "diminished"
+      }
+    ]
+  },
+  {
+    "tonalitat": "A",
+    "mode": "major",
+    "progressio_romana": "iii – ii – ii",
+    "acords": [
+      {
+        "acord": "C#",
+        "tipus": "minor"
+      },
+      {
+        "acord": "B",
+        "tipus": "minor"
+      },
+      {
+        "acord": "Bm7",
+        "tipus": "minor seventh"
+      }
+    ]
+  },
+  {
+    "tonalitat": "C#m",
+    "mode": "minor",
+    "progressio_romana": "VI – III – i – VI",
+    "acords": [
+      {
+        "acord": "A",
+        "tipus": "major"
+      },
+      {
+        "acord": "E7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "C#",
+        "tipus": "minor"
+      },
+      {
+        "acord": "A",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Fm",
+    "mode": "minor",
+    "progressio_romana": "v – VI – ii° – iv – v – v",
+    "acords": [
+      {
+        "acord": "C",
+        "tipus": "minor"
+      },
+      {
+        "acord": "C#",
+        "tipus": "major"
+      },
+      {
+        "acord": "G",
+        "tipus": "diminished"
+      },
+      {
+        "acord": "A#m7",
+        "tipus": "minor seventh"
+      },
+      {
+        "acord": "C",
+        "tipus": "minor"
+      },
+      {
+        "acord": "C",
+        "tipus": "minor"
+      }
+    ]
+  },
+  {
+    "tonalitat": "F#m",
+    "mode": "minor",
+    "progressio_romana": "iv – i – VII – v",
+    "acords": [
+      {
+        "acord": "Bm7",
+        "tipus": "minor seventh"
+      },
+      {
+        "acord": "F#",
+        "tipus": "minor"
+      },
+      {
+        "acord": "Emaj7",
+        "tipus": "major seventh"
+      },
+      {
+        "acord": "C#m7",
+        "tipus": "minor seventh"
+      }
+    ]
+  },
+  {
+    "tonalitat": "C#m",
+    "mode": "minor",
+    "progressio_romana": "iv – VI – VII – i",
+    "acords": [
+      {
+        "acord": "F#",
+        "tipus": "minor"
+      },
+      {
+        "acord": "Amaj7",
+        "tipus": "major seventh"
+      },
+      {
+        "acord": "B",
+        "tipus": "major"
+      },
+      {
+        "acord": "C#",
+        "tipus": "minor"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Cm",
+    "mode": "minor",
+    "progressio_romana": "ii° – i – i – III – iv – v",
+    "acords": [
+      {
+        "acord": "D",
+        "tipus": "diminished"
+      },
+      {
+        "acord": "C",
+        "tipus": "minor"
+      },
+      {
+        "acord": "Cm7",
+        "tipus": "minor seventh"
+      },
+      {
+        "acord": "D#",
+        "tipus": "major"
+      },
+      {
+        "acord": "F",
+        "tipus": "minor"
+      },
+      {
+        "acord": "G",
+        "tipus": "minor"
+      }
+    ]
+  },
+  {
+    "tonalitat": "F#m",
+    "mode": "minor",
+    "progressio_romana": "VII – i – v – VII",
+    "acords": [
+      {
+        "acord": "E",
+        "tipus": "major"
+      },
+      {
+        "acord": "F#m7",
+        "tipus": "minor seventh"
+      },
+      {
+        "acord": "C#",
+        "tipus": "minor"
+      },
+      {
+        "acord": "E",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Bbm",
+    "mode": "minor",
+    "progressio_romana": "III – i – VI – v",
+    "acords": [
+      {
+        "acord": "Db",
+        "tipus": "major"
+      },
+      {
+        "acord": "Bb",
+        "tipus": "minor"
+      },
+      {
+        "acord": "Gbmaj7",
+        "tipus": "major seventh"
+      },
+      {
+        "acord": "Fm7",
+        "tipus": "minor seventh"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Ab",
+    "mode": "major",
+    "progressio_romana": "vii° – I – vi",
+    "acords": [
+      {
+        "acord": "G",
+        "tipus": "diminished"
+      },
+      {
+        "acord": "Ab",
+        "tipus": "major"
+      },
+      {
+        "acord": "Fm7",
+        "tipus": "minor seventh"
+      }
+    ]
+  },
+  {
+    "tonalitat": "G",
+    "mode": "major",
+    "progressio_romana": "ii – V – ii – vi",
+    "acords": [
+      {
+        "acord": "A",
+        "tipus": "minor"
+      },
+      {
+        "acord": "D",
+        "tipus": "major"
+      },
+      {
+        "acord": "A",
+        "tipus": "minor"
+      },
+      {
+        "acord": "E",
+        "tipus": "minor"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Bbm",
+    "mode": "minor",
+    "progressio_romana": "VI – ii° – v – i",
+    "acords": [
+      {
+        "acord": "Gb",
+        "tipus": "major"
+      },
+      {
+        "acord": "Cø7",
+        "tipus": "half-diminished"
+      },
+      {
+        "acord": "F",
+        "tipus": "minor"
+      },
+      {
+        "acord": "Bb",
+        "tipus": "minor"
+      }
+    ]
+  },
+  {
+    "tonalitat": "F#m",
+    "mode": "minor",
+    "progressio_romana": "iv – VI – VII – III – VI – VI",
+    "acords": [
+      {
+        "acord": "B",
+        "tipus": "minor"
+      },
+      {
+        "acord": "D",
+        "tipus": "major"
+      },
+      {
+        "acord": "E",
+        "tipus": "major"
+      },
+      {
+        "acord": "Amaj7",
+        "tipus": "major seventh"
+      },
+      {
+        "acord": "Dmaj7",
+        "tipus": "major seventh"
+      },
+      {
+        "acord": "D",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "F#m",
+    "mode": "minor",
+    "progressio_romana": "iv – i – iv – i – iv",
+    "acords": [
+      {
+        "acord": "B",
+        "tipus": "minor"
+      },
+      {
+        "acord": "F#",
+        "tipus": "minor"
+      },
+      {
+        "acord": "Bm7",
+        "tipus": "minor seventh"
+      },
+      {
+        "acord": "F#",
+        "tipus": "minor"
+      },
+      {
+        "acord": "B",
+        "tipus": "minor"
+      }
+    ]
+  },
+  {
+    "tonalitat": "G",
+    "mode": "major",
+    "progressio_romana": "ii – IV – iii – I",
+    "acords": [
+      {
+        "acord": "A",
+        "tipus": "minor"
+      },
+      {
+        "acord": "C",
+        "tipus": "major"
+      },
+      {
+        "acord": "B",
+        "tipus": "minor"
+      },
+      {
+        "acord": "G",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "E",
+    "mode": "major",
+    "progressio_romana": "iii – iii – iii – vii° – IV",
+    "acords": [
+      {
+        "acord": "G#",
+        "tipus": "minor"
+      },
+      {
+        "acord": "G#",
+        "tipus": "minor"
+      },
+      {
+        "acord": "G#m7",
+        "tipus": "minor seventh"
+      },
+      {
+        "acord": "D#",
+        "tipus": "diminished"
+      },
+      {
+        "acord": "A",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Ab",
+    "mode": "major",
+    "progressio_romana": "I – ii – I – iii – iii",
+    "acords": [
+      {
+        "acord": "Ab",
+        "tipus": "major"
+      },
+      {
+        "acord": "Bb",
+        "tipus": "minor"
+      },
+      {
+        "acord": "Ab",
+        "tipus": "major"
+      },
+      {
+        "acord": "C",
+        "tipus": "minor"
+      },
+      {
+        "acord": "C",
+        "tipus": "minor"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Cm",
+    "mode": "minor",
+    "progressio_romana": "III – iv – i",
+    "acords": [
+      {
+        "acord": "D#",
+        "tipus": "major"
+      },
+      {
+        "acord": "Fm7",
+        "tipus": "minor seventh"
+      },
+      {
+        "acord": "C",
+        "tipus": "minor"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Ebm",
+    "mode": "minor",
+    "progressio_romana": "VII – ii° – i",
+    "acords": [
+      {
+        "acord": "Db",
+        "tipus": "major"
+      },
+      {
+        "acord": "Fø7",
+        "tipus": "half-diminished"
+      },
+      {
+        "acord": "Eb",
+        "tipus": "minor"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Bb",
+    "mode": "major",
+    "progressio_romana": "iii – vii° – ii",
+    "acords": [
+      {
+        "acord": "Dm7",
+        "tipus": "minor seventh"
+      },
+      {
+        "acord": "A",
+        "tipus": "diminished"
+      },
+      {
+        "acord": "C",
+        "tipus": "minor"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Bm",
+    "mode": "minor",
+    "progressio_romana": "ii° – iv – i",
+    "acords": [
+      {
+        "acord": "C#",
+        "tipus": "diminished"
+      },
+      {
+        "acord": "Em7",
+        "tipus": "minor seventh"
+      },
+      {
+        "acord": "B",
+        "tipus": "minor"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Bb",
+    "mode": "major",
+    "progressio_romana": "ii – IV – iii – V – I – IV",
+    "acords": [
+      {
+        "acord": "C",
+        "tipus": "minor"
+      },
+      {
+        "acord": "Eb",
+        "tipus": "major"
+      },
+      {
+        "acord": "Dm7",
+        "tipus": "minor seventh"
+      },
+      {
+        "acord": "F",
+        "tipus": "major"
+      },
+      {
+        "acord": "Bb",
+        "tipus": "major"
+      },
+      {
+        "acord": "Eb",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "G#m",
+    "mode": "minor",
+    "progressio_romana": "iv – iv – III – III – VI",
+    "acords": [
+      {
+        "acord": "C#m7",
+        "tipus": "minor seventh"
+      },
+      {
+        "acord": "C#m7",
+        "tipus": "minor seventh"
+      },
+      {
+        "acord": "B",
+        "tipus": "major"
+      },
+      {
+        "acord": "B",
+        "tipus": "major"
+      },
+      {
+        "acord": "E",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Eb",
+    "mode": "major",
+    "progressio_romana": "I – vii° – V",
+    "acords": [
+      {
+        "acord": "Eb",
+        "tipus": "major"
+      },
+      {
+        "acord": "D",
+        "tipus": "diminished"
+      },
+      {
+        "acord": "Bb",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "B",
+    "mode": "major",
+    "progressio_romana": "V – ii – V – I – vii° – iii",
+    "acords": [
+      {
+        "acord": "F#",
+        "tipus": "major"
+      },
+      {
+        "acord": "C#m7",
+        "tipus": "minor seventh"
+      },
+      {
+        "acord": "F#",
+        "tipus": "major"
+      },
+      {
+        "acord": "B7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "A#",
+        "tipus": "diminished"
+      },
+      {
+        "acord": "D#",
+        "tipus": "minor"
+      }
+    ]
+  },
+  {
+    "tonalitat": "E",
+    "mode": "major",
+    "progressio_romana": "vii° – vii° – vi",
+    "acords": [
+      {
+        "acord": "D#",
+        "tipus": "diminished"
+      },
+      {
+        "acord": "D#ø7",
+        "tipus": "half-diminished"
+      },
+      {
+        "acord": "C#",
+        "tipus": "minor"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Bbm",
+    "mode": "minor",
+    "progressio_romana": "III – i – III",
+    "acords": [
+      {
+        "acord": "Db7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Bb",
+        "tipus": "minor"
+      },
+      {
+        "acord": "Db",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Em",
+    "mode": "minor",
+    "progressio_romana": "i – v – ii° – III",
+    "acords": [
+      {
+        "acord": "E",
+        "tipus": "minor"
+      },
+      {
+        "acord": "B",
+        "tipus": "minor"
+      },
+      {
+        "acord": "F#",
+        "tipus": "diminished"
+      },
+      {
+        "acord": "Gmaj7",
+        "tipus": "major seventh"
+      }
+    ]
+  },
+  {
+    "tonalitat": "C#m",
+    "mode": "minor",
+    "progressio_romana": "ii° – v – VII",
+    "acords": [
+      {
+        "acord": "D#",
+        "tipus": "diminished"
+      },
+      {
+        "acord": "G#",
+        "tipus": "minor"
+      },
+      {
+        "acord": "B",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "G#m",
+    "mode": "minor",
+    "progressio_romana": "VI – i – v – III – i",
+    "acords": [
+      {
+        "acord": "E",
+        "tipus": "major"
+      },
+      {
+        "acord": "G#",
+        "tipus": "minor"
+      },
+      {
+        "acord": "D#m7",
+        "tipus": "minor seventh"
+      },
+      {
+        "acord": "B",
+        "tipus": "major"
+      },
+      {
+        "acord": "G#",
+        "tipus": "minor"
+      }
+    ]
+  },
+  {
+    "tonalitat": "D",
+    "mode": "major",
+    "progressio_romana": "I – iii – ii",
+    "acords": [
+      {
+        "acord": "D",
+        "tipus": "major"
+      },
+      {
+        "acord": "F#",
+        "tipus": "minor"
+      },
+      {
+        "acord": "Em7",
+        "tipus": "minor seventh"
+      }
+    ]
+  },
+  {
+    "tonalitat": "G",
+    "mode": "major",
+    "progressio_romana": "ii – V – I – iii – IV",
+    "acords": [
+      {
+        "acord": "A",
+        "tipus": "minor"
+      },
+      {
+        "acord": "D",
+        "tipus": "major"
+      },
+      {
+        "acord": "G",
+        "tipus": "major"
+      },
+      {
+        "acord": "B",
+        "tipus": "minor"
+      },
+      {
+        "acord": "Cmaj7",
+        "tipus": "major seventh"
+      }
+    ]
+  },
+  {
+    "tonalitat": "E",
+    "mode": "major",
+    "progressio_romana": "iii – iii – vi",
+    "acords": [
+      {
+        "acord": "G#",
+        "tipus": "minor"
+      },
+      {
+        "acord": "G#",
+        "tipus": "minor"
+      },
+      {
+        "acord": "C#",
+        "tipus": "minor"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Eb",
+    "mode": "major",
+    "progressio_romana": "vii° – vii° – vii° – iii",
+    "acords": [
+      {
+        "acord": "Dø7",
+        "tipus": "half-diminished"
+      },
+      {
+        "acord": "Dø7",
+        "tipus": "half-diminished"
+      },
+      {
+        "acord": "Dø7",
+        "tipus": "half-diminished"
+      },
+      {
+        "acord": "Gm7",
+        "tipus": "minor seventh"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Cm",
+    "mode": "minor",
+    "progressio_romana": "ii° – iv – VII – III",
+    "acords": [
+      {
+        "acord": "D",
+        "tipus": "diminished"
+      },
+      {
+        "acord": "F",
+        "tipus": "minor"
+      },
+      {
+        "acord": "A#",
+        "tipus": "major"
+      },
+      {
+        "acord": "D#",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "B",
+    "mode": "major",
+    "progressio_romana": "iii – vi – IV – I – ii – vii°",
+    "acords": [
+      {
+        "acord": "D#m7",
+        "tipus": "minor seventh"
+      },
+      {
+        "acord": "G#m7",
+        "tipus": "minor seventh"
+      },
+      {
+        "acord": "E",
+        "tipus": "major"
+      },
+      {
+        "acord": "B",
+        "tipus": "major"
+      },
+      {
+        "acord": "C#m7",
+        "tipus": "minor seventh"
+      },
+      {
+        "acord": "A#",
+        "tipus": "diminished"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Em",
+    "mode": "minor",
+    "progressio_romana": "iv – v – VII",
+    "acords": [
+      {
+        "acord": "A",
+        "tipus": "minor"
+      },
+      {
+        "acord": "B",
+        "tipus": "minor"
+      },
+      {
+        "acord": "D",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Fm",
+    "mode": "minor",
+    "progressio_romana": "ii° – i – III – VI – ii°",
+    "acords": [
+      {
+        "acord": "G",
+        "tipus": "diminished"
+      },
+      {
+        "acord": "F",
+        "tipus": "minor"
+      },
+      {
+        "acord": "G#",
+        "tipus": "major"
+      },
+      {
+        "acord": "C#",
+        "tipus": "major"
+      },
+      {
+        "acord": "G",
+        "tipus": "diminished"
+      }
+    ]
+  },
+  {
+    "tonalitat": "F#",
+    "mode": "major",
+    "progressio_romana": "ii – IV – vii° – IV – ii – I",
+    "acords": [
+      {
+        "acord": "G#m7",
+        "tipus": "minor seventh"
+      },
+      {
+        "acord": "Bmaj7",
+        "tipus": "major seventh"
+      },
+      {
+        "acord": "F",
+        "tipus": "diminished"
+      },
+      {
+        "acord": "B",
+        "tipus": "major"
+      },
+      {
+        "acord": "G#",
+        "tipus": "minor"
+      },
+      {
+        "acord": "F#maj7",
+        "tipus": "major seventh"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Db",
+    "mode": "major",
+    "progressio_romana": "IV – ii – ii – vi – vii°",
+    "acords": [
+      {
+        "acord": "Gb",
+        "tipus": "major"
+      },
+      {
+        "acord": "Eb",
+        "tipus": "minor"
+      },
+      {
+        "acord": "Eb",
+        "tipus": "minor"
+      },
+      {
+        "acord": "Bb",
+        "tipus": "minor"
+      },
+      {
+        "acord": "C",
+        "tipus": "diminished"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Eb",
+    "mode": "major",
+    "progressio_romana": "ii – vii° – iii – V – iii – IV",
+    "acords": [
+      {
+        "acord": "F",
+        "tipus": "minor"
+      },
+      {
+        "acord": "Dø7",
+        "tipus": "half-diminished"
+      },
+      {
+        "acord": "Gm7",
+        "tipus": "minor seventh"
+      },
+      {
+        "acord": "Bb",
+        "tipus": "major"
+      },
+      {
+        "acord": "G",
+        "tipus": "minor"
+      },
+      {
+        "acord": "Ab7",
+        "tipus": "dominant"
+      }
+    ]
+  },
+  {
+    "tonalitat": "D",
+    "mode": "major",
+    "progressio_romana": "IV – vii° – IV – V",
+    "acords": [
+      {
+        "acord": "G",
+        "tipus": "major"
+      },
+      {
+        "acord": "C#",
+        "tipus": "diminished"
+      },
+      {
+        "acord": "G",
+        "tipus": "major"
+      },
+      {
+        "acord": "A",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Eb",
+    "mode": "major",
+    "progressio_romana": "IV – iii – IV – V",
+    "acords": [
+      {
+        "acord": "Ab",
+        "tipus": "major"
+      },
+      {
+        "acord": "G",
+        "tipus": "minor"
+      },
+      {
+        "acord": "Ab",
+        "tipus": "major"
+      },
+      {
+        "acord": "Bbmaj7",
+        "tipus": "major seventh"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Bbm",
+    "mode": "minor",
+    "progressio_romana": "iv – ii° – ii° – iv",
+    "acords": [
+      {
+        "acord": "Ebm7",
+        "tipus": "minor seventh"
+      },
+      {
+        "acord": "C",
+        "tipus": "diminished"
+      },
+      {
+        "acord": "Cø7",
+        "tipus": "half-diminished"
+      },
+      {
+        "acord": "Eb",
+        "tipus": "minor"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Cm",
+    "mode": "minor",
+    "progressio_romana": "i – iv – i",
+    "acords": [
+      {
+        "acord": "Cm7",
+        "tipus": "minor seventh"
+      },
+      {
+        "acord": "F",
+        "tipus": "minor"
+      },
+      {
+        "acord": "C",
+        "tipus": "minor"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Ebm",
+    "mode": "minor",
+    "progressio_romana": "III – III – ii°",
+    "acords": [
+      {
+        "acord": "Gb",
+        "tipus": "major"
+      },
+      {
+        "acord": "Gb",
+        "tipus": "major"
+      },
+      {
+        "acord": "Fø7",
+        "tipus": "half-diminished"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Fm",
+    "mode": "minor",
+    "progressio_romana": "VI – VII – VI – i – VI – v",
+    "acords": [
+      {
+        "acord": "C#",
+        "tipus": "major"
+      },
+      {
+        "acord": "D#maj7",
+        "tipus": "major seventh"
+      },
+      {
+        "acord": "C#",
+        "tipus": "major"
+      },
+      {
+        "acord": "F",
+        "tipus": "minor"
+      },
+      {
+        "acord": "C#",
+        "tipus": "major"
+      },
+      {
+        "acord": "Cm7",
+        "tipus": "minor seventh"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Bb",
+    "mode": "major",
+    "progressio_romana": "vii° – vii° – V – I",
+    "acords": [
+      {
+        "acord": "A",
+        "tipus": "diminished"
+      },
+      {
+        "acord": "A",
+        "tipus": "diminished"
+      },
+      {
+        "acord": "F",
+        "tipus": "major"
+      },
+      {
+        "acord": "Bb",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "F",
+    "mode": "major",
+    "progressio_romana": "vii° – vi – I",
+    "acords": [
+      {
+        "acord": "Eø7",
+        "tipus": "half-diminished"
+      },
+      {
+        "acord": "D",
+        "tipus": "minor"
+      },
+      {
+        "acord": "F7",
+        "tipus": "dominant"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Bm",
+    "mode": "minor",
+    "progressio_romana": "VII – v – iv – VII",
+    "acords": [
+      {
+        "acord": "A",
+        "tipus": "major"
+      },
+      {
+        "acord": "F#m7",
+        "tipus": "minor seventh"
+      },
+      {
+        "acord": "E",
+        "tipus": "minor"
+      },
+      {
+        "acord": "A",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Am",
+    "mode": "minor",
+    "progressio_romana": "VI – ii° – i – i – i – VI",
+    "acords": [
+      {
+        "acord": "F7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "B",
+        "tipus": "diminished"
+      },
+      {
+        "acord": "A",
+        "tipus": "minor"
+      },
+      {
+        "acord": "A",
+        "tipus": "minor"
+      },
+      {
+        "acord": "Am7",
+        "tipus": "minor seventh"
+      },
+      {
+        "acord": "Fmaj7",
+        "tipus": "major seventh"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Ab",
+    "mode": "major",
+    "progressio_romana": "ii – vii° – IV – vii° – V",
+    "acords": [
+      {
+        "acord": "Bbm7",
+        "tipus": "minor seventh"
+      },
+      {
+        "acord": "G",
+        "tipus": "diminished"
+      },
+      {
+        "acord": "Db",
+        "tipus": "major"
+      },
+      {
+        "acord": "G",
+        "tipus": "diminished"
+      },
+      {
+        "acord": "Eb",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Bbm",
+    "mode": "minor",
+    "progressio_romana": "VI – III – v",
+    "acords": [
+      {
+        "acord": "Gb",
+        "tipus": "major"
+      },
+      {
+        "acord": "Db",
+        "tipus": "major"
+      },
+      {
+        "acord": "F",
+        "tipus": "minor"
+      }
+    ]
+  },
+  {
+    "tonalitat": "D",
+    "mode": "major",
+    "progressio_romana": "vii° – V – I – vii° – ii",
+    "acords": [
+      {
+        "acord": "C#",
+        "tipus": "diminished"
+      },
+      {
+        "acord": "A",
+        "tipus": "major"
+      },
+      {
+        "acord": "D",
+        "tipus": "major"
+      },
+      {
+        "acord": "C#",
+        "tipus": "diminished"
+      },
+      {
+        "acord": "Em7",
+        "tipus": "minor seventh"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Fm",
+    "mode": "minor",
+    "progressio_romana": "i – i – v",
+    "acords": [
+      {
+        "acord": "F",
+        "tipus": "minor"
+      },
+      {
+        "acord": "F",
+        "tipus": "minor"
+      },
+      {
+        "acord": "C",
+        "tipus": "minor"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Cm",
+    "mode": "minor",
+    "progressio_romana": "v – iv – VII – v – VII",
+    "acords": [
+      {
+        "acord": "G",
+        "tipus": "minor"
+      },
+      {
+        "acord": "F",
+        "tipus": "minor"
+      },
+      {
+        "acord": "A#",
+        "tipus": "major"
+      },
+      {
+        "acord": "G",
+        "tipus": "minor"
+      },
+      {
+        "acord": "A#",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "B",
+    "mode": "major",
+    "progressio_romana": "vii° – V – vi – I – ii",
+    "acords": [
+      {
+        "acord": "A#",
+        "tipus": "diminished"
+      },
+      {
+        "acord": "F#7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "G#m7",
+        "tipus": "minor seventh"
+      },
+      {
+        "acord": "B7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "C#",
+        "tipus": "minor"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Am",
+    "mode": "minor",
+    "progressio_romana": "iv – v – i – III – III",
+    "acords": [
+      {
+        "acord": "D",
+        "tipus": "minor"
+      },
+      {
+        "acord": "E",
+        "tipus": "minor"
+      },
+      {
+        "acord": "A",
+        "tipus": "minor"
+      },
+      {
+        "acord": "Cmaj7",
+        "tipus": "major seventh"
+      },
+      {
+        "acord": "Cmaj7",
+        "tipus": "major seventh"
+      }
+    ]
+  },
+  {
+    "tonalitat": "C#m",
+    "mode": "minor",
+    "progressio_romana": "VI – III – i – VI – VII – i",
+    "acords": [
+      {
+        "acord": "A",
+        "tipus": "major"
+      },
+      {
+        "acord": "E",
+        "tipus": "major"
+      },
+      {
+        "acord": "C#",
+        "tipus": "minor"
+      },
+      {
+        "acord": "A",
+        "tipus": "major"
+      },
+      {
+        "acord": "B",
+        "tipus": "major"
+      },
+      {
+        "acord": "C#m7",
+        "tipus": "minor seventh"
+      }
+    ]
+  },
+  {
+    "tonalitat": "G",
+    "mode": "major",
+    "progressio_romana": "ii – I – iii – ii",
+    "acords": [
+      {
+        "acord": "A",
+        "tipus": "minor"
+      },
+      {
+        "acord": "Gmaj7",
+        "tipus": "major seventh"
+      },
+      {
+        "acord": "B",
+        "tipus": "minor"
+      },
+      {
+        "acord": "Am7",
+        "tipus": "minor seventh"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Eb",
+    "mode": "major",
+    "progressio_romana": "ii – vii° – I",
+    "acords": [
+      {
+        "acord": "F",
+        "tipus": "minor"
+      },
+      {
+        "acord": "D",
+        "tipus": "diminished"
+      },
+      {
+        "acord": "Eb7",
+        "tipus": "dominant"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Ebm",
+    "mode": "minor",
+    "progressio_romana": "VII – i – i – ii° – ii°",
+    "acords": [
+      {
+        "acord": "Dbmaj7",
+        "tipus": "major seventh"
+      },
+      {
+        "acord": "Ebm7",
+        "tipus": "minor seventh"
+      },
+      {
+        "acord": "Eb",
+        "tipus": "minor"
+      },
+      {
+        "acord": "F",
+        "tipus": "diminished"
+      },
+      {
+        "acord": "F",
+        "tipus": "diminished"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Eb",
+    "mode": "major",
+    "progressio_romana": "iii – IV – I",
+    "acords": [
+      {
+        "acord": "Gm7",
+        "tipus": "minor seventh"
+      },
+      {
+        "acord": "Ab",
+        "tipus": "major"
+      },
+      {
+        "acord": "Ebmaj7",
+        "tipus": "major seventh"
+      }
+    ]
+  },
+  {
+    "tonalitat": "A",
+    "mode": "major",
+    "progressio_romana": "iii – I – V – IV – vii° – I",
+    "acords": [
+      {
+        "acord": "C#",
+        "tipus": "minor"
+      },
+      {
+        "acord": "A7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Emaj7",
+        "tipus": "major seventh"
+      },
+      {
+        "acord": "D",
+        "tipus": "major"
+      },
+      {
+        "acord": "G#",
+        "tipus": "diminished"
+      },
+      {
+        "acord": "Amaj7",
+        "tipus": "major seventh"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Em",
+    "mode": "minor",
+    "progressio_romana": "v – VII – VII",
+    "acords": [
+      {
+        "acord": "Bm7",
+        "tipus": "minor seventh"
+      },
+      {
+        "acord": "D",
+        "tipus": "major"
+      },
+      {
+        "acord": "D",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Gm",
+    "mode": "minor",
+    "progressio_romana": "VII – VII – i",
+    "acords": [
+      {
+        "acord": "F",
+        "tipus": "major"
+      },
+      {
+        "acord": "Fmaj7",
+        "tipus": "major seventh"
+      },
+      {
+        "acord": "G",
+        "tipus": "minor"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Ab",
+    "mode": "major",
+    "progressio_romana": "iii – vii° – I – V – IV",
+    "acords": [
+      {
+        "acord": "Cm7",
+        "tipus": "minor seventh"
+      },
+      {
+        "acord": "G",
+        "tipus": "diminished"
+      },
+      {
+        "acord": "Ab",
+        "tipus": "major"
+      },
+      {
+        "acord": "Ebmaj7",
+        "tipus": "major seventh"
+      },
+      {
+        "acord": "Db",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Gm",
+    "mode": "minor",
+    "progressio_romana": "i – i – III – ii° – ii° – i",
+    "acords": [
+      {
+        "acord": "G",
+        "tipus": "minor"
+      },
+      {
+        "acord": "Gm7",
+        "tipus": "minor seventh"
+      },
+      {
+        "acord": "A#",
+        "tipus": "major"
+      },
+      {
+        "acord": "Aø7",
+        "tipus": "half-diminished"
+      },
+      {
+        "acord": "Aø7",
+        "tipus": "half-diminished"
+      },
+      {
+        "acord": "G",
+        "tipus": "minor"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Fm",
+    "mode": "minor",
+    "progressio_romana": "VI – VII – VII – ii°",
+    "acords": [
+      {
+        "acord": "C#",
+        "tipus": "major"
+      },
+      {
+        "acord": "D#maj7",
+        "tipus": "major seventh"
+      },
+      {
+        "acord": "D#",
+        "tipus": "major"
+      },
+      {
+        "acord": "G",
+        "tipus": "diminished"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Em",
+    "mode": "minor",
+    "progressio_romana": "ii° – VII – III – VII – VII",
+    "acords": [
+      {
+        "acord": "F#",
+        "tipus": "diminished"
+      },
+      {
+        "acord": "Dmaj7",
+        "tipus": "major seventh"
+      },
+      {
+        "acord": "G",
+        "tipus": "major"
+      },
+      {
+        "acord": "Dmaj7",
+        "tipus": "major seventh"
+      },
+      {
+        "acord": "D7",
+        "tipus": "dominant"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Db",
+    "mode": "major",
+    "progressio_romana": "vi – ii – vii° – ii",
+    "acords": [
+      {
+        "acord": "Bb",
+        "tipus": "minor"
+      },
+      {
+        "acord": "Eb",
+        "tipus": "minor"
+      },
+      {
+        "acord": "Cø7",
+        "tipus": "half-diminished"
+      },
+      {
+        "acord": "Ebm7",
+        "tipus": "minor seventh"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Bb",
+    "mode": "major",
+    "progressio_romana": "IV – ii – iii – I – IV",
+    "acords": [
+      {
+        "acord": "Eb",
+        "tipus": "major"
+      },
+      {
+        "acord": "C",
+        "tipus": "minor"
+      },
+      {
+        "acord": "Dm7",
+        "tipus": "minor seventh"
+      },
+      {
+        "acord": "Bb",
+        "tipus": "major"
+      },
+      {
+        "acord": "Eb",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Ab",
+    "mode": "major",
+    "progressio_romana": "V – ii – V – vii° – I – vi",
+    "acords": [
+      {
+        "acord": "Ebmaj7",
+        "tipus": "major seventh"
+      },
+      {
+        "acord": "Bb",
+        "tipus": "minor"
+      },
+      {
+        "acord": "Eb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "G",
+        "tipus": "diminished"
+      },
+      {
+        "acord": "Ab",
+        "tipus": "major"
+      },
+      {
+        "acord": "F",
+        "tipus": "minor"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Ab",
+    "mode": "major",
+    "progressio_romana": "IV – vi – IV – V",
+    "acords": [
+      {
+        "acord": "Db",
+        "tipus": "major"
+      },
+      {
+        "acord": "F",
+        "tipus": "minor"
+      },
+      {
+        "acord": "Db",
+        "tipus": "major"
+      },
+      {
+        "acord": "Eb7",
+        "tipus": "dominant"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Em",
+    "mode": "minor",
+    "progressio_romana": "i – ii° – ii°",
+    "acords": [
+      {
+        "acord": "E",
+        "tipus": "minor"
+      },
+      {
+        "acord": "F#ø7",
+        "tipus": "half-diminished"
+      },
+      {
+        "acord": "F#",
+        "tipus": "diminished"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Am",
+    "mode": "minor",
+    "progressio_romana": "III – i – v – III – iv – iv",
+    "acords": [
+      {
+        "acord": "C",
+        "tipus": "major"
+      },
+      {
+        "acord": "A",
+        "tipus": "minor"
+      },
+      {
+        "acord": "E",
+        "tipus": "minor"
+      },
+      {
+        "acord": "C",
+        "tipus": "major"
+      },
+      {
+        "acord": "D",
+        "tipus": "minor"
+      },
+      {
+        "acord": "D",
+        "tipus": "minor"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Fm",
+    "mode": "minor",
+    "progressio_romana": "VI – iv – ii°",
+    "acords": [
+      {
+        "acord": "C#",
+        "tipus": "major"
+      },
+      {
+        "acord": "A#m7",
+        "tipus": "minor seventh"
+      },
+      {
+        "acord": "Gø7",
+        "tipus": "half-diminished"
+      }
+    ]
+  },
+  {
+    "tonalitat": "G#m",
+    "mode": "minor",
+    "progressio_romana": "III – VI – i – VI",
+    "acords": [
+      {
+        "acord": "B7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "E",
+        "tipus": "major"
+      },
+      {
+        "acord": "G#",
+        "tipus": "minor"
+      },
+      {
+        "acord": "Emaj7",
+        "tipus": "major seventh"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Eb",
+    "mode": "major",
+    "progressio_romana": "I – I – ii – iii – iii",
+    "acords": [
+      {
+        "acord": "Eb",
+        "tipus": "major"
+      },
+      {
+        "acord": "Eb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F",
+        "tipus": "minor"
+      },
+      {
+        "acord": "G",
+        "tipus": "minor"
+      },
+      {
+        "acord": "G",
+        "tipus": "minor"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Bb",
+    "mode": "major",
+    "progressio_romana": "ii – vi – I – I – IV – V",
+    "acords": [
+      {
+        "acord": "C",
+        "tipus": "minor"
+      },
+      {
+        "acord": "G",
+        "tipus": "minor"
+      },
+      {
+        "acord": "Bb",
+        "tipus": "major"
+      },
+      {
+        "acord": "Bb",
+        "tipus": "major"
+      },
+      {
+        "acord": "Eb",
+        "tipus": "major"
+      },
+      {
+        "acord": "F",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Am",
+    "mode": "minor",
+    "progressio_romana": "VI – VII – VII – i",
+    "acords": [
+      {
+        "acord": "F7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Gmaj7",
+        "tipus": "major seventh"
+      },
+      {
+        "acord": "G",
+        "tipus": "major"
+      },
+      {
+        "acord": "A",
+        "tipus": "minor"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Gm",
+    "mode": "minor",
+    "progressio_romana": "v – ii° – ii°",
+    "acords": [
+      {
+        "acord": "D",
+        "tipus": "minor"
+      },
+      {
+        "acord": "A",
+        "tipus": "diminished"
+      },
+      {
+        "acord": "A",
+        "tipus": "diminished"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Bb",
+    "mode": "major",
+    "progressio_romana": "IV – iii – vi – ii – vi – vi",
+    "acords": [
+      {
+        "acord": "Ebmaj7",
+        "tipus": "major seventh"
+      },
+      {
+        "acord": "Dm7",
+        "tipus": "minor seventh"
+      },
+      {
+        "acord": "Gm7",
+        "tipus": "minor seventh"
+      },
+      {
+        "acord": "C",
+        "tipus": "minor"
+      },
+      {
+        "acord": "G",
+        "tipus": "minor"
+      },
+      {
+        "acord": "G",
+        "tipus": "minor"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Bb",
+    "mode": "major",
+    "progressio_romana": "V – vi – IV – V – V",
+    "acords": [
+      {
+        "acord": "F",
+        "tipus": "major"
+      },
+      {
+        "acord": "G",
+        "tipus": "minor"
+      },
+      {
+        "acord": "Eb",
+        "tipus": "major"
+      },
+      {
+        "acord": "F",
+        "tipus": "major"
+      },
+      {
+        "acord": "F",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "C#m",
+    "mode": "minor",
+    "progressio_romana": "ii° – VI – VI – ii° – iv",
+    "acords": [
+      {
+        "acord": "D#",
+        "tipus": "diminished"
+      },
+      {
+        "acord": "A",
+        "tipus": "major"
+      },
+      {
+        "acord": "A",
+        "tipus": "major"
+      },
+      {
+        "acord": "D#ø7",
+        "tipus": "half-diminished"
+      },
+      {
+        "acord": "F#m7",
+        "tipus": "minor seventh"
+      }
+    ]
+  },
+  {
+    "tonalitat": "F#m",
+    "mode": "minor",
+    "progressio_romana": "ii° – VII – v – VII – v – VI",
+    "acords": [
+      {
+        "acord": "G#",
+        "tipus": "diminished"
+      },
+      {
+        "acord": "E",
+        "tipus": "major"
+      },
+      {
+        "acord": "C#",
+        "tipus": "minor"
+      },
+      {
+        "acord": "E",
+        "tipus": "major"
+      },
+      {
+        "acord": "C#",
+        "tipus": "minor"
+      },
+      {
+        "acord": "D",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "E",
+    "mode": "major",
+    "progressio_romana": "vii° – ii – IV – iii – vii° – iii",
+    "acords": [
+      {
+        "acord": "D#",
+        "tipus": "diminished"
+      },
+      {
+        "acord": "F#m7",
+        "tipus": "minor seventh"
+      },
+      {
+        "acord": "Amaj7",
+        "tipus": "major seventh"
+      },
+      {
+        "acord": "G#",
+        "tipus": "minor"
+      },
+      {
+        "acord": "D#",
+        "tipus": "diminished"
+      },
+      {
+        "acord": "G#",
+        "tipus": "minor"
+      }
+    ]
+  },
+  {
+    "tonalitat": "C",
+    "mode": "major",
+    "progressio_romana": "IV – vii° – IV – IV – I – V",
+    "acords": [
+      {
+        "acord": "F",
+        "tipus": "major"
+      },
+      {
+        "acord": "B",
+        "tipus": "diminished"
+      },
+      {
+        "acord": "F7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Fmaj7",
+        "tipus": "major seventh"
+      },
+      {
+        "acord": "C",
+        "tipus": "major"
+      },
+      {
+        "acord": "G",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "C",
+    "mode": "major",
+    "progressio_romana": "IV – ii – vii°",
+    "acords": [
+      {
+        "acord": "F",
+        "tipus": "major"
+      },
+      {
+        "acord": "Dm7",
+        "tipus": "minor seventh"
+      },
+      {
+        "acord": "B",
+        "tipus": "diminished"
+      }
+    ]
+  },
+  {
+    "tonalitat": "C#m",
+    "mode": "minor",
+    "progressio_romana": "VI – v – v – VI",
+    "acords": [
+      {
+        "acord": "A7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "G#m7",
+        "tipus": "minor seventh"
+      },
+      {
+        "acord": "G#",
+        "tipus": "minor"
+      },
+      {
+        "acord": "A",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "B",
+    "mode": "major",
+    "progressio_romana": "I – V – IV – I – I",
+    "acords": [
+      {
+        "acord": "B",
+        "tipus": "major"
+      },
+      {
+        "acord": "F#maj7",
+        "tipus": "major seventh"
+      },
+      {
+        "acord": "E",
+        "tipus": "major"
+      },
+      {
+        "acord": "B",
+        "tipus": "major"
+      },
+      {
+        "acord": "B7",
+        "tipus": "dominant"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Em",
+    "mode": "minor",
+    "progressio_romana": "VI – III – ii° – i – VII",
+    "acords": [
+      {
+        "acord": "C",
+        "tipus": "major"
+      },
+      {
+        "acord": "G",
+        "tipus": "major"
+      },
+      {
+        "acord": "F#",
+        "tipus": "diminished"
+      },
+      {
+        "acord": "Em7",
+        "tipus": "minor seventh"
+      },
+      {
+        "acord": "D",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Ebm",
+    "mode": "minor",
+    "progressio_romana": "iv – III – III – VII – i",
+    "acords": [
+      {
+        "acord": "Ab",
+        "tipus": "minor"
+      },
+      {
+        "acord": "Gb",
+        "tipus": "major"
+      },
+      {
+        "acord": "Gb",
+        "tipus": "major"
+      },
+      {
+        "acord": "Dbmaj7",
+        "tipus": "major seventh"
+      },
+      {
+        "acord": "Eb",
+        "tipus": "minor"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Bm",
+    "mode": "minor",
+    "progressio_romana": "v – III – VII – VI – ii° – iv",
+    "acords": [
+      {
+        "acord": "F#",
+        "tipus": "minor"
+      },
+      {
+        "acord": "D",
+        "tipus": "major"
+      },
+      {
+        "acord": "A7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "G",
+        "tipus": "major"
+      },
+      {
+        "acord": "C#",
+        "tipus": "diminished"
+      },
+      {
+        "acord": "Em7",
+        "tipus": "minor seventh"
+      }
+    ]
+  },
+  {
+    "tonalitat": "C",
+    "mode": "major",
+    "progressio_romana": "V – vii° – vi – iii – V",
+    "acords": [
+      {
+        "acord": "Gmaj7",
+        "tipus": "major seventh"
+      },
+      {
+        "acord": "Bø7",
+        "tipus": "half-diminished"
+      },
+      {
+        "acord": "A",
+        "tipus": "minor"
+      },
+      {
+        "acord": "Em7",
+        "tipus": "minor seventh"
+      },
+      {
+        "acord": "G",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Bm",
+    "mode": "minor",
+    "progressio_romana": "ii° – VI – VII – VI – ii°",
+    "acords": [
+      {
+        "acord": "C#",
+        "tipus": "diminished"
+      },
+      {
+        "acord": "G",
+        "tipus": "major"
+      },
+      {
+        "acord": "A",
+        "tipus": "major"
+      },
+      {
+        "acord": "G",
+        "tipus": "major"
+      },
+      {
+        "acord": "C#",
+        "tipus": "diminished"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Ebm",
+    "mode": "minor",
+    "progressio_romana": "v – VII – i – i – VI",
+    "acords": [
+      {
+        "acord": "Bb",
+        "tipus": "minor"
+      },
+      {
+        "acord": "Db",
+        "tipus": "major"
+      },
+      {
+        "acord": "Eb",
+        "tipus": "minor"
+      },
+      {
+        "acord": "Eb",
+        "tipus": "minor"
+      },
+      {
+        "acord": "B",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Fm",
+    "mode": "minor",
+    "progressio_romana": "ii° – v – VII",
+    "acords": [
+      {
+        "acord": "G",
+        "tipus": "diminished"
+      },
+      {
+        "acord": "C",
+        "tipus": "minor"
+      },
+      {
+        "acord": "D#",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Dm",
+    "mode": "minor",
+    "progressio_romana": "v – i – VII – ii° – ii°",
+    "acords": [
+      {
+        "acord": "A",
+        "tipus": "minor"
+      },
+      {
+        "acord": "Dm7",
+        "tipus": "minor seventh"
+      },
+      {
+        "acord": "C",
+        "tipus": "major"
+      },
+      {
+        "acord": "E",
+        "tipus": "diminished"
+      },
+      {
+        "acord": "E",
+        "tipus": "diminished"
+      }
+    ]
+  },
+  {
+    "tonalitat": "F#m",
+    "mode": "minor",
+    "progressio_romana": "v – VI – VI",
+    "acords": [
+      {
+        "acord": "C#",
+        "tipus": "minor"
+      },
+      {
+        "acord": "D",
+        "tipus": "major"
+      },
+      {
+        "acord": "D",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "E",
+    "mode": "major",
+    "progressio_romana": "iii – IV – iii – vii°",
+    "acords": [
+      {
+        "acord": "G#",
+        "tipus": "minor"
+      },
+      {
+        "acord": "A",
+        "tipus": "major"
+      },
+      {
+        "acord": "G#",
+        "tipus": "minor"
+      },
+      {
+        "acord": "D#",
+        "tipus": "diminished"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Ebm",
+    "mode": "minor",
+    "progressio_romana": "VII – III – ii°",
+    "acords": [
+      {
+        "acord": "Db",
+        "tipus": "major"
+      },
+      {
+        "acord": "Gb",
+        "tipus": "major"
+      },
+      {
+        "acord": "Fø7",
+        "tipus": "half-diminished"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Bm",
+    "mode": "minor",
+    "progressio_romana": "VII – iv – III – iv – iv",
+    "acords": [
+      {
+        "acord": "A",
+        "tipus": "major"
+      },
+      {
+        "acord": "Em7",
+        "tipus": "minor seventh"
+      },
+      {
+        "acord": "Dmaj7",
+        "tipus": "major seventh"
+      },
+      {
+        "acord": "E",
+        "tipus": "minor"
+      },
+      {
+        "acord": "Em7",
+        "tipus": "minor seventh"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Bb",
+    "mode": "major",
+    "progressio_romana": "I – vi – iii – vi – iii",
+    "acords": [
+      {
+        "acord": "Bb",
+        "tipus": "major"
+      },
+      {
+        "acord": "Gm7",
+        "tipus": "minor seventh"
+      },
+      {
+        "acord": "Dm7",
+        "tipus": "minor seventh"
+      },
+      {
+        "acord": "Gm7",
+        "tipus": "minor seventh"
+      },
+      {
+        "acord": "D",
+        "tipus": "minor"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Ab",
+    "mode": "major",
+    "progressio_romana": "vi – vi – vii° – IV – vi – ii",
+    "acords": [
+      {
+        "acord": "Fm7",
+        "tipus": "minor seventh"
+      },
+      {
+        "acord": "F",
+        "tipus": "minor"
+      },
+      {
+        "acord": "G",
+        "tipus": "diminished"
+      },
+      {
+        "acord": "Db",
+        "tipus": "major"
+      },
+      {
+        "acord": "F",
+        "tipus": "minor"
+      },
+      {
+        "acord": "Bb",
+        "tipus": "minor"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Am",
+    "mode": "minor",
+    "progressio_romana": "i – iv – III – ii° – iv",
+    "acords": [
+      {
+        "acord": "A",
+        "tipus": "minor"
+      },
+      {
+        "acord": "D",
+        "tipus": "minor"
+      },
+      {
+        "acord": "C",
+        "tipus": "major"
+      },
+      {
+        "acord": "B",
+        "tipus": "diminished"
+      },
+      {
+        "acord": "D",
+        "tipus": "minor"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Cm",
+    "mode": "minor",
+    "progressio_romana": "v – III – III – iv",
+    "acords": [
+      {
+        "acord": "G",
+        "tipus": "minor"
+      },
+      {
+        "acord": "D#",
+        "tipus": "major"
+      },
+      {
+        "acord": "D#",
+        "tipus": "major"
+      },
+      {
+        "acord": "Fm7",
+        "tipus": "minor seventh"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Bm",
+    "mode": "minor",
+    "progressio_romana": "ii° – iv – v – ii°",
+    "acords": [
+      {
+        "acord": "C#",
+        "tipus": "diminished"
+      },
+      {
+        "acord": "E",
+        "tipus": "minor"
+      },
+      {
+        "acord": "F#",
+        "tipus": "minor"
+      },
+      {
+        "acord": "C#",
+        "tipus": "diminished"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Bm",
+    "mode": "minor",
+    "progressio_romana": "VII – iv – i – v – iv",
+    "acords": [
+      {
+        "acord": "A",
+        "tipus": "major"
+      },
+      {
+        "acord": "E",
+        "tipus": "minor"
+      },
+      {
+        "acord": "Bm7",
+        "tipus": "minor seventh"
+      },
+      {
+        "acord": "F#",
+        "tipus": "minor"
+      },
+      {
+        "acord": "E",
+        "tipus": "minor"
+      }
+    ]
+  },
+  {
+    "tonalitat": "G",
+    "mode": "major",
+    "progressio_romana": "ii – vi – I – ii – vi – ii",
+    "acords": [
+      {
+        "acord": "Am7",
+        "tipus": "minor seventh"
+      },
+      {
+        "acord": "E",
+        "tipus": "minor"
+      },
+      {
+        "acord": "G",
+        "tipus": "major"
+      },
+      {
+        "acord": "A",
+        "tipus": "minor"
+      },
+      {
+        "acord": "E",
+        "tipus": "minor"
+      },
+      {
+        "acord": "Am7",
+        "tipus": "minor seventh"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Bm",
+    "mode": "minor",
+    "progressio_romana": "ii° – VII – i – iv",
+    "acords": [
+      {
+        "acord": "C#",
+        "tipus": "diminished"
+      },
+      {
+        "acord": "Amaj7",
+        "tipus": "major seventh"
+      },
+      {
+        "acord": "B",
+        "tipus": "minor"
+      },
+      {
+        "acord": "E",
+        "tipus": "minor"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Bbm",
+    "mode": "minor",
+    "progressio_romana": "VI – i – VII",
+    "acords": [
+      {
+        "acord": "Gb",
+        "tipus": "major"
+      },
+      {
+        "acord": "Bb",
+        "tipus": "minor"
+      },
+      {
+        "acord": "Ab7",
+        "tipus": "dominant"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Am",
+    "mode": "minor",
+    "progressio_romana": "ii° – VI – v – ii° – ii°",
+    "acords": [
+      {
+        "acord": "B",
+        "tipus": "diminished"
+      },
+      {
+        "acord": "F",
+        "tipus": "major"
+      },
+      {
+        "acord": "E",
+        "tipus": "minor"
+      },
+      {
+        "acord": "B",
+        "tipus": "diminished"
+      },
+      {
+        "acord": "B",
+        "tipus": "diminished"
+      }
+    ]
+  },
+  {
+    "tonalitat": "G",
+    "mode": "major",
+    "progressio_romana": "I – vi – vi – vii° – IV",
+    "acords": [
+      {
+        "acord": "G",
+        "tipus": "major"
+      },
+      {
+        "acord": "E",
+        "tipus": "minor"
+      },
+      {
+        "acord": "E",
+        "tipus": "minor"
+      },
+      {
+        "acord": "F#",
+        "tipus": "diminished"
+      },
+      {
+        "acord": "Cmaj7",
+        "tipus": "major seventh"
+      }
+    ]
+  },
+  {
+    "tonalitat": "B",
+    "mode": "major",
+    "progressio_romana": "vi – ii – iii",
+    "acords": [
+      {
+        "acord": "G#",
+        "tipus": "minor"
+      },
+      {
+        "acord": "C#",
+        "tipus": "minor"
+      },
+      {
+        "acord": "D#",
+        "tipus": "minor"
+      }
+    ]
+  },
+  {
+    "tonalitat": "G",
+    "mode": "major",
+    "progressio_romana": "V – I – IV – V",
+    "acords": [
+      {
+        "acord": "D",
+        "tipus": "major"
+      },
+      {
+        "acord": "G7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "C",
+        "tipus": "major"
+      },
+      {
+        "acord": "D",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "G",
+    "mode": "major",
+    "progressio_romana": "V – ii – vii° – IV – iii – IV",
+    "acords": [
+      {
+        "acord": "D",
+        "tipus": "major"
+      },
+      {
+        "acord": "Am7",
+        "tipus": "minor seventh"
+      },
+      {
+        "acord": "F#",
+        "tipus": "diminished"
+      },
+      {
+        "acord": "C",
+        "tipus": "major"
+      },
+      {
+        "acord": "B",
+        "tipus": "minor"
+      },
+      {
+        "acord": "C",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "F#m",
+    "mode": "minor",
+    "progressio_romana": "VII – ii° – i – i",
+    "acords": [
+      {
+        "acord": "E",
+        "tipus": "major"
+      },
+      {
+        "acord": "G#",
+        "tipus": "diminished"
+      },
+      {
+        "acord": "F#",
+        "tipus": "minor"
+      },
+      {
+        "acord": "F#m7",
+        "tipus": "minor seventh"
+      }
+    ]
+  },
+  {
+    "tonalitat": "E",
+    "mode": "major",
+    "progressio_romana": "vi – V – vii° – vi – I",
+    "acords": [
+      {
+        "acord": "C#",
+        "tipus": "minor"
+      },
+      {
+        "acord": "B",
+        "tipus": "major"
+      },
+      {
+        "acord": "D#",
+        "tipus": "diminished"
+      },
+      {
+        "acord": "C#",
+        "tipus": "minor"
+      },
+      {
+        "acord": "E",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Bb",
+    "mode": "major",
+    "progressio_romana": "IV – IV – I",
+    "acords": [
+      {
+        "acord": "Ebmaj7",
+        "tipus": "major seventh"
+      },
+      {
+        "acord": "Eb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Bb7",
+        "tipus": "dominant"
+      }
+    ]
+  },
+  {
+    "tonalitat": "F#",
+    "mode": "major",
+    "progressio_romana": "IV – I – ii – ii – IV – I",
+    "acords": [
+      {
+        "acord": "B",
+        "tipus": "major"
+      },
+      {
+        "acord": "F#maj7",
+        "tipus": "major seventh"
+      },
+      {
+        "acord": "G#",
+        "tipus": "minor"
+      },
+      {
+        "acord": "G#",
+        "tipus": "minor"
+      },
+      {
+        "acord": "B",
+        "tipus": "major"
+      },
+      {
+        "acord": "F#7",
+        "tipus": "dominant"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Am",
+    "mode": "minor",
+    "progressio_romana": "v – VII – i – i",
+    "acords": [
+      {
+        "acord": "E",
+        "tipus": "minor"
+      },
+      {
+        "acord": "G",
+        "tipus": "major"
+      },
+      {
+        "acord": "A",
+        "tipus": "minor"
+      },
+      {
+        "acord": "A",
+        "tipus": "minor"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Gm",
+    "mode": "minor",
+    "progressio_romana": "i – iv – III – v – ii°",
+    "acords": [
+      {
+        "acord": "G",
+        "tipus": "minor"
+      },
+      {
+        "acord": "C",
+        "tipus": "minor"
+      },
+      {
+        "acord": "A#",
+        "tipus": "major"
+      },
+      {
+        "acord": "Dm7",
+        "tipus": "minor seventh"
+      },
+      {
+        "acord": "Aø7",
+        "tipus": "half-diminished"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Ab",
+    "mode": "major",
+    "progressio_romana": "I – ii – vi",
+    "acords": [
+      {
+        "acord": "Abmaj7",
+        "tipus": "major seventh"
+      },
+      {
+        "acord": "Bb",
+        "tipus": "minor"
+      },
+      {
+        "acord": "F",
+        "tipus": "minor"
+      }
+    ]
+  },
+  {
+    "tonalitat": "C#m",
+    "mode": "minor",
+    "progressio_romana": "i – VI – VI – v – i – i",
+    "acords": [
+      {
+        "acord": "C#",
+        "tipus": "minor"
+      },
+      {
+        "acord": "A",
+        "tipus": "major"
+      },
+      {
+        "acord": "A",
+        "tipus": "major"
+      },
+      {
+        "acord": "G#m7",
+        "tipus": "minor seventh"
+      },
+      {
+        "acord": "C#",
+        "tipus": "minor"
+      },
+      {
+        "acord": "C#",
+        "tipus": "minor"
+      }
+    ]
+  },
+  {
+    "tonalitat": "A",
+    "mode": "major",
+    "progressio_romana": "vii° – vi – I – vi – iii – vi",
+    "acords": [
+      {
+        "acord": "G#",
+        "tipus": "diminished"
+      },
+      {
+        "acord": "F#",
+        "tipus": "minor"
+      },
+      {
+        "acord": "A",
+        "tipus": "major"
+      },
+      {
+        "acord": "F#",
+        "tipus": "minor"
+      },
+      {
+        "acord": "C#",
+        "tipus": "minor"
+      },
+      {
+        "acord": "F#",
+        "tipus": "minor"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Bm",
+    "mode": "minor",
+    "progressio_romana": "v – v – ii° – VII",
+    "acords": [
+      {
+        "acord": "F#",
+        "tipus": "minor"
+      },
+      {
+        "acord": "F#m7",
+        "tipus": "minor seventh"
+      },
+      {
+        "acord": "C#",
+        "tipus": "diminished"
+      },
+      {
+        "acord": "Amaj7",
+        "tipus": "major seventh"
+      }
+    ]
+  },
+  {
+    "tonalitat": "F",
+    "mode": "major",
+    "progressio_romana": "iii – V – vi – iii – IV – ii",
+    "acords": [
+      {
+        "acord": "Am7",
+        "tipus": "minor seventh"
+      },
+      {
+        "acord": "C",
+        "tipus": "major"
+      },
+      {
+        "acord": "Dm7",
+        "tipus": "minor seventh"
+      },
+      {
+        "acord": "A",
+        "tipus": "minor"
+      },
+      {
+        "acord": "Bb",
+        "tipus": "major"
+      },
+      {
+        "acord": "G",
+        "tipus": "minor"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Bb",
+    "mode": "major",
+    "progressio_romana": "vi – V – iii – vi – vii°",
+    "acords": [
+      {
+        "acord": "G",
+        "tipus": "minor"
+      },
+      {
+        "acord": "F",
+        "tipus": "major"
+      },
+      {
+        "acord": "Dm7",
+        "tipus": "minor seventh"
+      },
+      {
+        "acord": "G",
+        "tipus": "minor"
+      },
+      {
+        "acord": "A",
+        "tipus": "diminished"
+      }
+    ]
+  },
+  {
+    "tonalitat": "D",
+    "mode": "major",
+    "progressio_romana": "vii° – vi – iii – ii – IV",
+    "acords": [
+      {
+        "acord": "C#",
+        "tipus": "diminished"
+      },
+      {
+        "acord": "B",
+        "tipus": "minor"
+      },
+      {
+        "acord": "F#m7",
+        "tipus": "minor seventh"
+      },
+      {
+        "acord": "Em7",
+        "tipus": "minor seventh"
+      },
+      {
+        "acord": "G",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Bb",
+    "mode": "major",
+    "progressio_romana": "vii° – IV – IV – IV – I",
+    "acords": [
+      {
+        "acord": "A",
+        "tipus": "diminished"
+      },
+      {
+        "acord": "Eb",
+        "tipus": "major"
+      },
+      {
+        "acord": "Eb",
+        "tipus": "major"
+      },
+      {
+        "acord": "Eb",
+        "tipus": "major"
+      },
+      {
+        "acord": "Bb",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Ebm",
+    "mode": "minor",
+    "progressio_romana": "VII – i – VI",
+    "acords": [
+      {
+        "acord": "Db",
+        "tipus": "major"
+      },
+      {
+        "acord": "Ebm7",
+        "tipus": "minor seventh"
+      },
+      {
+        "acord": "B",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "G",
+    "mode": "major",
+    "progressio_romana": "V – iii – V – vii° – iii",
+    "acords": [
+      {
+        "acord": "D",
+        "tipus": "major"
+      },
+      {
+        "acord": "B",
+        "tipus": "minor"
+      },
+      {
+        "acord": "D",
+        "tipus": "major"
+      },
+      {
+        "acord": "F#",
+        "tipus": "diminished"
+      },
+      {
+        "acord": "B",
+        "tipus": "minor"
+      }
+    ]
+  },
+  {
+    "tonalitat": "F#",
+    "mode": "major",
+    "progressio_romana": "ii – vi – iii – I",
+    "acords": [
+      {
+        "acord": "G#",
+        "tipus": "minor"
+      },
+      {
+        "acord": "D#",
+        "tipus": "minor"
+      },
+      {
+        "acord": "A#",
+        "tipus": "minor"
+      },
+      {
+        "acord": "F#",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "E",
+    "mode": "major",
+    "progressio_romana": "IV – I – IV",
+    "acords": [
+      {
+        "acord": "A",
+        "tipus": "major"
+      },
+      {
+        "acord": "Emaj7",
+        "tipus": "major seventh"
+      },
+      {
+        "acord": "A7",
+        "tipus": "dominant"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Cm",
+    "mode": "minor",
+    "progressio_romana": "iv – ii° – i – v – III",
+    "acords": [
+      {
+        "acord": "Fm7",
+        "tipus": "minor seventh"
+      },
+      {
+        "acord": "D",
+        "tipus": "diminished"
+      },
+      {
+        "acord": "C",
+        "tipus": "minor"
+      },
+      {
+        "acord": "Gm7",
+        "tipus": "minor seventh"
+      },
+      {
+        "acord": "D#",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "F#",
+    "mode": "major",
+    "progressio_romana": "vii° – vii° – ii – vii° – V",
+    "acords": [
+      {
+        "acord": "F",
+        "tipus": "diminished"
+      },
+      {
+        "acord": "F",
+        "tipus": "diminished"
+      },
+      {
+        "acord": "G#",
+        "tipus": "minor"
+      },
+      {
+        "acord": "F",
+        "tipus": "diminished"
+      },
+      {
+        "acord": "C#",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Bbm",
+    "mode": "minor",
+    "progressio_romana": "VI – VII – III – III – ii° – iv",
+    "acords": [
+      {
+        "acord": "Gb",
+        "tipus": "major"
+      },
+      {
+        "acord": "Ab",
+        "tipus": "major"
+      },
+      {
+        "acord": "Db",
+        "tipus": "major"
+      },
+      {
+        "acord": "Db",
+        "tipus": "major"
+      },
+      {
+        "acord": "C",
+        "tipus": "diminished"
+      },
+      {
+        "acord": "Ebm7",
+        "tipus": "minor seventh"
+      }
+    ]
+  },
+  {
+    "tonalitat": "G#m",
+    "mode": "minor",
+    "progressio_romana": "ii° – VII – VI – iv",
+    "acords": [
+      {
+        "acord": "A#ø7",
+        "tipus": "half-diminished"
+      },
+      {
+        "acord": "F#",
+        "tipus": "major"
+      },
+      {
+        "acord": "E",
+        "tipus": "major"
+      },
+      {
+        "acord": "C#",
+        "tipus": "minor"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Eb",
+    "mode": "major",
+    "progressio_romana": "vi – IV – vi – V – vii°",
+    "acords": [
+      {
+        "acord": "C",
+        "tipus": "minor"
+      },
+      {
+        "acord": "Ab",
+        "tipus": "major"
+      },
+      {
+        "acord": "C",
+        "tipus": "minor"
+      },
+      {
+        "acord": "Bb",
+        "tipus": "major"
+      },
+      {
+        "acord": "Dø7",
+        "tipus": "half-diminished"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Dm",
+    "mode": "minor",
+    "progressio_romana": "VI – III – iv – VII",
+    "acords": [
+      {
+        "acord": "A#",
+        "tipus": "major"
+      },
+      {
+        "acord": "F",
+        "tipus": "major"
+      },
+      {
+        "acord": "Gm7",
+        "tipus": "minor seventh"
+      },
+      {
+        "acord": "C",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Bm",
+    "mode": "minor",
+    "progressio_romana": "i – VI – III – iv",
+    "acords": [
+      {
+        "acord": "Bm7",
+        "tipus": "minor seventh"
+      },
+      {
+        "acord": "G",
+        "tipus": "major"
+      },
+      {
+        "acord": "D",
+        "tipus": "major"
+      },
+      {
+        "acord": "E",
+        "tipus": "minor"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Gm",
+    "mode": "minor",
+    "progressio_romana": "VII – i – i – v",
+    "acords": [
+      {
+        "acord": "F",
+        "tipus": "major"
+      },
+      {
+        "acord": "G",
+        "tipus": "minor"
+      },
+      {
+        "acord": "G",
+        "tipus": "minor"
+      },
+      {
+        "acord": "D",
+        "tipus": "minor"
+      }
+    ]
+  },
+  {
+    "tonalitat": "G#m",
+    "mode": "minor",
+    "progressio_romana": "i – VII – III",
+    "acords": [
+      {
+        "acord": "G#",
+        "tipus": "minor"
+      },
+      {
+        "acord": "F#",
+        "tipus": "major"
+      },
+      {
+        "acord": "B",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Bbm",
+    "mode": "minor",
+    "progressio_romana": "VII – VI – i",
+    "acords": [
+      {
+        "acord": "Ab",
+        "tipus": "major"
+      },
+      {
+        "acord": "Gb",
+        "tipus": "major"
+      },
+      {
+        "acord": "Bb",
+        "tipus": "minor"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Bm",
+    "mode": "minor",
+    "progressio_romana": "VI – III – III – VI – iv – III",
+    "acords": [
+      {
+        "acord": "G",
+        "tipus": "major"
+      },
+      {
+        "acord": "D",
+        "tipus": "major"
+      },
+      {
+        "acord": "D",
+        "tipus": "major"
+      },
+      {
+        "acord": "G",
+        "tipus": "major"
+      },
+      {
+        "acord": "E",
+        "tipus": "minor"
+      },
+      {
+        "acord": "D",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "F",
+    "mode": "major",
+    "progressio_romana": "ii – vii° – IV – I – iii",
+    "acords": [
+      {
+        "acord": "Gm7",
+        "tipus": "minor seventh"
+      },
+      {
+        "acord": "E",
+        "tipus": "diminished"
+      },
+      {
+        "acord": "Bb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F",
+        "tipus": "major"
+      },
+      {
+        "acord": "Am7",
+        "tipus": "minor seventh"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Bb",
+    "mode": "major",
+    "progressio_romana": "vii° – iii – V",
+    "acords": [
+      {
+        "acord": "Aø7",
+        "tipus": "half-diminished"
+      },
+      {
+        "acord": "D",
+        "tipus": "minor"
+      },
+      {
+        "acord": "F",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "B",
+    "mode": "major",
+    "progressio_romana": "IV – ii – IV – vi – V – I",
+    "acords": [
+      {
+        "acord": "Emaj7",
+        "tipus": "major seventh"
+      },
+      {
+        "acord": "C#",
+        "tipus": "minor"
+      },
+      {
+        "acord": "E7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "G#",
+        "tipus": "minor"
+      },
+      {
+        "acord": "F#",
+        "tipus": "major"
+      },
+      {
+        "acord": "B",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "E",
+    "mode": "major",
+    "progressio_romana": "ii – iii – iii – IV",
+    "acords": [
+      {
+        "acord": "F#",
+        "tipus": "minor"
+      },
+      {
+        "acord": "G#m7",
+        "tipus": "minor seventh"
+      },
+      {
+        "acord": "G#",
+        "tipus": "minor"
+      },
+      {
+        "acord": "A",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Bm",
+    "mode": "minor",
+    "progressio_romana": "VI – VI – ii° – i – VI",
+    "acords": [
+      {
+        "acord": "Gmaj7",
+        "tipus": "major seventh"
+      },
+      {
+        "acord": "G",
+        "tipus": "major"
+      },
+      {
+        "acord": "C#ø7",
+        "tipus": "half-diminished"
+      },
+      {
+        "acord": "B",
+        "tipus": "minor"
+      },
+      {
+        "acord": "G",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Gm",
+    "mode": "minor",
+    "progressio_romana": "i – iv – iv – ii°",
+    "acords": [
+      {
+        "acord": "G",
+        "tipus": "minor"
+      },
+      {
+        "acord": "C",
+        "tipus": "minor"
+      },
+      {
+        "acord": "C",
+        "tipus": "minor"
+      },
+      {
+        "acord": "Aø7",
+        "tipus": "half-diminished"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Ab",
+    "mode": "major",
+    "progressio_romana": "I – IV – V – vii° – ii – IV",
+    "acords": [
+      {
+        "acord": "Ab",
+        "tipus": "major"
+      },
+      {
+        "acord": "Db7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Eb",
+        "tipus": "major"
+      },
+      {
+        "acord": "Gø7",
+        "tipus": "half-diminished"
+      },
+      {
+        "acord": "Bb",
+        "tipus": "minor"
+      },
+      {
+        "acord": "Dbmaj7",
+        "tipus": "major seventh"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Bbm",
+    "mode": "minor",
+    "progressio_romana": "III – i – ii° – VI",
+    "acords": [
+      {
+        "acord": "Db",
+        "tipus": "major"
+      },
+      {
+        "acord": "Bbm7",
+        "tipus": "minor seventh"
+      },
+      {
+        "acord": "Cø7",
+        "tipus": "half-diminished"
+      },
+      {
+        "acord": "Gb",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "F",
+    "mode": "major",
+    "progressio_romana": "vi – IV – vii° – V",
+    "acords": [
+      {
+        "acord": "D",
+        "tipus": "minor"
+      },
+      {
+        "acord": "Bb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "E",
+        "tipus": "diminished"
+      },
+      {
+        "acord": "C",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Bb",
+    "mode": "major",
+    "progressio_romana": "V – I – vi – vi",
+    "acords": [
+      {
+        "acord": "F",
+        "tipus": "major"
+      },
+      {
+        "acord": "Bb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "G",
+        "tipus": "minor"
+      },
+      {
+        "acord": "G",
+        "tipus": "minor"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Em",
+    "mode": "minor",
+    "progressio_romana": "VII – VII – i",
+    "acords": [
+      {
+        "acord": "D",
+        "tipus": "major"
+      },
+      {
+        "acord": "D7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "E",
+        "tipus": "minor"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Gm",
+    "mode": "minor",
+    "progressio_romana": "v – v – VI – v",
+    "acords": [
+      {
+        "acord": "D",
+        "tipus": "minor"
+      },
+      {
+        "acord": "D",
+        "tipus": "minor"
+      },
+      {
+        "acord": "D#",
+        "tipus": "major"
+      },
+      {
+        "acord": "D",
+        "tipus": "minor"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Em",
+    "mode": "minor",
+    "progressio_romana": "VI – ii° – VII",
+    "acords": [
+      {
+        "acord": "Cmaj7",
+        "tipus": "major seventh"
+      },
+      {
+        "acord": "F#",
+        "tipus": "diminished"
+      },
+      {
+        "acord": "D",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "F#",
+    "mode": "major",
+    "progressio_romana": "IV – ii – ii",
+    "acords": [
+      {
+        "acord": "B",
+        "tipus": "major"
+      },
+      {
+        "acord": "G#m7",
+        "tipus": "minor seventh"
+      },
+      {
+        "acord": "G#",
+        "tipus": "minor"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Ab",
+    "mode": "major",
+    "progressio_romana": "iii – vi – ii – V – vi – vi",
+    "acords": [
+      {
+        "acord": "Cm7",
+        "tipus": "minor seventh"
+      },
+      {
+        "acord": "F",
+        "tipus": "minor"
+      },
+      {
+        "acord": "Bbm7",
+        "tipus": "minor seventh"
+      },
+      {
+        "acord": "Eb",
+        "tipus": "major"
+      },
+      {
+        "acord": "Fm7",
+        "tipus": "minor seventh"
+      },
+      {
+        "acord": "F",
+        "tipus": "minor"
+      }
+    ]
+  },
+  {
+    "tonalitat": "F",
+    "mode": "major",
+    "progressio_romana": "vi – vii° – I – V – V – V",
+    "acords": [
+      {
+        "acord": "D",
+        "tipus": "minor"
+      },
+      {
+        "acord": "Eø7",
+        "tipus": "half-diminished"
+      },
+      {
+        "acord": "Fmaj7",
+        "tipus": "major seventh"
+      },
+      {
+        "acord": "C",
+        "tipus": "major"
+      },
+      {
+        "acord": "C7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "C",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "A",
+    "mode": "major",
+    "progressio_romana": "V – ii – iii",
+    "acords": [
+      {
+        "acord": "E7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "B",
+        "tipus": "minor"
+      },
+      {
+        "acord": "C#m7",
+        "tipus": "minor seventh"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Ab",
+    "mode": "major",
+    "progressio_romana": "vi – ii – vi – iii",
+    "acords": [
+      {
+        "acord": "F",
+        "tipus": "minor"
+      },
+      {
+        "acord": "Bbm7",
+        "tipus": "minor seventh"
+      },
+      {
+        "acord": "Fm7",
+        "tipus": "minor seventh"
+      },
+      {
+        "acord": "C",
+        "tipus": "minor"
+      }
+    ]
+  },
+  {
+    "tonalitat": "E",
+    "mode": "major",
+    "progressio_romana": "iii – V – iii – iii",
+    "acords": [
+      {
+        "acord": "G#",
+        "tipus": "minor"
+      },
+      {
+        "acord": "B",
+        "tipus": "major"
+      },
+      {
+        "acord": "G#m7",
+        "tipus": "minor seventh"
+      },
+      {
+        "acord": "G#",
+        "tipus": "minor"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Am",
+    "mode": "minor",
+    "progressio_romana": "ii° – ii° – VI – VII – VII",
+    "acords": [
+      {
+        "acord": "B",
+        "tipus": "diminished"
+      },
+      {
+        "acord": "B",
+        "tipus": "diminished"
+      },
+      {
+        "acord": "F",
+        "tipus": "major"
+      },
+      {
+        "acord": "G",
+        "tipus": "major"
+      },
+      {
+        "acord": "Gmaj7",
+        "tipus": "major seventh"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Em",
+    "mode": "minor",
+    "progressio_romana": "i – VI – VI",
+    "acords": [
+      {
+        "acord": "E",
+        "tipus": "minor"
+      },
+      {
+        "acord": "Cmaj7",
+        "tipus": "major seventh"
+      },
+      {
+        "acord": "C",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Gm",
+    "mode": "minor",
+    "progressio_romana": "i – i – i – ii° – III",
+    "acords": [
+      {
+        "acord": "G",
+        "tipus": "minor"
+      },
+      {
+        "acord": "Gm7",
+        "tipus": "minor seventh"
+      },
+      {
+        "acord": "Gm7",
+        "tipus": "minor seventh"
+      },
+      {
+        "acord": "A",
+        "tipus": "diminished"
+      },
+      {
+        "acord": "A#",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "D → G",
+    "mode": "major",
+    "tipus": "Modulació",
+    "progressio_romana": "I – V7 – [V7/x] – I (nova tonalitat)",
+    "acords": [
+      {
+        "acord": "D",
+        "tipus": "major"
+      },
+      {
+        "acord": "A7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F#7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "G",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Db → F",
+    "mode": "major",
+    "tipus": "Modulació",
+    "progressio_romana": "I – V7 – [V7/x] – I (nova tonalitat)",
+    "acords": [
+      {
+        "acord": "Db",
+        "tipus": "major"
+      },
+      {
+        "acord": "Ab7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "C7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "A → D",
+    "mode": "major",
+    "tipus": "Modulació",
+    "progressio_romana": "I – V7 – [V7/x] – I (nova tonalitat)",
+    "acords": [
+      {
+        "acord": "A",
+        "tipus": "major"
+      },
+      {
+        "acord": "E7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "C#7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "D",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Db → D",
+    "mode": "major",
+    "tipus": "Modulació",
+    "progressio_romana": "I – V7 – [V7/x] – I (nova tonalitat)",
+    "acords": [
+      {
+        "acord": "Db",
+        "tipus": "major"
+      },
+      {
+        "acord": "Ab7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "D7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "D",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "A → Ab",
+    "mode": "major",
+    "tipus": "Modulació",
+    "progressio_romana": "I – V7 – [V7/x] – I (nova tonalitat)",
+    "acords": [
+      {
+        "acord": "A",
+        "tipus": "major"
+      },
+      {
+        "acord": "E7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Bb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Ab",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "D → G",
+    "mode": "major",
+    "tipus": "Modulació",
+    "progressio_romana": "I – V7 – [V7/x] – I (nova tonalitat)",
+    "acords": [
+      {
+        "acord": "D",
+        "tipus": "major"
+      },
+      {
+        "acord": "A7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "C7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "G",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "E → Eb",
+    "mode": "major",
+    "tipus": "Modulació",
+    "progressio_romana": "I – V7 – [V7/x] – I (nova tonalitat)",
+    "acords": [
+      {
+        "acord": "E",
+        "tipus": "major"
+      },
+      {
+        "acord": "B7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Bb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Eb",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Ab → Db",
+    "mode": "major",
+    "tipus": "Modulació",
+    "progressio_romana": "I – V7 – [V7/x] – I (nova tonalitat)",
+    "acords": [
+      {
+        "acord": "Ab",
+        "tipus": "major"
+      },
+      {
+        "acord": "Eb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "C7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Db",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "E → D",
+    "mode": "major",
+    "tipus": "Modulació",
+    "progressio_romana": "I – V7 – [V7/x] – I (nova tonalitat)",
+    "acords": [
+      {
+        "acord": "E",
+        "tipus": "major"
+      },
+      {
+        "acord": "B7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "D7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "D",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "B → E",
+    "mode": "major",
+    "tipus": "Modulació",
+    "progressio_romana": "I – V7 – [V7/x] – I (nova tonalitat)",
+    "acords": [
+      {
+        "acord": "B",
+        "tipus": "major"
+      },
+      {
+        "acord": "F#7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "C#7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "E",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "F → Bb",
+    "mode": "major",
+    "tipus": "Modulació",
+    "progressio_romana": "I – V7 – [V7/x] – I (nova tonalitat)",
+    "acords": [
+      {
+        "acord": "F",
+        "tipus": "major"
+      },
+      {
+        "acord": "C7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Bb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Bb",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Eb → G",
+    "mode": "major",
+    "tipus": "Modulació",
+    "progressio_romana": "I – V7 – [V7/x] – I (nova tonalitat)",
+    "acords": [
+      {
+        "acord": "Eb",
+        "tipus": "major"
+      },
+      {
+        "acord": "Bb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "G7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "G",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Eb → Bb",
+    "mode": "major",
+    "tipus": "Modulació",
+    "progressio_romana": "I – V7 – [V7/x] – I (nova tonalitat)",
+    "acords": [
+      {
+        "acord": "Eb",
+        "tipus": "major"
+      },
+      {
+        "acord": "Bb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "A7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Bb",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "C → Bb",
+    "mode": "major",
+    "tipus": "Modulació",
+    "progressio_romana": "I – V7 – [V7/x] – I (nova tonalitat)",
+    "acords": [
+      {
+        "acord": "C",
+        "tipus": "major"
+      },
+      {
+        "acord": "G7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Bb",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Bb → F",
+    "mode": "major",
+    "tipus": "Modulació",
+    "progressio_romana": "I – V7 – [V7/x] – I (nova tonalitat)",
+    "acords": [
+      {
+        "acord": "Bb",
+        "tipus": "major"
+      },
+      {
+        "acord": "F7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "G7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Db → F",
+    "mode": "major",
+    "tipus": "Modulació",
+    "progressio_romana": "I – V7 – [V7/x] – I (nova tonalitat)",
+    "acords": [
+      {
+        "acord": "Db",
+        "tipus": "major"
+      },
+      {
+        "acord": "Ab7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "C7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Ab → F#",
+    "mode": "major",
+    "tipus": "Modulació",
+    "progressio_romana": "I – V7 – [V7/x] – I (nova tonalitat)",
+    "acords": [
+      {
+        "acord": "Ab",
+        "tipus": "major"
+      },
+      {
+        "acord": "Eb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "G#7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F#",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "D → F",
+    "mode": "major",
+    "tipus": "Modulació",
+    "progressio_romana": "I – V7 – [V7/x] – I (nova tonalitat)",
+    "acords": [
+      {
+        "acord": "D",
+        "tipus": "major"
+      },
+      {
+        "acord": "A7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "E7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Eb → G",
+    "mode": "major",
+    "tipus": "Modulació",
+    "progressio_romana": "I – V7 – [V7/x] – I (nova tonalitat)",
+    "acords": [
+      {
+        "acord": "Eb",
+        "tipus": "major"
+      },
+      {
+        "acord": "Bb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "A7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "G",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "E → C",
+    "mode": "major",
+    "tipus": "Modulació",
+    "progressio_romana": "I – V7 – [V7/x] – I (nova tonalitat)",
+    "acords": [
+      {
+        "acord": "E",
+        "tipus": "major"
+      },
+      {
+        "acord": "B7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "G7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "C",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "A → E",
+    "mode": "major",
+    "tipus": "Modulació",
+    "progressio_romana": "I – V7 – [V7/x] – I (nova tonalitat)",
+    "acords": [
+      {
+        "acord": "A",
+        "tipus": "major"
+      },
+      {
+        "acord": "E7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "B7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "E",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "C → Db",
+    "mode": "major",
+    "tipus": "Modulació",
+    "progressio_romana": "I – V7 – [V7/x] – I (nova tonalitat)",
+    "acords": [
+      {
+        "acord": "C",
+        "tipus": "major"
+      },
+      {
+        "acord": "G7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Db",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Eb → F",
+    "mode": "major",
+    "tipus": "Modulació",
+    "progressio_romana": "I – V7 – [V7/x] – I (nova tonalitat)",
+    "acords": [
+      {
+        "acord": "Eb",
+        "tipus": "major"
+      },
+      {
+        "acord": "Bb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "E7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Bb → Eb",
+    "mode": "major",
+    "tipus": "Modulació",
+    "progressio_romana": "I – V7 – [V7/x] – I (nova tonalitat)",
+    "acords": [
+      {
+        "acord": "Bb",
+        "tipus": "major"
+      },
+      {
+        "acord": "F7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Bb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Eb",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Eb → B",
+    "mode": "major",
+    "tipus": "Modulació",
+    "progressio_romana": "I – V7 – [V7/x] – I (nova tonalitat)",
+    "acords": [
+      {
+        "acord": "Eb",
+        "tipus": "major"
+      },
+      {
+        "acord": "Bb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "G#7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "B",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "D → C",
+    "mode": "major",
+    "tipus": "Modulació",
+    "progressio_romana": "I – V7 – [V7/x] – I (nova tonalitat)",
+    "acords": [
+      {
+        "acord": "D",
+        "tipus": "major"
+      },
+      {
+        "acord": "A7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "D7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "C",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "F → B",
+    "mode": "major",
+    "tipus": "Modulació",
+    "progressio_romana": "I – V7 – [V7/x] – I (nova tonalitat)",
+    "acords": [
+      {
+        "acord": "F",
+        "tipus": "major"
+      },
+      {
+        "acord": "C7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "E7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "B",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "F → B",
+    "mode": "major",
+    "tipus": "Modulació",
+    "progressio_romana": "I – V7 – [V7/x] – I (nova tonalitat)",
+    "acords": [
+      {
+        "acord": "F",
+        "tipus": "major"
+      },
+      {
+        "acord": "C7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "C#7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "B",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "A → Ab",
+    "mode": "major",
+    "tipus": "Modulació",
+    "progressio_romana": "I – V7 – [V7/x] – I (nova tonalitat)",
+    "acords": [
+      {
+        "acord": "A",
+        "tipus": "major"
+      },
+      {
+        "acord": "E7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Ab7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Ab",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "F# → A",
+    "mode": "major",
+    "tipus": "Modulació",
+    "progressio_romana": "I – V7 – [V7/x] – I (nova tonalitat)",
+    "acords": [
+      {
+        "acord": "F#",
+        "tipus": "major"
+      },
+      {
+        "acord": "C#7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "B7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "A",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "E → Db",
+    "mode": "major",
+    "tipus": "Modulació",
+    "progressio_romana": "I – V7 – [V7/x] – I (nova tonalitat)",
+    "acords": [
+      {
+        "acord": "E",
+        "tipus": "major"
+      },
+      {
+        "acord": "B7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Eb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Db",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "D → Ab",
+    "mode": "major",
+    "tipus": "Modulació",
+    "progressio_romana": "I – V7 – [V7/x] – I (nova tonalitat)",
+    "acords": [
+      {
+        "acord": "D",
+        "tipus": "major"
+      },
+      {
+        "acord": "A7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "C7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Ab",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "F# → A",
+    "mode": "major",
+    "tipus": "Modulació",
+    "progressio_romana": "I – V7 – [V7/x] – I (nova tonalitat)",
+    "acords": [
+      {
+        "acord": "F#",
+        "tipus": "major"
+      },
+      {
+        "acord": "C#7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "B7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "A",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Bb → E",
+    "mode": "major",
+    "tipus": "Modulació",
+    "progressio_romana": "I – V7 – [V7/x] – I (nova tonalitat)",
+    "acords": [
+      {
+        "acord": "Bb",
+        "tipus": "major"
+      },
+      {
+        "acord": "F7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "E7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "E",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "D → Eb",
+    "mode": "major",
+    "tipus": "Modulació",
+    "progressio_romana": "I – V7 – [V7/x] – I (nova tonalitat)",
+    "acords": [
+      {
+        "acord": "D",
+        "tipus": "major"
+      },
+      {
+        "acord": "A7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Bb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Eb",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "C → G",
+    "mode": "major",
+    "tipus": "Modulació",
+    "progressio_romana": "I – V7 – [V7/x] – I (nova tonalitat)",
+    "acords": [
+      {
+        "acord": "C",
+        "tipus": "major"
+      },
+      {
+        "acord": "G7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "B7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "G",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "B → Ab",
+    "mode": "major",
+    "tipus": "Modulació",
+    "progressio_romana": "I – V7 – [V7/x] – I (nova tonalitat)",
+    "acords": [
+      {
+        "acord": "B",
+        "tipus": "major"
+      },
+      {
+        "acord": "F#7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Bb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Ab",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "F → Ab",
+    "mode": "major",
+    "tipus": "Modulació",
+    "progressio_romana": "I – V7 – [V7/x] – I (nova tonalitat)",
+    "acords": [
+      {
+        "acord": "F",
+        "tipus": "major"
+      },
+      {
+        "acord": "C7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Ab7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Ab",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "B → D",
+    "mode": "major",
+    "tipus": "Modulació",
+    "progressio_romana": "I – V7 – [V7/x] – I (nova tonalitat)",
+    "acords": [
+      {
+        "acord": "B",
+        "tipus": "major"
+      },
+      {
+        "acord": "F#7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "D7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "D",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "B → F",
+    "mode": "major",
+    "tipus": "Modulació",
+    "progressio_romana": "I – V7 – [V7/x] – I (nova tonalitat)",
+    "acords": [
+      {
+        "acord": "B",
+        "tipus": "major"
+      },
+      {
+        "acord": "F#7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "G7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Db → E",
+    "mode": "major",
+    "tipus": "Modulació",
+    "progressio_romana": "I – V7 – [V7/x] – I (nova tonalitat)",
+    "acords": [
+      {
+        "acord": "Db",
+        "tipus": "major"
+      },
+      {
+        "acord": "Ab7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "G#7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "E",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "B → C",
+    "mode": "major",
+    "tipus": "Modulació",
+    "progressio_romana": "I – V7 – [V7/x] – I (nova tonalitat)",
+    "acords": [
+      {
+        "acord": "B",
+        "tipus": "major"
+      },
+      {
+        "acord": "F#7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "C",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "F# → Db",
+    "mode": "major",
+    "tipus": "Modulació",
+    "progressio_romana": "I – V7 – [V7/x] – I (nova tonalitat)",
+    "acords": [
+      {
+        "acord": "F#",
+        "tipus": "major"
+      },
+      {
+        "acord": "C#7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Gb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Db",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "F → A",
+    "mode": "major",
+    "tipus": "Modulació",
+    "progressio_romana": "I – V7 – [V7/x] – I (nova tonalitat)",
+    "acords": [
+      {
+        "acord": "F",
+        "tipus": "major"
+      },
+      {
+        "acord": "C7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "A7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "A",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "E → C",
+    "mode": "major",
+    "tipus": "Modulació",
+    "progressio_romana": "I – V7 – [V7/x] – I (nova tonalitat)",
+    "acords": [
+      {
+        "acord": "E",
+        "tipus": "major"
+      },
+      {
+        "acord": "B7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "E7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "C",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "A → Db",
+    "mode": "major",
+    "tipus": "Modulació",
+    "progressio_romana": "I – V7 – [V7/x] – I (nova tonalitat)",
+    "acords": [
+      {
+        "acord": "A",
+        "tipus": "major"
+      },
+      {
+        "acord": "E7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Db",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Db → F",
+    "mode": "major",
+    "tipus": "Modulació",
+    "progressio_romana": "I – V7 – [V7/x] – I (nova tonalitat)",
+    "acords": [
+      {
+        "acord": "Db",
+        "tipus": "major"
+      },
+      {
+        "acord": "Ab7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Bb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "D → Ab",
+    "mode": "major",
+    "tipus": "Modulació",
+    "progressio_romana": "I – V7 – [V7/x] – I (nova tonalitat)",
+    "acords": [
+      {
+        "acord": "D",
+        "tipus": "major"
+      },
+      {
+        "acord": "A7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Db7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Ab",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "E → Db",
+    "mode": "major",
+    "tipus": "Modulació",
+    "progressio_romana": "I – V7 – [V7/x] – I (nova tonalitat)",
+    "acords": [
+      {
+        "acord": "E",
+        "tipus": "major"
+      },
+      {
+        "acord": "B7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Db",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Ab → C",
+    "mode": "major",
+    "tipus": "Modulació",
+    "progressio_romana": "I – V7 – [V7/x] – I (nova tonalitat)",
+    "acords": [
+      {
+        "acord": "Ab",
+        "tipus": "major"
+      },
+      {
+        "acord": "Eb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "E7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "C",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Eb",
+    "mode": "major",
+    "tipus": "Blues 12 compassos",
+    "progressio_romana": "I7 – I7 – I7 – I7 – IV7 – IV7 – I7 – I7 – V7 – IV7 – I7 – V7",
+    "acords": [
+      {
+        "acord": "Eb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Eb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Eb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Eb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Ab7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Ab7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Eb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Eb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Bb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Ab7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Eb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Bb7",
+        "tipus": "dominant"
+      }
+    ]
+  },
+  {
+    "tonalitat": "A",
+    "mode": "major",
+    "tipus": "Blues 12 compassos",
+    "progressio_romana": "I7 – I7 – I7 – I7 – IV7 – IV7 – I7 – I7 – V7 – IV7 – I7 – V7",
+    "acords": [
+      {
+        "acord": "A7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "A7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "A7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "A7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "D7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "D7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "A7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "A7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "E7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "D7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "A7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "E7",
+        "tipus": "dominant"
+      }
+    ]
+  },
+  {
+    "tonalitat": "F",
+    "mode": "major",
+    "tipus": "Blues 12 compassos",
+    "progressio_romana": "I7 – I7 – I7 – I7 – IV7 – IV7 – I7 – I7 – V7 – IV7 – I7 – V7",
+    "acords": [
+      {
+        "acord": "F7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Bb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Bb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "C7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Bb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "C7",
+        "tipus": "dominant"
+      }
+    ]
+  },
+  {
+    "tonalitat": "F#",
+    "mode": "major",
+    "tipus": "Blues 12 compassos",
+    "progressio_romana": "I7 – I7 – I7 – I7 – IV7 – IV7 – I7 – I7 – V7 – IV7 – I7 – V7",
+    "acords": [
+      {
+        "acord": "F#7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F#7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F#7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F#7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "B7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "B7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F#7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F#7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "C#7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "B7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F#7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "C#7",
+        "tipus": "dominant"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Bb",
+    "mode": "major",
+    "tipus": "Blues 12 compassos",
+    "progressio_romana": "I7 – I7 – I7 – I7 – IV7 – IV7 – I7 – I7 – V7 – IV7 – I7 – V7",
+    "acords": [
+      {
+        "acord": "Bb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Bb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Bb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Bb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Eb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Eb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Bb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Bb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Eb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Bb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F7",
+        "tipus": "dominant"
+      }
+    ]
+  },
+  {
+    "tonalitat": "C",
+    "mode": "major",
+    "tipus": "Blues 12 compassos",
+    "progressio_romana": "I7 – I7 – I7 – I7 – IV7 – IV7 – I7 – I7 – V7 – IV7 – I7 – V7",
+    "acords": [
+      {
+        "acord": "C7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "C7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "C7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "C7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "C7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "C7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "G7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "C7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "G7",
+        "tipus": "dominant"
+      }
+    ]
+  },
+  {
+    "tonalitat": "F",
+    "mode": "major",
+    "tipus": "Blues 12 compassos",
+    "progressio_romana": "I7 – I7 – I7 – I7 – IV7 – IV7 – I7 – I7 – V7 – IV7 – I7 – V7",
+    "acords": [
+      {
+        "acord": "F7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Bb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Bb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "C7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Bb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "C7",
+        "tipus": "dominant"
+      }
+    ]
+  },
+  {
+    "tonalitat": "C",
+    "mode": "major",
+    "tipus": "Blues 12 compassos",
+    "progressio_romana": "I7 – I7 – I7 – I7 – IV7 – IV7 – I7 – I7 – V7 – IV7 – I7 – V7",
+    "acords": [
+      {
+        "acord": "C7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "C7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "C7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "C7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "C7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "C7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "G7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "C7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "G7",
+        "tipus": "dominant"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Eb",
+    "mode": "major",
+    "tipus": "Blues 12 compassos",
+    "progressio_romana": "I7 – I7 – I7 – I7 – IV7 – IV7 – I7 – I7 – V7 – IV7 – I7 – V7",
+    "acords": [
+      {
+        "acord": "Eb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Eb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Eb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Eb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Ab7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Ab7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Eb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Eb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Bb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Ab7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Eb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Bb7",
+        "tipus": "dominant"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Ab",
+    "mode": "major",
+    "tipus": "Blues 12 compassos",
+    "progressio_romana": "I7 – I7 – I7 – I7 – IV7 – IV7 – I7 – I7 – V7 – IV7 – I7 – V7",
+    "acords": [
+      {
+        "acord": "Ab7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Ab7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Ab7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Ab7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Db7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Db7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Ab7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Ab7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Eb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Db7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Ab7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Eb7",
+        "tipus": "dominant"
+      }
+    ]
+  },
+  {
+    "tonalitat": "F#",
+    "mode": "major",
+    "tipus": "Blues 12 compassos",
+    "progressio_romana": "I7 – I7 – I7 – I7 – IV7 – IV7 – I7 – I7 – V7 – IV7 – I7 – V7",
+    "acords": [
+      {
+        "acord": "F#7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F#7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F#7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F#7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "B7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "B7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F#7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F#7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "C#7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "B7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F#7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "C#7",
+        "tipus": "dominant"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Db",
+    "mode": "major",
+    "tipus": "Blues 12 compassos",
+    "progressio_romana": "I7 – I7 – I7 – I7 – IV7 – IV7 – I7 – I7 – V7 – IV7 – I7 – V7",
+    "acords": [
+      {
+        "acord": "Db7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Db7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Db7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Db7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Gb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Gb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Db7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Db7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Ab7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Gb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Db7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Ab7",
+        "tipus": "dominant"
+      }
+    ]
+  },
+  {
+    "tonalitat": "D",
+    "mode": "major",
+    "tipus": "Blues 12 compassos",
+    "progressio_romana": "I7 – I7 – I7 – I7 – IV7 – IV7 – I7 – I7 – V7 – IV7 – I7 – V7",
+    "acords": [
+      {
+        "acord": "D7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "D7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "D7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "D7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "G7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "G7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "D7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "D7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "A7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "G7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "D7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "A7",
+        "tipus": "dominant"
+      }
+    ]
+  },
+  {
+    "tonalitat": "F#",
+    "mode": "major",
+    "tipus": "Blues 12 compassos",
+    "progressio_romana": "I7 – I7 – I7 – I7 – IV7 – IV7 – I7 – I7 – V7 – IV7 – I7 – V7",
+    "acords": [
+      {
+        "acord": "F#7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F#7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F#7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F#7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "B7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "B7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F#7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F#7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "C#7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "B7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F#7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "C#7",
+        "tipus": "dominant"
+      }
+    ]
+  },
+  {
+    "tonalitat": "E",
+    "mode": "major",
+    "tipus": "Blues 12 compassos",
+    "progressio_romana": "I7 – I7 – I7 – I7 – IV7 – IV7 – I7 – I7 – V7 – IV7 – I7 – V7",
+    "acords": [
+      {
+        "acord": "E7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "E7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "E7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "E7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "A7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "A7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "E7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "E7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "B7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "A7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "E7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "B7",
+        "tipus": "dominant"
+      }
+    ]
+  },
+  {
+    "tonalitat": "D",
+    "mode": "major",
+    "tipus": "Blues 12 compassos",
+    "progressio_romana": "I7 – I7 – I7 – I7 – IV7 – IV7 – I7 – I7 – V7 – IV7 – I7 – V7",
+    "acords": [
+      {
+        "acord": "D7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "D7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "D7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "D7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "G7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "G7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "D7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "D7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "A7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "G7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "D7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "A7",
+        "tipus": "dominant"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Db",
+    "mode": "major",
+    "tipus": "Blues 12 compassos",
+    "progressio_romana": "I7 – I7 – I7 – I7 – IV7 – IV7 – I7 – I7 – V7 – IV7 – I7 – V7",
+    "acords": [
+      {
+        "acord": "Db7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Db7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Db7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Db7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Gb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Gb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Db7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Db7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Ab7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Gb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Db7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Ab7",
+        "tipus": "dominant"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Eb",
+    "mode": "major",
+    "tipus": "Blues 12 compassos",
+    "progressio_romana": "I7 – I7 – I7 – I7 – IV7 – IV7 – I7 – I7 – V7 – IV7 – I7 – V7",
+    "acords": [
+      {
+        "acord": "Eb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Eb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Eb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Eb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Ab7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Ab7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Eb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Eb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Bb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Ab7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Eb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Bb7",
+        "tipus": "dominant"
+      }
+    ]
+  },
+  {
+    "tonalitat": "E",
+    "mode": "major",
+    "tipus": "Blues 12 compassos",
+    "progressio_romana": "I7 – I7 – I7 – I7 – IV7 – IV7 – I7 – I7 – V7 – IV7 – I7 – V7",
+    "acords": [
+      {
+        "acord": "E7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "E7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "E7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "E7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "A7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "A7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "E7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "E7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "B7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "A7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "E7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "B7",
+        "tipus": "dominant"
+      }
+    ]
+  },
+  {
+    "tonalitat": "B",
+    "mode": "major",
+    "tipus": "Blues 12 compassos",
+    "progressio_romana": "I7 – I7 – I7 – I7 – IV7 – IV7 – I7 – I7 – V7 – IV7 – I7 – V7",
+    "acords": [
+      {
+        "acord": "B7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "B7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "B7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "B7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "E7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "E7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "B7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "B7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F#7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "E7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "B7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F#7",
+        "tipus": "dominant"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Bb",
+    "mode": "major",
+    "tipus": "Blues 12 compassos",
+    "progressio_romana": "I7 – I7 – I7 – I7 – IV7 – IV7 – I7 – I7 – V7 – IV7 – I7 – V7",
+    "acords": [
+      {
+        "acord": "Bb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Bb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Bb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Bb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Eb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Eb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Bb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Bb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Eb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Bb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F7",
+        "tipus": "dominant"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Ab",
+    "mode": "major",
+    "tipus": "Blues 12 compassos",
+    "progressio_romana": "I7 – I7 – I7 – I7 – IV7 – IV7 – I7 – I7 – V7 – IV7 – I7 – V7",
+    "acords": [
+      {
+        "acord": "Ab7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Ab7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Ab7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Ab7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Db7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Db7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Ab7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Ab7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Eb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Db7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Ab7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Eb7",
+        "tipus": "dominant"
+      }
+    ]
+  },
+  {
+    "tonalitat": "B",
+    "mode": "major",
+    "tipus": "Blues 12 compassos",
+    "progressio_romana": "I7 – I7 – I7 – I7 – IV7 – IV7 – I7 – I7 – V7 – IV7 – I7 – V7",
+    "acords": [
+      {
+        "acord": "B7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "B7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "B7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "B7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "E7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "E7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "B7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "B7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F#7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "E7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "B7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F#7",
+        "tipus": "dominant"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Db",
+    "mode": "major",
+    "tipus": "Blues 12 compassos",
+    "progressio_romana": "I7 – I7 – I7 – I7 – IV7 – IV7 – I7 – I7 – V7 – IV7 – I7 – V7",
+    "acords": [
+      {
+        "acord": "Db7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Db7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Db7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Db7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Gb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Gb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Db7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Db7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Ab7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Gb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Db7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Ab7",
+        "tipus": "dominant"
+      }
+    ]
+  },
+  {
+    "tonalitat": "G",
+    "mode": "major",
+    "tipus": "Blues 12 compassos",
+    "progressio_romana": "I7 – I7 – I7 – I7 – IV7 – IV7 – I7 – I7 – V7 – IV7 – I7 – V7",
+    "acords": [
+      {
+        "acord": "G7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "G7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "G7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "G7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "C7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "C7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "G7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "G7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "D7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "C7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "G7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "D7",
+        "tipus": "dominant"
+      }
+    ]
+  },
+  {
+    "tonalitat": "F",
+    "mode": "major",
+    "tipus": "Blues 12 compassos",
+    "progressio_romana": "I7 – I7 – I7 – I7 – IV7 – IV7 – I7 – I7 – V7 – IV7 – I7 – V7",
+    "acords": [
+      {
+        "acord": "F7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Bb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Bb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "C7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Bb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "C7",
+        "tipus": "dominant"
+      }
+    ]
+  },
+  {
+    "tonalitat": "F",
+    "mode": "major",
+    "tipus": "Blues 12 compassos",
+    "progressio_romana": "I7 – I7 – I7 – I7 – IV7 – IV7 – I7 – I7 – V7 – IV7 – I7 – V7",
+    "acords": [
+      {
+        "acord": "F7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Bb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Bb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "C7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Bb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "C7",
+        "tipus": "dominant"
+      }
+    ]
+  },
+  {
+    "tonalitat": "G",
+    "mode": "major",
+    "tipus": "Blues 12 compassos",
+    "progressio_romana": "I7 – I7 – I7 – I7 – IV7 – IV7 – I7 – I7 – V7 – IV7 – I7 – V7",
+    "acords": [
+      {
+        "acord": "G7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "G7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "G7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "G7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "C7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "C7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "G7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "G7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "D7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "C7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "G7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "D7",
+        "tipus": "dominant"
+      }
+    ]
+  },
+  {
+    "tonalitat": "F#",
+    "mode": "major",
+    "tipus": "Blues 12 compassos",
+    "progressio_romana": "I7 – I7 – I7 – I7 – IV7 – IV7 – I7 – I7 – V7 – IV7 – I7 – V7",
+    "acords": [
+      {
+        "acord": "F#7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F#7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F#7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F#7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "B7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "B7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F#7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F#7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "C#7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "B7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F#7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "C#7",
+        "tipus": "dominant"
+      }
+    ]
+  },
+  {
+    "tonalitat": "E",
+    "mode": "major",
+    "tipus": "Blues 12 compassos",
+    "progressio_romana": "I7 – I7 – I7 – I7 – IV7 – IV7 – I7 – I7 – V7 – IV7 – I7 – V7",
+    "acords": [
+      {
+        "acord": "E7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "E7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "E7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "E7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "A7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "A7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "E7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "E7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "B7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "A7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "E7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "B7",
+        "tipus": "dominant"
+      }
+    ]
+  },
+  {
+    "tonalitat": "E",
+    "mode": "major",
+    "tipus": "Blues 12 compassos",
+    "progressio_romana": "I7 – I7 – I7 – I7 – IV7 – IV7 – I7 – I7 – V7 – IV7 – I7 – V7",
+    "acords": [
+      {
+        "acord": "E7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "E7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "E7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "E7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "A7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "A7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "E7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "E7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "B7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "A7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "E7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "B7",
+        "tipus": "dominant"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Eb",
+    "mode": "major",
+    "tipus": "Blues 12 compassos",
+    "progressio_romana": "I7 – I7 – I7 – I7 – IV7 – IV7 – I7 – I7 – V7 – IV7 – I7 – V7",
+    "acords": [
+      {
+        "acord": "Eb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Eb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Eb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Eb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Ab7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Ab7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Eb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Eb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Bb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Ab7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Eb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Bb7",
+        "tipus": "dominant"
+      }
+    ]
+  },
+  {
+    "tonalitat": "E",
+    "mode": "major",
+    "tipus": "Blues 12 compassos",
+    "progressio_romana": "I7 – I7 – I7 – I7 – IV7 – IV7 – I7 – I7 – V7 – IV7 – I7 – V7",
+    "acords": [
+      {
+        "acord": "E7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "E7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "E7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "E7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "A7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "A7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "E7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "E7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "B7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "A7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "E7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "B7",
+        "tipus": "dominant"
+      }
+    ]
+  },
+  {
+    "tonalitat": "C",
+    "mode": "major",
+    "tipus": "Blues 12 compassos",
+    "progressio_romana": "I7 – I7 – I7 – I7 – IV7 – IV7 – I7 – I7 – V7 – IV7 – I7 – V7",
+    "acords": [
+      {
+        "acord": "C7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "C7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "C7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "C7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "C7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "C7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "G7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "C7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "G7",
+        "tipus": "dominant"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Bb",
+    "mode": "major",
+    "tipus": "Blues 12 compassos",
+    "progressio_romana": "I7 – I7 – I7 – I7 – IV7 – IV7 – I7 – I7 – V7 – IV7 – I7 – V7",
+    "acords": [
+      {
+        "acord": "Bb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Bb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Bb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Bb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Eb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Eb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Bb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Bb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Eb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Bb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F7",
+        "tipus": "dominant"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Bb",
+    "mode": "major",
+    "tipus": "Blues 12 compassos",
+    "progressio_romana": "I7 – I7 – I7 – I7 – IV7 – IV7 – I7 – I7 – V7 – IV7 – I7 – V7",
+    "acords": [
+      {
+        "acord": "Bb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Bb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Bb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Bb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Eb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Eb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Bb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Bb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Eb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Bb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F7",
+        "tipus": "dominant"
+      }
+    ]
+  },
+  {
+    "tonalitat": "G",
+    "mode": "major",
+    "tipus": "Blues 12 compassos",
+    "progressio_romana": "I7 – I7 – I7 – I7 – IV7 – IV7 – I7 – I7 – V7 – IV7 – I7 – V7",
+    "acords": [
+      {
+        "acord": "G7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "G7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "G7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "G7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "C7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "C7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "G7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "G7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "D7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "C7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "G7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "D7",
+        "tipus": "dominant"
+      }
+    ]
+  },
+  {
+    "tonalitat": "E",
+    "mode": "major",
+    "tipus": "Blues 12 compassos",
+    "progressio_romana": "I7 – I7 – I7 – I7 – IV7 – IV7 – I7 – I7 – V7 – IV7 – I7 – V7",
+    "acords": [
+      {
+        "acord": "E7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "E7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "E7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "E7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "A7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "A7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "E7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "E7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "B7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "A7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "E7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "B7",
+        "tipus": "dominant"
+      }
+    ]
+  },
+  {
+    "tonalitat": "F",
+    "mode": "major",
+    "tipus": "Blues 12 compassos",
+    "progressio_romana": "I7 – I7 – I7 – I7 – IV7 – IV7 – I7 – I7 – V7 – IV7 – I7 – V7",
+    "acords": [
+      {
+        "acord": "F7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Bb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Bb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "C7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Bb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "C7",
+        "tipus": "dominant"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Bb",
+    "mode": "major",
+    "tipus": "Blues 12 compassos",
+    "progressio_romana": "I7 – I7 – I7 – I7 – IV7 – IV7 – I7 – I7 – V7 – IV7 – I7 – V7",
+    "acords": [
+      {
+        "acord": "Bb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Bb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Bb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Bb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Eb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Eb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Bb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Bb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Eb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Bb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F7",
+        "tipus": "dominant"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Db",
+    "mode": "major",
+    "tipus": "Blues 12 compassos",
+    "progressio_romana": "I7 – I7 – I7 – I7 – IV7 – IV7 – I7 – I7 – V7 – IV7 – I7 – V7",
+    "acords": [
+      {
+        "acord": "Db7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Db7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Db7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Db7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Gb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Gb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Db7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Db7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Ab7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Gb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Db7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Ab7",
+        "tipus": "dominant"
+      }
+    ]
+  },
+  {
+    "tonalitat": "D",
+    "mode": "major",
+    "tipus": "Blues 12 compassos",
+    "progressio_romana": "I7 – I7 – I7 – I7 – IV7 – IV7 – I7 – I7 – V7 – IV7 – I7 – V7",
+    "acords": [
+      {
+        "acord": "D7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "D7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "D7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "D7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "G7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "G7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "D7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "D7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "A7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "G7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "D7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "A7",
+        "tipus": "dominant"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Db",
+    "mode": "major",
+    "tipus": "Blues 12 compassos",
+    "progressio_romana": "I7 – I7 – I7 – I7 – IV7 – IV7 – I7 – I7 – V7 – IV7 – I7 – V7",
+    "acords": [
+      {
+        "acord": "Db7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Db7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Db7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Db7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Gb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Gb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Db7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Db7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Ab7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Gb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Db7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Ab7",
+        "tipus": "dominant"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Eb",
+    "mode": "major",
+    "tipus": "Blues 12 compassos",
+    "progressio_romana": "I7 – I7 – I7 – I7 – IV7 – IV7 – I7 – I7 – V7 – IV7 – I7 – V7",
+    "acords": [
+      {
+        "acord": "Eb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Eb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Eb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Eb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Ab7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Ab7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Eb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Eb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Bb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Ab7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Eb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Bb7",
+        "tipus": "dominant"
+      }
+    ]
+  },
+  {
+    "tonalitat": "F#",
+    "mode": "major",
+    "tipus": "Blues 12 compassos",
+    "progressio_romana": "I7 – I7 – I7 – I7 – IV7 – IV7 – I7 – I7 – V7 – IV7 – I7 – V7",
+    "acords": [
+      {
+        "acord": "F#7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F#7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F#7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F#7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "B7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "B7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F#7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F#7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "C#7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "B7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F#7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "C#7",
+        "tipus": "dominant"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Eb",
+    "mode": "major",
+    "tipus": "Blues 12 compassos",
+    "progressio_romana": "I7 – I7 – I7 – I7 – IV7 – IV7 – I7 – I7 – V7 – IV7 – I7 – V7",
+    "acords": [
+      {
+        "acord": "Eb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Eb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Eb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Eb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Ab7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Ab7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Eb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Eb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Bb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Ab7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Eb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Bb7",
+        "tipus": "dominant"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Eb",
+    "mode": "major",
+    "tipus": "Blues 12 compassos",
+    "progressio_romana": "I7 – I7 – I7 – I7 – IV7 – IV7 – I7 – I7 – V7 – IV7 – I7 – V7",
+    "acords": [
+      {
+        "acord": "Eb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Eb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Eb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Eb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Ab7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Ab7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Eb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Eb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Bb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Ab7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Eb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Bb7",
+        "tipus": "dominant"
+      }
+    ]
+  },
+  {
+    "tonalitat": "F#",
+    "mode": "major",
+    "tipus": "Blues 12 compassos",
+    "progressio_romana": "I7 – I7 – I7 – I7 – IV7 – IV7 – I7 – I7 – V7 – IV7 – I7 – V7",
+    "acords": [
+      {
+        "acord": "F#7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F#7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F#7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F#7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "B7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "B7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F#7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F#7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "C#7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "B7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F#7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "C#7",
+        "tipus": "dominant"
+      }
+    ]
+  },
+  {
+    "tonalitat": "A",
+    "mode": "major",
+    "tipus": "Blues 12 compassos",
+    "progressio_romana": "I7 – I7 – I7 – I7 – IV7 – IV7 – I7 – I7 – V7 – IV7 – I7 – V7",
+    "acords": [
+      {
+        "acord": "A7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "A7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "A7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "A7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "D7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "D7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "A7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "A7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "E7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "D7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "A7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "E7",
+        "tipus": "dominant"
+      }
+    ]
+  },
+  {
+    "tonalitat": "F",
+    "mode": "major",
+    "tipus": "Blues 12 compassos",
+    "progressio_romana": "I7 – I7 – I7 – I7 – IV7 – IV7 – I7 – I7 – V7 – IV7 – I7 – V7",
+    "acords": [
+      {
+        "acord": "F7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Bb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Bb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "C7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "Bb7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "F7",
+        "tipus": "dominant"
+      },
+      {
+        "acord": "C7",
+        "tipus": "dominant"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Bb",
+    "mode": "major",
+    "tipus": "Substitució de tritó",
+    "progressio_romana": "I – ♭II7 – I",
+    "acords": [
+      {
+        "acord": "Bb",
+        "tipus": "major"
+      },
+      {
+        "acord": "B7",
+        "tipus": "dominant (tritone substitution)"
+      },
+      {
+        "acord": "Bb",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "E",
+    "mode": "major",
+    "tipus": "Substitució de tritó",
+    "progressio_romana": "I – ♭II7 – I",
+    "acords": [
+      {
+        "acord": "E",
+        "tipus": "major"
+      },
+      {
+        "acord": "F7",
+        "tipus": "dominant (tritone substitution)"
+      },
+      {
+        "acord": "E",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "D",
+    "mode": "major",
+    "tipus": "Substitució de tritó",
+    "progressio_romana": "I – ♭II7 – I",
+    "acords": [
+      {
+        "acord": "D",
+        "tipus": "major"
+      },
+      {
+        "acord": "Eb7",
+        "tipus": "dominant (tritone substitution)"
+      },
+      {
+        "acord": "D",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "D",
+    "mode": "major",
+    "tipus": "Substitució de tritó",
+    "progressio_romana": "I – ♭II7 – I",
+    "acords": [
+      {
+        "acord": "D",
+        "tipus": "major"
+      },
+      {
+        "acord": "Eb7",
+        "tipus": "dominant (tritone substitution)"
+      },
+      {
+        "acord": "D",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "F",
+    "mode": "major",
+    "tipus": "Substitució de tritó",
+    "progressio_romana": "I – ♭II7 – I",
+    "acords": [
+      {
+        "acord": "F",
+        "tipus": "major"
+      },
+      {
+        "acord": "Gb7",
+        "tipus": "dominant (tritone substitution)"
+      },
+      {
+        "acord": "F",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "A",
+    "mode": "major",
+    "tipus": "Substitució de tritó",
+    "progressio_romana": "I – ♭II7 – I",
+    "acords": [
+      {
+        "acord": "A",
+        "tipus": "major"
+      },
+      {
+        "acord": "Bb7",
+        "tipus": "dominant (tritone substitution)"
+      },
+      {
+        "acord": "A",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "B",
+    "mode": "major",
+    "tipus": "Substitució de tritó",
+    "progressio_romana": "I – ♭II7 – I",
+    "acords": [
+      {
+        "acord": "B",
+        "tipus": "major"
+      },
+      {
+        "acord": "C7",
+        "tipus": "dominant (tritone substitution)"
+      },
+      {
+        "acord": "B",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Eb",
+    "mode": "major",
+    "tipus": "Substitució de tritó",
+    "progressio_romana": "I – ♭II7 – I",
+    "acords": [
+      {
+        "acord": "Eb",
+        "tipus": "major"
+      },
+      {
+        "acord": "E7",
+        "tipus": "dominant (tritone substitution)"
+      },
+      {
+        "acord": "Eb",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "C",
+    "mode": "major",
+    "tipus": "Substitució de tritó",
+    "progressio_romana": "I – ♭II7 – I",
+    "acords": [
+      {
+        "acord": "C",
+        "tipus": "major"
+      },
+      {
+        "acord": "Db7",
+        "tipus": "dominant (tritone substitution)"
+      },
+      {
+        "acord": "C",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "F#",
+    "mode": "major",
+    "tipus": "Substitució de tritó",
+    "progressio_romana": "I – ♭II7 – I",
+    "acords": [
+      {
+        "acord": "F#",
+        "tipus": "major"
+      },
+      {
+        "acord": "C#7",
+        "tipus": "dominant (tritone substitution)"
+      },
+      {
+        "acord": "F#",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "D",
+    "mode": "major",
+    "tipus": "Substitució de tritó",
+    "progressio_romana": "I – ♭II7 – I",
+    "acords": [
+      {
+        "acord": "D",
+        "tipus": "major"
+      },
+      {
+        "acord": "Eb7",
+        "tipus": "dominant (tritone substitution)"
+      },
+      {
+        "acord": "D",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Ab",
+    "mode": "major",
+    "tipus": "Substitució de tritó",
+    "progressio_romana": "I – ♭II7 – I",
+    "acords": [
+      {
+        "acord": "Ab",
+        "tipus": "major"
+      },
+      {
+        "acord": "A7",
+        "tipus": "dominant (tritone substitution)"
+      },
+      {
+        "acord": "Ab",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Bb",
+    "mode": "major",
+    "tipus": "Substitució de tritó",
+    "progressio_romana": "I – ♭II7 – I",
+    "acords": [
+      {
+        "acord": "Bb",
+        "tipus": "major"
+      },
+      {
+        "acord": "B7",
+        "tipus": "dominant (tritone substitution)"
+      },
+      {
+        "acord": "Bb",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "F#",
+    "mode": "major",
+    "tipus": "Substitució de tritó",
+    "progressio_romana": "I – ♭II7 – I",
+    "acords": [
+      {
+        "acord": "F#",
+        "tipus": "major"
+      },
+      {
+        "acord": "C#7",
+        "tipus": "dominant (tritone substitution)"
+      },
+      {
+        "acord": "F#",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "E",
+    "mode": "major",
+    "tipus": "Substitució de tritó",
+    "progressio_romana": "I – ♭II7 – I",
+    "acords": [
+      {
+        "acord": "E",
+        "tipus": "major"
+      },
+      {
+        "acord": "F7",
+        "tipus": "dominant (tritone substitution)"
+      },
+      {
+        "acord": "E",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Db",
+    "mode": "major",
+    "tipus": "Substitució de tritó",
+    "progressio_romana": "I – ♭II7 – I",
+    "acords": [
+      {
+        "acord": "Db",
+        "tipus": "major"
+      },
+      {
+        "acord": "D7",
+        "tipus": "dominant (tritone substitution)"
+      },
+      {
+        "acord": "Db",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "C",
+    "mode": "major",
+    "tipus": "Substitució de tritó",
+    "progressio_romana": "I – ♭II7 – I",
+    "acords": [
+      {
+        "acord": "C",
+        "tipus": "major"
+      },
+      {
+        "acord": "Db7",
+        "tipus": "dominant (tritone substitution)"
+      },
+      {
+        "acord": "C",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Ab",
+    "mode": "major",
+    "tipus": "Substitució de tritó",
+    "progressio_romana": "I – ♭II7 – I",
+    "acords": [
+      {
+        "acord": "Ab",
+        "tipus": "major"
+      },
+      {
+        "acord": "A7",
+        "tipus": "dominant (tritone substitution)"
+      },
+      {
+        "acord": "Ab",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Bb",
+    "mode": "major",
+    "tipus": "Substitució de tritó",
+    "progressio_romana": "I – ♭II7 – I",
+    "acords": [
+      {
+        "acord": "Bb",
+        "tipus": "major"
+      },
+      {
+        "acord": "B7",
+        "tipus": "dominant (tritone substitution)"
+      },
+      {
+        "acord": "Bb",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "C",
+    "mode": "major",
+    "tipus": "Substitució de tritó",
+    "progressio_romana": "I – ♭II7 – I",
+    "acords": [
+      {
+        "acord": "C",
+        "tipus": "major"
+      },
+      {
+        "acord": "Db7",
+        "tipus": "dominant (tritone substitution)"
+      },
+      {
+        "acord": "C",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "D",
+    "mode": "major",
+    "tipus": "Substitució de tritó",
+    "progressio_romana": "I – ♭II7 – I",
+    "acords": [
+      {
+        "acord": "D",
+        "tipus": "major"
+      },
+      {
+        "acord": "Eb7",
+        "tipus": "dominant (tritone substitution)"
+      },
+      {
+        "acord": "D",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Db",
+    "mode": "major",
+    "tipus": "Substitució de tritó",
+    "progressio_romana": "I – ♭II7 – I",
+    "acords": [
+      {
+        "acord": "Db",
+        "tipus": "major"
+      },
+      {
+        "acord": "D7",
+        "tipus": "dominant (tritone substitution)"
+      },
+      {
+        "acord": "Db",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "E",
+    "mode": "major",
+    "tipus": "Substitució de tritó",
+    "progressio_romana": "I – ♭II7 – I",
+    "acords": [
+      {
+        "acord": "E",
+        "tipus": "major"
+      },
+      {
+        "acord": "F7",
+        "tipus": "dominant (tritone substitution)"
+      },
+      {
+        "acord": "E",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "C",
+    "mode": "major",
+    "tipus": "Substitució de tritó",
+    "progressio_romana": "I – ♭II7 – I",
+    "acords": [
+      {
+        "acord": "C",
+        "tipus": "major"
+      },
+      {
+        "acord": "Db7",
+        "tipus": "dominant (tritone substitution)"
+      },
+      {
+        "acord": "C",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "A",
+    "mode": "major",
+    "tipus": "Substitució de tritó",
+    "progressio_romana": "I – ♭II7 – I",
+    "acords": [
+      {
+        "acord": "A",
+        "tipus": "major"
+      },
+      {
+        "acord": "Bb7",
+        "tipus": "dominant (tritone substitution)"
+      },
+      {
+        "acord": "A",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Db",
+    "mode": "major",
+    "tipus": "Substitució de tritó",
+    "progressio_romana": "I – ♭II7 – I",
+    "acords": [
+      {
+        "acord": "Db",
+        "tipus": "major"
+      },
+      {
+        "acord": "D7",
+        "tipus": "dominant (tritone substitution)"
+      },
+      {
+        "acord": "Db",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "E",
+    "mode": "major",
+    "tipus": "Substitució de tritó",
+    "progressio_romana": "I – ♭II7 – I",
+    "acords": [
+      {
+        "acord": "E",
+        "tipus": "major"
+      },
+      {
+        "acord": "F7",
+        "tipus": "dominant (tritone substitution)"
+      },
+      {
+        "acord": "E",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "B",
+    "mode": "major",
+    "tipus": "Substitució de tritó",
+    "progressio_romana": "I – ♭II7 – I",
+    "acords": [
+      {
+        "acord": "B",
+        "tipus": "major"
+      },
+      {
+        "acord": "C7",
+        "tipus": "dominant (tritone substitution)"
+      },
+      {
+        "acord": "B",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "C",
+    "mode": "major",
+    "tipus": "Substitució de tritó",
+    "progressio_romana": "I – ♭II7 – I",
+    "acords": [
+      {
+        "acord": "C",
+        "tipus": "major"
+      },
+      {
+        "acord": "Db7",
+        "tipus": "dominant (tritone substitution)"
+      },
+      {
+        "acord": "C",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "E",
+    "mode": "major",
+    "tipus": "Substitució de tritó",
+    "progressio_romana": "I – ♭II7 – I",
+    "acords": [
+      {
+        "acord": "E",
+        "tipus": "major"
+      },
+      {
+        "acord": "F7",
+        "tipus": "dominant (tritone substitution)"
+      },
+      {
+        "acord": "E",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "F",
+    "mode": "major",
+    "tipus": "Substitució de tritó",
+    "progressio_romana": "I – ♭II7 – I",
+    "acords": [
+      {
+        "acord": "F",
+        "tipus": "major"
+      },
+      {
+        "acord": "Gb7",
+        "tipus": "dominant (tritone substitution)"
+      },
+      {
+        "acord": "F",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Eb",
+    "mode": "major",
+    "tipus": "Substitució de tritó",
+    "progressio_romana": "I – ♭II7 – I",
+    "acords": [
+      {
+        "acord": "Eb",
+        "tipus": "major"
+      },
+      {
+        "acord": "E7",
+        "tipus": "dominant (tritone substitution)"
+      },
+      {
+        "acord": "Eb",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "F#",
+    "mode": "major",
+    "tipus": "Substitució de tritó",
+    "progressio_romana": "I – ♭II7 – I",
+    "acords": [
+      {
+        "acord": "F#",
+        "tipus": "major"
+      },
+      {
+        "acord": "C#7",
+        "tipus": "dominant (tritone substitution)"
+      },
+      {
+        "acord": "F#",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "B",
+    "mode": "major",
+    "tipus": "Substitució de tritó",
+    "progressio_romana": "I – ♭II7 – I",
+    "acords": [
+      {
+        "acord": "B",
+        "tipus": "major"
+      },
+      {
+        "acord": "C7",
+        "tipus": "dominant (tritone substitution)"
+      },
+      {
+        "acord": "B",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "G",
+    "mode": "major",
+    "tipus": "Substitució de tritó",
+    "progressio_romana": "I – ♭II7 – I",
+    "acords": [
+      {
+        "acord": "G",
+        "tipus": "major"
+      },
+      {
+        "acord": "Ab7",
+        "tipus": "dominant (tritone substitution)"
+      },
+      {
+        "acord": "G",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "C",
+    "mode": "major",
+    "tipus": "Substitució de tritó",
+    "progressio_romana": "I – ♭II7 – I",
+    "acords": [
+      {
+        "acord": "C",
+        "tipus": "major"
+      },
+      {
+        "acord": "Db7",
+        "tipus": "dominant (tritone substitution)"
+      },
+      {
+        "acord": "C",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "A",
+    "mode": "major",
+    "tipus": "Substitució de tritó",
+    "progressio_romana": "I – ♭II7 – I",
+    "acords": [
+      {
+        "acord": "A",
+        "tipus": "major"
+      },
+      {
+        "acord": "Bb7",
+        "tipus": "dominant (tritone substitution)"
+      },
+      {
+        "acord": "A",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "E",
+    "mode": "major",
+    "tipus": "Substitució de tritó",
+    "progressio_romana": "I – ♭II7 – I",
+    "acords": [
+      {
+        "acord": "E",
+        "tipus": "major"
+      },
+      {
+        "acord": "F7",
+        "tipus": "dominant (tritone substitution)"
+      },
+      {
+        "acord": "E",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "B",
+    "mode": "major",
+    "tipus": "Substitució de tritó",
+    "progressio_romana": "I – ♭II7 – I",
+    "acords": [
+      {
+        "acord": "B",
+        "tipus": "major"
+      },
+      {
+        "acord": "C7",
+        "tipus": "dominant (tritone substitution)"
+      },
+      {
+        "acord": "B",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "B",
+    "mode": "major",
+    "tipus": "Substitució de tritó",
+    "progressio_romana": "I – ♭II7 – I",
+    "acords": [
+      {
+        "acord": "B",
+        "tipus": "major"
+      },
+      {
+        "acord": "C7",
+        "tipus": "dominant (tritone substitution)"
+      },
+      {
+        "acord": "B",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Db",
+    "mode": "major",
+    "tipus": "Substitució de tritó",
+    "progressio_romana": "I – ♭II7 – I",
+    "acords": [
+      {
+        "acord": "Db",
+        "tipus": "major"
+      },
+      {
+        "acord": "D7",
+        "tipus": "dominant (tritone substitution)"
+      },
+      {
+        "acord": "Db",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "D",
+    "mode": "major",
+    "tipus": "Substitució de tritó",
+    "progressio_romana": "I – ♭II7 – I",
+    "acords": [
+      {
+        "acord": "D",
+        "tipus": "major"
+      },
+      {
+        "acord": "Eb7",
+        "tipus": "dominant (tritone substitution)"
+      },
+      {
+        "acord": "D",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "F",
+    "mode": "major",
+    "tipus": "Substitució de tritó",
+    "progressio_romana": "I – ♭II7 – I",
+    "acords": [
+      {
+        "acord": "F",
+        "tipus": "major"
+      },
+      {
+        "acord": "Gb7",
+        "tipus": "dominant (tritone substitution)"
+      },
+      {
+        "acord": "F",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Db",
+    "mode": "major",
+    "tipus": "Substitució de tritó",
+    "progressio_romana": "I – ♭II7 – I",
+    "acords": [
+      {
+        "acord": "Db",
+        "tipus": "major"
+      },
+      {
+        "acord": "D7",
+        "tipus": "dominant (tritone substitution)"
+      },
+      {
+        "acord": "Db",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "B",
+    "mode": "major",
+    "tipus": "Substitució de tritó",
+    "progressio_romana": "I – ♭II7 – I",
+    "acords": [
+      {
+        "acord": "B",
+        "tipus": "major"
+      },
+      {
+        "acord": "C7",
+        "tipus": "dominant (tritone substitution)"
+      },
+      {
+        "acord": "B",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "D",
+    "mode": "major",
+    "tipus": "Substitució de tritó",
+    "progressio_romana": "I – ♭II7 – I",
+    "acords": [
+      {
+        "acord": "D",
+        "tipus": "major"
+      },
+      {
+        "acord": "Eb7",
+        "tipus": "dominant (tritone substitution)"
+      },
+      {
+        "acord": "D",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "B",
+    "mode": "major",
+    "tipus": "Substitució de tritó",
+    "progressio_romana": "I – ♭II7 – I",
+    "acords": [
+      {
+        "acord": "B",
+        "tipus": "major"
+      },
+      {
+        "acord": "C7",
+        "tipus": "dominant (tritone substitution)"
+      },
+      {
+        "acord": "B",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "E",
+    "mode": "major",
+    "tipus": "Substitució de tritó",
+    "progressio_romana": "I – ♭II7 – I",
+    "acords": [
+      {
+        "acord": "E",
+        "tipus": "major"
+      },
+      {
+        "acord": "F7",
+        "tipus": "dominant (tritone substitution)"
+      },
+      {
+        "acord": "E",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "B",
+    "mode": "major",
+    "tipus": "Substitució de tritó",
+    "progressio_romana": "I – ♭II7 – I",
+    "acords": [
+      {
+        "acord": "B",
+        "tipus": "major"
+      },
+      {
+        "acord": "C7",
+        "tipus": "dominant (tritone substitution)"
+      },
+      {
+        "acord": "B",
+        "tipus": "major"
+      }
+    ]
+  },
+  {
+    "tonalitat": "Ab",
+    "mode": "major",
+    "tipus": "Substitució de tritó",
+    "progressio_romana": "I – ♭II7 – I",
+    "acords": [
+      {
+        "acord": "Ab",
+        "tipus": "major"
+      },
+      {
+        "acord": "A7",
+        "tipus": "dominant (tritone substitution)"
+      },
+      {
+        "acord": "Ab",
+        "tipus": "major"
+      }
+    ]
+  }
+]

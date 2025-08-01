@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { Music, Trophy, BookOpen, Volume2, Target, Puzzle, ArrowLeft, Play, Clock, CheckCircle, XCircle } from "lucide-react";
+import { getRandomProgression, getProgressionsByMode, getChordTypes } from "./data/progressions";
 
-type GameMode = 'home' | 'theory' | 'speed' | 'memory' | 'target' | 'puzzle' | 'arcade';
+type GameMode = 'home' | 'theory' | 'speed' | 'memory' | 'target' | 'puzzle' | 'arcade' | 'harmonia';
 
 // Contingut educatiu real per cada joc
 const gameContent = {
@@ -74,6 +75,20 @@ const gameContent = {
       options: ["2a menor, 7a major", "2a menor, 6a menor", "3a menor, 6a major", "3a menor, 7a menor"],
       correct: 2,
       explanation: "El mode dòric té 3a menor i 6a major, donant-li un caràcter únic.",
+      level: "Avançat"
+    },
+    {
+      question: "La progressió vi-IV-I-V és típica en:",
+      options: ["Música clàssica", "Música pop", "Jazz", "Blues"],
+      correct: 1,
+      explanation: "Aquesta progressió és molt comuna en la música pop contemporània.",
+      level: "Avançat"
+    },
+    {
+      question: "Un acord half-diminished conté:",
+      options: ["3a menor + 5a disminuïda + 7a menor", "3a menor + 5a disminuïda + 7a major", "3a major + 5a disminuïda + 7a menor", "3a menor + 5a justa + 7a menor"],
+      correct: 0,
+      explanation: "L'acord half-diminished (ø7) té 3a menor, 5a disminuïda i 7a menor.",
       level: "Avançat"
     }
   ],
@@ -181,7 +196,7 @@ const gameContent = {
     {
       challenge: "Identifica 5 intervals correctament",
       goal: 5,
-      reward: "Bronze en Intervals",
+      reward: "🥉 Bronze en Intervals",
       questions: [
         { question: "Do a Mi", options: ["2a", "3a", "4a"], correct: 1 },
         { question: "Do a Fa", options: ["3a", "4a", "5a"], correct: 1 },
@@ -195,7 +210,7 @@ const gameContent = {
     {
       challenge: "Completa 3 escales majors",
       goal: 3,
-      reward: "Plata en Escales",
+      reward: "🥈 Plata en Escales",
       questions: [
         { question: "Do major: Do, Re, ?, Fa, Sol, ?, Si", options: ["Mi, La", "Re, La", "Mi, Si"], correct: 0 },
         { question: "Sol major: Sol, La, ?, Do, Re, ?, Fa#", options: ["Si, Mi", "La, Mi", "Si, Fa"], correct: 0 },
@@ -205,7 +220,7 @@ const gameContent = {
     {
       challenge: "Reconeix 4 acords majors i menors",
       goal: 4,
-      reward: "Or en Acords",
+      reward: "🥇 Or en Acords",
       questions: [
         { question: "Do-Mi-Sol és:", options: ["Major", "Menor", "Augmentat"], correct: 0 },
         { question: "Do-Mib-Sol és:", options: ["Major", "Menor", "Disminuït"], correct: 1 },
@@ -213,6 +228,20 @@ const gameContent = {
         { question: "La-Do-Mi és:", options: ["Major", "Menor", "Disminuït"], correct: 1 },
         { question: "Mi-Sol#-Si és:", options: ["Major", "Menor", "Augmentat"], correct: 0 },
         { question: "Fa-Lab-Do és:", options: ["Major", "Menor", "Disminuït"], correct: 1 }
+      ]
+    },
+    {
+      challenge: "Mestre en Progressions Harmòniques",
+      goal: 5,
+      reward: "💎 Diamant en Harmonia",
+      questions: [
+        { question: "En Fa major, la progressió vi-IV-I-V és:", options: ["Dm-Bb-F-C", "Am-F-C-G", "Gm-Eb-Bb-F"], correct: 0 },
+        { question: "Un acord half-diminished té:", options: ["3a menor + 5a dim + 7a menor", "3a menor + 5a dim + 7a major", "3a major + 5a dim + 7a menor"], correct: 0 },
+        { question: "La progressió ii°-V-i és típica de:", options: ["Mode major", "Mode menor", "Mode dòric"], correct: 1 },
+        { question: "En Am, l'acord VII és:", options: ["G", "G#", "Gmaj7"], correct: 0 },
+        { question: "Un acord de dominant conté:", options: ["7a menor", "7a major", "6a major"], correct: 0 },
+        { question: "La cadència plagal és:", options: ["V-I", "IV-I", "ii-V"], correct: 1 },
+        { question: "En el mode menor, el VI grau és:", options: ["Major", "Menor", "Augmentat"], correct: 0 }
       ]
     }
   ],
@@ -256,6 +285,30 @@ const gameContent = {
       options: ["Fa", "Sol", "La", "Si"],
       correct: [1],
       explanation: "Una quinta justa des de Do és Sol (7 semitons)"
+    },
+    {
+      question: "Completa la progressió en F menor:",
+      text: "__ - Gm - __ - Bb",
+      blanks: 2,
+      options: ["Dm", "Fm", "Ab", "C", "Eb"],
+      correct: [1, 2],
+      explanation: "Progressió vi-I-ii-IV en F major: Dm-F-Gm-Bb"
+    },
+    {
+      question: "Identifica el tipus d'acord:",
+      text: "C - E - G - B♭ és un acord __",
+      blanks: 1,
+      options: ["major", "menor", "dominant", "augmentat"],
+      correct: [2],
+      explanation: "C7 (Do dominant) conté 3a major i 7a menor, característic dels acords dominants"
+    },
+    {
+      question: "Completa la cadència:",
+      text: "Am - __ - G - __",
+      blanks: 2,
+      options: ["F", "C", "Dm", "Em"],
+      correct: [0, 1],
+      explanation: "Progressió vi-IV-V-I: Am-F-G-C"
     }
   ],
   arcade: [
@@ -282,8 +335,50 @@ const gameContent = {
       description: "Corre per les escales musicals!",
       instructions: "Salta només sobre les notes de l'escala correcta.",
       type: "platform"
+    },
+    {
+      name: "Progression Master",
+      description: "Identifica progressions harmòniques reals!",
+      instructions: "Escolta la progressió i identifica els acords correctes.",
+      type: "progression"
     }
-  ]
+  ],
+  harmonia: () => {
+    // Generar preguntes dinàmiques basades en les progressions reals
+    const progression = getRandomProgression();
+    const wrongProgressions = getProgressionsByMode(progression.mode).filter(p => p.tonalitat !== progression.tonalitat).slice(0, 2);
+    const allChordTypes = getChordTypes();
+    
+    return [
+      {
+        type: "identify_progression",
+        progression: progression,
+        question: `Identifica la progressió en ${progression.tonalitat} ${progression.mode}:`,
+        chords: progression.acords.map(a => a.acord).join(" - "),
+        options: [
+          progression.progressio_romana,
+          wrongProgressions[0]?.progressio_romana || "I - V - vi - IV",
+          wrongProgressions[1]?.progressio_romana || "vi - IV - I - V",
+          "ii - V - I - vi"
+        ],
+        correct: 0,
+        explanation: `Aquesta progressió ${progression.progressio_romana} és característica del mode ${progression.mode} en ${progression.tonalitat}.`
+      },
+      {
+        type: "chord_analysis",
+        progression: progression,
+        question: `Quin tipus d'acord és ${progression.acords[0].acord}?`,
+        options: [
+          progression.acords[0].tipus,
+          allChordTypes.filter(t => t !== progression.acords[0].tipus)[0] || "major",
+          allChordTypes.filter(t => t !== progression.acords[0].tipus)[1] || "minor",
+          allChordTypes.filter(t => t !== progression.acords[0].tipus)[2] || "diminished"
+        ],
+        correct: 0,
+        explanation: `${progression.acords[0].acord} és un acord ${progression.acords[0].tipus}.`
+      }
+    ];
+  }
 };
 
 const gameTypes = [
@@ -328,6 +423,13 @@ const gameTypes = [
     description: 'Jocs musicals divertits',
     icon: Music,
     color: 'from-pink-500 to-pink-600'
+  },
+  {
+    id: 'harmonia',
+    title: 'Harmonia Avançada',
+    description: 'Progressions harmòniques reals',
+    icon: Trophy,
+    color: 'from-gold-500 to-yellow-600'
   }
 ];
 
@@ -346,6 +448,8 @@ function GameComponent({ mode, onBack }: { mode: GameMode; onBack: () => void })
   const [puzzleAnswers, setPuzzleAnswers] = useState<string[]>([]);
   const [arcadeGame, setArcadeGame] = useState(0);
   const [gameCompleted, setGameCompleted] = useState(false);
+  const [currentHarmonia, setCurrentHarmonia] = useState(0);
+  const [harmoniaQuestions, setHarmoniaQuestions] = useState<any[]>([]);
 
   const game = gameTypes.find(g => g.id === mode);
   const content = gameContent[mode as keyof typeof gameContent];
@@ -372,6 +476,8 @@ function GameComponent({ mode, onBack }: { mode: GameMode; onBack: () => void })
     setTargetProgress(0);
     setPuzzleAnswers([]);
     setGameCompleted(false);
+    setCurrentHarmonia(0);
+    setHarmoniaQuestions([]);
     
     if (mode === 'speed' && content && content[0] && 'timeLimit' in content[0]) {
       setTimeLeft(content[0].timeLimit || 5);
@@ -403,6 +509,27 @@ function GameComponent({ mode, onBack }: { mode: GameMode; onBack: () => void })
           }
         }, 2000);
       }
+    }
+
+    // Handlejar preguntes d'harmonia
+    if (mode === 'harmonia') {
+      const isCorrect = answerIndex === harmoniaQuestions[currentHarmonia]?.correct;
+      if (isCorrect) setScore(score + 1);
+      
+      setSelectedAnswer(answerIndex);
+      setShowResult(true);
+      
+      setTimeout(() => {
+        if (currentHarmonia < harmoniaQuestions.length - 1) {
+          setCurrentHarmonia(currentHarmonia + 1);
+          setSelectedAnswer(null);
+          setShowResult(false);
+        } else {
+          setGameStarted(false);
+          setGameCompleted(true);
+        }
+      }, 3000);
+      return;
     }
   };
 
@@ -518,6 +645,9 @@ function GameComponent({ mode, onBack }: { mode: GameMode; onBack: () => void })
           )}
           {mode === 'arcade' && (
             <p className="text-gray-300">Jocs d'acció musicals divertits amb diferents mecàniques de joc.</p>
+          )}
+          {mode === 'harmonia' && (
+            <p className="text-gray-300">Analitza progressions harmòniques reals de milers de cançons i aprèn harmonia avançada.</p>
           )}
         </div>
         
@@ -884,6 +1014,140 @@ function GameComponent({ mode, onBack }: { mode: GameMode; onBack: () => void })
     );
   }
 
+  // Joc d'Harmonia (amb progressions reals)
+  if (mode === 'harmonia') {
+    const [harmoniaQuestions, setHarmoniaQuestions] = useState<any[]>([]);
+    const [currentHarmonia, setCurrentHarmonia] = useState(0);
+
+    // Generar preguntes dinàmiques quan es carrega el joc
+    useEffect(() => {
+      if (gameStarted && harmoniaQuestions.length === 0) {
+        const questions = [];
+        for (let i = 0; i < 5; i++) {
+          const progression = getRandomProgression();
+          const wrongProgressions = getProgressionsByMode(progression.mode)
+            .filter(p => p.tonalitat !== progression.tonalitat)
+            .slice(0, 2);
+          
+          questions.push({
+            type: "identify_progression",
+            progression: progression,
+            question: `Identifica la progressió en ${progression.tonalitat} ${progression.mode}:`,
+            chords: progression.acords.map((a: any) => a.acord).join(" - "),
+            romanNumerals: progression.progressio_romana,
+            options: [
+              progression.progressio_romana,
+              wrongProgressions[0]?.progressio_romana || "I - V - vi - IV",
+              wrongProgressions[1]?.progressio_romana || "vi - IV - I - V",
+              "ii - V - I - vi"
+            ],
+            correct: 0,
+            explanation: `Aquesta progressió ${progression.progressio_romana} és característica del mode ${progression.mode} en ${progression.tonalitat}.`
+          });
+        }
+        setHarmoniaQuestions(questions);
+      }
+    }, [gameStarted]);
+
+    if (gameCompleted) {
+      return (
+        <div className="text-center max-w-md mx-auto">
+          <div className="text-6xl mb-6">🎼</div>
+          <h2 className="text-3xl font-bold text-yellow-400 mb-4">Mestre d'Harmonia!</h2>
+          <p className="text-white text-xl mb-6">Puntuació final: {score}/{harmoniaQuestions.length}</p>
+          <div className="flex space-x-4 justify-center">
+            <button
+              onClick={startGame}
+              className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold"
+            >
+              Jugar de nou
+            </button>
+            <button
+              onClick={onBack}
+              className="bg-gray-600 hover:bg-gray-700 text-white px-6 py-3 rounded-lg font-semibold"
+            >
+              Tornar al menú
+            </button>
+          </div>
+        </div>
+      );
+    }
+
+    if (harmoniaQuestions.length === 0) {
+      return (
+        <div className="text-center">
+          <div className="text-4xl mb-4">🎼</div>
+          <p className="text-white">Generant progressions harmòniques...</p>
+        </div>
+      );
+    }
+
+    const currentQuestion = harmoniaQuestions[currentHarmonia];
+    
+    return (
+      <div className="max-w-2xl mx-auto">
+        <div className="text-center mb-6">
+          <span className="text-lg text-white">Progressió {currentHarmonia + 1} de {harmoniaQuestions.length}</span>
+          <div className="text-sm text-gray-400">Puntuació: {score}/{harmoniaQuestions.length}</div>
+        </div>
+
+        <div className="bg-slate-800/80 rounded-lg p-8 border border-slate-700">
+          <h3 className="text-2xl font-bold text-white mb-6 text-center">
+            {currentQuestion.question}
+          </h3>
+
+          {/* Progressió d'acords */}
+          <div className="bg-gradient-to-r from-yellow-500/10 to-orange-500/10 rounded-lg p-6 mb-6 border border-yellow-500/20">
+            <div className="text-center">
+              <h4 className="text-lg text-yellow-400 font-semibold mb-3">Progressió d'Acords:</h4>
+              <div className="text-2xl font-mono text-white mb-2">{currentQuestion.chords}</div>
+              <div className="text-sm text-gray-400">en {currentQuestion.progression.tonalitat} {currentQuestion.progression.mode}</div>
+            </div>
+          </div>
+
+          {/* Opcions de progressions romanes */}
+          <h4 className="text-lg text-white mb-4 text-center">Quin és l'anàlisi en xifra romana?</h4>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {currentQuestion.options.map((option: string, index: number) => (
+              <button
+                key={index}
+                onClick={() => !showResult && handleAnswer(index)}
+                disabled={showResult}
+                className={`p-4 rounded-lg border-2 transition-all text-lg font-semibold font-mono ${
+                  showResult
+                    ? index === currentQuestion.correct
+                      ? 'bg-green-600 border-green-500 text-white'
+                      : index === selectedAnswer
+                      ? 'bg-red-600 border-red-500 text-white'
+                      : 'bg-slate-700 border-slate-600 text-gray-300'
+                    : 'bg-slate-700 border-slate-600 text-white hover:bg-slate-600 hover:border-slate-500'
+                }`}
+              >
+                {option}
+              </button>
+            ))}
+          </div>
+
+          {/* Explicació */}
+          {showResult && (
+            <div className="mt-6 p-4 bg-slate-700/50 rounded-lg">
+              <h4 className="font-semibold text-white mb-2">Explicació:</h4>
+              <p className="text-gray-300">{currentQuestion.explanation}</p>
+              <div className="mt-3 text-sm text-gray-400">
+                <strong>Detalls de la progressió:</strong>
+                <ul className="mt-2">
+                  {currentQuestion.progression.acords.map((acord: any, i: number) => (
+                    <li key={i}>• {acord.acord} ({acord.tipus})</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+    );
+  }
+
   // Altres jocs (fallback)
   return (
     <div className="text-center">
@@ -929,7 +1193,7 @@ function App() {
         </div>
 
         {/* Grid de jocs */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {gameTypes.map((game) => {
             const IconComponent = game.icon;
             return (
@@ -954,7 +1218,7 @@ function App() {
         {/* Estadístiques */}
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
           <div className="bg-gradient-to-br from-blue-500/10 to-blue-600/10 p-6 rounded-2xl border border-blue-500/20 text-center">
-            <div className="text-3xl font-bold text-blue-400 mb-2">6</div>
+            <div className="text-3xl font-bold text-blue-400 mb-2">7</div>
             <div className="text-gray-300">Modes de Joc</div>
           </div>
           <div className="bg-gradient-to-br from-purple-500/10 to-purple-600/10 p-6 rounded-2xl border border-purple-500/20 text-center">
@@ -962,8 +1226,8 @@ function App() {
             <div className="text-gray-300">Exercicis</div>
           </div>
           <div className="bg-gradient-to-br from-pink-500/10 to-pink-600/10 p-6 rounded-2xl border border-pink-500/20 text-center">
-            <div className="text-3xl font-bold text-pink-400 mb-2">11</div>
-            <div className="text-gray-300">Nivells</div>
+            <div className="text-3xl font-bold text-pink-400 mb-2">9966</div>
+            <div className="text-gray-300">Progressions Reals</div>
           </div>
         </div>
       </div>

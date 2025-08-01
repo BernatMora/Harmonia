@@ -71,3 +71,8 @@ shared/
   - Visual feedback for correct/incorrect answers
   - Game completion screens with replay functionality
   - Challenge progression with rewards system
+- **2025-08-01**: Integrated real harmonic progressions database:
+  - **Harmonia Mode**: New advanced game mode with 9966+ real progressions
+  - Dynamic question generation from authentic musical data
+  - Roman numeral analysis with detailed chord breakdowns
+  - Progressive difficulty with major/minor mode recognition
