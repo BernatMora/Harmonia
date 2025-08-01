@@ -55,11 +55,17 @@ const gameTypes = [
 ];
 
 export default function HomePage() {
-  const [, setLocation] = useLocation();
+  const [location, setLocation] = useLocation();
 
   const handleCardClick = (path: string) => {
-    console.log('Navigating to:', path);
-    setLocation(path);
+    console.log('Current location:', location);
+    console.log('Attempting navigation to:', path);
+    
+    // Force immediate navigation with proper state update
+    setTimeout(() => {
+      setLocation(path);
+      console.log('Navigation completed to:', path);
+    }, 10);
   };
 
   return (
@@ -99,13 +105,13 @@ export default function HomePage() {
             const IconComponent = game.icon;
             
             return (
-              <Card 
-                key={game.id} 
-                onClick={() => handleCardClick(game.path)}
-                className="relative bg-gradient-to-br from-slate-800/80 to-slate-900/80 border-slate-700/50 hover:border-slate-600 hover:shadow-2xl hover:shadow-blue-500/10 active:scale-95 transition-all duration-300 cursor-pointer h-full backdrop-blur-sm overflow-hidden touch-manipulation group"
-                style={{
-                  animation: `fadeInUp 0.6s ease-out ${index * 0.1}s both`
-                }}
+              <Link href={game.path} className="block h-full">
+                <Card 
+                  key={game.id} 
+                  className="relative bg-gradient-to-br from-slate-800/80 to-slate-900/80 border-slate-700/50 hover:border-slate-600 hover:shadow-2xl hover:shadow-blue-500/10 active:scale-95 transition-all duration-300 cursor-pointer h-full backdrop-blur-sm overflow-hidden touch-manipulation group focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-slate-900"
+                  style={{
+                    animation: `fadeInUp 0.6s ease-out ${index * 0.1}s both`
+                  }}
               >
                   {/* Glow effect */}
                   <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -122,15 +128,13 @@ export default function HomePage() {
                     </CardDescription>
                   </CardHeader>
                   <CardContent className="pt-0 relative z-10">
-                    <Button 
-                      className="w-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 hover:from-blue-500/30 hover:to-purple-500/30 active:from-blue-500/40 active:to-purple-500/40 text-white border border-blue-500/30 hover:border-blue-400/50 mobile-button text-sm sm:text-base font-semibold shadow-lg hover:shadow-blue-500/20 transition-all duration-300 pointer-events-none"
-                      variant="outline"
-                    >
+                    <div className="w-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 group-hover:from-blue-500/30 group-hover:to-purple-500/30 group-active:from-blue-500/40 group-active:to-purple-500/40 text-white border border-blue-500/30 group-hover:border-blue-400/50 rounded-md px-4 py-3 text-center text-sm sm:text-base font-semibold shadow-lg group-hover:shadow-blue-500/20 transition-all duration-300 relative overflow-hidden">
                       <span className="relative z-10">Començar</span>
-                      <div className="absolute inset-0 bg-gradient-to-r from-blue-600/0 via-blue-600/20 to-purple-600/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded"></div>
-                    </Button>
+                      <div className="absolute inset-0 bg-gradient-to-r from-blue-600/0 via-blue-600/20 to-purple-600/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
                   </CardContent>
                 </Card>
+              </Link>
             );
           })}
         </div>
